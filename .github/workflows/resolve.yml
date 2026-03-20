@@ -1,0 +1,40 @@
+name: BTC 5m Auto-Resolve
+
+on:
+  schedule:
+    # Toutes les 15 minutes
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install requests pandas numpy scikit-learn
+
+      - name: Auto-resolve past signals
+        run: python btc5m/btc5m_signal.py auto-resolve
+        continue-on-error: true
+
+      - name: Commit updated log
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add btc5m/signal_log.json
+          git diff --staged --quiet || git commit -m "auto-resolve [$(date -u '+%H:%M UTC')]"
+          git push
+        continue-on-error: true
