@@ -25,7 +25,7 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
-        run: pip install requests pandas numpy scikit-learn
+        run: pip install -r requirements.txt
 
       - name: Run signal
         run: python btc5m/btc5m_signal.py signal
