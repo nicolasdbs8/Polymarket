@@ -1,0 +1,44 @@
+name: BTC 5m Signal
+
+on:
+  schedule:
+    # Toutes les 10 minutes (minimum GitHub = 5min, mais 10min économise le quota)
+    - cron: '*/10 * * * *'
+  workflow_dispatch:  # permet de déclencher manuellement depuis GitHub
+
+jobs:
+  signal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4  # kill si ça dépasse 4 min (ne doit pas arriver)
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          # Nécessaire pour pouvoir committer le log ensuite
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install requests pandas numpy scikit-learn
+
+      - name: Run signal
+        run: python btc5m/btc5m_signal.py signal
+        # Continue même si pas de marché actif
+        continue-on-error: true
+
+      - name: Commit signal log if updated
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add btc5m/signal_log.json
+          # Ne commit que si le fichier a changé
+          git diff --staged --quiet || git commit -m "signal log [$(date -u '+%H:%M UTC')]"
+          git push
+        # Ne fail pas si rien à committer
+        continue-on-error: true
