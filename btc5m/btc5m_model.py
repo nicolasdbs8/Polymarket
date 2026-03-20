@@ -62,7 +62,7 @@ STABLE_FEATURES = [
 # 1. Collecte des données (repris de phase0)
 # ─────────────────────────────────────────────────────────────────────────────
 
-BINANCE_KLINES_URL = "https://api.binance.com/api/v3/klines"
+
 
 def fetch_btc_5m(days: int) -> pd.DataFrame:
     end_ms   = int(datetime.now(timezone.utc).timestamp() * 1000)
@@ -80,7 +80,7 @@ def fetch_btc_5m(days: int) -> pd.DataFrame:
             "startTime": current_start, "endTime": end_ms, "limit": 1000,
         }
         try:
-            r = requests.get(BINANCE_KLINES_URL, params=params, timeout=15)
+            r = requests.get(KRAKEN_OHLC_URL, params={"pair":"XBTUSD","interval":5,"since":current_start//1000}, timeout=15)
             r.raise_for_status()
             batch = r.json()
         except requests.RequestException as e:
