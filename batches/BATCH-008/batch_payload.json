@@ -1,0 +1,795 @@
+[
+  {
+    "market_id": "BATCH-008-0",
+    "thesis_id": "BATCH-008-0-TH1",
+    "analysis_id": "BATCH-008-0-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:50:15Z",
+    "resolution_date": "2026-03-31T23:55:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contract is structurally clear and now almost entirely retrospective: the listed deadline has already passed, and the sourced reporting after that date still describes the war as ongoing rather than officially ended."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Past deadline already elapsed before analysis time for March 1st, in a war that Reuters still described as ongoing on March 13 and March 18, 2026.",
+      "base_rate_comment": "Minimum base rate. Once the deadline has passed and credible reporting still describes the military campaign as ongoing, only resolution-edge ambiguity, not political probability, keeps the number above literal zero."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "An official announcement ending military operations had to be made by the listed deadline",
+          "status": "not_filled",
+          "comment": "The deadline of March 1st is already past, and later reporting still refers to ongoing operations."
+        },
+        {
+          "name": "That official announcement had to be attributable to Trump, the U.S. government, or the military",
+          "status": "not_filled",
+          "comment": "No such official end announcement is reflected in the sources reviewed."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Resolution sources could still uncover an earlier qualifying official statement",
+          "status": "unknown",
+          "comment": "The only residual uncertainty is archival/resolution rather than forward-looking politics."
+        },
+        {
+          "name": "Consensus of credible reporting might identify a qualifying statement missed in surface reporting",
+          "status": "unknown",
+          "comment": "Possible in theory, but unsupported by the reviewed record."
+        },
+        {
+          "name": "Subsequent reporting continues to describe operations as ongoing",
+          "status": "filled",
+          "comment": "Reuters on March 13 and March 18 still described the war and military operations as ongoing."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Deadline already expired",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "This is the dominant structural fact for all four expired submarkets."
+      },
+      {
+        "factor_name": "Reuters still described operations as ongoing after the deadline",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "That is strong evidence against any qualifying official end announcement by the earlier date."
+      },
+      {
+        "factor_name": "Potential resolution-source or archival edge case",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Only a missed official statement or unusual resolution interpretation keeps this from practical zero."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The only real counter-thesis is that a qualifying official end statement was made by the deadline and later reporting simply continued to describe the broader conflict in imprecise terms.",
+      "top_3_failure_reasons": [
+        "A qualifying official statement may exist in an archival source that broad news summaries did not foreground.",
+        "Polymarket may accept consensus reporting around an official statement even if it was not widely covered later.",
+        "Some later stories may use broad language like 'war' or 'operations' imprecisely even after a narrower mission was officially declared complete."
+      ],
+      "market_might_be_right_because": "In expired deadline markets, the only thing that matters is whether a qualifying statement technically existed before the cut-off.",
+      "thesis_invalidation_trigger": "Discovery of an official Trump/U.S. government/military announcement made on or before March 1st explicitly stating that the operations had concluded."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket rules page for the March 31 contract; Reuters of March 13, 2026 on Trump's 'when I feel it in my bones' remark; Reuters of March 18, 2026 on the Pentagon's request for more than $200 billion for the Iran war.",
+      "historical_precedents": "Wars sometimes end abruptly by political announcement, but public declarations of mission completion are often delayed when objectives remain fluid or contested.",
+      "institutional_constraints": "The market resolves Yes only if Trump, the U.S. government, or the military publicly and officially announce that military operations against Iran, initiated on February 28, 2026, have concluded by the listed date. Informal leaks do not count; official statements and/or consensus of credible reporting do.",
+      "timeline_recent": "As of March 13, Trump was saying the war would end 'when I feel it in my bones' rather than naming a hard date, and as of March 18 the Pentagon was seeking more than $200 billion for ongoing operations.",
+      "actors_and_incentives": "Trump has incentives to signal strength and flexibility rather than concede arbitrary deadlines; the Pentagon and military leadership have incentives to avoid declaring completion while major operational questions remain.",
+      "key_uncertainties": "Whether Trump prioritizes a quick declaratory victory, whether military conditions allow a real or rhetorical end-state, and whether the administration chooses an official end statement versus continued open-ended operations.",
+      "counterarguments": "Trump has previously implied the campaign could end soon, and a political declaration need not mean all regional tension disappears.",
+      "dominant_market_narrative": "The shortest deadlines look mostly dead, while later deadlines remain live because a political declaration of success can occur before every military or diplomatic issue is fully resolved."
+    }
+  },
+  {
+    "market_id": "BATCH-008-1",
+    "thesis_id": "BATCH-008-1-TH1",
+    "analysis_id": "BATCH-008-1-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:50:15Z",
+    "resolution_date": "2026-03-31T23:55:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contract is structurally clear and now almost entirely retrospective: the listed deadline has already passed, and the sourced reporting after that date still describes the war as ongoing rather than officially ended."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Past deadline already elapsed before analysis time for March 2nd, in a war that Reuters still described as ongoing on March 13 and March 18, 2026.",
+      "base_rate_comment": "Minimum base rate. Once the deadline has passed and credible reporting still describes the military campaign as ongoing, only resolution-edge ambiguity, not political probability, keeps the number above literal zero."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "An official announcement ending military operations had to be made by the listed deadline",
+          "status": "not_filled",
+          "comment": "The deadline of March 2nd is already past, and later reporting still refers to ongoing operations."
+        },
+        {
+          "name": "That official announcement had to be attributable to Trump, the U.S. government, or the military",
+          "status": "not_filled",
+          "comment": "No such official end announcement is reflected in the sources reviewed."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Resolution sources could still uncover an earlier qualifying official statement",
+          "status": "unknown",
+          "comment": "The only residual uncertainty is archival/resolution rather than forward-looking politics."
+        },
+        {
+          "name": "Consensus of credible reporting might identify a qualifying statement missed in surface reporting",
+          "status": "unknown",
+          "comment": "Possible in theory, but unsupported by the reviewed record."
+        },
+        {
+          "name": "Subsequent reporting continues to describe operations as ongoing",
+          "status": "filled",
+          "comment": "Reuters on March 13 and March 18 still described the war and military operations as ongoing."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Deadline already expired",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "This is the dominant structural fact for all four expired submarkets."
+      },
+      {
+        "factor_name": "Reuters still described operations as ongoing after the deadline",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "That is strong evidence against any qualifying official end announcement by the earlier date."
+      },
+      {
+        "factor_name": "Potential resolution-source or archival edge case",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Only a missed official statement or unusual resolution interpretation keeps this from practical zero."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The only real counter-thesis is that a qualifying official end statement was made by the deadline and later reporting simply continued to describe the broader conflict in imprecise terms.",
+      "top_3_failure_reasons": [
+        "A qualifying official statement may exist in an archival source that broad news summaries did not foreground.",
+        "Polymarket may accept consensus reporting around an official statement even if it was not widely covered later.",
+        "Some later stories may use broad language like 'war' or 'operations' imprecisely even after a narrower mission was officially declared complete."
+      ],
+      "market_might_be_right_because": "In expired deadline markets, the only thing that matters is whether a qualifying statement technically existed before the cut-off.",
+      "thesis_invalidation_trigger": "Discovery of an official Trump/U.S. government/military announcement made on or before March 2nd explicitly stating that the operations had concluded."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket rules page for the March 31 contract; Reuters of March 13, 2026 on Trump's 'when I feel it in my bones' remark; Reuters of March 18, 2026 on the Pentagon's request for more than $200 billion for the Iran war.",
+      "historical_precedents": "Wars sometimes end abruptly by political announcement, but public declarations of mission completion are often delayed when objectives remain fluid or contested.",
+      "institutional_constraints": "The market resolves Yes only if Trump, the U.S. government, or the military publicly and officially announce that military operations against Iran, initiated on February 28, 2026, have concluded by the listed date. Informal leaks do not count; official statements and/or consensus of credible reporting do.",
+      "timeline_recent": "As of March 13, Trump was saying the war would end 'when I feel it in my bones' rather than naming a hard date, and as of March 18 the Pentagon was seeking more than $200 billion for ongoing operations.",
+      "actors_and_incentives": "Trump has incentives to signal strength and flexibility rather than concede arbitrary deadlines; the Pentagon and military leadership have incentives to avoid declaring completion while major operational questions remain.",
+      "key_uncertainties": "Whether Trump prioritizes a quick declaratory victory, whether military conditions allow a real or rhetorical end-state, and whether the administration chooses an official end statement versus continued open-ended operations.",
+      "counterarguments": "Trump has previously implied the campaign could end soon, and a political declaration need not mean all regional tension disappears.",
+      "dominant_market_narrative": "The shortest deadlines look mostly dead, while later deadlines remain live because a political declaration of success can occur before every military or diplomatic issue is fully resolved."
+    }
+  },
+  {
+    "market_id": "BATCH-008-2",
+    "thesis_id": "BATCH-008-2-TH1",
+    "analysis_id": "BATCH-008-2-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:50:15Z",
+    "resolution_date": "2026-03-31T23:55:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contract is structurally clear and now almost entirely retrospective: the listed deadline has already passed, and the sourced reporting after that date still describes the war as ongoing rather than officially ended."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Past deadline already elapsed before analysis time for March 7th, in a war that Reuters still described as ongoing on March 13 and March 18, 2026.",
+      "base_rate_comment": "Minimum base rate. Once the deadline has passed and credible reporting still describes the military campaign as ongoing, only resolution-edge ambiguity, not political probability, keeps the number above literal zero."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "An official announcement ending military operations had to be made by the listed deadline",
+          "status": "not_filled",
+          "comment": "The deadline of March 7th is already past, and later reporting still refers to ongoing operations."
+        },
+        {
+          "name": "That official announcement had to be attributable to Trump, the U.S. government, or the military",
+          "status": "not_filled",
+          "comment": "No such official end announcement is reflected in the sources reviewed."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Resolution sources could still uncover an earlier qualifying official statement",
+          "status": "unknown",
+          "comment": "The only residual uncertainty is archival/resolution rather than forward-looking politics."
+        },
+        {
+          "name": "Consensus of credible reporting might identify a qualifying statement missed in surface reporting",
+          "status": "unknown",
+          "comment": "Possible in theory, but unsupported by the reviewed record."
+        },
+        {
+          "name": "Subsequent reporting continues to describe operations as ongoing",
+          "status": "filled",
+          "comment": "Reuters on March 13 and March 18 still described the war and military operations as ongoing."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Deadline already expired",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "This is the dominant structural fact for all four expired submarkets."
+      },
+      {
+        "factor_name": "Reuters still described operations as ongoing after the deadline",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "That is strong evidence against any qualifying official end announcement by the earlier date."
+      },
+      {
+        "factor_name": "Potential resolution-source or archival edge case",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Only a missed official statement or unusual resolution interpretation keeps this from practical zero."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The only real counter-thesis is that a qualifying official end statement was made by the deadline and later reporting simply continued to describe the broader conflict in imprecise terms.",
+      "top_3_failure_reasons": [
+        "A qualifying official statement may exist in an archival source that broad news summaries did not foreground.",
+        "Polymarket may accept consensus reporting around an official statement even if it was not widely covered later.",
+        "Some later stories may use broad language like 'war' or 'operations' imprecisely even after a narrower mission was officially declared complete."
+      ],
+      "market_might_be_right_because": "In expired deadline markets, the only thing that matters is whether a qualifying statement technically existed before the cut-off.",
+      "thesis_invalidation_trigger": "Discovery of an official Trump/U.S. government/military announcement made on or before March 7th explicitly stating that the operations had concluded."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket rules page for the March 31 contract; Reuters of March 13, 2026 on Trump's 'when I feel it in my bones' remark; Reuters of March 18, 2026 on the Pentagon's request for more than $200 billion for the Iran war.",
+      "historical_precedents": "Wars sometimes end abruptly by political announcement, but public declarations of mission completion are often delayed when objectives remain fluid or contested.",
+      "institutional_constraints": "The market resolves Yes only if Trump, the U.S. government, or the military publicly and officially announce that military operations against Iran, initiated on February 28, 2026, have concluded by the listed date. Informal leaks do not count; official statements and/or consensus of credible reporting do.",
+      "timeline_recent": "As of March 13, Trump was saying the war would end 'when I feel it in my bones' rather than naming a hard date, and as of March 18 the Pentagon was seeking more than $200 billion for ongoing operations.",
+      "actors_and_incentives": "Trump has incentives to signal strength and flexibility rather than concede arbitrary deadlines; the Pentagon and military leadership have incentives to avoid declaring completion while major operational questions remain.",
+      "key_uncertainties": "Whether Trump prioritizes a quick declaratory victory, whether military conditions allow a real or rhetorical end-state, and whether the administration chooses an official end statement versus continued open-ended operations.",
+      "counterarguments": "Trump has previously implied the campaign could end soon, and a political declaration need not mean all regional tension disappears.",
+      "dominant_market_narrative": "The shortest deadlines look mostly dead, while later deadlines remain live because a political declaration of success can occur before every military or diplomatic issue is fully resolved."
+    }
+  },
+  {
+    "market_id": "BATCH-008-3",
+    "thesis_id": "BATCH-008-3-TH1",
+    "analysis_id": "BATCH-008-3-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:50:15Z",
+    "resolution_date": "2026-03-31T23:55:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contract is structurally clear and now almost entirely retrospective: the listed deadline has already passed, and the sourced reporting after that date still describes the war as ongoing rather than officially ended."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Past deadline already elapsed before analysis time for March 15th, in a war that Reuters still described as ongoing on March 13 and March 18, 2026.",
+      "base_rate_comment": "Minimum base rate. Once the deadline has passed and credible reporting still describes the military campaign as ongoing, only resolution-edge ambiguity, not political probability, keeps the number above literal zero."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "An official announcement ending military operations had to be made by the listed deadline",
+          "status": "not_filled",
+          "comment": "The deadline of March 15th is already past, and later reporting still refers to ongoing operations."
+        },
+        {
+          "name": "That official announcement had to be attributable to Trump, the U.S. government, or the military",
+          "status": "not_filled",
+          "comment": "No such official end announcement is reflected in the sources reviewed."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Resolution sources could still uncover an earlier qualifying official statement",
+          "status": "unknown",
+          "comment": "The only residual uncertainty is archival/resolution rather than forward-looking politics."
+        },
+        {
+          "name": "Consensus of credible reporting might identify a qualifying statement missed in surface reporting",
+          "status": "unknown",
+          "comment": "Possible in theory, but unsupported by the reviewed record."
+        },
+        {
+          "name": "Subsequent reporting continues to describe operations as ongoing",
+          "status": "filled",
+          "comment": "Reuters on March 13 and March 18 still described the war and military operations as ongoing."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Deadline already expired",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "This is the dominant structural fact for all four expired submarkets."
+      },
+      {
+        "factor_name": "Reuters still described operations as ongoing after the deadline",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "That is strong evidence against any qualifying official end announcement by the earlier date."
+      },
+      {
+        "factor_name": "Potential resolution-source or archival edge case",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Only a missed official statement or unusual resolution interpretation keeps this from practical zero."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The only real counter-thesis is that a qualifying official end statement was made by the deadline and later reporting simply continued to describe the broader conflict in imprecise terms.",
+      "top_3_failure_reasons": [
+        "A qualifying official statement may exist in an archival source that broad news summaries did not foreground.",
+        "Polymarket may accept consensus reporting around an official statement even if it was not widely covered later.",
+        "Some later stories may use broad language like 'war' or 'operations' imprecisely even after a narrower mission was officially declared complete."
+      ],
+      "market_might_be_right_because": "In expired deadline markets, the only thing that matters is whether a qualifying statement technically existed before the cut-off.",
+      "thesis_invalidation_trigger": "Discovery of an official Trump/U.S. government/military announcement made on or before March 15th explicitly stating that the operations had concluded."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket rules page for the March 31 contract; Reuters of March 13, 2026 on Trump's 'when I feel it in my bones' remark; Reuters of March 18, 2026 on the Pentagon's request for more than $200 billion for the Iran war.",
+      "historical_precedents": "Wars sometimes end abruptly by political announcement, but public declarations of mission completion are often delayed when objectives remain fluid or contested.",
+      "institutional_constraints": "The market resolves Yes only if Trump, the U.S. government, or the military publicly and officially announce that military operations against Iran, initiated on February 28, 2026, have concluded by the listed date. Informal leaks do not count; official statements and/or consensus of credible reporting do.",
+      "timeline_recent": "As of March 13, Trump was saying the war would end 'when I feel it in my bones' rather than naming a hard date, and as of March 18 the Pentagon was seeking more than $200 billion for ongoing operations.",
+      "actors_and_incentives": "Trump has incentives to signal strength and flexibility rather than concede arbitrary deadlines; the Pentagon and military leadership have incentives to avoid declaring completion while major operational questions remain.",
+      "key_uncertainties": "Whether Trump prioritizes a quick declaratory victory, whether military conditions allow a real or rhetorical end-state, and whether the administration chooses an official end statement versus continued open-ended operations.",
+      "counterarguments": "Trump has previously implied the campaign could end soon, and a political declaration need not mean all regional tension disappears.",
+      "dominant_market_narrative": "The shortest deadlines look mostly dead, while later deadlines remain live because a political declaration of success can occur before every military or diplomatic issue is fully resolved."
+    }
+  },
+  {
+    "market_id": "BATCH-008-4",
+    "thesis_id": "BATCH-008-4-TH1",
+    "analysis_id": "BATCH-008-4-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:50:15Z",
+    "resolution_date": "2026-03-31T23:55:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contract is clear and highly tradable. The key issue is whether Trump opts for a near-term political declaration of mission completion despite evidence that operations remain ongoing and expensive."
+    },
+    "base_rate": {
+      "base_rate_value": 0.12,
+      "base_rate_reference_class": "About twelve days remain from the analysis date to March 31, in a conflict Reuters still described as active and financially expanding as of March 18, 2026.",
+      "base_rate_comment": "Low but non-trivial base rate. Trump has personal latitude to declare success before every military objective is fully settled, but Reuters reporting on March 13 and March 18 points to continuing operations rather than an imminent formal end."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Trump or official U.S. channels must publicly announce that military operations against Iran have concluded by March 31",
+          "status": "partial",
+          "comment": "This is politically possible, but no such declaration existed in the sources reviewed as of March 19."
+        },
+        {
+          "name": "The administration must be willing to define the operation as ended despite ongoing regional instability",
+          "status": "partial",
+          "comment": "Trump can do this rhetorically, but the military and Pentagon context currently cut the other way."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Trump still wants a short, declaratory war timeline",
+          "status": "partial",
+          "comment": "He had earlier suggested roughly four to five weeks, but then shifted to a more discretionary standard."
+        },
+        {
+          "name": "The Pentagon and White House can align around an end-state announcement quickly",
+          "status": "partial",
+          "comment": "Possible in theory, but recent funding requests imply continued operations."
+        },
+        {
+          "name": "No new escalation forces an extension before March 31",
+          "status": "partial",
+          "comment": "A fresh escalation would sharply reduce the probability of an end announcement."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Trump previously implied the war could end relatively soon",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "The market is not irrational to keep a small March probability alive because Trump has suggested a short campaign in earlier remarks."
+      },
+      {
+        "factor_name": "Trump can define the end politically rather than operationally",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "A presidential announcement can come before every strategic issue is actually resolved."
+      },
+      {
+        "factor_name": "Reuters still described ongoing operations on March 13",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Trump said the war would end 'when I feel it in my bones,' which is not an end announcement."
+      },
+      {
+        "factor_name": "Pentagon seeking more than $200 billion for the war on March 18",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "That is a major signal that U.S. planning still assumes ongoing operations rather than imminent closure."
+      },
+      {
+        "factor_name": "Very short remaining timeline to March 31",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market can still be right if Trump prioritizes a political declaration of mission success before March 31, regardless of whether every military or diplomatic consequence is fully settled.",
+      "top_3_failure_reasons": [
+        "Trump may choose to define victory on his own terms and announce an end earlier than institutional analysts expect.",
+        "A short-horizon declaratory end does not require a durable regional peace, only an official statement that U.S. operations have concluded.",
+        "The market may understand Trump's rhetorical style better than conventional military-analysis models do."
+      ],
+      "market_might_be_right_because": "A presidential announcement standard can make end-of-operations markets resolve sooner than traditional war-analysis would suggest.",
+      "thesis_invalidation_trigger": "Official White House, Pentagon or Trump statement before March 31 explicitly saying U.S. military operations against Iran have concluded."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket rules page for the March 31 contract; Reuters of March 13, 2026 on Trump's 'when I feel it in my bones' remark; Reuters of March 18, 2026 on the Pentagon's request for more than $200 billion for the Iran war.",
+      "historical_precedents": "Wars sometimes end abruptly by political announcement, but public declarations of mission completion are often delayed when objectives remain fluid or contested.",
+      "institutional_constraints": "The market resolves Yes only if Trump, the U.S. government, or the military publicly and officially announce that military operations against Iran, initiated on February 28, 2026, have concluded by the listed date. Informal leaks do not count; official statements and/or consensus of credible reporting do.",
+      "timeline_recent": "As of March 13, Trump was saying the war would end 'when I feel it in my bones' rather than naming a hard date, and as of March 18 the Pentagon was seeking more than $200 billion for ongoing operations.",
+      "actors_and_incentives": "Trump has incentives to signal strength and flexibility rather than concede arbitrary deadlines; the Pentagon and military leadership have incentives to avoid declaring completion while major operational questions remain.",
+      "key_uncertainties": "Whether Trump prioritizes a quick declaratory victory, whether military conditions allow a real or rhetorical end-state, and whether the administration chooses an official end statement versus continued open-ended operations.",
+      "counterarguments": "Trump has previously implied the campaign could end soon, and a political declaration need not mean all regional tension disappears.",
+      "dominant_market_narrative": "The shortest deadlines look mostly dead, while later deadlines remain live because a political declaration of success can occur before every military or diplomatic issue is fully resolved."
+    }
+  },
+  {
+    "market_id": "BATCH-008-5",
+    "thesis_id": "BATCH-008-5-TH1",
+    "analysis_id": "BATCH-008-5-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:50:15Z",
+    "resolution_date": "2026-03-31T23:55:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contract is clear and meaningful. This deadline is long enough to permit a real or rhetorical end-of-operations announcement, but not so long that it becomes close to automatic."
+    },
+    "base_rate": {
+      "base_rate_value": 0.43,
+      "base_rate_reference_class": "Roughly six weeks remain from the analysis date to April 30, long enough for a political declaration of mission completion if the White House decides to frame operations as finite and successful.",
+      "base_rate_comment": "Moderate base rate. April 30 is plausibly the first window in which a politically defined mission-end announcement could arrive, but Reuters still shows ongoing war footing and no firm timetable."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Trump or official U.S. channels must announce that operations have concluded by April 30",
+          "status": "partial",
+          "comment": "Quite plausible on this horizon, but not yet signaled as the official plan."
+        },
+        {
+          "name": "The administration must see enough operational progress to justify a close-out message",
+          "status": "partial",
+          "comment": "An April declaration would likely require at least a plausible narrative of military objective completion."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Trump prefers a limited campaign rather than an open-ended war",
+          "status": "filled",
+          "comment": "His public rhetoric has favored flexibility and an eventual self-declared end rather than permanent escalation."
+        },
+        {
+          "name": "Congressional, fiscal or allied pressure pushes toward a defined end-state",
+          "status": "partial",
+          "comment": "The huge funding request and diplomatic criticism could increase pressure for closure."
+        },
+        {
+          "name": "Iranian or regional escalation does not reset the clock before late April",
+          "status": "partial",
+          "comment": "Still the biggest contextual risk."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Trump can announce an end on political criteria",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "The market is about an official announcement, not a fully verified end to all regional hostilities."
+      },
+      {
+        "factor_name": "Pressure to avoid a long costly war",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "The funding burden and criticism from multiple actors create incentives to define a stopping point."
+      },
+      {
+        "factor_name": "No fixed timeline publicly adopted yet",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "As of March 18 the Pentagon still plans for substantial ongoing operations",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "The budget request suggests the system is not yet acting as if the campaign is near formal conclusion."
+      },
+      {
+        "factor_name": "Potential for renewed escalation to delay any end announcement",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market may be right because April is the first deadline long enough for Trump to convert a fluid conflict into a declaratory victory narrative and formally say operations are over.",
+      "top_3_failure_reasons": [
+        "A political end announcement can happen before the strategic situation is fully normalized.",
+        "Budget pressure and diplomatic criticism may increase incentives to declare closure by late April.",
+        "The market may correctly infer that Trump dislikes the optics of an open-ended Iran war."
+      ],
+      "market_might_be_right_because": "This horizon aligns with a plausible White House decision to claim success and move from active operations to deterrence posture.",
+      "thesis_invalidation_trigger": "A late-March or early-April signaling package from Trump or the Pentagon emphasizing achieved objectives and transition out of active operations."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket rules page for the March 31 contract; Reuters of March 13, 2026 on Trump's 'when I feel it in my bones' remark; Reuters of March 18, 2026 on the Pentagon's request for more than $200 billion for the Iran war.",
+      "historical_precedents": "Wars sometimes end abruptly by political announcement, but public declarations of mission completion are often delayed when objectives remain fluid or contested.",
+      "institutional_constraints": "The market resolves Yes only if Trump, the U.S. government, or the military publicly and officially announce that military operations against Iran, initiated on February 28, 2026, have concluded by the listed date. Informal leaks do not count; official statements and/or consensus of credible reporting do.",
+      "timeline_recent": "As of March 13, Trump was saying the war would end 'when I feel it in my bones' rather than naming a hard date, and as of March 18 the Pentagon was seeking more than $200 billion for ongoing operations.",
+      "actors_and_incentives": "Trump has incentives to signal strength and flexibility rather than concede arbitrary deadlines; the Pentagon and military leadership have incentives to avoid declaring completion while major operational questions remain.",
+      "key_uncertainties": "Whether Trump prioritizes a quick declaratory victory, whether military conditions allow a real or rhetorical end-state, and whether the administration chooses an official end statement versus continued open-ended operations.",
+      "counterarguments": "Trump has previously implied the campaign could end soon, and a political declaration need not mean all regional tension disappears.",
+      "dominant_market_narrative": "The shortest deadlines look mostly dead, while later deadlines remain live because a political declaration of success can occur before every military or diplomatic issue is fully resolved."
+    }
+  },
+  {
+    "market_id": "BATCH-008-6",
+    "thesis_id": "BATCH-008-6-TH1",
+    "analysis_id": "BATCH-008-6-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:50:15Z",
+    "resolution_date": "2026-03-31T23:55:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contract is clear and currently the dominant market outcome. The question is not whether the war is short by military standards, but whether Trump formally declares U.S. operations over by the end of June."
+    },
+    "base_rate": {
+      "base_rate_value": 0.67,
+      "base_rate_reference_class": "More than three months remain from the analysis date to June 30, giving the administration ample time to pivot from active war footing to an official declaration that operations have concluded.",
+      "base_rate_comment": "High but not overwhelming base rate. June 30 is long enough for a Trump-style declaratory end-state to become likely, especially if the administration wants to avoid an indefinite costly war, but ongoing escalation and undefined objectives still matter."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Trump or official U.S. channels must announce the operations have concluded by June 30",
+          "status": "partial",
+          "comment": "This is highly plausible over a three-plus-month window, but still not certain as of March 19."
+        },
+        {
+          "name": "The administration must decide that announcing an end serves its political and strategic interests",
+          "status": "partial",
+          "comment": "That seems more likely over this horizon than on the March or April deadlines."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Trump continues to prefer a bounded war rather than an indefinite campaign",
+          "status": "filled",
+          "comment": "His rhetoric and political incentives point toward eventual declaratory closure rather than endless operations."
+        },
+        {
+          "name": "Military objectives become sufficiently claimable by late June",
+          "status": "partial",
+          "comment": "Not yet clear, but there is enough time for a plausible victory narrative to be assembled."
+        },
+        {
+          "name": "No fresh crisis forces a reset of the campaign near the deadline",
+          "status": "partial",
+          "comment": "This is the largest risk to the June Yes thesis."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Longest live horizon in the batch",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Time materially increases the chance that the administration eventually chooses to declare the mission concluded."
+      },
+      {
+        "factor_name": "Strong political incentive to avoid an open-ended war",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 2,
+        "factor_comment": "The cost, controversy and strategic drag of the Iran war all create pressure for a formal stop point."
+      },
+      {
+        "factor_name": "Trump can define completion politically, not only operationally",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "As of mid-March there is still no fixed end timetable",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Major escalation or prolonged Hormuz conflict could postpone any end announcement",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3,
+        "factor_comment": "A worsening regional picture could force the administration to keep the campaign open longer."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market may be right because by the end of June Trump is more likely than not to have found a politically convenient moment to say the military operation has concluded, even if deterrence and regional tensions continue.",
+      "top_3_failure_reasons": [
+        "The market may correctly separate an official end announcement from a full strategic settlement.",
+        "Three-plus months is enough time for Trump to claim mission success and pivot rhetorically.",
+        "Political, fiscal and diplomatic incentives all push toward a bounded conflict rather than an indefinite campaign."
+      ],
+      "market_might_be_right_because": "This is the cleanest horizon for a Trump-style declaration of closure that does not require total regional normalization.",
+      "thesis_invalidation_trigger": "Signals by late spring that objectives have expanded or that the administration is preparing for a longer war rather than a declaration of conclusion."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket rules page for the March 31 contract; Reuters of March 13, 2026 on Trump's 'when I feel it in my bones' remark; Reuters of March 18, 2026 on the Pentagon's request for more than $200 billion for the Iran war.",
+      "historical_precedents": "Wars sometimes end abruptly by political announcement, but public declarations of mission completion are often delayed when objectives remain fluid or contested.",
+      "institutional_constraints": "The market resolves Yes only if Trump, the U.S. government, or the military publicly and officially announce that military operations against Iran, initiated on February 28, 2026, have concluded by the listed date. Informal leaks do not count; official statements and/or consensus of credible reporting do.",
+      "timeline_recent": "As of March 13, Trump was saying the war would end 'when I feel it in my bones' rather than naming a hard date, and as of March 18 the Pentagon was seeking more than $200 billion for ongoing operations.",
+      "actors_and_incentives": "Trump has incentives to signal strength and flexibility rather than concede arbitrary deadlines; the Pentagon and military leadership have incentives to avoid declaring completion while major operational questions remain.",
+      "key_uncertainties": "Whether Trump prioritizes a quick declaratory victory, whether military conditions allow a real or rhetorical end-state, and whether the administration chooses an official end statement versus continued open-ended operations.",
+      "counterarguments": "Trump has previously implied the campaign could end soon, and a political declaration need not mean all regional tension disappears.",
+      "dominant_market_narrative": "The shortest deadlines look mostly dead, while later deadlines remain live because a political declaration of success can occur before every military or diplomatic issue is fully resolved."
+    }
+  }
+]

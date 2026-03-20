@@ -1,0 +1,1166 @@
+[
+  {
+    "market_id": "BATCH-002-1",
+    "thesis_id": "BATCH-002-1-TH1",
+    "analysis_id": "BATCH-002-1-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:40:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contrat clair et très liquide. La question centrale est de savoir si l'avance nationale de TISZA se convertit en plus grand nombre de sièges dans un système encore favorable à Fidesz."
+    },
+    "base_rate": {
+      "base_rate_value": 0.57,
+      "base_rate_reference_class": "Principal parti d'opposition menant dans les sondages à moins d'un mois du scrutin face à un parti dominant sortant, dans un système majoritaire-mixte.",
+      "base_rate_comment": "Base rate élevé sans être quasi certain. TISZA mène nettement dans plusieurs sondages récents, mais la conversion voix-sièges reste plus risquée qu'en proportionnelle pure."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "TISZA doit conserver son avance jusqu'au jour du vote",
+          "status": "filled",
+          "comment": "Les derniers sondages publics crédibles le placent devant Fidesz."
+        },
+        {
+          "name": "L'avance nationale doit se traduire en plus grand nombre de sièges",
+          "status": "partial",
+          "comment": "C'est plausible mais le système électoral hongrois peut sur-récompenser le parti dominant territorialement."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Le vote utile d'opposition reste concentré sur TISZA",
+          "status": "filled",
+          "comment": "Les autres partis d'opposition sont très affaiblis et certains acteurs ont appelé à soutenir TISZA."
+        },
+        {
+          "name": "Les indécis ne se déplacent pas massivement vers Fidesz",
+          "status": "partial",
+          "comment": "Un volant d'indécis subsiste."
+        },
+        {
+          "name": "Les ressources institutionnelles de Fidesz ne compensent pas l'écart de popularité",
+          "status": "partial",
+          "comment": "C'est le principal risque résiduel contre TISZA."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "TISZA mène dans plusieurs sondages récents",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Reuters rapportait encore début et mi-mars une avance nette de TISZA sur Fidesz."
+      },
+      {
+        "factor_name": "Concentration du vote anti-Orbán autour de TISZA",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Le paysage d'opposition s'est reconfiguré autour de Péter Magyar et de son parti."
+      },
+      {
+        "factor_name": "Momentum de campagne visible dans les grandes mobilisations",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Avantage structurel de Fidesz dans la mécanique des sièges",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le système et la géographie électorale peuvent réduire l'effet d'une avance nationale de TISZA."
+      },
+      {
+        "factor_name": "Part élevée d'indécis encore présents",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Contrôle médiatique et territorial persistant de Fidesz",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut sous-estimer la capacité de Fidesz à transformer un retard en voix en avantage en sièges grâce à son implantation territoriale et aux effets du système électoral.",
+      "top_3_failure_reasons": [
+        "L'avance de TISZA dans les sondages peut être réelle en voix mais insuffisante en sièges.",
+        "Les indécis peuvent se rallier plus tardivement à Fidesz qu'attendu.",
+        "Les instruments institutionnels et médiatiques de Fidesz peuvent encore modifier la conversion finale du vote."
+      ],
+      "market_might_be_right_because": "Les sources publiques les plus récentes placent bien TISZA comme premier parti probable en voix et potentiellement en sièges.",
+      "thesis_invalidation_trigger": "Nouveaux sondages crédibles montrant Fidesz revenu à parité ou devant, ou projections sérieuses donnant Fidesz premier en sièges."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 4, 11 et 15 mars 2026 ; AP des 13 et 15 mars 2026.",
+      "historical_precedents": "Les oppositions tardivement consolidées peuvent finir premières, mais dans des systèmes mixtes la conversion sièges peut diverger des voix.",
+      "institutional_constraints": "Le marché résout sur le parti ou la coalition obtenant le plus grand nombre de sièges, avec départage par votes valides si nécessaire.",
+      "timeline_recent": "TISZA reste devant Fidesz dans plusieurs sondages à un mois du vote.",
+      "actors_and_incentives": "TISZA veut agréger le vote de changement ; Fidesz veut transformer l'élection en référendum sur sécurité et souveraineté.",
+      "key_uncertainties": "Conversion voix-sièges, comportement des indécis, efficacité finale de la machine Fidesz.",
+      "counterarguments": "Le système électoral et la domination territoriale de Fidesz peuvent encore inverser le résultat en sièges.",
+      "dominant_market_narrative": "TISZA est le favori principal pour finir premier en sièges, mais sans certitude écrasante."
+    }
+  },
+  {
+    "market_id": "BATCH-002-19",
+    "thesis_id": "BATCH-002-19-TH1",
+    "analysis_id": "BATCH-002-19-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:40:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contrat très liquide et bien défini. La vraie question est si Fidesz peut convertir son appareil institutionnel en première place en sièges malgré son retard dans plusieurs sondages."
+    },
+    "base_rate": {
+      "base_rate_value": 0.35,
+      "base_rate_reference_class": "Coalition sortante dominante disposant d'un appareil d'Etat puissant mais abordant l'élection en retard dans des sondages récents.",
+      "base_rate_comment": "Base rate substantiel car Fidesz garde un avantage structurel inhabituel pour un parti au pouvoir, mais inférieur à 50% car TISZA mène dans les enquêtes publiques les plus crédibles."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Fidesz–KDNP doit combler ou compenser son retard national en sièges",
+          "status": "partial",
+          "comment": "C'est possible, mais non central dans les derniers sondages indépendants."
+        },
+        {
+          "name": "La coalition Fidesz–KDNP doit rester unie et compétitive jusqu'au scrutin",
+          "status": "filled",
+          "comment": "Aucun signe de rupture interne significative n'a été identifié."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "L'implantation territoriale de Fidesz produit un bonus en circonscriptions",
+          "status": "filled",
+          "comment": "C'est l'un de ses principaux atouts structurels."
+        },
+        {
+          "name": "Les indécis se déplacent en fin de campagne vers le pouvoir sortant",
+          "status": "partial",
+          "comment": "Possible mais non confirmé par les derniers chiffres disponibles."
+        },
+        {
+          "name": "Les sondages indépendants sous-estiment réellement Fidesz",
+          "status": "partial",
+          "comment": "Argument avancé par le camp gouvernemental, mais non démontré publiquement."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Appareil institutionnel et médiatique de Fidesz",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Fidesz conserve un avantage organisationnel et territorial que TISZA n'a pas encore totalement neutralisé."
+      },
+      {
+        "factor_name": "Potentiel bonus en sièges lié au système électoral",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Même en étant derrière en voix, Fidesz peut rester compétitif pour finir premier en sièges."
+      },
+      {
+        "factor_name": "Base rurale et fidélité du noyau dur",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "TISZA mène dans les sondages indépendants récents",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les derniers sondages largement cités montrent Fidesz derrière TISZA."
+      },
+      {
+        "factor_name": "Usure du pouvoir après seize ans",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Concentration croissante du vote anti-Fidesz",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut sous-estimer Fidesz parce que le système électoral hongrois et la géographie du vote favorisent encore le parti au pouvoir davantage que ne le reflètent des sondages nationaux.",
+      "top_3_failure_reasons": [
+        "Les projections basées sur les sondages peuvent sous-estimer le bonus en sièges de Fidesz.",
+        "Les indécis peuvent se rallier au pouvoir plus fortement en fin de campagne.",
+        "Le vote utile anti-Orbán peut être moins discipliné territorialement qu'attendu."
+      ],
+      "market_might_be_right_because": "Fidesz reste une coalition extrêmement puissante et structurellement bien placée pour finir première en sièges même en période difficile.",
+      "thesis_invalidation_trigger": "Sondages convergents et projections de sièges montrant TISZA devant de manière robuste, y compris après prise en compte des biais de système."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 4, 11 et 15 mars 2026 ; AP des 13 et 15 mars 2026.",
+      "historical_precedents": "Les partis sortants très enracinés peuvent surperformer les sondages en sièges, surtout dans des systèmes mixtes et fortement personnalisés.",
+      "institutional_constraints": "La résolution se fait sur le plus grand nombre de sièges, pas sur la seule première place en voix.",
+      "timeline_recent": "Fidesz reste derrière TISZA dans plusieurs sondages, mais continue d'afficher une forte présence organisationnelle.",
+      "actors_and_incentives": "Orbán veut conserver le pouvoir en misant sur la sécurité, la souveraineté et la peur d'un changement d'alignement géopolitique.",
+      "key_uncertainties": "Ampleur du bonus de sièges, comportement des indécis, robustesse réelle des sondages indépendants.",
+      "counterarguments": "L'usure du pouvoir et la consolidation de l'opposition peuvent être cette fois suffisantes pour faire tomber Fidesz en sièges aussi.",
+      "dominant_market_narrative": "Fidesz est le principal challenger de TISZA, avec une vraie chance résiduelle mais non favorite."
+    }
+  },
+  {
+    "market_id": "BATCH-002-0",
+    "thesis_id": "BATCH-002-0-TH1",
+    "analysis_id": "BATCH-002-0-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:40:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal. Le parti existe politiquement mais aucune trajectoire publique sérieuse ne le place en tête en sièges du prochain Parlement."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Parti d'opposition secondaire historiquement important mais désormais dépassé par TISZA comme véhicule principal du vote anti-Orbán.",
+      "base_rate_comment": "Base rate minimal autorisé par le protocole. Dans une élection polarisée autour de deux blocs, un parti secondaire sans dynamique nationale n'a pratiquement aucune trajectoire réaliste vers la première place en sièges."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "DK doit franchir ou retrouver un niveau électoral national compétitif",
+          "status": "not_filled",
+          "comment": "Aucune donnée récente ne montre DK à un niveau compatible avec la première place en sièges."
+        },
+        {
+          "name": "DK doit dépasser simultanément TISZA et Fidesz",
+          "status": "not_filled",
+          "comment": "Condition structurellement absente du dossier public actuel."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "DK conserve une existence politique ou organisationnelle identifiable",
+          "status": "filled",
+          "comment": "Le parti ou la marque existe encore publiquement."
+        },
+        {
+          "name": "Le système devient beaucoup plus fragmenté qu'attendu",
+          "status": "unknown",
+          "comment": "Un chaos électoral pourrait théoriquement augmenter de très petites probabilités, sans soutien public sérieux aujourd'hui."
+        },
+        {
+          "name": "DK retrouve un vote utile propre",
+          "status": "not_filled",
+          "comment": "La logique actuelle du vote utile se concentre ailleurs."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Structure partisane historique et notoriété",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Election structurée autour du duel TISZA-Fidesz",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La quasi-totalité de la probabilité réelle de première place en sièges est absorbée par les deux blocs dominants."
+      },
+      {
+        "factor_name": "Absence de dynamique nationale crédible pour DK",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Aucune source récente crédible ne présente DK comme candidat plausible à la première place en sièges."
+      },
+      {
+        "factor_name": "Vote utile pénalisant les petits partis",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "DK ne peut devenir pertinent qu'en cas d'effondrement simultané des deux blocs dominants ou de fragmentation extrême rendant possible une surprise électorale hors consensus.",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent parfois écraser à zéro des scénarios juridiquement possibles mais rarissimes.",
+        "Une fragmentation ou un choc de campagne très atypique pourrait redistribuer plus fortement les voix que prévu.",
+        "DK peut disposer d'une résilience organisationnelle sous-estimée par les traders."
+      ],
+      "market_might_be_right_because": "DK conserve au moins une existence politique identifiable, ce qui justifie une probabilité minimale non nulle.",
+      "thesis_invalidation_trigger": "Sondages crédibles montrant une remontée nationale significative de DK ou effondrement simultané de TISZA et de Fidesz."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 4, 11 et 15 mars 2026 ; AP du 13 janvier et du 15 mars 2026.",
+      "historical_precedents": "Les petits partis peuvent survivre parlementairement, mais presque jamais finir premiers dans une élection polarisée par deux grands blocs.",
+      "institutional_constraints": "Le marché résout sur le plus grand nombre de sièges remportés par le parti ou la coalition nommée.",
+      "timeline_recent": "La campagne hongroise est dominée par TISZA et Fidesz ; les autres partis sont périphériques.",
+      "actors_and_incentives": "DK cherche surtout à préserver sa survie politique ou son poids marginal, pas à émerger comme force dominante.",
+      "key_uncertainties": "Niveau réel de fragmentation du vote, survie parlementaire éventuelle, chocs de campagne non anticipés.",
+      "counterarguments": "Les surprises électorales existent toujours en théorie, surtout quand des marchés concentrent fortement la probabilité sur peu d'issues.",
+      "dominant_market_narrative": "DK n'est pas considéré comme un scénario réel pour finir premier en sièges."
+    }
+  },
+  {
+    "market_id": "BATCH-002-12",
+    "thesis_id": "BATCH-002-12-TH1",
+    "analysis_id": "BATCH-002-12-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:40:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal. Le parti existe politiquement mais aucune trajectoire publique sérieuse ne le place en tête en sièges du prochain Parlement."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Petit parti libéral d'opposition éclipsé par la montée de TISZA et par la logique de vote utile.",
+      "base_rate_comment": "Base rate minimal autorisé par le protocole. Dans une élection polarisée autour de deux blocs, un parti secondaire sans dynamique nationale n'a pratiquement aucune trajectoire réaliste vers la première place en sièges."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Momentum doit franchir ou retrouver un niveau électoral national compétitif",
+          "status": "not_filled",
+          "comment": "Aucune donnée récente ne montre Momentum à un niveau compatible avec la première place en sièges."
+        },
+        {
+          "name": "Momentum doit dépasser simultanément TISZA et Fidesz",
+          "status": "not_filled",
+          "comment": "Condition structurellement absente du dossier public actuel."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Momentum conserve une existence politique ou organisationnelle identifiable",
+          "status": "filled",
+          "comment": "Le parti ou la marque existe encore publiquement."
+        },
+        {
+          "name": "Le système devient beaucoup plus fragmenté qu'attendu",
+          "status": "unknown",
+          "comment": "Un chaos électoral pourrait théoriquement augmenter de très petites probabilités, sans soutien public sérieux aujourd'hui."
+        },
+        {
+          "name": "Momentum retrouve un vote utile propre",
+          "status": "not_filled",
+          "comment": "La logique actuelle du vote utile se concentre ailleurs."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Marque politique encore identifiable",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Election structurée autour du duel TISZA-Fidesz",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La quasi-totalité de la probabilité réelle de première place en sièges est absorbée par les deux blocs dominants."
+      },
+      {
+        "factor_name": "Absence de dynamique nationale crédible pour Momentum",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Aucune source récente crédible ne présente Momentum comme candidat plausible à la première place en sièges."
+      },
+      {
+        "factor_name": "Vote utile pénalisant les petits partis",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Momentum ne peut devenir pertinent qu'en cas d'effondrement simultané des deux blocs dominants ou de fragmentation extrême rendant possible une surprise électorale hors consensus.",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent parfois écraser à zéro des scénarios juridiquement possibles mais rarissimes.",
+        "Une fragmentation ou un choc de campagne très atypique pourrait redistribuer plus fortement les voix que prévu.",
+        "Momentum peut disposer d'une résilience organisationnelle sous-estimée par les traders."
+      ],
+      "market_might_be_right_because": "Momentum conserve au moins une existence politique identifiable, ce qui justifie une probabilité minimale non nulle.",
+      "thesis_invalidation_trigger": "Sondages crédibles montrant une remontée nationale significative de Momentum ou effondrement simultané de TISZA et de Fidesz."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 4, 11 et 15 mars 2026 ; AP du 13 janvier et du 15 mars 2026.",
+      "historical_precedents": "Les petits partis peuvent survivre parlementairement, mais presque jamais finir premiers dans une élection polarisée par deux grands blocs.",
+      "institutional_constraints": "Le marché résout sur le plus grand nombre de sièges remportés par le parti ou la coalition nommée.",
+      "timeline_recent": "La campagne hongroise est dominée par TISZA et Fidesz ; les autres partis sont périphériques.",
+      "actors_and_incentives": "Momentum cherche surtout à préserver sa survie politique ou son poids marginal, pas à émerger comme force dominante.",
+      "key_uncertainties": "Niveau réel de fragmentation du vote, survie parlementaire éventuelle, chocs de campagne non anticipés.",
+      "counterarguments": "Les surprises électorales existent toujours en théorie, surtout quand des marchés concentrent fortement la probabilité sur peu d'issues.",
+      "dominant_market_narrative": "Momentum n'est pas considéré comme un scénario réel pour finir premier en sièges."
+    }
+  },
+  {
+    "market_id": "BATCH-002-2",
+    "thesis_id": "BATCH-002-2-TH1",
+    "analysis_id": "BATCH-002-2-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:40:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal. Le parti existe politiquement mais aucune trajectoire publique sérieuse ne le place en tête en sièges du prochain Parlement."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Petit parti écologiste sans dynamique nationale récente compatible avec la première place.",
+      "base_rate_comment": "Base rate minimal autorisé par le protocole. Dans une élection polarisée autour de deux blocs, un parti secondaire sans dynamique nationale n'a pratiquement aucune trajectoire réaliste vers la première place en sièges."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "LMP doit franchir ou retrouver un niveau électoral national compétitif",
+          "status": "not_filled",
+          "comment": "Aucune donnée récente ne montre LMP à un niveau compatible avec la première place en sièges."
+        },
+        {
+          "name": "LMP doit dépasser simultanément TISZA et Fidesz",
+          "status": "not_filled",
+          "comment": "Condition structurellement absente du dossier public actuel."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "LMP conserve une existence politique ou organisationnelle identifiable",
+          "status": "filled",
+          "comment": "Le parti ou la marque existe encore publiquement."
+        },
+        {
+          "name": "Le système devient beaucoup plus fragmenté qu'attendu",
+          "status": "unknown",
+          "comment": "Un chaos électoral pourrait théoriquement augmenter de très petites probabilités, sans soutien public sérieux aujourd'hui."
+        },
+        {
+          "name": "LMP retrouve un vote utile propre",
+          "status": "not_filled",
+          "comment": "La logique actuelle du vote utile se concentre ailleurs."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Existence de marque électorale",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Election structurée autour du duel TISZA-Fidesz",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La quasi-totalité de la probabilité réelle de première place en sièges est absorbée par les deux blocs dominants."
+      },
+      {
+        "factor_name": "Absence de dynamique nationale crédible pour LMP",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Aucune source récente crédible ne présente LMP comme candidat plausible à la première place en sièges."
+      },
+      {
+        "factor_name": "Vote utile pénalisant les petits partis",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "LMP ne peut devenir pertinent qu'en cas d'effondrement simultané des deux blocs dominants ou de fragmentation extrême rendant possible une surprise électorale hors consensus.",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent parfois écraser à zéro des scénarios juridiquement possibles mais rarissimes.",
+        "Une fragmentation ou un choc de campagne très atypique pourrait redistribuer plus fortement les voix que prévu.",
+        "LMP peut disposer d'une résilience organisationnelle sous-estimée par les traders."
+      ],
+      "market_might_be_right_because": "LMP conserve au moins une existence politique identifiable, ce qui justifie une probabilité minimale non nulle.",
+      "thesis_invalidation_trigger": "Sondages crédibles montrant une remontée nationale significative de LMP ou effondrement simultané de TISZA et de Fidesz."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 4, 11 et 15 mars 2026 ; AP du 13 janvier et du 15 mars 2026.",
+      "historical_precedents": "Les petits partis peuvent survivre parlementairement, mais presque jamais finir premiers dans une élection polarisée par deux grands blocs.",
+      "institutional_constraints": "Le marché résout sur le plus grand nombre de sièges remportés par le parti ou la coalition nommée.",
+      "timeline_recent": "La campagne hongroise est dominée par TISZA et Fidesz ; les autres partis sont périphériques.",
+      "actors_and_incentives": "LMP cherche surtout à préserver sa survie politique ou son poids marginal, pas à émerger comme force dominante.",
+      "key_uncertainties": "Niveau réel de fragmentation du vote, survie parlementaire éventuelle, chocs de campagne non anticipés.",
+      "counterarguments": "Les surprises électorales existent toujours en théorie, surtout quand des marchés concentrent fortement la probabilité sur peu d'issues.",
+      "dominant_market_narrative": "LMP n'est pas considéré comme un scénario réel pour finir premier en sièges."
+    }
+  },
+  {
+    "market_id": "BATCH-002-11",
+    "thesis_id": "BATCH-002-11-TH1",
+    "analysis_id": "BATCH-002-11-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:40:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal. Le parti existe politiquement mais aucune trajectoire publique sérieuse ne le place en tête en sièges du prochain Parlement."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Ancien grand parti de centre-gauche devenu formation résiduelle dans une opposition désormais dominée par TISZA.",
+      "base_rate_comment": "Base rate minimal. Même si MSZP a historiquement dominé la gauche hongroise, sa position actuelle est trop faible pour rendre crédible une première place en sièges en 2026."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "MSZP doit franchir ou retrouver un niveau électoral national compétitif",
+          "status": "not_filled",
+          "comment": "Aucune donnée récente ne montre MSZP à un niveau compatible avec la première place en sièges."
+        },
+        {
+          "name": "MSZP doit dépasser simultanément TISZA et Fidesz",
+          "status": "not_filled",
+          "comment": "Condition structurellement absente du dossier public actuel."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "MSZP conserve une existence politique ou organisationnelle identifiable",
+          "status": "filled",
+          "comment": "Le parti ou la marque existe encore publiquement."
+        },
+        {
+          "name": "Le système devient beaucoup plus fragmenté qu'attendu",
+          "status": "unknown",
+          "comment": "Un chaos électoral pourrait théoriquement augmenter de très petites probabilités, sans soutien public sérieux aujourd'hui."
+        },
+        {
+          "name": "MSZP retrouve un vote utile propre",
+          "status": "not_filled",
+          "comment": "La logique actuelle du vote utile se concentre ailleurs."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Héritage organisationnel et historique",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Election structurée autour du duel TISZA-Fidesz",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La quasi-totalité de la probabilité réelle de première place en sièges est absorbée par les deux blocs dominants."
+      },
+      {
+        "factor_name": "Absence de dynamique nationale crédible pour MSZP",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Aucune source récente crédible ne présente MSZP comme candidat plausible à la première place en sièges."
+      },
+      {
+        "factor_name": "Vote utile pénalisant les petits partis",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "MSZP ne peut devenir pertinent qu'en cas d'effondrement simultané des deux blocs dominants ou de fragmentation extrême rendant possible une surprise électorale hors consensus.",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent parfois écraser à zéro des scénarios juridiquement possibles mais rarissimes.",
+        "Une fragmentation ou un choc de campagne très atypique pourrait redistribuer plus fortement les voix que prévu.",
+        "MSZP peut disposer d'une résilience organisationnelle sous-estimée par les traders."
+      ],
+      "market_might_be_right_because": "MSZP conserve au moins une existence politique identifiable, ce qui justifie une probabilité minimale non nulle.",
+      "thesis_invalidation_trigger": "Sondages crédibles montrant une remontée nationale significative de MSZP ou effondrement simultané de TISZA et de Fidesz."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 4, 11 et 15 mars 2026 ; AP du 13 janvier et du 15 mars 2026.",
+      "historical_precedents": "Les petits partis peuvent survivre parlementairement, mais presque jamais finir premiers dans une élection polarisée par deux grands blocs.",
+      "institutional_constraints": "Le marché résout sur le plus grand nombre de sièges remportés par le parti ou la coalition nommée.",
+      "timeline_recent": "La campagne hongroise est dominée par TISZA et Fidesz ; les autres partis sont périphériques.",
+      "actors_and_incentives": "MSZP cherche surtout à préserver sa survie politique ou son poids marginal, pas à émerger comme force dominante.",
+      "key_uncertainties": "Niveau réel de fragmentation du vote, survie parlementaire éventuelle, chocs de campagne non anticipés.",
+      "counterarguments": "Les surprises électorales existent toujours en théorie, surtout quand des marchés concentrent fortement la probabilité sur peu d'issues.",
+      "dominant_market_narrative": "MSZP n'est pas considéré comme un scénario réel pour finir premier en sièges."
+    }
+  },
+  {
+    "market_id": "BATCH-002-13",
+    "thesis_id": "BATCH-002-13-TH1",
+    "analysis_id": "BATCH-002-13-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:40:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat marginal mais un peu plus sérieux que les autres micro-issues : Mi Hazánk semble pouvoir franchir le seuil parlementaire, sans trajectoire réaliste vers la première place."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Parti tiers radical susceptible d'entrer au Parlement mais très loin des deux blocs dominants dans les intentions de vote.",
+      "base_rate_comment": "Base rate minimal. Le fait d'être potentiellement troisième et d'entrer au Parlement n'approche pas la condition de finir premier en sièges."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Mi Hazánk doit dépasser simultanément TISZA et Fidesz",
+          "status": "not_filled",
+          "comment": "Aucune enquête récente ne suggère une telle trajectoire."
+        },
+        {
+          "name": "Sa progression doit dépasser le simple franchissement du seuil",
+          "status": "not_filled",
+          "comment": "Le dossier public actuel concerne seulement son accès probable au Parlement."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Mi Hazánk franchit le seuil parlementaire",
+          "status": "filled",
+          "comment": "Reuters le présente comme le seul autre parti probablement au-dessus de 5%."
+        },
+        {
+          "name": "Le scrutin se fragmente davantage qu'attendu",
+          "status": "partial",
+          "comment": "Possible mais pas suffisant à lui seul pour produire une première place."
+        },
+        {
+          "name": "Le parti capte un basculement protestataire massif",
+          "status": "not_filled",
+          "comment": "Aucun signal crédible en ce sens."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Probable entrée au Parlement",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "C'est le seul petit parti régulièrement mentionné comme au-dessus du seuil."
+      },
+      {
+        "factor_name": "Visibilité croissante dans certains sondages",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Duel TISZA-Fidesz absorbant la compétition pour la première place",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Même en troisième position, Mi Hazánk reste très loin de la première place probable en sièges."
+      },
+      {
+        "factor_name": "Niveau de soutien encore très bas en valeur absolue",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les sondages crédibles le situent autour de 6-7% parmi les décidés, très loin d'un score dominant."
+      },
+      {
+        "factor_name": "Vote utile comprimant l'espace des partis tiers",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Mi Hazánk ne pourrait devenir pertinent qu'en cas d'effondrement simultané de TISZA et Fidesz avec fragmentation extrême du système, scénario très atypique mais juridiquement possible.",
+      "top_3_failure_reasons": [
+        "Une surprise de campagne peut parfois redistribuer fortement le vote protestataire.",
+        "Les marchés peuvent sous-pricer les petites probabilités de configurations chaotiques.",
+        "L'attention portée au duel principal peut masquer une progression plus forte qu'attendu d'un parti radical tiers."
+      ],
+      "market_might_be_right_because": "Mi Hazánk est au moins identifié comme probable entrant au Parlement, ce qui justifie une probabilité minimale non nulle.",
+      "thesis_invalidation_trigger": "Sondages crédibles montrant Mi Hazánk dans une dynamique de double-digit élevée et effondrement simultané des deux grands blocs."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 4 et du 11 mars 2026.",
+      "historical_precedents": "Les petits partis radicaux peuvent devenir charnières, mais presque jamais premiers en sièges sans bouleversement systémique.",
+      "institutional_constraints": "Résolution sur le plus grand nombre de sièges au Parlement national.",
+      "timeline_recent": "Mi Hazánk apparaît comme le seul autre parti susceptible de franchir le seuil parlementaire.",
+      "actors_and_incentives": "Le parti cherche surtout à sécuriser une représentation et un rôle d'appoint, pas une domination électorale.",
+      "key_uncertainties": "Amplitude réelle de son vote protestataire, niveau final de fragmentation du Parlement.",
+      "counterarguments": "Un climat électoral très chaotique peut parfois favoriser une poussée plus forte des partis radicaux.",
+      "dominant_market_narrative": "Mi Hazánk peut entrer au Parlement mais n'est pas un scénario sérieux pour la première place."
+    }
+  },
+  {
+    "market_id": "BATCH-002-20",
+    "thesis_id": "BATCH-002-20-TH1",
+    "analysis_id": "BATCH-002-20-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:40:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal. Le parti existe politiquement mais aucune trajectoire publique sérieuse ne le place en tête en sièges du prochain Parlement."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Petit parti allié/écologiste sans base nationale autonome suffisante pour viser la première place.",
+      "base_rate_comment": "Base rate minimal autorisé par le protocole. Dans une élection polarisée autour de deux blocs, un parti secondaire sans dynamique nationale n'a pratiquement aucune trajectoire réaliste vers la première place en sièges."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Párbeszéd doit franchir ou retrouver un niveau électoral national compétitif",
+          "status": "not_filled",
+          "comment": "Aucune donnée récente ne montre Párbeszéd à un niveau compatible avec la première place en sièges."
+        },
+        {
+          "name": "Párbeszéd doit dépasser simultanément TISZA et Fidesz",
+          "status": "not_filled",
+          "comment": "Condition structurellement absente du dossier public actuel."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Párbeszéd conserve une existence politique ou organisationnelle identifiable",
+          "status": "filled",
+          "comment": "Le parti ou la marque existe encore publiquement."
+        },
+        {
+          "name": "Le système devient beaucoup plus fragmenté qu'attendu",
+          "status": "unknown",
+          "comment": "Un chaos électoral pourrait théoriquement augmenter de très petites probabilités, sans soutien public sérieux aujourd'hui."
+        },
+        {
+          "name": "Párbeszéd retrouve un vote utile propre",
+          "status": "not_filled",
+          "comment": "La logique actuelle du vote utile se concentre ailleurs."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Existence de marque politique",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Election structurée autour du duel TISZA-Fidesz",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La quasi-totalité de la probabilité réelle de première place en sièges est absorbée par les deux blocs dominants."
+      },
+      {
+        "factor_name": "Absence de dynamique nationale crédible pour Párbeszéd",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Aucune source récente crédible ne présente Párbeszéd comme candidat plausible à la première place en sièges."
+      },
+      {
+        "factor_name": "Vote utile pénalisant les petits partis",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Párbeszéd ne peut devenir pertinent qu'en cas d'effondrement simultané des deux blocs dominants ou de fragmentation extrême rendant possible une surprise électorale hors consensus.",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent parfois écraser à zéro des scénarios juridiquement possibles mais rarissimes.",
+        "Une fragmentation ou un choc de campagne très atypique pourrait redistribuer plus fortement les voix que prévu.",
+        "Párbeszéd peut disposer d'une résilience organisationnelle sous-estimée par les traders."
+      ],
+      "market_might_be_right_because": "Párbeszéd conserve au moins une existence politique identifiable, ce qui justifie une probabilité minimale non nulle.",
+      "thesis_invalidation_trigger": "Sondages crédibles montrant une remontée nationale significative de Párbeszéd ou effondrement simultané de TISZA et de Fidesz."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 4, 11 et 15 mars 2026 ; AP du 13 janvier et du 15 mars 2026.",
+      "historical_precedents": "Les petits partis peuvent survivre parlementairement, mais presque jamais finir premiers dans une élection polarisée par deux grands blocs.",
+      "institutional_constraints": "Le marché résout sur le plus grand nombre de sièges remportés par le parti ou la coalition nommée.",
+      "timeline_recent": "La campagne hongroise est dominée par TISZA et Fidesz ; les autres partis sont périphériques.",
+      "actors_and_incentives": "Párbeszéd cherche surtout à préserver sa survie politique ou son poids marginal, pas à émerger comme force dominante.",
+      "key_uncertainties": "Niveau réel de fragmentation du vote, survie parlementaire éventuelle, chocs de campagne non anticipés.",
+      "counterarguments": "Les surprises électorales existent toujours en théorie, surtout quand des marchés concentrent fortement la probabilité sur peu d'issues.",
+      "dominant_market_narrative": "Párbeszéd n'est pas considéré comme un scénario réel pour finir premier en sièges."
+    }
+  },
+  {
+    "market_id": "BATCH-002-21",
+    "thesis_id": "BATCH-002-21-TH1",
+    "analysis_id": "BATCH-002-21-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:40:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal. Le parti existe politiquement mais aucune trajectoire publique sérieuse ne le place en tête en sièges du prochain Parlement."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Ancien grand parti d'opposition radicale aujourd'hui marginalisé après éclatement et concurrence de TISZA et de Mi Hazánk.",
+      "base_rate_comment": "Base rate minimal. Jobbik a eu une importance historique, mais sa position actuelle est trop faible pour rendre crédible une première place en sièges en 2026."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Jobbik doit franchir ou retrouver un niveau électoral national compétitif",
+          "status": "not_filled",
+          "comment": "Aucune donnée récente ne montre Jobbik à un niveau compatible avec la première place en sièges."
+        },
+        {
+          "name": "Jobbik doit dépasser simultanément TISZA et Fidesz",
+          "status": "not_filled",
+          "comment": "Condition structurellement absente du dossier public actuel."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Jobbik conserve une existence politique ou organisationnelle identifiable",
+          "status": "filled",
+          "comment": "Le parti ou la marque existe encore publiquement."
+        },
+        {
+          "name": "Le système devient beaucoup plus fragmenté qu'attendu",
+          "status": "unknown",
+          "comment": "Un chaos électoral pourrait théoriquement augmenter de très petites probabilités, sans soutien public sérieux aujourd'hui."
+        },
+        {
+          "name": "Jobbik retrouve un vote utile propre",
+          "status": "not_filled",
+          "comment": "La logique actuelle du vote utile se concentre ailleurs."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Notoriété historique du nom Jobbik",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Election structurée autour du duel TISZA-Fidesz",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La quasi-totalité de la probabilité réelle de première place en sièges est absorbée par les deux blocs dominants."
+      },
+      {
+        "factor_name": "Absence de dynamique nationale crédible pour Jobbik",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Aucune source récente crédible ne présente Jobbik comme candidat plausible à la première place en sièges."
+      },
+      {
+        "factor_name": "Vote utile pénalisant les petits partis",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Jobbik ne peut devenir pertinent qu'en cas d'effondrement simultané des deux blocs dominants ou de fragmentation extrême rendant possible une surprise électorale hors consensus.",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent parfois écraser à zéro des scénarios juridiquement possibles mais rarissimes.",
+        "Une fragmentation ou un choc de campagne très atypique pourrait redistribuer plus fortement les voix que prévu.",
+        "Jobbik peut disposer d'une résilience organisationnelle sous-estimée par les traders."
+      ],
+      "market_might_be_right_because": "Jobbik conserve au moins une existence politique identifiable, ce qui justifie une probabilité minimale non nulle.",
+      "thesis_invalidation_trigger": "Sondages crédibles montrant une remontée nationale significative de Jobbik ou effondrement simultané de TISZA et de Fidesz."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 4, 11 et 15 mars 2026 ; AP du 13 janvier et du 15 mars 2026.",
+      "historical_precedents": "Les petits partis peuvent survivre parlementairement, mais presque jamais finir premiers dans une élection polarisée par deux grands blocs.",
+      "institutional_constraints": "Le marché résout sur le plus grand nombre de sièges remportés par le parti ou la coalition nommée.",
+      "timeline_recent": "La campagne hongroise est dominée par TISZA et Fidesz ; les autres partis sont périphériques.",
+      "actors_and_incentives": "Jobbik cherche surtout à préserver sa survie politique ou son poids marginal, pas à émerger comme force dominante.",
+      "key_uncertainties": "Niveau réel de fragmentation du vote, survie parlementaire éventuelle, chocs de campagne non anticipés.",
+      "counterarguments": "Les surprises électorales existent toujours en théorie, surtout quand des marchés concentrent fortement la probabilité sur peu d'issues.",
+      "dominant_market_narrative": "Jobbik n'est pas considéré comme un scénario réel pour finir premier en sièges."
+    }
+  },
+  {
+    "market_id": "BATCH-002-29",
+    "thesis_id": "BATCH-002-29-TH1",
+    "analysis_id": "BATCH-002-29-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:40:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "conditional",
+      "event_clarity": "medium",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat marginal et plus ambigu que les autres car KDNP concourt politiquement dans la coalition Fidesz-KDNP, alors que le marché principal résout aussi séparément sur la coalition."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Petit partenaire junior d'une coalition dominante, sans trajectoire autonome crédible vers la première place nationale en sièges.",
+      "base_rate_comment": "Base rate minimal. Même si Fidesz-KDNP performait très bien, la première place autonome de KDNP en sièges n'a pas de trajectoire publique crédible."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "KDNP doit avoir une attribution autonome de sièges compatible avec une première place",
+          "status": "not_filled",
+          "comment": "Aucune dynamique publique crédible ne montre KDNP séparément en position de finir premier."
+        },
+        {
+          "name": "Le partenaire junior doit dépasser Fidesz lui-même en sièges ou en attribution pertinente",
+          "status": "not_filled",
+          "comment": "Scénario incompatible avec la structure politique observée de la coalition."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "KDNP existe comme composante identifiable de la coalition",
+          "status": "filled",
+          "comment": "Le parti existe bien comme composante nominale de Fidesz-KDNP."
+        },
+        {
+          "name": "La convention de résolution permet une lecture autonome de KDNP",
+          "status": "partial",
+          "comment": "La règle générale de Polymarket vise les sièges du parti ou de la coalition nommée, mais le cas d'un junior partner d'une coalition commune est moins intuitif."
+        },
+        {
+          "name": "KDNP acquiert une centralité électorale propre",
+          "status": "not_filled",
+          "comment": "Aucun signal en ce sens."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Existence formelle de KDNP comme parti nommé",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "KDNP est structurellement subordonné à Fidesz dans la coalition",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le partenaire junior n'a pas de trajectoire publique autonome vers la première place en sièges."
+      },
+      {
+        "factor_name": "Contrat principal déjà offert sur Fidesz-KDNP",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Cela renforce l'idée que le scénario central de victoire du bloc passe par la coalition, pas par KDNP seul."
+      },
+      {
+        "factor_name": "Absence totale de dynamique électorale distincte",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Aucune source récente ne présente KDNP comme force autonome capable d'arriver première."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "KDNP ne pourrait devenir pertinent que si la résolution attribuait de manière inattendue des sièges à la composante nommée dans une coalition gagnante et si cette lecture autonome prévalait.",
+      "top_3_failure_reasons": [
+        "Le cas d'un partenaire junior dans une coalition nommée séparément peut générer plus d'ambiguïté de résolution qu'attendu.",
+        "Les traders peuvent écraser à zéro un contrat techniquement mal compris plutôt que réellement impossible.",
+        "Une interprétation formelle inhabituelle des sièges de coalition pourrait surprendre."
+      ],
+      "market_might_be_right_because": "KDNP existe bien comme parti formel, donc la possibilité théorique n'est pas absolument nulle.",
+      "thesis_invalidation_trigger": "Clarification publique ou officielle montrant que KDNP recevrait une attribution autonome pertinente de sièges au point d'être réellement éligible à ce marché."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket du marché principal ; structure politique Fidesz-KDNP ; Reuters sur la campagne hongroise 2026.",
+      "historical_precedents": "Les partenaires juniors de coalition n'arrivent presque jamais premiers en sièges contre leur propre allié dominant.",
+      "institutional_constraints": "La résolution se fait sur le parti ou la coalition nommé ; pour KDNP seul, l'attribution autonome de sièges apparaît plus ambiguë que pour Fidesz-KDNP.",
+      "timeline_recent": "La campagne publique porte sur Fidesz et Orbán, pas sur KDNP comme acteur autonome.",
+      "actors_and_incentives": "KDNP sert avant tout de partenaire de coalition, non de moteur électoral indépendant.",
+      "key_uncertainties": "Convention exacte d'attribution de sièges pertinente pour ce contrat, interprétation finale de la résolution.",
+      "counterarguments": "Les marchés avec issues très faibles peuvent parfois intégrer maladroitement des ambiguïtés techniques réelles.",
+      "dominant_market_narrative": "KDNP n'est pas perçu comme un scénario réel de première place en sièges, avec en plus une légère ambiguïté de résolution."
+    }
+  }
+]

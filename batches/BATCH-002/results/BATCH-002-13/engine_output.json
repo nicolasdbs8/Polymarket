@@ -1,0 +1,52 @@
+{
+  "market_id": "BATCH-002-13",
+  "thesis_id": "BATCH-002-13-TH1",
+  "analysis_id": "BATCH-002-13-TH1-A1",
+  "calculation_timestamp": "2026-03-18T17:55:45Z",
+  "parameters_version": "1.1",
+  "schema_version": "1.0",
+  "inputs_summary": {
+    "base_rate": 0.01,
+    "market_probability_yes": 0.0005,
+    "confidence_overall": "high",
+    "liquidity_quality": "low",
+    "information_accessibility": "medium",
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low",
+    "factor_count": 5
+  },
+  "probability": {
+    "weighted_factor_sum": -13,
+    "max_possible_sum": 22,
+    "adjustment_ratio": -0.5909,
+    "probability_adjustment": -0.1773,
+    "prerequisite_factor": 0.7667,
+    "blocking_veto_triggered": true,
+    "p_estimated": 0.01,
+    "uncertainty_low": 0.01,
+    "uncertainty_high": 0.05,
+    "uncertainty_width": 0.04
+  },
+  "edge": {
+    "raw_edge": 0.0095,
+    "confidence_factor_applied": 1.0,
+    "liquidity_factor_applied": 0.6,
+    "information_factor_applied": 0.9,
+    "event_ambiguity_factor_applied": 1.0,
+    "time_factor_applied": 1.0,
+    "days_to_resolution": 24,
+    "adjusted_edge_before_uncertainty_penalty": 0.0051,
+    "uncertainty_penalty_applied": false,
+    "adjusted_edge": 0.0051
+  },
+  "decision": {
+    "veto_triggered": true,
+    "veto_reasons": [
+      "marche extreme : prix YES 0% <= seuil 15% (moteur non fiable en dessous de ce seuil)"
+    ],
+    "position_side": "none",
+    "decision": "no_trade",
+    "paper_position_size": 0.0
+  },
+  "validation_warnings": []
+}

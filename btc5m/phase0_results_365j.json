@@ -1,0 +1,518 @@
+{
+  "generated_at": "2026-03-19T18:32:18Z",
+  "days": 365,
+  "n_candles": 105036,
+  "baseline": {
+    "n_total": 105036,
+    "n_up": 52296,
+    "n_down": 52740,
+    "p_up": 0.4979,
+    "p_down": 0.5021,
+    "binom_p": 0.1717,
+    "baseline_bias": false
+  },
+  "features": [
+    {
+      "name": "ret_1",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": -0.0227,
+      "p_pearson": 0.0,
+      "r_pb": -0.0227,
+      "p_pb": 0.0,
+      "mw_p": 0.0,
+      "auc": 0.4855,
+      "mean_up": -3e-05,
+      "mean_down": 3e-05,
+      "significant": true
+    },
+    {
+      "name": "ret_2",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": -0.0088,
+      "p_pearson": 0.0044,
+      "r_pb": -0.0088,
+      "p_pb": 0.0044,
+      "mw_p": 0.0007,
+      "auc": 0.4939,
+      "mean_up": -1e-05,
+      "mean_down": 1e-05,
+      "significant": false
+    },
+    {
+      "name": "ret_3",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": -0.007,
+      "p_pearson": 0.023,
+      "r_pb": -0.007,
+      "p_pb": 0.023,
+      "mw_p": 0.0003,
+      "auc": 0.4935,
+      "mean_up": -1e-05,
+      "mean_down": 1e-05,
+      "significant": false
+    },
+    {
+      "name": "ret_cum5",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": -0.0236,
+      "p_pearson": 0.0,
+      "r_pb": -0.0236,
+      "p_pb": 0.0,
+      "mw_p": 0.0,
+      "auc": 0.4832,
+      "mean_up": -8e-05,
+      "mean_down": 7e-05,
+      "significant": true
+    },
+    {
+      "name": "ret_cum10",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": -0.0245,
+      "p_pearson": 0.0,
+      "r_pb": -0.0245,
+      "p_pb": 0.0,
+      "mw_p": 0.0,
+      "auc": 0.4823,
+      "mean_up": -0.00012,
+      "mean_down": 9e-05,
+      "significant": true
+    },
+    {
+      "name": "n_green_5",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": -0.0237,
+      "p_pearson": 0.0,
+      "r_pb": -0.0237,
+      "p_pb": 0.0,
+      "mw_p": 0.0,
+      "auc": 0.4864,
+      "mean_up": 2.46348,
+      "mean_down": 2.51513,
+      "significant": true
+    },
+    {
+      "name": "n_green_10",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": -0.0262,
+      "p_pearson": 0.0,
+      "r_pb": -0.0262,
+      "p_pb": 0.0,
+      "mw_p": 0.0,
+      "auc": 0.4846,
+      "mean_up": 4.93917,
+      "mean_down": 5.01815,
+      "significant": true
+    },
+    {
+      "name": "streak",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": 0.0011,
+      "p_pearson": 0.7135,
+      "r_pb": 0.0011,
+      "p_pb": 0.7135,
+      "mw_p": 0.9364,
+      "auc": 0.5001,
+      "mean_up": 0.94935,
+      "mean_down": 0.94632,
+      "significant": false
+    },
+    {
+      "name": "body_ratio",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": -0.0026,
+      "p_pearson": 0.3926,
+      "r_pb": -0.0026,
+      "p_pb": 0.3926,
+      "mw_p": 0.363,
+      "auc": 0.4984,
+      "mean_up": 0.54531,
+      "mean_down": 0.54687,
+      "significant": false
+    },
+    {
+      "name": "close_pos",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": -0.0208,
+      "p_pearson": 0.0,
+      "r_pb": -0.0208,
+      "p_pb": 0.0,
+      "mw_p": 0.0,
+      "auc": 0.4882,
+      "mean_up": 0.49408,
+      "mean_down": 0.50888,
+      "significant": true
+    },
+    {
+      "name": "wick_asymm",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": 0.0044,
+      "p_pearson": 0.1532,
+      "r_pb": 0.0044,
+      "p_pb": 0.1532,
+      "mw_p": 0.2302,
+      "auc": 0.5021,
+      "mean_up": -0.00099,
+      "mean_down": -0.00429,
+      "significant": false
+    },
+    {
+      "name": "vol_12",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": 0.0034,
+      "p_pearson": 0.2659,
+      "r_pb": 0.0034,
+      "p_pb": 0.2659,
+      "mw_p": 0.0535,
+      "auc": 0.5034,
+      "mean_up": 0.00111,
+      "mean_down": 0.00111,
+      "significant": false
+    },
+    {
+      "name": "vol_36",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": 0.0006,
+      "p_pearson": 0.8546,
+      "r_pb": 0.0006,
+      "p_pb": 0.8546,
+      "mw_p": 0.2743,
+      "auc": 0.5019,
+      "mean_up": 0.00116,
+      "mean_down": 0.00116,
+      "significant": false
+    },
+    {
+      "name": "vol_72",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": 0.0004,
+      "p_pearson": 0.8927,
+      "r_pb": 0.0004,
+      "p_pb": 0.8927,
+      "mw_p": 0.3135,
+      "auc": 0.5018,
+      "mean_up": 0.00118,
+      "mean_down": 0.00118,
+      "significant": false
+    },
+    {
+      "name": "atr_12",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": 0.0011,
+      "p_pearson": 0.7283,
+      "r_pb": 0.0011,
+      "p_pb": 0.7283,
+      "mw_p": 0.2182,
+      "auc": 0.5022,
+      "mean_up": 148.06693,
+      "mean_down": 147.85556,
+      "significant": false
+    },
+    {
+      "name": "vol_percentile",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": 0.0053,
+      "p_pearson": 0.0837,
+      "r_pb": 0.0053,
+      "p_pb": 0.0837,
+      "mw_p": 0.0679,
+      "auc": 0.5033,
+      "mean_up": 0.48738,
+      "mean_down": 0.48399,
+      "significant": false
+    },
+    {
+      "name": "vol_ratio",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": 0.0037,
+      "p_pearson": 0.235,
+      "r_pb": 0.0037,
+      "p_pb": 0.235,
+      "mw_p": 0.1483,
+      "auc": 0.5026,
+      "mean_up": 0.95426,
+      "mean_down": 0.95169,
+      "significant": false
+    },
+    {
+      "name": "range_pos_20",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": -0.0298,
+      "p_pearson": 0.0,
+      "r_pb": -0.0298,
+      "p_pb": 0.0,
+      "mw_p": 0.0,
+      "auc": 0.4828,
+      "mean_up": 0.50011,
+      "mean_down": 0.51781,
+      "significant": true
+    },
+    {
+      "name": "close_vs_ma10",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": -0.0273,
+      "p_pearson": 0.0,
+      "r_pb": -0.0273,
+      "p_pb": 0.0,
+      "mw_p": 0.0,
+      "auc": 0.4811,
+      "mean_up": -7e-05,
+      "mean_down": 5e-05,
+      "significant": true
+    },
+    {
+      "name": "hour_utc",
+      "n": 105036,
+      "valid": true,
+      "r_pearson": 0.0031,
+      "p_pearson": 0.3178,
+      "r_pb": 0.0031,
+      "p_pb": 0.3178,
+      "mw_p": 0.3177,
+      "auc": 0.5018,
+      "mean_up": 11.51753,
+      "mean_down": 11.47488,
+      "significant": false
+    }
+  ],
+  "stability": {
+    "ret_1": {
+      "period_corrs": [
+        -0.0269,
+        -0.0086,
+        -0.0281,
+        -0.0242
+      ],
+      "sign_consistent": true,
+      "corr_std": 0.0078,
+      "stable": true
+    },
+    "ret_2": {
+      "period_corrs": [
+        -0.0187,
+        0.0004,
+        -0.0074,
+        -0.0084
+      ],
+      "sign_consistent": false,
+      "corr_std": 0.0068,
+      "stable": false
+    },
+    "ret_3": {
+      "period_corrs": [
+        -0.0074,
+        -0.0018,
+        -0.0094,
+        -0.008
+      ],
+      "sign_consistent": true,
+      "corr_std": 0.0029,
+      "stable": true
+    },
+    "ret_cum5": {
+      "period_corrs": [
+        -0.0335,
+        -0.0098,
+        -0.0225,
+        -0.0267
+      ],
+      "sign_consistent": true,
+      "corr_std": 0.0086,
+      "stable": true
+    },
+    "ret_cum10": {
+      "period_corrs": [
+        -0.033,
+        -0.0161,
+        -0.0221,
+        -0.0267
+      ],
+      "sign_consistent": true,
+      "corr_std": 0.0062,
+      "stable": true
+    },
+    "n_green_5": {
+      "period_corrs": [
+        -0.034,
+        -0.0122,
+        -0.0276,
+        -0.0213
+      ],
+      "sign_consistent": true,
+      "corr_std": 0.008,
+      "stable": true
+    },
+    "n_green_10": {
+      "period_corrs": [
+        -0.0348,
+        -0.0188,
+        -0.0263,
+        -0.0253
+      ],
+      "sign_consistent": true,
+      "corr_std": 0.0057,
+      "stable": true
+    },
+    "streak": {
+      "period_corrs": [
+        0.0078,
+        0.0007,
+        -0.0022,
+        -0.0017
+      ],
+      "sign_consistent": false,
+      "corr_std": 0.004,
+      "stable": false
+    },
+    "body_ratio": {
+      "period_corrs": [
+        -0.0094,
+        0.0024,
+        -0.0045,
+        0.0006
+      ],
+      "sign_consistent": false,
+      "corr_std": 0.0046,
+      "stable": false
+    },
+    "close_pos": {
+      "period_corrs": [
+        -0.0285,
+        -0.0095,
+        -0.0295,
+        -0.0167
+      ],
+      "sign_consistent": true,
+      "corr_std": 0.0083,
+      "stable": true
+    },
+    "wick_asymm": {
+      "period_corrs": [
+        0.0059,
+        0.007,
+        0.0038,
+        0.001
+      ],
+      "sign_consistent": true,
+      "corr_std": 0.0023,
+      "stable": true
+    },
+    "vol_12": {
+      "period_corrs": [
+        0.0041,
+        0.0008,
+        0.0038,
+        0.0046
+      ],
+      "sign_consistent": true,
+      "corr_std": 0.0015,
+      "stable": true
+    },
+    "vol_36": {
+      "period_corrs": [
+        0.005,
+        -0.0003,
+        -0.0011,
+        -0.0003
+      ],
+      "sign_consistent": false,
+      "corr_std": 0.0024,
+      "stable": false
+    },
+    "vol_72": {
+      "period_corrs": [
+        0.0014,
+        0.0074,
+        -0.0038,
+        0.0007
+      ],
+      "sign_consistent": false,
+      "corr_std": 0.004,
+      "stable": false
+    },
+    "atr_12": {
+      "period_corrs": [
+        0.0063,
+        -0.0025,
+        -0.0006,
+        0.0034
+      ],
+      "sign_consistent": false,
+      "corr_std": 0.0034,
+      "stable": false
+    },
+    "vol_percentile": {
+      "period_corrs": [
+        0.0074,
+        -0.0061,
+        0.0161,
+        0.0038
+      ],
+      "sign_consistent": false,
+      "corr_std": 0.008,
+      "stable": false
+    },
+    "vol_ratio": {
+      "period_corrs": [
+        0.0058,
+        -0.0096,
+        0.014,
+        0.0043
+      ],
+      "sign_consistent": false,
+      "corr_std": 0.0085,
+      "stable": false
+    },
+    "range_pos_20": {
+      "period_corrs": [
+        -0.0383,
+        -0.0111,
+        -0.0321,
+        -0.0389
+      ],
+      "sign_consistent": true,
+      "corr_std": 0.0113,
+      "stable": true
+    },
+    "close_vs_ma10": {
+      "period_corrs": [
+        -0.0373,
+        -0.0141,
+        -0.0271,
+        -0.0293
+      ],
+      "sign_consistent": true,
+      "corr_std": 0.0083,
+      "stable": true
+    },
+    "hour_utc": {
+      "period_corrs": [
+        0.0055,
+        0.0047,
+        -0.0,
+        0.0022
+      ],
+      "sign_consistent": false,
+      "corr_std": 0.0022,
+      "stable": false
+    }
+  }
+}

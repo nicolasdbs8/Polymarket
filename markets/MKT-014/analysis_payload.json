@@ -1,0 +1,126 @@
+{
+  "market_id": "MKT-014",
+  "thesis_id": "MKT-014-TH1",
+  "analysis_id": "MKT-014-TH1-A1",
+  "analysis_timestamp": "2026-03-18T17:15:00Z",
+  "resolution_date": "2026-04-04T00:00:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "high",
+    "resolution_clarity": "high",
+    "liquidity_quality": "high",
+    "information_accessibility": "medium",
+    "market_noise_level": "medium",
+    "screening_comment": "Marché standard NCAA winner : clair, liquide, sans ambiguïté. L'incertitude provient uniquement de la variance du format et du pricing déjà élevé."
+  },
+  "base_rate": {
+    "base_rate_value": 0.14,
+    "base_rate_reference_class": "Equipes top contenders (souvent seeds n°1 ou équivalent) dans le tournoi NCAA.",
+    "base_rate_comment": "Même les meilleures équipes du tournoi dépassent rarement ~20-25% en probabilité individuelle à cause du format à élimination directe."
+  },
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "Arizona participe au tournoi NCAA 2026",
+        "status": "filled",
+        "comment": "Présence dans le bracket supposée par le marché et cohérente avec le pricing."
+      },
+      {
+        "name": "Résolution basée sur le champion officiel NCAA",
+        "status": "filled",
+        "comment": "Règle standard Polymarket, non ambiguë."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Absence de blessure majeure",
+        "status": "partial",
+        "comment": "Pas d'information critique identifiée, mais incertitude structurelle."
+      },
+      {
+        "name": "Bracket praticable jusqu'au Final Four",
+        "status": "partial",
+        "comment": "Même un contender devra affronter plusieurs équipes élite."
+      },
+      {
+        "name": "Capacité à performer sur 6 matchs",
+        "status": "partial",
+        "comment": "C'est le principal verrou structurel."
+      }
+    ]
+  },
+  "factor_list": [
+    {
+      "factor_name": "Statut implicite de top contender",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "Le pricing implique qu'Arizona fait partie du premier groupe d'équipes."
+    },
+    {
+      "factor_name": "Qualité globale suffisante pour être dans le haut du bracket",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2
+    },
+    {
+      "factor_name": "Exposition médiatique et confiance du marché",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 1
+    },
+    {
+      "factor_name": "Format NCAA extrêmement volatil",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Six matchs à élimination directe = variance maximale."
+    },
+    {
+      "factor_name": "Accumulation d'adversaires élite en deuxième semaine",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 2
+    },
+    {
+      "factor_name": "Prix déjà élevé à 17.65%",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Très peu de marge pour un edge positif ; le marché price déjà fortement Arizona."
+    }
+  ],
+  "confidence": {
+    "confidence_sources": "medium",
+    "confidence_model": "medium",
+    "confidence_context": "medium",
+    "confidence_overall": "medium"
+  },
+  "ambiguity": {
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low"
+  },
+  "contradiction_forced": {
+    "best_counter_thesis": "Arizona est sous-évalué si l'équipe est en réalité top 2 du tournoi et que son bracket est plus facile que prévu.",
+    "top_3_failure_reasons": [
+      "Le base rate est trop conservateur pour une équipe réellement dominante.",
+      "Le bracket peut s'ouvrir via des upsets.",
+      "Le marché peut sous-estimer l'écart réel de niveau."
+    ],
+    "market_might_be_right_because": "Le marché price correctement un contender fort sans tomber dans une surestimation excessive, en tenant compte de la variance du tournoi.",
+    "thesis_invalidation_trigger": "Victoires dominantes dans les deux premiers tours combinées à l'élimination de plusieurs favoris majeurs."
+  },
+  "research_notes": {
+    "primary_sources": "Structure du tournoi NCAA ; pricing Polymarket ; historique des seeds.",
+    "historical_precedents": "Les champions NCAA ont rarement une probabilité individuelle élevée avant le tournoi.",
+    "institutional_constraints": "Résolution = champion officiel NCAA.",
+    "timeline_recent": "Arizona est pricé comme top contender à l'entrée du tournoi.",
+    "actors_and_incentives": "Equipe considérée comme forte par le marché ; forte attention des parieurs.",
+    "key_uncertainties": "Matchups, variance, blessures, performance sur plusieurs tours.",
+    "counterarguments": "Arizona peut surperformer si le niveau réel est supérieur à celui implicite dans le prix.",
+    "dominant_market_narrative": "Arizona est un prétendant sérieux mais pas dominant."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "market_id": "MKT-015",
+  "market_title": "Will the Bank of Russia decrease the key rate after the March Meeting?",
+  "platform": "polymarket",
+  "market_type": "binary",
+  "market_probability_yes": 0.905,
+  "price_yes": 0.905,
+  "price_no": 0.095,
+  "market_probability_no": 0.095,
+  "resolution_date": "2026-03-20T00:00:00Z",
+  "market_snapshot_time": "2026-03-18T17:05:33Z",
+  "category": "macroeconomics",
+  "market_url": "https://polymarket.com/fr/event/bank-of-russia-decision-in-march",
+  "schema_version": "1.0",
+  "market_volume": 34841.45
+}

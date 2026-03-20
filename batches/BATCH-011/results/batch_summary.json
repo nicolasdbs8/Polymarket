@@ -1,0 +1,114 @@
+{
+  "batch_id": "BATCH-011",
+  "results": [
+    {
+      "market_id": "BATCH-011-5",
+      "label": "Will annual inflation increase by ≥3.4% in March?",
+      "price_yes": 0.5275,
+      "p_estimated": 0.0728,
+      "adj_edge": -0.3092,
+      "side": "no",
+      "decision": "standard_paper_position",
+      "size": 50.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-011-4",
+      "label": "Will annual inflation increase by 3.3% in March?",
+      "price_yes": 0.2795,
+      "p_estimated": 0.0715,
+      "adj_edge": -0.1414,
+      "side": "no",
+      "decision": "standard_paper_position",
+      "size": 50.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-011-3",
+      "label": "Will annual inflation increase by 3.2% in March?",
+      "price_yes": 0.095,
+      "p_estimated": 0.14,
+      "adj_edge": 0.0306,
+      "side": "yes",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-011-8",
+      "label": "Will annual inflation increase by 3.1% in March?",
+      "price_yes": 0.0455,
+      "p_estimated": 0.1355,
+      "adj_edge": 0.0612,
+      "side": "yes",
+      "decision": "small_paper_position",
+      "size": 20.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-011-7",
+      "label": "Will annual inflation increase by 3.0% in March?",
+      "price_yes": 0.0305,
+      "p_estimated": 0.1815,
+      "adj_edge": 0.1027,
+      "side": "none",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": true,
+      "veto_reason": "grand outsider avec gap structurel : prix YES 3% < seuil 25% et edge brut +15% > +12% — l'ecart est trop grand pour être analytique"
+    },
+    {
+      "market_id": "BATCH-011-0",
+      "label": "Will annual inflation increase by 2.9% in March?",
+      "price_yes": 0.021,
+      "p_estimated": 0.1777,
+      "adj_edge": 0.1066,
+      "side": "none",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": true,
+      "veto_reason": "grand outsider avec gap structurel : prix YES 2% < seuil 25% et edge brut +16% > +12% — l'ecart est trop grand pour être analytique"
+    },
+    {
+      "market_id": "BATCH-011-1",
+      "label": "Will annual inflation increase by ≤2.6% in March?",
+      "price_yes": 0.0085,
+      "p_estimated": 0.01,
+      "adj_edge": 0.001,
+      "side": "yes",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-011-2",
+      "label": "Will annual inflation increase by 2.8% in March?",
+      "price_yes": 0.0085,
+      "p_estimated": 0.13,
+      "adj_edge": 0.0826,
+      "side": "none",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": true,
+      "veto_reason": "grand outsider avec gap structurel : prix YES 1% < seuil 25% et edge brut +12% > +12% — l'ecart est trop grand pour être analytique"
+    },
+    {
+      "market_id": "BATCH-011-6",
+      "label": "Will annual inflation increase by 2.7% in March?",
+      "price_yes": 0.0045,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0037,
+      "side": "yes",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": false,
+      "veto_reason": ""
+    }
+  ],
+  "errors": []
+}

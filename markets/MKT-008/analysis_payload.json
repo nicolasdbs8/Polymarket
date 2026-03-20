@@ -1,0 +1,146 @@
+{
+  "market_id": "MKT-008",
+  "thesis_id": "MKT-008-TH1",
+  "analysis_id": "MKT-008-TH1-A1",
+  "analysis_timestamp": "2026-03-18T15:45:41Z",
+  "resolution_date": "2026-03-31T00:00:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "high",
+    "resolution_clarity": "high",
+    "liquidity_quality": "medium",
+    "information_accessibility": "medium",
+    "market_noise_level": "medium",
+    "screening_comment": "Marché admissible : la résolution est précise et l'échéance est très proche. Réserve principale : les sondages et projections de sièges sont hétérogènes, et la fragmentation partisane rend l'ordre final sensible à de faibles écarts."
+  },
+  "base_rate": {
+    "base_rate_value": 0.4,
+    "base_rate_reference_class": "Parti sortant de centre-gauche mené par le Premier ministre, entrant dans la dernière semaine de campagne dans une élection parlementaire fragmentée, à la fois compétitif en vote brut et souvent derrière en projections de sièges.",
+    "base_rate_comment": "Le parallèle historique est limité : les sortants slovènes sont vulnérables, mais GS bénéficie encore de la prime de l'incumbency et reste au contact dans plusieurs enquêtes de mars. Le marché porte seulement sur le plus grand nombre de sièges, pas sur la capacité à gouverner."
+  },
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "GS reste au contact immédiat de SDS jusqu'au jour du vote",
+        "status": "filled",
+        "comment": "Plusieurs sondages de mi-mars montrent encore GS proche de SDS, et certaines enquêtes placent même GS en tête du vote brut."
+      },
+      {
+        "name": "La conversion voix-sièges ne pénalise pas suffisamment GS pour le laisser derrière SDS",
+        "status": "partial",
+        "comment": "C'est le nœud du marché : GS peut rester compétitif en voix tout en finissant derrière en sièges selon la dispersion des autres listes."
+      },
+      {
+        "name": "Aucun choc de fin de campagne ne provoque un mouvement net vers SDS",
+        "status": "partial",
+        "comment": "La campagne reste volatile ; GS bénéficie de la controverse Black Cube, mais rien ne garantit que l'effet soit assez fort pour inverser le classement en sièges."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Vote anti-Janša suffisamment mobilisé",
+        "status": "partial",
+        "comment": "Le rejet de Janša reste un moteur potentiel pour GS, mais son intensité exacte dans les derniers jours est incertaine."
+      },
+      {
+        "name": "Prime au parti du Premier ministre sortant",
+        "status": "filled",
+        "comment": "GS dispose encore de la visibilité institutionnelle de Robert Golob et de l'appareil de l'exécutif."
+      },
+      {
+        "name": "Clôture de campagne favorable après la controverse Black Cube",
+        "status": "partial",
+        "comment": "Les révélations sur Black Cube peuvent aider GS à remobiliser, mais l'ampleur électorale de l'affaire est inconnue."
+      },
+      {
+        "name": "Faible dispersion du centre-gauche et des listes concurrentes",
+        "status": "unknown",
+        "comment": "La fragmentation des forces proches peut priver GS de sièges décisifs même avec un vote national correct."
+      }
+    ]
+  },
+  "factor_list": [
+    {
+      "factor_name": "GS reste compétitif en vote brut dans plusieurs sondages de mi-mars",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "Ninamedia mi-mars plaçait GS autour de 30% contre 26% pour SDS, et d'autres enquêtes montrent un duel serré plutôt qu'un effondrement de GS."
+    },
+    {
+      "factor_name": "Avantage d'incumbency de Robert Golob",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2,
+      "factor_comment": "Le Premier ministre sortant conserve une visibilité et une capacité de cadrage médiatique supérieures à celles d'un simple challenger."
+    },
+    {
+      "factor_name": "Controverse Black Cube défavorable à SDS en fin de campagne",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2,
+      "factor_comment": "L'affaire peut réactiver le vote anti-Janša et donc relever la probabilité que GS finisse finalement premier."
+    },
+    {
+      "factor_name": "La plupart des projections de sièges récentes donnent SDS devant GS",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Le problème central de YES est là : en mars 2026, la majorité des seat projections consultées mettent SDS devant, souvent de quelques sièges."
+    },
+    {
+      "factor_name": "Usure nette du gouvernement Golob",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "La popularité du gouvernement a reculé et le mandat a érodé l'élan de 2022."
+    },
+    {
+      "factor_name": "Fragmentation partisane défavorable à la conversion de GS en premier bloc",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "Même en restant proche en voix, GS peut perdre la bataille des sièges à cause des performances des autres listes."
+    },
+    {
+      "factor_name": "Structure du marché focalisée sur le premier parti en sièges plutôt que sur la future coalition",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "GS ne profite pas ici de l'argument classique selon lequel Janša peut finir premier mais rester isolé pour gouverner ; seule compte la première place en sièges."
+    }
+  ],
+  "confidence": {
+    "confidence_sources": "medium",
+    "confidence_model": "medium",
+    "confidence_context": "medium",
+    "confidence_overall": "medium"
+  },
+  "ambiguity": {
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low"
+  },
+  "contradiction_forced": {
+    "best_counter_thesis": "Le marché peut encore sous-pricer la capacité de GS à finir premier : la course reste serrée en vote brut, Robert Golob conserve l'avantage de l'incumbency, et une dynamique anti-Janša en toute fin de campagne peut suffire à faire basculer quelques sièges clefs.",
+    "top_3_failure_reasons": [
+      "Les projections de sièges disponibles peuvent surestimer l'avantage structurel de SDS et sous-estimer la conversion réelle du vote GS.",
+      "La controverse Black Cube peut produire un effet tardif plus important qu'anticipé contre Janez Janša et SDS.",
+      "Le marché peut accorder trop de poids à l'usure gouvernementale et pas assez au fait que GS reste encore premier ou quasi premier dans certains sondages récents."
+    ],
+    "market_might_be_right_because": "Le prix autour de 35.5% reflète correctement un scénario minoritaire mais crédible : GS n'est pas favori sur les projections de sièges, mais il reste assez proche pour l'emporter sur une dernière oscillation.",
+    "thesis_invalidation_trigger": "Publication de sondages finaux ou d'exit polls crédibles montrant SDS devant GS avec un avantage suffisamment net en sièges pour rendre improbable tout retournement."
+  },
+  "research_notes": {
+    "primary_sources": "Page Polymarket et règles de résolution ; Reuters sur la date du scrutin du 22 mars 2026 ; Reuters du 17 mars 2026 sur la controverse Black Cube ; compilations de sondages et projections de sièges de mars 2026.",
+    "historical_precedents": "Les partis sortants slovènes peuvent rapidement perdre leur statut dominant, mais les élections restent très fragmentées et la première place en sièges peut se jouer à faible marge.",
+    "institutional_constraints": "Le marché résout selon le parti qui remporte le plus grand nombre de sièges au Državni zbor. En cas d'égalité en sièges, départage par nombre de voix valides, puis par ordre alphabétique de l'abréviation. En cas d'ambiguïté, Polymarket renvoie aux résultats officiels de l'autorité électorale slovène.",
+    "timeline_recent": "6 janvier 2026 : élection fixée au 22 mars ; début-mars : plusieurs projections donnent SDS devant, mais certaines enquêtes montrent GS au contact ou devant en vote brut ; 17 mars 2026 : controverse Black Cube ; 18 mars 2026 : GS cote environ 35.5% sur Polymarket.",
+    "actors_and_incentives": "GS et Golob veulent transformer le rejet de Janša en remontée finale ; SDS veut convertir son avance structurelle en première place ; les petites listes déterminent une partie de la conversion finale en sièges.",
+    "key_uncertainties": "Qualité et biais des derniers sondages, effet réel de Black Cube, niveau de participation, comportement des indécis et conversion voix-sièges des petites listes.",
+    "counterarguments": "Le principal argument contre YES est que la plupart des projections de sièges, qui collent mieux à la règle de résolution que les sondages bruts, mettent SDS devant.",
+    "dominant_market_narrative": "Narratif dominant : GS reste vivant et peut encore surprendre, mais les données disponibles l'installent plutôt comme challenger crédible que comme favori."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "market_id": "BATCH-001-6",
+  "thesis_id": "BATCH-001-6-TH1",
+  "analysis_id": "BATCH-001-6-TH1-A1",
+  "calculation_timestamp": "2026-03-18T17:43:13Z",
+  "parameters_version": "1.1",
+  "schema_version": "1.0",
+  "inputs_summary": {
+    "base_rate": 0.34,
+    "market_probability_yes": 0.345,
+    "confidence_overall": "medium",
+    "liquidity_quality": "high",
+    "information_accessibility": "high",
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low",
+    "factor_count": 6
+  },
+  "probability": {
+    "weighted_factor_sum": -2,
+    "max_possible_sum": 28,
+    "adjustment_ratio": -0.0714,
+    "probability_adjustment": -0.0214,
+    "prerequisite_factor": 0.8667,
+    "blocking_veto_triggered": false,
+    "p_estimated": 0.2761,
+    "uncertainty_low": 0.2011,
+    "uncertainty_high": 0.3511,
+    "uncertainty_width": 0.15
+  },
+  "edge": {
+    "raw_edge": -0.0689,
+    "confidence_factor_applied": 0.8,
+    "liquidity_factor_applied": 1.0,
+    "information_factor_applied": 1.0,
+    "event_ambiguity_factor_applied": 1.0,
+    "time_factor_applied": 1.0,
+    "days_to_resolution": 24,
+    "adjusted_edge_before_uncertainty_penalty": -0.0551,
+    "uncertainty_penalty_applied": false,
+    "adjusted_edge": -0.0551
+  },
+  "decision": {
+    "veto_triggered": false,
+    "veto_reasons": [],
+    "position_side": "no",
+    "decision": "small_paper_position",
+    "paper_position_size": 20.0
+  },
+  "validation_warnings": []
+}

@@ -1,0 +1,56 @@
+Tu dois produire une analyse groupée pour un événement Polymarket multi-contrats.
+
+# Événement
+Titre : March Inflation US - Annual (Higher Brackets)
+URL   : https://polymarket.com/event/march-inflation-us-annual-higher-brackets
+Date de résolution : 2026-04-10T00:00:00Z
+Batch ID : BATCH-011
+
+# Contrats à analyser (9)
+  - [5] Will annual inflation increase by ≥3.4% in March? — YES 53% / NO 47%
+  - [4] Will annual inflation increase by 3.3% in March? — YES 28% / NO 72%
+  - [3] Will annual inflation increase by 3.2% in March? — YES 10% / NO 90%
+  - [8] Will annual inflation increase by 3.1% in March? — YES 5% / NO 95%
+  - [7] Will annual inflation increase by 3.0% in March? — YES 3% / NO 97%
+  - [0] Will annual inflation increase by 2.9% in March? — YES 2% / NO 98%
+  - [1] Will annual inflation increase by ≤2.6% in March? — YES 1% / NO 99%
+  - [2] Will annual inflation increase by 2.8% in March? — YES 1% / NO 99%
+  - [6] Will annual inflation increase by 2.7% in March? — YES 0% / NO 100%
+
+# Ce que tu dois produire
+
+Un fichier JSON unique nommé batch_payload.json contenant une liste d'objets analysis_payload,
+un par contrat listé ci-dessus.
+
+Chaque analysis_payload doit respecter exactement le schéma V2.3 habituel, avec :
+- market_id      : "BATCH-011-[contract_id]"  ex: "BATCH-011-38"
+- thesis_id      : market_id + "-TH1"
+- analysis_id    : thesis_id + "-A1"
+- analysis_version : "A1"
+- resolution_date : "2026-04-10T00:00:00Z"
+- protocol_version : "2.3"
+- schema_version : "1.0"
+- analysis_timestamp : heure actuelle ISO 8601
+
+Pour chaque contrat, tu dois analyser indépendamment :
+- le base_rate (fréquence historique pour ce type de candidat/équipe)
+- les prérequis bloquants et pondérants
+- les facteurs accélérateurs et freins spécifiques à ce contrat
+- la confiance
+- les ambiguïtés
+- la contradiction forcée obligatoire (best_counter_thesis + top_3_failure_reasons)
+
+# Format de sortie
+
+```json
+[
+  { analysis_payload complet pour contrat 1 },
+  { analysis_payload complet pour contrat 2 },
+  ...
+]
+```
+
+Le JSON doit être valide, indenté, sans commentaires.
+Rappel : top_3_failure_reasons doit contenir EXACTEMENT 3 éléments.
+Rappel : tous les enums en anglais : high/medium/low, accelerator/brake, etc.
+Rappel : tu dois impérativement te référer au modèle batch_payload_exemple.json dans les fichiers source du projet.

@@ -1,0 +1,133 @@
+{
+  "market_id": "MKT-011",
+  "thesis_id": "MKT-011-TH1",
+  "analysis_id": "MKT-011-TH1-A1",
+  "analysis_timestamp": "2026-03-18T16:58:00Z",
+  "resolution_date": "2026-04-04T00:00:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "high",
+    "resolution_clarity": "high",
+    "liquidity_quality": "high",
+    "information_accessibility": "medium",
+    "market_noise_level": "medium",
+    "screening_comment": "Marché admissible : équipe et événement parfaitement définis, règle de résolution explicite, liquidité élevée. L'incertitude vient surtout de la variance structurelle du tournoi NCAA."
+  },
+  "base_rate": {
+    "base_rate_value": 0.07,
+    "base_rate_reference_class": "Seeds n°2 du tournoi NCAA masculin avec profil d'équipe élite et ambition réaliste de titre national.",
+    "base_rate_comment": "Base rate prudent : Houston est un vrai contender, mais une équipe seed n°2 reste mécaniquement loin d'une probabilité dominante dans un tournoi à six matchs couperets, surtout avec un seed n°1 fort dans la même région."
+  },
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "Houston doit rester vivant dans le bracket NCAA",
+        "status": "filled",
+        "comment": "Au moment du snapshot, Houston est qualifié, non éliminé, et officiellement seed n°2."
+      },
+      {
+        "name": "La résolution Polymarket doit rester adossée au champion officiel NCAA",
+        "status": "filled",
+        "comment": "La règle de résolution est claire et vérifiable."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Le noyau principal reste fonctionnel sur l'ensemble du tournoi",
+        "status": "filled",
+        "comment": "Aucun signal récent de blessure structurante ou de forfait majeur n'a été identifié dans les sources consultées."
+      },
+      {
+        "name": "Le chemin régional jusqu'au Final Four reste praticable",
+        "status": "partial",
+        "comment": "Le tirage initial est favorable, mais la présence de Florida dans la South Region durcit fortement la route."
+      },
+      {
+        "name": "L'avantage géographique potentiel du South Regional profite réellement à Houston",
+        "status": "partial",
+        "comment": "Jouer potentiellement à Houston est un vrai plus, mais cet avantage reste conditionné à la qualification jusque-là."
+      }
+    ]
+  },
+  "factor_list": [
+    {
+      "factor_name": "Programme élite et continuité compétitive sous Kelvin Sampson",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "Houston n'est pas une équipe surprise ; le programme est installé au niveau national et habitué aux deep runs."
+    },
+    {
+      "factor_name": "Roster crédible de contender avec création et profondeur",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 2,
+      "factor_comment": "Les sources récentes mettent en avant Flemings, Sharp, Uzan, Tugler et une rotation solide."
+    },
+    {
+      "factor_name": "Motivation de revanche après la finale perdue en 2025",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 1
+    },
+    {
+      "factor_name": "Avantage logistique potentiel du South Regional à Houston",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2
+    },
+    {
+      "factor_name": "Présence de Florida seed n°1 dans la même région",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Même si Houston survit aux premiers tours, la route vers le Final Four passe potentiellement par un obstacle structurel majeur."
+    },
+    {
+      "factor_name": "Houston n'est pas seed n°1",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2
+    },
+    {
+      "factor_name": "Variance structurelle du tournoi NCAA",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Aucune équipe individuelle ne porte une probabilité très élevée dans ce format ; six victoires successives restent difficiles, même pour une équipe élite."
+    }
+  ],
+  "confidence": {
+    "confidence_sources": "medium",
+    "confidence_model": "medium",
+    "confidence_context": "medium",
+    "confidence_overall": "medium"
+  },
+  "ambiguity": {
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low"
+  },
+  "contradiction_forced": {
+    "best_counter_thesis": "Le marché sous-estime Houston : le programme est assez fort, assez profond et assez expérimenté pour valoir davantage que 7.5 %, surtout avec un bracket initial abordable et un avantage géographique potentiel en deuxième semaine.",
+    "top_3_failure_reasons": [
+      "Le base rate retenu peut être trop conservateur pour une équipe de niveau top-5 national avec un vrai upside de titre.",
+      "L'importance attribuée à Florida dans la même région peut être excessive si Florida tombe tôt ou arrive diminué.",
+      "L'avantage de jouer potentiellement la deuxième semaine à Houston peut être plus décisif que ce que l'analyse retient."
+    ],
+    "market_might_be_right_because": "Le marché peut correctement intégrer le fait que Houston est un contender réel mais secondaire, freiné par la structure du bracket et par la variance extrême du tournoi.",
+    "thesis_invalidation_trigger": "Victoire nette de Houston dans les deux premiers tours suivie d'une élimination précoce de Florida ou d'un affaiblissement clair du haut de la South Region."
+  },
+  "research_notes": {
+    "primary_sources": "Bracket officiel NCAA 2026 ; règle de résolution Polymarket ; AP Top 25 ; couverture récente sur Houston par Houston Chronicle et sources associées.",
+    "historical_precedents": "Les seeds n°2 gagnent parfois le titre, mais leur fréquence reste inférieure à celle des seeds n°1 et la probabilité individuelle demeure limitée.",
+    "institutional_constraints": "Résolution selon le champion officiel NCAA ; élimination de Houston = résolution immédiate à No sur Polymarket.",
+    "timeline_recent": "Houston entre dans le tournoi comme seed n°2, après une saison de très haut niveau, en cherchant à effacer la finale perdue contre Florida en 2025.",
+    "actors_and_incentives": "Houston dispose d'un noyau compétitif, d'un coach élite et d'une narrative de revanche ; le marché doit arbitrer entre cette qualité réelle et la dureté de la South Region.",
+    "key_uncertainties": "Capacité réelle de Houston à battre Florida si le duel a lieu ; impact effectif de l'avantage géographique ; niveau terminal de l'attaque contre des défenses élite en fin de tournoi.",
+    "counterarguments": "Houston a le profil d'une équipe qui peut surperformer un prix à 7.5 % si sa défense et sa maîtrise collective dominent les fins de match.",
+    "dominant_market_narrative": "Houston est vu comme un vrai candidat au titre, mais derrière le premier cercle des équipes les plus faciles à acheter dans ce tournoi."
+  }
+}

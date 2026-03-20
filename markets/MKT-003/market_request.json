@@ -1,0 +1,12 @@
+{
+  "market_id": "MKT-003",
+  "market_title": "Le régime iranien tombera-t-il d'ici le 31 mars ?",
+  "platform": "polymarket",
+  "market_probability_yes": 0.03,
+  "price_yes": 0.031,
+  "resolution_date": "2026-03-31T00:00:00Z",
+  "market_snapshot_time": "2026-03-16T20:00:00Z",
+  "category": "geopolitics",
+  "market_url": "https://polymarket.com/fr/event/will-the-iranian-regime-fall-by-march-31",
+  "schema_version": "1.0"
+}

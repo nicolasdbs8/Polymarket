@@ -1,0 +1,55 @@
+Tu dois produire une analyse groupée pour un événement Polymarket multi-contrats.
+
+# Événement
+Titre : US x Iran ceasefire by...?
+URL   : https://polymarket.com/fr/event/us-x-iran-ceasefire-by
+Date de résolution : UNKNOWN
+Batch ID : BATCH-006
+
+# Contrats à analyser (9)
+  - [5] US x Iran ceasefire by December 31? — YES 72% / NO 28%
+  - [6] US x Iran ceasefire by June 30? — YES 52% / NO 48%
+  - [7] US x Iran ceasefire by May 31? — YES 42% / NO 57%
+  - [1] US x Iran ceasefire by April 30? — YES 32% / NO 68%
+  - [8] US x Iran ceasefire by April 15? — YES 19% / NO 81%
+  - [0] US x Iran ceasefire by March 31? — YES 6% / NO 94%
+  - [2] US x Iran ceasefire by March 6? — YES 0% / NO 100%
+  - [3] US x Iran ceasefire by March 15? — YES 0% / NO 100%
+  - [4] US x Iran ceasefire by March 2? — YES 0% / NO 100%
+
+# Ce que tu dois produire
+
+Un fichier JSON unique nommé batch_payload.json contenant une liste d'objets analysis_payload,
+un par contrat listé ci-dessus.
+
+Chaque analysis_payload doit respecter exactement le schéma V2.3 habituel, avec :
+- market_id      : "BATCH-006-[contract_id]"  ex: "BATCH-006-38"
+- thesis_id      : market_id + "-TH1"
+- analysis_id    : thesis_id + "-A1"
+- analysis_version : "A1"
+- resolution_date : "UNKNOWN"
+- protocol_version : "2.3"
+- schema_version : "1.0"
+- analysis_timestamp : heure actuelle ISO 8601
+
+Pour chaque contrat, tu dois analyser indépendamment :
+- le base_rate (fréquence historique pour ce type de candidat/équipe)
+- les prérequis bloquants et pondérants
+- les facteurs accélérateurs et freins spécifiques à ce contrat
+- la confiance
+- les ambiguïtés
+- la contradiction forcée obligatoire (best_counter_thesis + top_3_failure_reasons)
+
+# Format de sortie
+
+```json
+[
+  { analysis_payload complet pour contrat 1 },
+  { analysis_payload complet pour contrat 2 },
+  ...
+]
+```
+
+Le JSON doit être valide, indenté, sans commentaires.
+Rappel : top_3_failure_reasons doit contenir EXACTEMENT 3 éléments.
+Rappel : tous les enums en anglais : high/medium/low, accelerator/brake, etc.

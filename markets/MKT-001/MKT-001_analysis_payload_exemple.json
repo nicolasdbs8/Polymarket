@@ -1,0 +1,106 @@
+{
+  "market_id": "MKT-001",
+  "thesis_id": "MKT-001-TH1",
+  "analysis_id": "MKT-001-TH1-A1",
+  "analysis_timestamp": "2025-06-01T14:00:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "high",
+    "resolution_clarity": "high",
+    "liquidity_quality": "medium",
+    "information_accessibility": "medium",
+    "market_noise_level": "low",
+    "screening_comment": "Marché bien défini, règle de résolution claire."
+  },
+
+  "base_rate": {
+    "base_rate_value": 0.30,
+    "base_rate_reference_class": "Fréquence historique des événements de type X sur 20 ans (1995-2015) : 30% des cas.",
+    "base_rate_comment": "Classe de référence pertinente mais contexte légèrement différent."
+  },
+
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "Cadre juridique compatible",
+        "status": "filled",
+        "comment": "Aucun obstacle légal identifié."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Acteur principal encore en position",
+        "status": "filled",
+        "comment": "Confirmé."
+      },
+      {
+        "name": "Fenêtre temporelle ouverte",
+        "status": "partial",
+        "comment": "La fenêtre se réduit mais reste ouverte."
+      }
+    ]
+  },
+
+  "factor_list": [
+    {
+      "factor_name": "Pression institutionnelle accrue",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "Trois acteurs majeurs ont exprimé publiquement leur soutien depuis janvier."
+    },
+    {
+      "factor_name": "Calendrier favorable",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2,
+      "factor_comment": "Fenêtre de 4 mois avant les prochaines contraintes."
+    },
+    {
+      "factor_name": "Inertie bureaucratique",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "Processus habituel prend 6-9 mois."
+    },
+    {
+      "factor_name": "Opposition de l'acteur B",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 1
+    }
+  ],
+
+  "confidence": {
+    "confidence_sources": "medium",
+    "confidence_model": "medium",
+    "confidence_context": "high",
+    "confidence_overall": "medium"
+  },
+
+  "ambiguity": {
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low"
+  },
+
+  "contradiction_forced": {
+    "best_counter_thesis": "Le marché prise correctement l'inertie structurelle et le manque de précédent direct dans ce contexte précis.",
+    "top_3_failure_reasons": [
+      "L'inertie institutionnelle est sous-estimée dans le facteur de frein.",
+      "L'acteur B pourrait avoir plus d'influence que ce qui est public.",
+      "Le calendrier favorable pourrait être invalidé par un événement externe non anticipé."
+    ],
+    "market_might_be_right_because": "Le marché a peut-être accès à des signaux informels non documentés publiquement.",
+    "thesis_invalidation_trigger": "Déclaration officielle de l'acteur principal indiquant un retrait ou un report au-delà de la date de résolution."
+  },
+
+  "research_notes": {
+    "primary_sources": "Rapports officiels Q1 2025, conférences de presse du 15 mars.",
+    "historical_precedents": "Événements similaires en 2008 et 2014.",
+    "dominant_market_narrative": "Le marché semble sur-pondérer l'inertie et sous-pondérer la pression externe récente."
+  }
+}

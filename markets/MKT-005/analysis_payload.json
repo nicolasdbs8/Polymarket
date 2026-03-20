@@ -1,0 +1,146 @@
+{
+  "market_id": "MKT-005",
+  "thesis_id": "MKT-005-TH1",
+  "analysis_id": "MKT-005-TH1-A1",
+  "analysis_timestamp": "2026-03-16T20:45:45Z",
+  "resolution_date": "2027-01-01T05:00:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "high",
+    "resolution_clarity": "high",
+    "liquidity_quality": "high",
+    "information_accessibility": "medium",
+    "market_noise_level": "medium",
+    "screening_comment": "Marché exploitable : règle de résolution explicite, volume correct et contexte public vérifiable. Réserve principale : information interne limitée sur l'état réel de préparation d'une IPO."
+  },
+  "base_rate": {
+    "base_rate_value": 0.09,
+    "base_rate_reference_class": "Grandes plateformes crypto privées ou fintech/crypto exchanges de premier plan, sans dépôt public connu à date donnée, devant réaliser une première cotation dans une fenêtre d'environ 9 à 12 mois.",
+    "base_rate_comment": "La classe de référence reste imparfaite car les IPO crypto sont rares et très dépendantes du cycle réglementaire et du marché actions. Mais sans dépôt public ni calendrier officiel, la fréquence de conversion en IPO effectivement réalisée dans l'année reste basse."
+  },
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "Fenêtre temporelle encore suffisante pour préparer et finaliser une IPO avant le 31 décembre 2026",
+        "status": "partial",
+        "comment": "Techniquement possible, mais la fenêtre est courte pour une société non encore engagée publiquement dans un processus de cotation."
+      },
+      {
+        "name": "Absence d'obstacle réglementaire ou judiciaire empêchant matériellement une cotation en 2026",
+        "status": "partial",
+        "comment": "OKX peut opérer et se développer, mais l'accord pénal américain et le consultant de conformité jusqu'en février 2027 compliquent le dossier."
+      },
+      {
+        "name": "Volonté réelle du management et des actionnaires de viser 2026 plutôt qu'un horizon ultérieur",
+        "status": "partial",
+        "comment": "Il existe des signaux d'ouverture à une future cotation, mais aucun engagement temporel pour 2026."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Préparation financière et documentaire compatible avec une cotation rapide",
+        "status": "unknown",
+        "comment": "Aucun dépôt SEC ni information publique détaillée sur des comptes audités destinés à une IPO n'a été identifié."
+      },
+      {
+        "name": "Fenêtre de marché favorable pour les IPO crypto en 2026",
+        "status": "filled",
+        "comment": "Le marché primaire crypto s'est rouvert avec Bullish en 2025 et BitGo en 2026."
+      },
+      {
+        "name": "Acceptabilité réglementaire suffisante aux États-Unis et dans les juridictions clés",
+        "status": "partial",
+        "comment": "L'expansion américaine et les licences européennes aident, mais le passif AML et le regard des régulateurs restent des freins."
+      },
+      {
+        "name": "Pression de financement justifiant une introduction rapide",
+        "status": "not_filled",
+        "comment": "L'investissement minoritaire d'ICE à une valorisation de 25 milliards réduit l'urgence financière immédiate d'une IPO en 2026."
+      }
+    ]
+  },
+  "factor_list": [
+    {
+      "factor_name": "Réouverture de la fenêtre des IPO crypto",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2,
+      "factor_comment": "Bullish a réussi son IPO en août 2025 et BitGo a coté en janvier 2026, ce qui montre qu'un accès au marché actions est de nouveau possible pour des acteurs crypto."
+    },
+    {
+      "factor_name": "Partenariat stratégique avec ICE et valorisation privée élevée",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2,
+      "factor_comment": "L'investissement d'ICE, son siège au board et la valorisation à 25 milliards renforcent la crédibilité institutionnelle de OKX et créent une voie potentielle vers les marchés publics."
+    },
+    {
+      "factor_name": "Signal verbal d'ouverture à une cotation future",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 1,
+      "factor_comment": "Haider Rafique a déclaré à Reuters qu'il jugeait très probable d'aller dans cette direction à l'avenir, sans promettre 2026."
+    },
+    {
+      "factor_name": "Aucun processus IPO public identifié à ce stade",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Aucun dépôt SEC, aucun prospectus ni aucun calendrier officiel d'introduction n'ont été trouvés, alors que la date limite est fin 2026."
+    },
+    {
+      "factor_name": "Passif judiciaire américain et consultant de conformité jusqu'en 2027",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Le plaidoyer de culpabilité de février 2025 et l'obligation de conserver un consultant externe jusqu'en février 2027 rendent une IPO en 2026 plus difficile politiquement, réglementairement et opérationnellement."
+    },
+    {
+      "factor_name": "Surveillance réglementaire persistante en Europe",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "OKX a obtenu un agrément via Malte, mais la procédure maltaise a ensuite suscité des critiques d'ESMA et d'autres régulateurs européens."
+    },
+    {
+      "factor_name": "Absence d'urgence financière évidente après le tour ICE",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "Une société fraîchement valorisée à 25 milliards et financée par un partenaire stratégique peut raisonnablement attendre 2027 ou plus tard pour optimiser son timing de marché."
+    }
+  ],
+  "confidence": {
+    "confidence_sources": "high",
+    "confidence_model": "medium",
+    "confidence_context": "medium",
+    "confidence_overall": "medium"
+  },
+  "ambiguity": {
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low"
+  },
+  "contradiction_forced": {
+    "best_counter_thesis": "Le marché peut encore sous-estimer la vitesse à laquelle un exchange crypto global, désormais adoubé par ICE et soutenu par une fenêtre IPO rouverte, peut formaliser une cotation si le management décide d'accélérer dès le printemps ou l'été 2026.",
+    "top_3_failure_reasons": [
+      "OKX pourrait déjà être beaucoup plus avancé en préparation interne qu'il n'apparaît publiquement.",
+      "Le partenariat avec ICE peut servir de prélude direct à une cotation plus rapide que prévu, surtout dans un marché crypto redevenu porteur.",
+      "Le poids accordé au passif réglementaire peut être excessif si les investisseurs privilégient la croissance et jugent les remédiations suffisantes."
+    ],
+    "market_might_be_right_because": "Le prix de 13% reflète peut-être correctement un scénario de faible probabilité mais non marginal : une IPO reste plausible si OKX convertit vite son momentum institutionnel en dépôt formel.",
+    "thesis_invalidation_trigger": "Annonce officielle d'un dépôt confidentiel ou public d'un dossier d'introduction en bourse, ou communication de la société indiquant explicitement viser une cotation en 2026."
+  },
+  "research_notes": {
+    "primary_sources": "Règles Polymarket du marché ; Reuters du 24 février 2025 sur le guilty plea ; communiqué du DOJ ; annonce officielle OKX du 15 avril 2025 sur le lancement américain ; Reuters du 13 juin 2025 sur les agréments MiCA via Malte ; Reuters du 5 mars 2026 sur l'investissement d'ICE ; Reuters sur les IPO Bullish et BitGo.",
+    "historical_precedents": "Coinbase en 2021 comme précédent majeur de cotation crypto ; Bullish en août 2025 et BitGo en janvier 2026 comme preuves récentes de réouverture de la fenêtre IPO crypto ; ces précédents montrent la possibilité, pas la rapidité d'exécution sans préparation visible.",
+    "institutional_constraints": "Le marché résout sur une vraie IPO finalisée avant le 31 décembre 2026 23:59 ET, confirmée par annonces officielles ou sources crédibles. Une fusion, acquisition ou disparition de OKX avant résolution donne No.",
+    "timeline_recent": "24 février 2025 : plaidoyer de culpabilité d'Aux Cayes/OKX et consultant jusqu'en février 2027 ; 15 avril 2025 : lancement officiel de OKX aux États-Unis et siège à San Jose ; juin 2025 : agrément MiCA obtenu via Malte mais sous regard critique ; 5 mars 2026 : investissement minoritaire d'ICE valorisant OKX à 25 milliards.",
+    "actors_and_incentives": "Le management de OKX cherche davantage de légitimité institutionnelle et d'accès réglementé ; ICE a intérêt à approfondir l'intégration crypto-tradfi ; les actionnaires existants peuvent préférer maximiser la valorisation et attendre un moment encore meilleur ; les régulateurs veulent voir des remédiations crédibles.",
+    "key_uncertainties": "Existence ou non d'une préparation confidentielle à l'IPO ; choix du lieu de cotation ; capacité à transformer le partenariat ICE en dossier public rapide ; degré réel de tolérance des investisseurs vis-à-vis du passif AML ; calendrier réglementaire américain et européen.",
+    "counterarguments": "Les récents succès de Bullish et BitGo montrent que le marché actions peut absorber des dossiers crypto ; ICE apporte une caution institutionnelle rare ; OKX dispose d'une taille et d'une marque suffisantes pour attirer rapidement les banques et investisseurs si la décision est prise.",
+    "dominant_market_narrative": "Narratif mixte : oui, le secteur crypto est de nouveau 'IPO-able', mais OKX semble davantage en phase de consolidation institutionnelle et réglementaire qu'en sprint final vers une cotation cette année."
+  }
+}

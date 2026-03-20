@@ -1,0 +1,319 @@
+[
+  {
+    "market_id": "BATCH-010-2",
+    "thesis_id": "BATCH-010-2-TH1",
+    "analysis_id": "BATCH-010-2-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:00:00Z",
+    "resolution_date": "2026-12-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "medium",
+      "information_accessibility": "medium",
+      "market_noise_level": "medium",
+      "screening_comment": "Événement globalement clair, mais une ambiguïté subsiste sur ce qui compte exactement comme une élection présidentielle officiellement 'scheduled'."
+    },
+    "base_rate": {
+      "base_rate_value": 0.34,
+      "base_rate_reference_class": "Régime autoritaire consolidé faisant face à une pression internationale persistante, susceptible d’annoncer un calendrier électoral pour préserver une façade institutionnelle sans nécessairement concéder une compétition libre.",
+      "base_rate_comment": "Base rate modéré. Le régime a intérêt à conserver une légitimité procédurale minimale, mais il garde aussi une forte capacité à retarder, manipuler ou requalifier le calendrier selon son intérêt."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Le régime conserve la capacité institutionnelle d’annoncer officiellement une présidentielle avant fin 2026",
+          "status": "filled",
+          "comment": "Aucun obstacle institutionnel matériel n’empêche une annonce officielle."
+        },
+        {
+          "name": "Le pouvoir choisit effectivement de publier un calendrier ou une date qui sera reconnue comme une programmation présidentielle",
+          "status": "partial",
+          "comment": "C’est politiquement plausible, mais pas acquis."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "La pression internationale reste suffisante pour pousser Caracas à afficher un calendrier électoral",
+          "status": "partial",
+          "comment": "Cette pression existe, mais son efficacité réelle varie."
+        },
+        {
+          "name": "Le régime estime qu’une annonce électorale améliore davantage sa position qu’un report",
+          "status": "partial",
+          "comment": "Le calcul coût-bénéfice reste incertain."
+        },
+        {
+          "name": "L’opposition et les partenaires extérieurs traitent l’annonce comme une vraie programmation présidentielle",
+          "status": "unknown",
+          "comment": "Une annonce peut exister tout en restant contestée sur sa substance."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Besoin périodique de légitimité institutionnelle",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Les régimes hybrides ou autoritaires utilisent souvent l’annonce d’élections comme outil de normalisation politique et diplomatique."
+      },
+      {
+        "factor_name": "Capacité du régime à manipuler le calendrier sans renoncer à l’échéance",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Forte incitation à différer si le contexte politique est défavorable",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le régime peut juger préférable de retarder plutôt que de fixer un cadre électoral risqué."
+      },
+      {
+        "factor_name": "Ambiguïté potentielle sur la portée réelle d’une 'programmation' électorale",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut avoir raison de rester sous 50% parce que le régime n’a aucune raison de s’enfermer trop tôt dans un calendrier présidentiel s’il pense pouvoir mieux contrôler le jeu par le flou et le report.",
+      "top_3_failure_reasons": [
+        "Le régime peut privilégier la survie politique au détriment de toute façade procédurale.",
+        "La pression internationale peut rester insuffisante pour forcer une vraie programmation.",
+        "Une définition stricte de 'scheduled' peut exclure des signaux politiques informels ou incomplets."
+      ],
+      "market_might_be_right_because": "Le marché intègre peut-être correctement le fait que l’annonce d’une présidentielle n’est utile au régime que si elle améliore sa position stratégique.",
+      "thesis_invalidation_trigger": "Déclaration officielle du pouvoir vénézuélien excluant explicitement toute programmation présidentielle avant 2027."
+    },
+    "research_notes": {
+      "primary_sources": "Comportement institutionnel récent du régime vénézuélien et logique diplomatique observable.",
+      "historical_precedents": "Usage d’élections ou d’annonces électorales comme instrument de légitimation dans des régimes autoritaires ou hybrides.",
+      "institutional_constraints": "Le pouvoir central conserve une forte maîtrise des institutions électorales.",
+      "timeline_recent": "Aucun calendrier présidentiel incontestable n’est encore intégré comme évidence publique à la date de l’analyse.",
+      "actors_and_incentives": "Le régime cherche à préserver le contrôle tout en limitant les coûts diplomatiques et économiques.",
+      "key_uncertainties": "Définition précise de 'scheduled', intensité de la pression extérieure, calcul tactique du régime.",
+      "counterarguments": "Le pouvoir peut juger qu’un flou prolongé lui donne plus de marge qu’une date officielle.",
+      "dominant_market_narrative": "Une programmation d’ici fin 2026 reste plausible, mais pas assez évidente pour devenir le scénario dominant."
+    }
+  },
+  {
+    "market_id": "BATCH-010-0",
+    "thesis_id": "BATCH-010-0-TH1",
+    "analysis_id": "BATCH-010-0-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:00:00Z",
+    "resolution_date": "2026-12-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "L’événement est compréhensible, mais la fenêtre jusqu’au 31 mars 2026 est très courte pour une annonce présidentielle formelle."
+    },
+    "base_rate": {
+      "base_rate_value": 0.03,
+      "base_rate_reference_class": "Annonce électorale majeure dans un régime autoritaire sur un horizon de moins de deux semaines sans signal public décisif déjà installé.",
+      "base_rate_comment": "Base rate très faible. Sur une fenêtre aussi courte, l’absence de signal fort préalable écrase presque toute probabilité politique normale."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Une décision politique formelle doit être prise avant le 31 mars 2026",
+          "status": "not_filled",
+          "comment": "Aucun élément fort n’indique qu’une telle annonce soit imminente."
+        },
+        {
+          "name": "Cette décision doit être publiée sous une forme reconnue comme une programmation présidentielle",
+          "status": "partial",
+          "comment": "Même si un signal apparaissait, la qualification exacte pourrait rester contestée."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "L’appareil électoral est prêt à diffuser un calendrier présidentiel immédiatement",
+          "status": "unknown",
+          "comment": "Préparation réelle non observable de façon robuste."
+        },
+        {
+          "name": "Le régime a un intérêt tactique immédiat à annoncer avant fin mars",
+          "status": "partial",
+          "comment": "Possible, mais non démontré."
+        },
+        {
+          "name": "Aucune priorité politique concurrente ne pousse au report",
+          "status": "partial",
+          "comment": "Le régime peut préférer conserver l’ambiguïté."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Fenêtre temporelle extrêmement courte",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Moins de deux semaines restantes réduit fortement la probabilité d’une annonce présidentielle formelle crédible."
+      },
+      {
+        "factor_name": "Absence de signal public décisif déjà installé",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Sans pré-annonce ou séquence préparatoire visible, l’annonce avant le 31 mars reste marginale."
+      },
+      {
+        "factor_name": "Possibilité théorique d’un mouvement tactique soudain du régime",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le seul vrai cas contraire est une annonce surprise utilisée comme choc tactique par le régime pour reprendre l’initiative politique avant fin mars.",
+      "top_3_failure_reasons": [
+        "Des préparatifs non publics peuvent déjà être achevés.",
+        "Le régime peut choisir une annonce surprise pour déstabiliser l’opposition.",
+        "Une définition souple de 'scheduled' peut permettre une résolution Yes sur une communication moins formelle qu’attendu."
+      ],
+      "market_might_be_right_because": "Le marché price correctement une probabilité très faible mais non nulle d’annonce surprise.",
+      "thesis_invalidation_trigger": "Annonce officielle d’un calendrier ou d’une date présidentielle avant le 31 mars 2026."
+    },
+    "research_notes": {
+      "primary_sources": "Absence de signal public décisif à la date de l’analyse.",
+      "historical_precedents": "Les annonces électorales rapides existent mais restent rares sans séquence préparatoire visible.",
+      "institutional_constraints": "Le régime peut annoncer vite s’il le souhaite, mais n’y est pas mécaniquement forcé.",
+      "timeline_recent": "Aucune dynamique publique forte ne suggère une programmation imminente avant fin mars.",
+      "actors_and_incentives": "Le régime arbitre entre effet de surprise, pression extérieure et intérêt à conserver le flou.",
+      "key_uncertainties": "Existence de préparatifs cachés et interprétation exacte de 'scheduled'.",
+      "counterarguments": "Un pouvoir très centralisé peut surprendre plus vite qu’un modèle institutionnel classique ne l’imagine.",
+      "dominant_market_narrative": "Le scénario Yes avant le 31 mars est très minoritaire."
+    }
+  },
+  {
+    "market_id": "BATCH-010-1",
+    "thesis_id": "BATCH-010-1-TH1",
+    "analysis_id": "BATCH-010-1-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:00:00Z",
+    "resolution_date": "2026-12-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "rejected",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "La deadline du 31 janvier 2026 est déjà dépassée au moment de l’analyse. Le contrat devient essentiellement rétrospectif et non exploitable analytiquement comme événement futur."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Événement à deadline déjà expirée sans preuve retenue d’occurrence avant la date limite.",
+      "base_rate_comment": "Valeur minimale imposée par le schéma. En pratique, la question est presque entièrement archival/résolution, pas prospective."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "La fenêtre temporelle devait encore être ouverte au moment pertinent",
+          "status": "not_filled",
+          "comment": "La date du 31 janvier 2026 est déjà passée."
+        },
+        {
+          "name": "Une programmation présidentielle devait avoir été annoncée au plus tard le 31 janvier 2026",
+          "status": "not_filled",
+          "comment": "Aucune preuve retenue ici ne permet de considérer cette condition comme remplie."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Une source officielle ou un consensus crédible pourrait encore révéler un acte antérieur qualifiant",
+          "status": "unknown",
+          "comment": "C’est la seule zone résiduelle d’incertitude."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Deadline déjà expirée",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "C’est le fait structurel décisif : le contrat porte sur une échéance déjà passée."
+      },
+      {
+        "factor_name": "Nature désormais rétrospective du contrat",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "L’analyse ne repose plus sur une probabilité politique future mais sur la découverte d’une éventuelle annonce passée."
+      },
+      {
+        "factor_name": "Possibilité résiduelle d’un cas archival ou de résolution",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule vraie contre-thèse est qu’un acte officiel valable ait été publié avant le 31 janvier 2026 mais insuffisamment visible dans les sources consultées au moment de l’analyse.",
+      "top_3_failure_reasons": [
+        "Une source officielle antérieure peut exister sans avoir été correctement intégrée.",
+        "Le critère de résolution peut accepter une forme de programmation moins explicite qu’attendu.",
+        "Un retard de diffusion ou d’archivage peut masquer une annonce valable faite avant la deadline."
+      ],
+      "market_might_be_right_because": "Sur un contrat expiré, seule la matérialité exacte d’une annonce antérieure compte réellement.",
+      "thesis_invalidation_trigger": "Mise au jour d’un document officiel ou d’un consensus crédible prouvant qu’une présidentielle a bien été programmée avant le 31 janvier 2026."
+    },
+    "research_notes": {
+      "primary_sources": "Vérification calendaire et logique de contrat expiré.",
+      "historical_precedents": "Les marchés à deadline déjà dépassée deviennent des questions de preuve, pas de prévision.",
+      "institutional_constraints": "La résolution dépend entièrement de l’existence d’une annonce qualifiante avant la date limite.",
+      "timeline_recent": "Au 19 mars 2026, la question n’est plus prospective.",
+      "actors_and_incentives": "Aucun acteur ne peut encore rendre l’événement vrai après la deadline ; seule compte la réalité d’un acte antérieur.",
+      "key_uncertainties": "Existence éventuelle d’une source officielle passée non intégrée.",
+      "counterarguments": "Un contrat expiré peut encore surprendre si la documentation historique est incomplète.",
+      "dominant_market_narrative": "Le contrat est pratiquement mort sauf découverte archival."
+    }
+  }
+]

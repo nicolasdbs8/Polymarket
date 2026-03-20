@@ -1,0 +1,139 @@
+{
+  "measured_at": "2026-03-20T15:31:00Z",
+  "n_obs": 13,
+  "mean_spread": 0.01,
+  "median_spread": 0.01,
+  "recommended_friction": 0.005,
+  "observations": [
+    {
+      "slug": "btc-updown-5m-1774020300",
+      "p_up": 0.525,
+      "p_down": 0.475,
+      "spread": 0.01,
+      "best_bid": 0.52,
+      "best_ask": 0.53,
+      "last_trade": 0.53,
+      "mins": 2.1
+    },
+    {
+      "slug": "btc-updown-5m-1774020600",
+      "p_up": 0.495,
+      "p_down": 0.505,
+      "spread": 0.01,
+      "best_bid": 0.49,
+      "best_ask": 0.5,
+      "last_trade": 0.5,
+      "mins": 7.1
+    },
+    {
+      "slug": "btc-updown-5m-1774020900",
+      "p_up": 0.505,
+      "p_down": 0.495,
+      "spread": 0.01,
+      "best_bid": 0.5,
+      "best_ask": 0.51,
+      "last_trade": 0.51,
+      "mins": 12.1
+    },
+    {
+      "slug": "btc-updown-5m-1774020300",
+      "p_up": 0.525,
+      "p_down": 0.475,
+      "spread": 0.01,
+      "best_bid": 0.52,
+      "best_ask": 0.53,
+      "last_trade": 0.53,
+      "mins": 1.1
+    },
+    {
+      "slug": "btc-updown-5m-1774020600",
+      "p_up": 0.505,
+      "p_down": 0.495,
+      "spread": 0.01,
+      "best_bid": 0.5,
+      "best_ask": 0.51,
+      "last_trade": 0.51,
+      "mins": 6.1
+    },
+    {
+      "slug": "btc-updown-5m-1774020900",
+      "p_up": 0.505,
+      "p_down": 0.495,
+      "spread": 0.01,
+      "best_bid": 0.5,
+      "best_ask": 0.51,
+      "last_trade": 0.51,
+      "mins": 11.1
+    },
+    {
+      "slug": "btc-updown-5m-1774020300",
+      "p_up": 0.275,
+      "p_down": 0.725,
+      "spread": 0.01,
+      "best_bid": 0.27,
+      "best_ask": 0.28,
+      "last_trade": 0.19,
+      "mins": 0.0
+    },
+    {
+      "slug": "btc-updown-5m-1774020600",
+      "p_up": 0.505,
+      "p_down": 0.495,
+      "spread": 0.01,
+      "best_bid": 0.5,
+      "best_ask": 0.51,
+      "last_trade": 0.51,
+      "mins": 5.0
+    },
+    {
+      "slug": "btc-updown-5m-1774020900",
+      "p_up": 0.505,
+      "p_down": 0.495,
+      "spread": 0.01,
+      "best_bid": 0.5,
+      "best_ask": 0.51,
+      "last_trade": 0.51,
+      "mins": 10.0
+    },
+    {
+      "slug": "btc-updown-5m-1774020300",
+      "p_up": 0.275,
+      "p_down": 0.725,
+      "spread": 0.01,
+      "best_bid": 0.27,
+      "best_ask": 0.28,
+      "last_trade": 0.19,
+      "mins": -1.0
+    },
+    {
+      "slug": "btc-updown-5m-1774020600",
+      "p_up": 0.505,
+      "p_down": 0.495,
+      "spread": 0.01,
+      "best_bid": 0.5,
+      "best_ask": 0.51,
+      "last_trade": 0.51,
+      "mins": 4.0
+    },
+    {
+      "slug": "btc-updown-5m-1774020900",
+      "p_up": 0.505,
+      "p_down": 0.495,
+      "spread": 0.01,
+      "best_bid": 0.5,
+      "best_ask": 0.51,
+      "last_trade": 0.51,
+      "mins": 9.0
+    },
+    {
+      "slug": "btc-updown-5m-1774021200",
+      "p_up": 0.505,
+      "p_down": 0.495,
+      "spread": 0.01,
+      "best_bid": 0.5,
+      "best_ask": 0.51,
+      "last_trade": 0.51,
+      "mins": 14.0
+    }
+  ]
+}

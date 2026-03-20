@@ -1,0 +1,133 @@
+{
+  "market_id": "MKT-004",
+  "thesis_id": "MKT-004-TH1",
+  "analysis_id": "MKT-004-TH1-A1",
+  "analysis_timestamp": "2026-03-16T20:00:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "medium",
+    "resolution_clarity": "medium",
+    "liquidity_quality": "high",
+    "information_accessibility": "high",
+    "market_noise_level": "medium",
+    "screening_comment": "Marché analysable : bonne liquidité, information macroéconomique abondante et sources officielles disponibles. Réserve principale : la résolution dépend vraisemblablement du cadrage NBER et d'une règle Polymarket non entièrement capturée dans les extraits consultés."
+  },
+  "base_rate": {
+    "base_rate_value": 0.22,
+    "base_rate_reference_class": "Fréquence historique approximative d'entrée en récession américaine dans un horizon de 9 à 12 mois à partir d'une phase d'expansion mûre, plutôt que fréquence brute annuelle simple.",
+    "base_rate_comment": "Le base rate reste imparfait : les récessions américaines sont peu nombreuses, très hétérogènes, et souvent déclenchées par des chocs exogènes. Le contexte actuel combine ralentissement cyclique, choc pétrolier potentiel et contrainte inflationniste, ce qui peut pousser le risque au-dessus d'une année 'normale' sans pour autant rendre la récession plus probable qu'improbable."
+  },
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "Contraction suffisamment large pour relever de la définition NBER",
+        "status": "filled",
+        "comment": "Condition conceptuellement ouverte : si un vrai retournement macro survient, il peut être qualifié de récession par le NBER."
+      },
+      {
+        "name": "Point haut de cycle situé au plus tard en décembre 2026",
+        "status": "filled",
+        "comment": "La fenêtre temporelle reste ouverte car le marché porte sur une entrée en récession avant fin 2026, pas sur une annonce immédiate."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Affaiblissement du marché du travail au-delà d'un simple ralentissement de l'embauche",
+        "status": "partial",
+        "comment": "Le marché du travail paraît plus mou, mais les licenciements restent faibles et les demandes hebdomadaires d'allocations chômage ne signalent pas encore une rupture nette."
+      },
+      {
+        "name": "Faiblesse durable de la demande des ménages",
+        "status": "partial",
+        "comment": "La consommation ralentit, mais ne s'est pas encore effondrée de manière diffuse."
+      },
+      {
+        "name": "Persistance du choc énergétique / géopolitique",
+        "status": "unknown",
+        "comment": "Le choc pétrolier lié à l'Iran peut accélérer le basculement vers la récession, mais sa durée reste très incertaine."
+      },
+      {
+        "name": "Marge de réaction monétaire suffisante malgré l'inflation",
+        "status": "partial",
+        "comment": "La Fed pourrait être contrainte par un nouveau choc inflationniste, ce qui réduit sa capacité à amortir un ralentissement."
+      }
+    ]
+  },
+  "factor_list": [
+    {
+      "factor_name": "Ralentissement macro déjà visible avant le choc iranien",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 3,
+      "factor_comment": "Le PIB réel du T4 2025 n'a progressé que de 0,7% en rythme annualisé, ce qui indique une économie déjà fragile avant la nouvelle hausse du pétrole."
+    },
+    {
+      "factor_name": "Choc pétrolier et risque stagflationniste",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "Une hausse durable de l'énergie frapperait à la fois le revenu réel des ménages, les marges des entreprises et la liberté de la Fed."
+    },
+    {
+      "factor_name": "Fragilité du marché du travail sous la surface",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2,
+      "factor_comment": "Les créations d'emplois sont faibles et plusieurs sources décrivent un marché du travail plus fragile qu'il n'en a l'air."
+    },
+    {
+      "factor_name": "Résilience résiduelle de l'activité et des prévisions centrales",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Les prévisions centrales du CBO et du Conference Board restent orientées vers une croissance positive en 2026 plutôt que vers une récession de référence."
+    },
+    {
+      "factor_name": "Licenciements encore faibles",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "Les inscriptions hebdomadaires au chômage restent basses, ce qui contredit pour l'instant l'idée d'une contraction déjà enclenchée."
+    },
+    {
+      "factor_name": "Ambiguïté temporelle liée au décalage NBER",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "Même si l'économie se retourne fin 2026, la datation et la lecture de résolution peuvent introduire un bruit temporel non négligeable."
+    }
+  ],
+  "confidence": {
+    "confidence_sources": "high",
+    "confidence_model": "medium",
+    "confidence_context": "low",
+    "confidence_overall": "medium"
+  },
+  "ambiguity": {
+    "event_ambiguity": "medium",
+    "resolution_ambiguity": "medium"
+  },
+  "contradiction_forced": {
+    "best_counter_thesis": "Le marché peut encore sous-pricer la résilience structurelle de l'économie américaine : tant que l'emploi ne casse pas franchement et que le choc énergétique reste transitoire, le scénario central reste celui d'un simple ralentissement inflationniste, pas d'une récession NBER d'ici fin 2026.",
+    "top_3_failure_reasons": [
+      "Le choc pétrolier pourrait se dissiper trop vite pour transmettre une vraie contraction macroéconomique.",
+      "Le ralentissement actuel peut rester un simple soft patch sans diffusion suffisante à l'ensemble de l'économie.",
+      "La règle exacte de résolution Polymarket peut être moins favorable à une lecture prudente que ce que suggère l'analogie avec la datation NBER."
+    ],
+    "market_might_be_right_because": "Le prix à 31% reflète peut-être correctement le fait qu'il existe de vrais risques baissiers, mais qu'en l'absence d'effondrement du travail ou du crédit, la plupart des scénarios restent encore compatibles avec une croissance faible mais positive.",
+    "thesis_invalidation_trigger": "Désescalade rapide au Moyen-Orient combinée à plusieurs mois de stabilisation de l'emploi, de la consommation et des indicateurs avancés américains."
+  },
+  "research_notes": {
+    "primary_sources": "NBER Business Cycle Dating Committee; BEA GDP Q4 2025 second estimate; CBO Budget and Economic Outlook 2026-2036; Conference Board LEI and Economy Watch March 2026; Federal Reserve communications; Reuters mars 2026.",
+    "historical_precedents": "Récessions américaines déclenchées ou aggravées par chocs énergétiques, resserrement monétaire ou retournement rapide du marché du travail ; comparaison utile mais imparfaite avec 1973-1974, 1990 et 2008 sur la logique de choc + diffusion.",
+    "institutional_constraints": "La résolution semble dépendre d'une définition officielle de la récession, vraisemblablement liée au NBER ; le délai de datation officielle et l'absence de capture complète des règles exactes imposent une prudence méthodologique.",
+    "timeline_recent": "T4 2025 : croissance réelle ramenée à 0,7% ; début 2026 : emploi plus mou, immobilier faible, indicateurs avancés encore négatifs ; mars 2026 : choc géopolitique sur l'Iran et remontée du pétrole, ce qui ravive le risque de stagflation.",
+    "actors_and_incentives": "Fed partagée entre inflation et croissance ; ménages exposés à l'énergie et à l'effet richesse ; entreprises sensibles aux coûts et à la demande ; marché Polymarket intègre à la fois les signaux de ralentissement et la résilience observée.",
+    "key_uncertainties": "Durée du choc pétrolier, réaction de la Fed, comportement de l'emploi au printemps-été 2026, ampleur de la diffusion du ralentissement au-delà de l'industrie et du logement, règles précises de résolution du marché.",
+    "counterarguments": "Les prévisions centrales officielles et semi-officielles restent hors récession, les licenciements demeurent bas, et l'économie américaine a déjà absorbé plusieurs faux signaux récessionnistes depuis 2022.",
+    "dominant_market_narrative": "Le marché paraît pricier un risque sérieux mais minoritaire : pas de scénario rose, pas non plus de certitude récessionniste."
+  }
+}

@@ -1,0 +1,730 @@
+[
+  {
+    "market_id": "BATCH-001-8",
+    "thesis_id": "BATCH-001-8-TH1",
+    "analysis_id": "BATCH-001-8-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:25:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contrat exploitable : la règle de résolution Polymarket est explicite et la campagne hongroise est très documentée. L'incertitude vient surtout de l'écart entre vote, formation de majorité et confirmation formelle du prochain Premier ministre."
+    },
+    "base_rate": {
+      "base_rate_value": 0.58,
+      "base_rate_reference_class": "Chef d'opposition dominant dans les sondages à moins d'un mois d'une législative, face à un sortant affaibli mais institutionnellement enraciné.",
+      "base_rate_comment": "Base rate élevé sans être écrasant. Péter Magyar mène dans les sondages et sa coalition de fait concentre le vote anti-Orbán, mais le système politique hongrois et les ressources de Fidesz empêchent de pousser la probabilité vers des niveaux quasi certains."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "TISZA doit finir en position de former une majorité ou une coalition gouvernementale viable",
+          "status": "partial",
+          "comment": "Les sondages favorisent TISZA, mais la transformation de l'avance en majorité gouvernante n'est pas encore acquise."
+        },
+        {
+          "name": "Péter Magyar doit rester le choix naturel pour la fonction de Premier ministre dans le camp anti-Orbán",
+          "status": "filled",
+          "comment": "Il est le chef de TISZA et la figure centrale de l'opposition compétitive."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "L'avance de TISZA dans les sondages se maintient jusqu'au vote",
+          "status": "filled",
+          "comment": "Reuters rapportait encore le 11 mars une avance significative de TISZA sur Fidesz."
+        },
+        {
+          "name": "L'opposition utile reste concentrée sur TISZA plutôt que re-fragmentée",
+          "status": "filled",
+          "comment": "Plusieurs groupes se sont retirés ou ont appelé à soutenir TISZA, ce qui renforce la logique de vote utile."
+        },
+        {
+          "name": "Les leviers institutionnels de Fidesz ne suffisent pas à compenser le retard politique",
+          "status": "partial",
+          "comment": "C'est le principal risque résiduel pour la thèse Magyar."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "TISZA mène dans les sondages récents",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Reuters a rapporté une avance nette de TISZA sur Fidesz parmi les électeurs décidés à l'approche du scrutin."
+      },
+      {
+        "factor_name": "Consolidation du vote anti-Orbán autour d'une figure unique",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "La campagne est largement structurée comme un duel Magyar contre Orbán, ce qui marginalise les autres opposants."
+      },
+      {
+        "factor_name": "Dynamique de campagne favorable et forte mobilisation visible",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Avantage d'incumbency et contrôle institutionnel de Fidesz",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Orbán conserve l'appareil d'Etat, une forte présence médiatique et des règles électorales largement façonnées sous son pouvoir."
+      },
+      {
+        "factor_name": "Risque d'écart entre victoire électorale et confirmation formelle du prochain Premier ministre",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Campagne de peur et accusations de financement étranger contre Magyar",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 1
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut encore sous-estimer la résilience d'Orbán : même mené dans les sondages, Fidesz garde assez de contrôle institutionnel, médiatique et territorial pour empêcher Magyar d'être effectivement nommé Premier ministre.",
+      "top_3_failure_reasons": [
+        "Les sondages peuvent surestimer la conversion électorale réelle de TISZA.",
+        "Le système institutionnel et territorial favorise Fidesz davantage que ne le reflète un simple head-to-head de popularité.",
+        "Une majorité anti-Orbán peut s'avérer plus difficile à transformer en confirmation formelle de Magyar que prévu."
+      ],
+      "market_might_be_right_because": "Le duel politique hongrois s'est clairement polarisé autour de Magyar et Orbán, et la tendance publique la plus récente favorise Magyar.",
+      "thesis_invalidation_trigger": "Nouveaux sondages crédibles montrant Fidesz de retour devant TISZA ou absence de trajectoire plausible vers une majorité conduite par Magyar."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 11, 15, 16 et 18 mars 2026 ; AP des 12 et 15 mars 2026.",
+      "historical_precedents": "Les challengers d'opposition qui arrivent en tête tardivement peuvent gagner, mais en régime hybride ou fortement centralisé la conversion en pouvoir effectif reste plus fragile.",
+      "institutional_constraints": "Le marché résout sur la personne officiellement nommée et confirmée Premier ministre après l'élection, pas seulement sur le vainqueur moral ou le premier parti.",
+      "timeline_recent": "Élection fixée au 12 avril ; TISZA reste en tête dans les sondages ; la campagne s'est durcie autour d'Orbán contre Magyar.",
+      "actors_and_incentives": "Magyar veut agréger le vote de changement ; Orbán veut transformer la campagne en référendum sécuritaire et conserver le pouvoir malgré son retard.",
+      "key_uncertainties": "Robustesse réelle des sondages, distribution territoriale du vote, capacité de TISZA à sécuriser une majorité parlementaire exploitable.",
+      "counterarguments": "Orbán reste l'adversaire le plus puissant du pays et n'a pas encore perdu le contrôle des leviers essentiels du régime.",
+      "dominant_market_narrative": "Péter Magyar est devenu le favori clair, mais pas un favori hors d'atteinte."
+    }
+  },
+  {
+    "market_id": "BATCH-001-6",
+    "thesis_id": "BATCH-001-6-TH1",
+    "analysis_id": "BATCH-001-6-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:25:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contrat exploitable et liquide. Le cœur de l'analyse est de mesurer si la puissance institutionnelle d'Orbán compense son retard dans les sondages."
+    },
+    "base_rate": {
+      "base_rate_value": 0.34,
+      "base_rate_reference_class": "Chef de gouvernement sortant, au pouvoir depuis longtemps, disposant d'un fort contrôle institutionnel mais abordant l'élection avec un handicap politique réel.",
+      "base_rate_comment": "Base rate non négligeable car Orbán reste l'incumbent dominant du système, mais inférieur à 50% car les sondages récents placent TISZA devant et la campagne semble plus dangereuse pour lui qu'aucune depuis 2010."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Fidesz doit finir en position de conserver ou recomposer une majorité gouvernante",
+          "status": "partial",
+          "comment": "C'est possible mais non central dans les sondages les plus récents."
+        },
+        {
+          "name": "Viktor Orbán doit rester le candidat naturel de Fidesz à la primature après l'élection",
+          "status": "filled",
+          "comment": "Aucun signal crédible ne pointe vers un remplacement interne immédiat."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Le contrôle institutionnel de Fidesz produit un avantage électoral concret",
+          "status": "filled",
+          "comment": "C'est une réalité structurelle du paysage politique hongrois."
+        },
+        {
+          "name": "Les attaques contre Magyar réduisent effectivement son avance",
+          "status": "partial",
+          "comment": "La campagne négative existe, mais son efficacité terminale reste incertaine."
+        },
+        {
+          "name": "Les indécis se déplacent en faveur d'Orbán à la fin de campagne",
+          "status": "partial",
+          "comment": "Hypothèse plausible, mais non confirmée par les derniers sondages publics."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Avantage d'incumbency et appareil de Fidesz",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Orbán garde l'Etat, le parti, le maillage rural et une très forte présence médiatique."
+      },
+      {
+        "factor_name": "Campagne sécuritaire et soutien symbolique américain",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Expérience et centralité personnelle d'Orbán dans Fidesz",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "TISZA mène dans les sondages récents",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les dernières enquêtes publiques largement reprises placent Orbán derrière Péter Magyar."
+      },
+      {
+        "factor_name": "Usure du pouvoir après seize années au gouvernement",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Contexte économique défavorable et fatigue électorale",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut sous-estimer Orbán parce que les sondages publics ne captent pas entièrement l'avantage structurel de Fidesz dans un système qu'il domine depuis des années.",
+      "top_3_failure_reasons": [
+        "Le retard d'Orbán dans les sondages peut être moins décisif que prévu dans le système électoral hongrois.",
+        "Une remobilisation tardive des indécis et du vote rural peut suffire à sauver Fidesz.",
+        "Les marchés peuvent sur-pondérer la dynamique médiatique de Magyar au détriment de la machine électorale réelle d'Orbán."
+      ],
+      "market_might_be_right_because": "Orbán reste l'unique pôle de pouvoir de Fidesz et bénéficie d'un appareil politique que Magyar ne possède pas encore.",
+      "thesis_invalidation_trigger": "Nouvelles enquêtes crédibles donnant TISZA nettement devant sans resserrement et projection de majorité stable hors de portée pour Fidesz."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 11, 15, 16 et 18 mars 2026 ; AP des 12 et 15 mars 2026.",
+      "historical_precedents": "Les chefs de gouvernement très installés peuvent survivre à des campagnes difficiles, mais la longévité finit aussi par générer une forte fatigue du corps électoral.",
+      "institutional_constraints": "Le marché résout sur le prochain Premier ministre officiellement nommé et confirmé après l'élection.",
+      "timeline_recent": "Orbán fait face à sa course la plus serrée depuis des années et tente de remobiliser sa base par une campagne numérique et sécuritaire.",
+      "actors_and_incentives": "Orbán veut transformer l'élection en choix de stabilité souverainiste ; l'opposition veut la transformer en référendum anti-corruption et anti-usure.",
+      "key_uncertainties": "Effet réel de l'avantage institutionnel, comportement des indécis, conversion des intentions de vote en sièges et en nomination gouvernementale.",
+      "counterarguments": "Le niveau de lassitude électorale et le retard mesuré de Fidesz peuvent être enfin suffisants pour le sortir du pouvoir.",
+      "dominant_market_narrative": "Orbán reste très dangereux, mais n'est plus le favori central du scrutin."
+    }
+  },
+  {
+    "market_id": "BATCH-001-10",
+    "thesis_id": "BATCH-001-10-TH1",
+    "analysis_id": "BATCH-001-10-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:25:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat analytiquement simple : Toroczkai existe politiquement, mais le saut entre petit parti radical et primature nationale reste énorme."
+    },
+    "base_rate": {
+      "base_rate_value": 0.02,
+      "base_rate_reference_class": "Chef d'un petit parti tiers dépassant marginalement le seuil parlementaire dans une élection dominée par deux pôles principaux.",
+      "base_rate_comment": "Base rate très bas. Un acteur tiers peut devenir faiseur de roi, mais devenir lui-même Premier ministre sans basculement massif ou blocage institutionnel exceptionnel reste rare."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Our Homeland doit obtenir un rôle central dans la formation du gouvernement",
+          "status": "partial",
+          "comment": "Le parti semble au-dessus du seuil, mais rien n'indique qu'il soit le pivot obligatoire du prochain exécutif."
+        },
+        {
+          "name": "László Toroczkai doit être acceptable comme compromis de primature au-delà de son camp",
+          "status": "not_filled",
+          "comment": "Aucune dynamique publique sérieuse ne montre Toroczkai accepté comme Premier ministre par un camp majoritaire."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Our Homeland dépasse le seuil parlementaire",
+          "status": "filled",
+          "comment": "Reuters le présentait comme le seul autre parti probablement au-dessus de 5%."
+        },
+        {
+          "name": "Le scrutin débouche sur un Parlement très fragmenté",
+          "status": "partial",
+          "comment": "Possible, mais pas le scénario central des enquêtes publiées."
+        },
+        {
+          "name": "Fidesz ou une autre force accepte Toroczkai comme tête d'exécutif",
+          "status": "not_filled",
+          "comment": "Aucun signal en ce sens n'a été identifié."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Our Homeland semble franchir le seuil parlementaire",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "Exister parlementairement est une condition minimale pour toute hypothèse de levier post-électoral."
+      },
+      {
+        "factor_name": "Possibilité théorique de rôle de kingmaker en cas de Parlement serré",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Election structurée comme un duel Magyar-Orbán",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La compétition principale absorbe presque toute la probabilité réelle de primature."
+      },
+      {
+        "factor_name": "Faible acceptabilité coalitionnelle pour Toroczkai comme Premier ministre",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le passage de petit parti radical à chef de gouvernement national n'a pas de trajectoire publique crédible ici."
+      },
+      {
+        "factor_name": "Aucun signal de coalition PM compromise autour de Toroczkai",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut sous-estimer Toroczkai si l'élection produit un blocage extrême où un petit parti charnière impose son chef comme compromis de gouvernement.",
+      "top_3_failure_reasons": [
+        "Un Parlement plus fragmenté que prévu pourrait donner à Our Homeland un poids décisif inattendu.",
+        "Fidesz pourrait préférer un arrangement tactique atypique plutôt qu'une alternance totale vers Magyar.",
+        "Les marchés peuvent parfois écraser trop vite les petites probabilités de scénarios de blocage institutionnel."
+      ],
+      "market_might_be_right_because": "Toroczkai existe comme acteur politique national et son parti n'est pas totalement hors du jeu parlementaire.",
+      "thesis_invalidation_trigger": "Sondages ou signaux crédibles montrant Our Homeland en position charnière indispensable et ouverture publique à un compromis gouvernemental autour de Toroczkai."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 4 et du 11 mars 2026 sur les sondages et la place de Our Homeland.",
+      "historical_precedents": "Les petits partis peuvent influencer des coalitions, mais leurs chefs deviennent rarement Premiers ministres sans configuration de crise.",
+      "institutional_constraints": "Le marché résout sur la personne officiellement nommée et confirmée Premier ministre, pas sur un simple rôle de partenaire ou de faiseur de roi.",
+      "timeline_recent": "Our Homeland gagne en visibilité et semble franchir le seuil, mais reste loin derrière TISZA et Fidesz.",
+      "actors_and_incentives": "Toroczkai veut faire exister une offre radicale autonome ; les deux grands blocs veulent concentrer le vote utile.",
+      "key_uncertainties": "Degré réel de fragmentation parlementaire, comportement post-électoral de Fidesz, valeur de négociation de Our Homeland.",
+      "counterarguments": "Un Parlement très bloqué peut parfois produire des solutions de compromis initialement jugées improbables.",
+      "dominant_market_narrative": "Toroczkai n'est pas perçu comme un vrai candidat à la primature, seulement comme un acteur secondaire pouvant peser sur le jeu."
+    }
+  },
+  {
+    "market_id": "BATCH-001-11",
+    "thesis_id": "BATCH-001-11-TH1",
+    "analysis_id": "BATCH-001-11-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:25:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très lointain du scénario central. La question n'est pas de savoir si Kapitány est visible publiquement, mais s'il existe un chemin crédible vers une nomination comme Premier ministre."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Technocrate ou recrue d'équipe économique, publiquement associée à un camp mais non présentée comme tête politique du gouvernement.",
+      "base_rate_comment": "Base rate minimal autorisé par le protocole. Être recruté pour un rôle économique n'équivaut pas à être candidat plausible à la primature."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "István Kapitány doit être publiquement propulsé comme option de Premier ministre",
+          "status": "not_filled",
+          "comment": "Reuters l'a présenté comme renfort économique de l'équipe Magyar, pas comme candidat à la primature."
+        },
+        {
+          "name": "Le camp vainqueur doit préférer un technocrate externe à son propre leader",
+          "status": "not_filled",
+          "comment": "Aucun signal crédible ne va dans ce sens."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "L'équipe Magyar valorise Kapitány comme figure économique sérieuse",
+          "status": "filled",
+          "comment": "C'est le seul point positif vérifiable."
+        },
+        {
+          "name": "Une logique de cabinet technocratique prend le dessus après l'élection",
+          "status": "unknown",
+          "comment": "Scénario théorique sans ancrage public solide."
+        },
+        {
+          "name": "Kapitány acquiert rapidement une centralité politique nationale",
+          "status": "not_filled",
+          "comment": "Aucune dynamique en ce sens n'a été observée."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Crédibilité économique et profil technocratique",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Recrutement officiel par l'équipe Magyar",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Péter Magyar est lui-même le chef naturel de TISZA",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Si TISZA gagne, la trajectoire naturelle mène vers Magyar, pas vers un technocrate recruté pour l'économie."
+      },
+      {
+        "factor_name": "Absence totale de campagne ou de mandat public pour Kapitány comme Premier ministre",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le dossier public ne contient aucun signal sérieux de primaturabilité."
+      },
+      {
+        "factor_name": "Marché parent dominé par le duel Magyar-Orbán",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Kapitány pourrait émerger uniquement dans un scénario de gouvernement technocratique de compromis où Magyar préfère déléguer la primature pour maximiser l'acceptabilité économique et institutionnelle.",
+      "top_3_failure_reasons": [
+        "Une crise post-électorale pourrait créer une demande inattendue pour une figure technocratique.",
+        "Le marché peut écraser abusivement à zéro des scénarios rares mais juridiquement possibles.",
+        "Le rôle économique confié à Kapitány pourrait être le début d'une montée plus rapide que prévu."
+      ],
+      "market_might_be_right_because": "Kapitány a au moins une existence publique récente dans le camp de l'opposition.",
+      "thesis_invalidation_trigger": "Annonce explicite par TISZA ou par des partenaires potentiels que Kapitány serait une option de Premier ministre ou de chef de gouvernement technocratique."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 19 janvier 2026 sur le recrutement d'István Kapitány par Péter Magyar.",
+      "historical_precedents": "Des technocrates peuvent parfois accéder à la tête du gouvernement, mais cela suppose généralement une crise de coalition ou un accord d'urgence clairement négocié.",
+      "institutional_constraints": "Le marché résout uniquement sur la personne effectivement nommée et confirmée Premier ministre après l'élection.",
+      "timeline_recent": "Kapitány a été présenté comme renfort économique de l'équipe d'opposition, pas comme prétendant à la primature.",
+      "actors_and_incentives": "Magyar cherche à crédibiliser son équipe économique ; Kapitány apporte cette crédibilité sans supplanter le leadership politique.",
+      "key_uncertainties": "Existence ou non d'un scénario technocratique post-électoral, niveau de fragmentation du Parlement, choix tactique éventuel de TISZA.",
+      "counterarguments": "Les scénarios de compromis technocratique existent toujours en théorie lorsqu'un système partisan entre en blocage.",
+      "dominant_market_narrative": "Kapitány n'est pas considéré comme un candidat réel au poste de Premier ministre."
+    }
+  },
+  {
+    "market_id": "BATCH-001-12",
+    "thesis_id": "BATCH-001-12-TH1",
+    "analysis_id": "BATCH-001-12-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:25:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal. Lázár est un acteur important de Fidesz, mais aucune dynamique publique ne le place comme successeur immédiat d'Orbán pour cette séquence électorale."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Poids lourd interne du parti au pouvoir qui n'est pas le chef officiel de campagne ni le candidat naturel au poste de Premier ministre.",
+      "base_rate_comment": "Base rate minimal. Un dauphin interne peut émerger en cas de choc, mais Orbán reste à ce stade le centre incontesté de Fidesz."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Fidesz doit renoncer à Orbán comme option de primature pour l'après-élection",
+          "status": "not_filled",
+          "comment": "Aucun signal crédible n'indique ce basculement."
+        },
+        {
+          "name": "János Lázár doit être choisi comme successeur immédiat ou compromis interne",
+          "status": "not_filled",
+          "comment": "Sa visibilité publique ne suffit pas à établir une trajectoire de succession pour avril 2026."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Lázár reste une figure importante de Fidesz",
+          "status": "filled",
+          "comment": "Il apparaît encore publiquement aux côtés d'Orbán en campagne."
+        },
+        {
+          "name": "Un scénario de succession précoce devient politiquement nécessaire",
+          "status": "unknown",
+          "comment": "C'est théoriquement possible mais pas soutenu par les informations publiques actuelles."
+        },
+        {
+          "name": "La base Fidesz accepte un transfert rapide vers Lázár",
+          "status": "unknown",
+          "comment": "Aucune confirmation récente de cette hypothèse."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Statut de figure interne visible de Fidesz",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Proximité publique avec Orbán pendant la campagne",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Orbán reste le candidat naturel de Fidesz à la primature",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Tant qu'Orbán est politiquement debout, le scénario normal n'ouvre pas d'espace à Lázár."
+      },
+      {
+        "factor_name": "Absence de signal de succession immédiate",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Aucune source récente n'indique que Fidesz prépare Lázár comme Premier ministre post-électoral."
+      },
+      {
+        "factor_name": "Marché effectivement bipolaire entre Magyar et Orbán",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Lázár pourrait devenir pertinent uniquement si Fidesz décidait, après un choc électoral ou une impasse de coalition, qu'Orbán doit s'effacer au profit d'une figure plus négociable.",
+      "top_3_failure_reasons": [
+        "Les scénarios de succession interne sont parfois sous-pricés tant qu'ils ne sont pas publiquement lancés.",
+        "Un résultat électoral ambigu pourrait pousser Fidesz à tester un compromis sans Orbán.",
+        "La visibilité de Lázár dans l'appareil peut lui donner plus de potentiel interne que ne le reflète son prix de marché."
+      ],
+      "market_might_be_right_because": "Lázár est bien une figure identifiable du camp gouvernemental, ce qui le rend au moins théoriquement disponible comme successeur.",
+      "thesis_invalidation_trigger": "Fuite crédible, déclaration interne ou signaux de campagne montrant que Fidesz considère sérieusement une option post-Orbán autour de Lázár."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; visuel Reuters Connect du 7 mars 2026 montrant Lázár aux côtés d'Orbán en campagne ; contexte Reuters général sur l'élection.",
+      "historical_precedents": "Les partis dominés par un chef très centralisé remplacent rarement ce chef sans crise explicite ou besoin de survie immédiat.",
+      "institutional_constraints": "Le marché résout sur le prochain Premier ministre officiellement nommé après l'élection, pas sur un simple poids lourd partisan.",
+      "timeline_recent": "Lázár reste visible dans la campagne Fidesz, mais la compétition publique tourne autour d'Orbán contre Magyar.",
+      "actors_and_incentives": "Fidesz veut garder Orbán comme visage central tant qu'il croit encore pouvoir conserver le pouvoir.",
+      "key_uncertainties": "Amplitude d'un éventuel choc électoral, discipline interne de Fidesz, appétit réel pour une succession rapide.",
+      "counterarguments": "En cas d'impasse, un parti au pouvoir peut parfois choisir un successeur moins polarisant pour sauver l'essentiel.",
+      "dominant_market_narrative": "Lázár n'est pas vu comme un scénario réel à court terme pour la primature."
+    }
+  },
+  {
+    "market_id": "BATCH-001-9",
+    "thesis_id": "BATCH-001-9-TH1",
+    "analysis_id": "BATCH-001-9-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:25:00Z",
+    "resolution_date": "2026-04-12T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal. Dobrev reste une figure politique nationale, mais la logique de vote utile et la centralité de TISZA rendent sa trajectoire vers la primature très faible."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Leader d'un parti d'opposition secondaire dans une élection polarisée autour d'un autre chef d'opposition devenu challenger principal du pouvoir.",
+      "base_rate_comment": "Base rate minimal. Dobrev a une existence politique réelle, mais pas de trajectoire publique sérieuse vers la tête du prochain gouvernement."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "La Democratic Coalition doit redevenir le pivot de l'opposition ou d'une coalition post-électorale",
+          "status": "not_filled",
+          "comment": "Le centre de gravité de l'opposition est désormais TISZA, pas DK."
+        },
+        {
+          "name": "Klára Dobrev doit émerger comme choix acceptable de Premier ministre au-delà de son parti",
+          "status": "not_filled",
+          "comment": "Aucun signal crédible n'indique une telle dynamique."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Dobrev conserve une visibilité nationale comme dirigeante de DK",
+          "status": "filled",
+          "comment": "Elle existe encore publiquement comme figure de parti."
+        },
+        {
+          "name": "La fragmentation de l'opposition empêche TISZA de s'imposer",
+          "status": "partial",
+          "comment": "Risque théorique, mais les informations disponibles montrent plutôt une concentration autour de Magyar."
+        },
+        {
+          "name": "DK retrouve un poids parlementaire de négociation décisif",
+          "status": "unknown",
+          "comment": "Non démontré par les sources récentes consultées."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Existence d'un appareil partisan propre autour de DK",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Visibilité nationale et campagne identifiable",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "TISZA capte la quasi-totalité de la crédibilité d'alternance",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le vote de changement s'organise principalement derrière Péter Magyar, pas derrière DK."
+      },
+      {
+        "factor_name": "Fragmentation de l'opposition pénalise DK plus qu'elle ne l'aide",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Absence de trajectoire publique sérieuse vers la primature",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les sources récentes ne présentent jamais Dobrev comme une candidate plausible au poste de prochain Premier ministre."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Dobrev pourrait réapparaître uniquement si l'opposition anti-Orbán se re-fragmentait brutalement et qu'un compromis inattendu se cherchait en dehors de Magyar.",
+      "top_3_failure_reasons": [
+        "La fragmentation de l'opposition peut produire des issues plus chaotiques que le narratif binaire actuel ne le suggère.",
+        "Le marché peut sous-pricer des scénarios rares de compromis entre formations d'opposition.",
+        "La visibilité politique résiduelle de Dobrev peut compter davantage en cas de blocage post-électoral."
+      ],
+      "market_might_be_right_because": "Dobrev reste une personnalité politique nationale connue, ce qui lui donne au moins une existence théorique dans le marché.",
+      "thesis_invalidation_trigger": "Sondages ou négociations crédibles montrant un retour de DK au centre du jeu oppositionnel ou une remise en cause majeure du leadership de Magyar."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 11 mars 2026 ; Financial Times sur le retrait d'autres groupes au profit de TISZA ; visuels de campagne montrant Dobrev comme candidate de DK.",
+      "historical_precedents": "Les leaders de partis secondaires peuvent survivre politiquement, mais deviennent rarement Premiers ministres quand un autre opposant monopolise la dynamique de changement.",
+      "institutional_constraints": "Le marché résout sur la personne effectivement nommée Premier ministre après l'élection.",
+      "timeline_recent": "La campagne hongroise est dominée par le duel Magyar-Orbán tandis que DK continue d'exister en périphérie.",
+      "actors_and_incentives": "DK veut préserver son espace partisan ; TISZA veut monopoliser le vote utile anti-Orbán ; Fidesz bénéficie d'une opposition fragmentée mais affronte surtout Magyar.",
+      "key_uncertainties": "Niveau réel de DK le jour du vote, degré de fragmentation de l'opposition, scénarios de compromis en cas de Parlement serré.",
+      "counterarguments": "Les systèmes fragmentés peuvent parfois faire émerger des solutions de compromis initialement marginales.",
+      "dominant_market_narrative": "Dobrev n'est pas considérée comme une candidate réaliste au poste de prochain Premier ministre."
+    }
+  }
+]

@@ -1,0 +1,481 @@
+[
+  {
+    "market_id": "BATCH-007-1",
+    "thesis_id": "BATCH-007-1-TH1",
+    "analysis_id": "BATCH-007-1-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:33:14Z",
+    "resolution_date": "2026-06-30T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contrat exploitable : la règle Polymarket est précise et le contexte régional est bien couvert, mais l'horizon est très court et dépend d'une éventuelle entrée des Houthis dans la confrontation actuelle."
+    },
+    "base_rate": {
+      "base_rate_value": 0.18,
+      "base_rate_reference_class": "Fenêtre très courte de moins de deux semaines pour une frappe israélienne sur le Yémen, alors que les Houthis restent à l'écart du conflit Iran-Israël au 13 mars 2026 malgré des précédents de frappes israéliennes en 2024-2025.",
+      "base_rate_comment": "Base rate faible mais non nul. Israël a déjà frappé le Yémen à plusieurs reprises en 2024 et 2025 en réponse à des attaques houthies, mais Reuters rapportait encore le 13 mars 2026 que les Houthis n'étaient pas entrés dans la guerre en cours, ce qui réduit fortement la probabilité d'une frappe avant le 31 mars."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Les Houthis doivent reprendre des actions contre Israël ou créer un motif immédiat de riposte",
+          "status": "partial",
+          "comment": "Reuters a indiqué le 13 mars qu'ils n'étaient pas encore entrés dans la guerre, même s'ils se disaient prêts à agir."
+        },
+        {
+          "name": "Israël doit choisir une réponse directe sur le sol yéménite plutôt qu'une posture d'attente ou de dissuasion indirecte",
+          "status": "partial",
+          "comment": "Israël a déjà frappé le Yémen en 2024 et 2025, mais rien ne montre qu'une telle décision soit déjà prise pour mars 2026."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Le précédent de frappes israéliennes sur le Yémen reste opérant dans la doctrine de riposte",
+          "status": "filled",
+          "comment": "Reuters a documenté plusieurs frappes israéliennes sur des cibles houthies en 2024 et 2025."
+        },
+        {
+          "name": "Les Houthis abandonnent rapidement leur retenue actuelle",
+          "status": "partial",
+          "comment": "Ils sont alignés sur l'axe iranien mais, selon Reuters, ont gardé une logique d'attente au 13 mars."
+        },
+        {
+          "name": "La fenêtre politique et militaire d'ici fin mars permet une frappe confirmable par des sources crédibles",
+          "status": "partial",
+          "comment": "Le marché exige une confirmation datée par consensus de sources crédibles avant l'échéance."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Historique récent de frappes israéliennes sur le Yémen",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Reuters a documenté des frappes israéliennes sur Hodeidah, Sanaa et d'autres cibles houthies en 2024 et 2025."
+      },
+      {
+        "factor_name": "Conflit régional élargi entre Israël, les États-Unis et l'Iran",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Houthis encore non engagés dans la guerre au 13 mars 2026",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Reuters a expliqué que les Houthis n'avaient pas encore rejoint l'escalade malgré la guerre en cours avec l'Iran."
+      },
+      {
+        "factor_name": "Horizon très court jusqu'au 31 mars",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Même si la probabilité terminale existe, la fenêtre de temps est très compressée."
+      },
+      {
+        "factor_name": "Possibilité qu'Israël priorise l'Iran et le Liban plutôt que d'ouvrir immédiatement un front yéménite",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut sous-estimer la vitesse avec laquelle une attaque houthie ou une simple menace crédible pourrait pousser Israël à répliquer très vite sur le Yémen, comme en 2024 et 2025.",
+      "top_3_failure_reasons": [
+        "Les Houthis peuvent abandonner soudainement leur retenue actuelle et fournir un casus belli immédiat.",
+        "Israël a déjà montré qu'il était prêt à frapper le Yémen à longue distance en réponse aux Houthis.",
+        "Le marché peut mieux intégrer que nous des signaux non publics sur une riposte déjà préparée."
+      ],
+      "market_might_be_right_because": "Les précédents de 2024 et 2025 montrent qu'un passage rapide de la menace à la frappe israélienne contre les Houthis est possible.",
+      "thesis_invalidation_trigger": "Confirmation crédible d'une attaque houthie directe contre Israël ou avertissement militaire israélien spécifique visant le Yémen avant fin mars."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 13 mars 2026 sur les Houthis ; Reuters des 29 septembre 2024, 6 mai 2025, 10 juin 2025, 7 juillet 2025, 24 août 2025, 10 septembre 2025 et 16 septembre 2025 sur les frappes israéliennes au Yémen.",
+      "historical_precedents": "Israël a déjà frappé plusieurs fois le Yémen en réponse à des attaques houthies, ce qui empêche de considérer l'événement comme extraordinaire.",
+      "institutional_constraints": "Le marché résout Yes si Israël initie une frappe aérienne, drone ou missile sur le sol yéménite ou une représentation officielle du Yémen avant l'échéance, avec confirmation datée par consensus de sources crédibles.",
+      "timeline_recent": "Au 13 mars 2026, Reuters rapportait que les Houthis n'étaient pas encore entrés dans la guerre déclenchée fin février contre l'Iran.",
+      "actors_and_incentives": "Israël veut dissuader les Houthis sans ouvrir inutilement un front supplémentaire ; les Houthis veulent préserver leur rôle régional tout en évitant une riposte disproportionnée.",
+      "key_uncertainties": "Décision des Houthis d'escalader, seuil israélien de riposte, capacité du marché à exiger une confirmation horodatée avant la deadline.",
+      "counterarguments": "Le précédent de frappes déjà nombreuses réduit la barrière psychologique à une nouvelle frappe.",
+      "dominant_market_narrative": "Une frappe d'ici fin mars est possible, mais dépend d'un déclencheur houthi très rapide."
+    }
+  },
+  {
+    "market_id": "BATCH-007-3",
+    "thesis_id": "BATCH-007-3-TH1",
+    "analysis_id": "BATCH-007-3-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:33:14Z",
+    "resolution_date": "2026-06-30T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contrat exploitable : la règle de résolution est précise et l'horizon d'un peu plus de six semaines laisse plus de temps qu'au 31 mars, tout en restant dépendant d'un déclencheur houthi ou d'une extension délibérée du front israélien."
+    },
+    "base_rate": {
+      "base_rate_value": 0.3,
+      "base_rate_reference_class": "Fenêtre d'environ six semaines pour une frappe israélienne sur le Yémen, avec précédents multiples de frappes contre les Houthis et contexte de guerre régionale accrue, mais sans engagement houthi constaté au 13 mars 2026.",
+      "base_rate_comment": "Base rate intermédiaire. Le précédent de plusieurs frappes israéliennes contre les Houthis rend le scénario plausible, mais le fait que les Houthis restent à l'écart au 13 mars empêche de monter trop haut pour une échéance fin avril."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Les Houthis doivent soit reprendre des frappes vers Israël soit créer un motif stratégique de riposte",
+          "status": "partial",
+          "comment": "Leur comportement est la variable clé."
+        },
+        {
+          "name": "Israël doit juger utile d'étendre ou de réactiver le front yéménite avant fin avril",
+          "status": "partial",
+          "comment": "Plausible mais non acquis tant que l'effort principal reste centré ailleurs."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Le précédent de frappes contre les Houthis rend une nouvelle opération politiquement et militairement faisable",
+          "status": "filled",
+          "comment": "La faisabilité opérationnelle ne fait plus de doute après les frappes de 2024 et 2025."
+        },
+        {
+          "name": "Les Houthis cessent d'observer leur retenue actuelle",
+          "status": "partial",
+          "comment": "Reuters la décrivait encore comme réelle mi-mars."
+        },
+        {
+          "name": "La guerre régionale produit un déclencheur avant fin avril",
+          "status": "partial",
+          "comment": "Le temps disponible est suffisant pour qu'un incident survienne, mais cela reste spéculatif."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Antécédents directs de frappes israéliennes contre les Houthis",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Israël a déjà frappé plusieurs sites houthies au Yémen en 2024 et 2025."
+      },
+      {
+        "factor_name": "Conflit Israël-Iran encore ouvert et régionalisé",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Fenêtre plus longue que mars, laissant place à un incident déclencheur",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Houthis encore non engagés au 13 mars",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La retenue actuelle reste le principal frein."
+      },
+      {
+        "factor_name": "Israël peut préférer concentrer ses moyens sur l'Iran, Gaza et le Liban",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut avoir raison parce que, sur six semaines, la probabilité cumulative d'un incident houthi suivi d'une riposte israélienne devient nettement plus élevée qu'à fin mars.",
+      "top_3_failure_reasons": [
+        "Les Houthis ont déjà une histoire d'attaques contre Israël et peuvent réactiver ce front rapidement.",
+        "Israël a déjà établi le précédent opérationnel et n'aurait pas besoin d'innover pour frapper à nouveau.",
+        "La guerre régionale peut produire une escalade secondaire même si le Yémen n'est pas aujourd'hui le front principal."
+      ],
+      "market_might_be_right_because": "Le précédent de frappes israéliennes au Yémen transforme une éventuelle réplique future en scénario routinisé plutôt qu'exceptionnel.",
+      "thesis_invalidation_trigger": "Reprise des attaques houthies contre Israël ou avertissement israélien public visant les infrastructures houthies avant fin avril."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 13 mars 2026 sur les Houthis ; Reuters 2024-2025 sur les frappes israéliennes au Yémen.",
+      "historical_precedents": "Les frappes israéliennes répétées au Yémen en 2024 et 2025 montrent une vraie propension à répondre militairement aux Houthis.",
+      "institutional_constraints": "Le marché exige une frappe datable et confirmée par consensus de sources crédibles avant la deadline.",
+      "timeline_recent": "Mi-mars 2026, les Houthis n'avaient pas encore rejoint la guerre contre l'Iran malgré leur proximité avec Téhéran.",
+      "actors_and_incentives": "Israël veut conserver la dissuasion à distance ; les Houthis veulent préserver leur levier sans subir un coût excessif.",
+      "key_uncertainties": "Calendrier d'une éventuelle entrée houthie, seuil de réaction israélien, dispersion des priorités militaires israéliennes.",
+      "counterarguments": "Le fait que les Houthis aient encore choisi la retenue malgré l'escalade régionale suggère qu'une frappe n'est pas automatique.",
+      "dominant_market_narrative": "D'ici fin avril, une frappe devient un scénario vraiment compétitif mais pas dominant."
+    }
+  },
+  {
+    "market_id": "BATCH-007-2",
+    "thesis_id": "BATCH-007-2-TH1",
+    "analysis_id": "BATCH-007-2-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:33:14Z",
+    "resolution_date": "2026-06-30T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contrat exploitable : l'horizon de plus de deux mois rend l'événement cumulativement plus plausible, surtout avec des précédents nombreux de frappes israéliennes contre les Houthis."
+    },
+    "base_rate": {
+      "base_rate_value": 0.4,
+      "base_rate_reference_class": "Fenêtre d'un peu plus de deux mois pour une nouvelle frappe israélienne sur le Yémen, dans un contexte de guerre régionale persistante et de précédents opérationnels israéliens déjà établis contre les Houthis.",
+      "base_rate_comment": "Base rate significative mais inférieure au marché à 52%. L'horizon devient assez long pour qu'une reprise d'hostilités houthies ou une décision israélienne de dissuasion survienne, sans pour autant rendre le scénario majoritaire dès maintenant."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Un déclencheur houthi ou stratégique doit apparaître d'ici fin mai",
+          "status": "partial",
+          "comment": "Le temps disponible augmente la probabilité cumulative sans la garantir."
+        },
+        {
+          "name": "Israël doit estimer utile une action directe contre le Yémen avant fin mai",
+          "status": "partial",
+          "comment": "La faisabilité est claire, mais la décision reste conditionnelle."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Les précédents de frappes restent politiquement réutilisables",
+          "status": "filled",
+          "comment": "L'historique 2024-2025 rend une nouvelle frappe institutionnellement plus facile."
+        },
+        {
+          "name": "Les Houthis restent disposés à reconsidérer leur retenue",
+          "status": "partial",
+          "comment": "Leur leader s'était dit prêt à agir, même si la retenue dominait au 13 mars."
+        },
+        {
+          "name": "La guerre régionale perdure assez longtemps pour impliquer le Yémen",
+          "status": "partial",
+          "comment": "Plausible vu l'intensité actuelle du conflit Iran-Israël."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Multiples précédents israéliens de frappes sur le Yémen",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Israël a déjà frappé Hodeidah, Sanaa, al-Jawf, des ports et un aéroport au cours de 2024-2025."
+      },
+      {
+        "factor_name": "Horizon de plus de deux mois",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 2,
+        "factor_comment": "La probabilité cumulative d'un incident et d'une riposte augmente nettement avec le temps."
+      },
+      {
+        "factor_name": "Contexte de guerre régionale persistante",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Houthis encore inactifs à la mi-mars",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3,
+        "factor_comment": "Leur retenue actuelle reste une vraie donnée négative, même si elle peut changer."
+      },
+      {
+        "factor_name": "Israël peut continuer à hiérarchiser d'autres fronts",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut être correct parce que, sur un horizon allant jusqu'à fin mai, la combinaison du précédent opérationnel israélien et du risque d'escalade houthie rend une frappe plus probable qu'improbable.",
+      "top_3_failure_reasons": [
+        "Le temps disponible augmente fortement la probabilité cumulative d'un incident déclencheur.",
+        "Israël a déjà montré qu'il était prêt à frapper les infrastructures houthies à plusieurs reprises.",
+        "Les Houthis pourraient décider d'entrer dans le conflit si la guerre contre l'Iran se prolonge."
+      ],
+      "market_might_be_right_because": "À mesure que l'horizon s'allonge, le précédent de frappes et la logique de dissuasion rendent une nouvelle opération de plus en plus plausible.",
+      "thesis_invalidation_trigger": "Nouvelle attaque houthie contre Israël ou reprise visible des menaces israéliennes ciblant explicitement le Yémen avant fin mai."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 13 mars 2026 ; Reuters sur les frappes israéliennes contre les Houthis en 2024-2025.",
+      "historical_precedents": "Le précédent n'est pas unique : Israël a répété ce type d'action, ce qui augmente la plausibilité d'une récidive.",
+      "institutional_constraints": "Le marché exige une confirmation datée par consensus crédible avant la deadline du contrat.",
+      "timeline_recent": "Au 13 mars 2026, les Houthis restaient encore en dehors de l'escalade militaire directe.",
+      "actors_and_incentives": "Israël veut maintenir la dissuasion contre les axes de projection iraniens ; les Houthis arbitrent entre solidarité régionale et survie locale.",
+      "key_uncertainties": "Durée du conflit principal, timing d'une éventuelle entrée houthie, rythme de décision israélien.",
+      "counterarguments": "L'absence de déclencheur houthi immédiat peut perdurer plus longtemps que le marché ne l'anticipe.",
+      "dominant_market_narrative": "D'ici fin mai, l'événement devient proche d'une pièce en l'air inclinée vers Yes sans être certain."
+    }
+  },
+  {
+    "market_id": "BATCH-007-0",
+    "thesis_id": "BATCH-007-0-TH1",
+    "analysis_id": "BATCH-007-0-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:33:14Z",
+    "resolution_date": "2026-06-30T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contrat exploitable : c'est la fenêtre la plus longue du batch, ce qui rend la logique cumulative la plus favorable à une frappe, même si le scénario dépend toujours d'un déclencheur et n'est pas automatiquement majoritaire."
+    },
+    "base_rate": {
+      "base_rate_value": 0.48,
+      "base_rate_reference_class": "Fenêtre d'environ trois mois et demi pour une frappe israélienne sur le Yémen, avec une forte base de précédents militaires contre les Houthis mais une absence d'escalade houthie constatée à la mi-mars 2026.",
+      "base_rate_comment": "Base rate la plus haute du batch, mais volontairement sous 50%. Plus l'horizon s'allonge, plus les chances cumulées de déclencheur augmentent ; cependant, l'inaction houthie actuelle et la possibilité qu'Israël reste concentré sur d'autres fronts empêchent de transformer cela en quasi-événement."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Un motif stratégique ou militaire doit apparaître avant fin juin",
+          "status": "partial",
+          "comment": "La longueur de la fenêtre augmente la probabilité, mais le motif reste nécessaire."
+        },
+        {
+          "name": "Israël doit considérer le Yémen comme un front utile à traiter d'ici l'été",
+          "status": "partial",
+          "comment": "Plausible si les Houthis réactivent les attaques ou si la logique de dissuasion régionale l'impose."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Les précédents opérationnels israéliens réduisent le coût décisionnel d'une nouvelle frappe",
+          "status": "filled",
+          "comment": "C'est déjà une option éprouvée."
+        },
+        {
+          "name": "Les Houthis restent susceptibles d'entrer dans l'escalade sur l'horizon du trimestre",
+          "status": "partial",
+          "comment": "Leur retenue actuelle ne garantit pas l'inaction jusqu'à fin juin."
+        },
+        {
+          "name": "La guerre régionale ou ses conséquences persistent au-delà de mars",
+          "status": "partial",
+          "comment": "Le conflit actuel suggère un risque de prolongation, sans certitude."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Historique lourd de frappes israéliennes déjà menées contre le Yémen",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Israël a déjà frappé à plusieurs reprises les Houthis, y compris ports, aéroport et capitale."
+      },
+      {
+        "factor_name": "Fenêtre la plus longue du batch",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "D'ici fin juin, la probabilité cumulative d'un déclencheur est mécaniquement la plus élevée parmi ces contrats."
+      },
+      {
+        "factor_name": "Conflit régional élargi et instable",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Houthis encore non engagés à la mi-mars",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3,
+        "factor_comment": "La meilleure donnée actuelle reste un frein, même si son poids décroît avec l'allongement de l'horizon."
+      },
+      {
+        "factor_name": "Israël peut continuer à privilégier l'Iran, le Liban ou Gaza",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut avoir raison parce qu'à l'échelle d'un trimestre entier, une nouvelle frappe israélienne sur le Yémen ressemble davantage à une question de déclencheur que de volonté de principe.",
+      "top_3_failure_reasons": [
+        "Israël a déjà démontré sa capacité et sa volonté de frapper les Houthis en cas de besoin.",
+        "Le temps long augmente fortement la probabilité cumulative d'une provocation houthie ou d'une décision de dissuasion.",
+        "Le marché peut correctement lire que le précédent militaire abaisse la barrière à une nouvelle frappe."
+      ],
+      "market_might_be_right_because": "Sur l'horizon le plus long, le scénario Yes bénéficie à la fois du précédent opérationnel et du simple passage du temps.",
+      "thesis_invalidation_trigger": "Signes répétés d'une prolongation du conflit régional avec menaces houthies renouvelées ou nouvelles alertes israéliennes visant le Yémen."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 13 mars 2026 ; Reuters sur les frappes israéliennes au Yémen en 2024-2025.",
+      "historical_precedents": "Israël a frappé le Yémen de façon répétée en réponse aux Houthis, ce qui rend une nouvelle frappe historiquement plausible.",
+      "institutional_constraints": "Le contrat ne requiert pas une guerre totale, seulement une frappe aérienne, drone ou missile confirmée par des sources crédibles avant l'échéance.",
+      "timeline_recent": "Les Houthis restaient encore hors du conflit direct au 13 mars, malgré leur proximité avec l'axe iranien.",
+      "actors_and_incentives": "Israël cherche à empêcher une extension incontrôlée tout en gardant la capacité de punir rapidement une escalade houthie ; les Houthis arbitrent entre solidarité régionale et coût de survie.",
+      "key_uncertainties": "Calendrier réel d'une possible entrée houthie, durée de la guerre régionale, hiérarchie des priorités israéliennes.",
+      "counterarguments": "Même sur trois mois et demi, l'absence de déclencheur peut persister si les Houthis continuent d'attendre.",
+      "dominant_market_narrative": "D'ici fin juin, le marché voit la frappe comme plus probable qu'improbable ; l'analyse la juge proche d'une vraie pièce en l'air mais encore légèrement sous 50%."
+    }
+  }
+]

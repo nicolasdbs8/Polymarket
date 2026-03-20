@@ -1,0 +1,32 @@
+{
+  "batch_id": "BATCH-010",
+  "event_title": "Venezuela presidential election scheduled by...?",
+  "event_url": "https://polymarket.com/event/venezuela-presidential-election-scheduled-by",
+  "resolution_date": "2026-12-31T00:00:00Z",
+  "snapshot_time": "2026-03-19T15:10:59Z",
+  "contract_count": 3,
+  "contracts": [
+    {
+      "contract_id": "2",
+      "label": "Venezuela election scheduled by December 31, 2026?",
+      "price_yes": 0.435,
+      "price_no": 0.565,
+      "type": "binary"
+    },
+    {
+      "contract_id": "0",
+      "label": "Venezuela election scheduled by March 31, 2026?",
+      "price_yes": 0.0155,
+      "price_no": 0.9845,
+      "type": "binary"
+    },
+    {
+      "contract_id": "1",
+      "label": "Venezuela election scheduled by January 31, 2026?",
+      "price_yes": 0.0,
+      "price_no": 1.0,
+      "type": "binary"
+    }
+  ],
+  "schema_version": "1.0"
+}

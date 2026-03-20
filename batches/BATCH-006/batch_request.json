@@ -1,0 +1,74 @@
+{
+  "batch_id": "BATCH-006",
+  "event_title": "US x Iran ceasefire by...?",
+  "event_url": "https://polymarket.com/fr/event/us-x-iran-ceasefire-by",
+  "resolution_date": "UNKNOWN",
+  "snapshot_time": "2026-03-19T14:09:00Z",
+  "contract_count": 9,
+  "contracts": [
+    {
+      "contract_id": "5",
+      "label": "US x Iran ceasefire by December 31?",
+      "price_yes": 0.715,
+      "price_no": 0.285,
+      "type": "binary"
+    },
+    {
+      "contract_id": "6",
+      "label": "US x Iran ceasefire by June 30?",
+      "price_yes": 0.52,
+      "price_no": 0.48,
+      "type": "binary"
+    },
+    {
+      "contract_id": "7",
+      "label": "US x Iran ceasefire by May 31?",
+      "price_yes": 0.425,
+      "price_no": 0.575,
+      "type": "binary"
+    },
+    {
+      "contract_id": "1",
+      "label": "US x Iran ceasefire by April 30?",
+      "price_yes": 0.325,
+      "price_no": 0.675,
+      "type": "binary"
+    },
+    {
+      "contract_id": "8",
+      "label": "US x Iran ceasefire by April 15?",
+      "price_yes": 0.19,
+      "price_no": 0.81,
+      "type": "binary"
+    },
+    {
+      "contract_id": "0",
+      "label": "US x Iran ceasefire by March 31?",
+      "price_yes": 0.065,
+      "price_no": 0.935,
+      "type": "binary"
+    },
+    {
+      "contract_id": "2",
+      "label": "US x Iran ceasefire by March 6?",
+      "price_yes": 0.0,
+      "price_no": 1.0,
+      "type": "binary"
+    },
+    {
+      "contract_id": "3",
+      "label": "US x Iran ceasefire by March 15?",
+      "price_yes": 0.0,
+      "price_no": 1.0,
+      "type": "binary"
+    },
+    {
+      "contract_id": "4",
+      "label": "US x Iran ceasefire by March 2?",
+      "price_yes": 0.0,
+      "price_no": 1.0,
+      "type": "binary"
+    }
+  ],
+  "schema_version": "1.0"
+}

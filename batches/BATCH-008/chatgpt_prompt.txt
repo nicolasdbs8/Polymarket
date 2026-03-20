@@ -1,0 +1,53 @@
+Tu dois produire une analyse groupée pour un événement Polymarket multi-contrats.
+
+# Événement
+Titre : Trump announces end of military operations against Iran by ...?
+URL   : https://polymarket.com/event/trump-announces-end-of-military-operations-against-iran-by
+Date de résolution : 2026-03-31T23:55:00Z
+Batch ID : BATCH-008
+
+# Contrats à analyser (7)
+  - [6] Trump announces end of military operations against Iran by June 30th? — YES 74% / NO 26%
+  - [5] Trump announces end of military operations against Iran by April 30th? — YES 52% / NO 48%
+  - [4] Trump announces end of military operations against Iran by March 31st? — YES 10% / NO 90%
+  - [0] Trump announces end of military operations against Iran by March 1st? — YES 0% / NO 100%
+  - [1] Trump announces end of military operations against Iran by March 2nd? — YES 0% / NO 100%
+  - [2] Trump announces end of military operations against Iran by March 7th? — YES 0% / NO 100%
+  - [3] Trump announces end of military operations against Iran by March 15th? — YES 0% / NO 100%
+
+# Ce que tu dois produire
+
+Un fichier JSON unique nommé batch_payload.json contenant une liste d'objets analysis_payload,
+un par contrat listé ci-dessus.
+
+Chaque analysis_payload doit respecter exactement le schéma V2.3 habituel, avec :
+- market_id      : "BATCH-008-[contract_id]"  ex: "BATCH-008-38"
+- thesis_id      : market_id + "-TH1"
+- analysis_id    : thesis_id + "-A1"
+- analysis_version : "A1"
+- resolution_date : "2026-03-31T23:55:00Z"
+- protocol_version : "2.3"
+- schema_version : "1.0"
+- analysis_timestamp : heure actuelle ISO 8601
+
+Pour chaque contrat, tu dois analyser indépendamment :
+- le base_rate (fréquence historique pour ce type de candidat/équipe)
+- les prérequis bloquants et pondérants
+- les facteurs accélérateurs et freins spécifiques à ce contrat
+- la confiance
+- les ambiguïtés
+- la contradiction forcée obligatoire (best_counter_thesis + top_3_failure_reasons)
+
+# Format de sortie
+
+```json
+[
+  { analysis_payload complet pour contrat 1 },
+  { analysis_payload complet pour contrat 2 },
+  ...
+]
+```
+
+Le JSON doit être valide, indenté, sans commentaires.
+Rappel : top_3_failure_reasons doit contenir EXACTEMENT 3 éléments.
+Rappel : tous les enums en anglais : high/medium/low, accelerator/brake, etc.

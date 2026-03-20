@@ -1,0 +1,60 @@
+{
+  "batch_id": "BATCH-008",
+  "event_title": "Trump announces end of military operations against Iran by ...?",
+  "event_url": "https://polymarket.com/event/trump-announces-end-of-military-operations-against-iran-by",
+  "resolution_date": "2026-03-31T23:55:00Z",
+  "snapshot_time": "2026-03-19T14:46:28Z",
+  "contract_count": 7,
+  "contracts": [
+    {
+      "contract_id": "6",
+      "label": "Trump announces end of military operations against Iran by June 30th?",
+      "price_yes": 0.74,
+      "price_no": 0.26,
+      "type": "binary"
+    },
+    {
+      "contract_id": "5",
+      "label": "Trump announces end of military operations against Iran by April 30th?",
+      "price_yes": 0.525,
+      "price_no": 0.475,
+      "type": "binary"
+    },
+    {
+      "contract_id": "4",
+      "label": "Trump announces end of military operations against Iran by March 31st?",
+      "price_yes": 0.095,
+      "price_no": 0.905,
+      "type": "binary"
+    },
+    {
+      "contract_id": "0",
+      "label": "Trump announces end of military operations against Iran by March 1st?",
+      "price_yes": 0.0,
+      "price_no": 1.0,
+      "type": "binary"
+    },
+    {
+      "contract_id": "1",
+      "label": "Trump announces end of military operations against Iran by March 2nd?",
+      "price_yes": 0.0,
+      "price_no": 1.0,
+      "type": "binary"
+    },
+    {
+      "contract_id": "2",
+      "label": "Trump announces end of military operations against Iran by March 7th?",
+      "price_yes": 0.0,
+      "price_no": 1.0,
+      "type": "binary"
+    },
+    {
+      "contract_id": "3",
+      "label": "Trump announces end of military operations against Iran by March 15th?",
+      "price_yes": 0.0,
+      "price_no": 1.0,
+      "type": "binary"
+    }
+  ],
+  "schema_version": "1.0"
+}

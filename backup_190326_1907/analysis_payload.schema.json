@@ -1,0 +1,312 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "analysis_payload.schema.json",
+  "title": "analysis_payload",
+  "description": "Objet structuré produit par la conversation analytique. Contient tous les éléments nécessaires au moteur pour appliquer les règles du protocole.",
+  "type": "object",
+  "required": [
+    "market_id",
+    "thesis_id",
+    "analysis_id",
+    "analysis_timestamp",
+    "protocol_version",
+    "schema_version",
+    "analysis_version",
+    "screening",
+    "base_rate",
+    "prerequisites",
+    "factor_list",
+    "confidence",
+    "ambiguity",
+    "contradiction_forced"
+  ],
+  "additionalProperties": false,
+  "properties": {
+
+    "market_id": {
+      "type": "string",
+      "pattern": "^MKT-[0-9]{3,}$"
+    },
+    "thesis_id": {
+      "type": "string",
+      "description": "Identifiant de la thèse analytique active.",
+      "pattern": "^MKT-[0-9]{3,}-TH[0-9]+$"
+    },
+    "analysis_id": {
+      "type": "string",
+      "description": "Identifiant de cette version d'analyse.",
+      "pattern": "^MKT-[0-9]{3,}-TH[0-9]+-A[0-9]+$"
+    },
+    "analysis_timestamp": {
+      "type": "string",
+      "description": "Horodatage de production de l'analyse.",
+      "format": "date-time"
+    },
+    "protocol_version": {
+      "type": "string",
+      "description": "Version du protocole analytique utilisé.",
+      "examples": ["2.3"]
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "analysis_version": {
+      "type": "string",
+      "description": "Version interne de l'analyse (A1, A2, R1, R2…).",
+      "pattern": "^(A|R)[0-9]+$"
+    },
+
+    "screening": {
+      "type": "object",
+      "description": "Résultat du filtrage d'admissibilité du marché.",
+      "required": [
+        "screening_status",
+        "event_clarity",
+        "resolution_clarity",
+        "liquidity_quality",
+        "information_accessibility",
+        "market_noise_level"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "screening_status": {
+          "type": "string",
+          "enum": ["admissible", "conditional", "rejected"]
+        },
+        "event_clarity": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "resolution_clarity": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "liquidity_quality": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "information_accessibility": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "market_noise_level": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "screening_comment": {
+          "type": "string"
+        }
+      }
+    },
+
+    "base_rate": {
+      "type": "object",
+      "description": "Taux de base historique. Point de départ de l'estimation probabiliste.",
+      "required": ["base_rate_value"],
+      "additionalProperties": false,
+      "properties": {
+        "base_rate_value": {
+          "type": "number",
+          "description": "Valeur numérique du base rate. BLOQUANT.",
+          "minimum": 0.01,
+          "maximum": 0.99
+        },
+        "base_rate_reference_class": {
+          "type": "string",
+          "description": "Classe historique de référence utilisée. DÉGRADANT si absent."
+        },
+        "base_rate_comment": {
+          "type": "string",
+          "description": "Justification et limites du parallèle historique. Informationnel."
+        }
+      }
+    },
+
+    "prerequisites": {
+      "type": "object",
+      "description": "Prérequis à remplir pour que l'événement soit possible.",
+      "required": ["blocking", "weighted"],
+      "additionalProperties": false,
+      "properties": {
+        "blocking": {
+          "type": "array",
+          "description": "Prérequis bloquants. Un seul not_filled déclenche le veto analytique.",
+          "items": {
+            "$ref": "#/definitions/prerequisite_item"
+          }
+        },
+        "weighted": {
+          "type": "array",
+          "description": "Prérequis pondérants. Influencent la confiance mais ne bloquent pas.",
+          "items": {
+            "$ref": "#/definitions/prerequisite_item"
+          }
+        }
+      }
+    },
+
+    "factor_list": {
+      "type": "array",
+      "description": "Liste structurée des facteurs pondérés. BLOQUANT si vide.",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/factor_item"
+      }
+    },
+
+    "confidence": {
+      "type": "object",
+      "description": "Évaluation de la confiance dans l'analyse.",
+      "required": [
+        "confidence_sources",
+        "confidence_model",
+        "confidence_context",
+        "confidence_overall"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "confidence_sources": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "confidence_model": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "confidence_context": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "confidence_overall": {
+          "type": "string",
+          "description": "Confiance globale synthétique. BLOQUANT si absent.",
+          "enum": ["high", "medium", "low"]
+        }
+      }
+    },
+
+    "ambiguity": {
+      "type": "object",
+      "description": "Évaluation des ambiguïtés du marché.",
+      "required": ["event_ambiguity", "resolution_ambiguity"],
+      "additionalProperties": false,
+      "properties": {
+        "event_ambiguity": {
+          "type": "string",
+          "description": "Clarté de l'événement réel à prédire.",
+          "enum": ["high", "medium", "low"]
+        },
+        "resolution_ambiguity": {
+          "type": "string",
+          "description": "Prévisibilité de la règle de résolution de la plateforme. Si high → veto de trading.",
+          "enum": ["high", "medium", "low"]
+        }
+      }
+    },
+
+    "contradiction_forced": {
+      "type": "object",
+      "description": "Contradiction forcée obligatoire. Absence = payload invalide (BLOQUANT).",
+      "required": [
+        "best_counter_thesis",
+        "top_3_failure_reasons"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "best_counter_thesis": {
+          "type": "string",
+          "description": "Meilleure thèse contraire à la thèse principale. BLOQUANT.",
+          "minLength": 10
+        },
+        "top_3_failure_reasons": {
+          "type": "array",
+          "description": "Les 3 raisons principales pour lesquelles l'estimation pourrait être fausse. BLOQUANT.",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 5
+          }
+        },
+        "market_might_be_right_because": {
+          "type": "string",
+          "description": "Ce que le marché pourrait voir de juste. DÉGRADANT si absent."
+        },
+        "thesis_invalidation_trigger": {
+          "type": "string",
+          "description": "Événement qui invaliderait le plus vite la thèse. DÉGRADANT si absent."
+        }
+      }
+    },
+
+    "research_notes": {
+      "type": "object",
+      "description": "Notes de recherche structurées (optionnel).",
+      "additionalProperties": false,
+      "properties": {
+        "primary_sources": { "type": "string" },
+        "historical_precedents": { "type": "string" },
+        "institutional_constraints": { "type": "string" },
+        "timeline_recent": { "type": "string" },
+        "actors_and_incentives": { "type": "string" },
+        "key_uncertainties": { "type": "string" },
+        "counterarguments": { "type": "string" },
+        "dominant_market_narrative": { "type": "string" }
+      }
+    }
+
+  },
+
+  "definitions": {
+
+    "prerequisite_item": {
+      "type": "object",
+      "required": ["name", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["filled", "partial", "not_filled", "unknown"]
+        },
+        "comment": {
+          "type": "string"
+        }
+      }
+    },
+
+    "factor_item": {
+      "type": "object",
+      "required": ["factor_name", "factor_type", "factor_score", "factor_weight"],
+      "additionalProperties": false,
+      "properties": {
+        "factor_name": {
+          "type": "string",
+          "minLength": 2
+        },
+        "factor_type": {
+          "type": "string",
+          "enum": ["accelerator", "brake"]
+        },
+        "factor_score": {
+          "type": "integer",
+          "minimum": -2,
+          "maximum": 2
+        },
+        "factor_weight": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "factor_comment": {
+          "type": "string",
+          "description": "DÉGRADANT si absent sur un facteur de poids 3."
+        }
+      }
+    }
+
+  }
+}

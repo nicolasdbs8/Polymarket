@@ -1,0 +1,808 @@
+[
+  {
+    "market_id": "BATCH-009-1",
+    "thesis_id": "BATCH-009-1-TH1",
+    "analysis_id": "BATCH-009-1-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:00:37Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contract is analyzable and the underlying data are current, but the market pricing appears disconnected from current capitalization levels because Alphabet is far below Apple and Microsoft as of March 19."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Company currently ranked fourth by market cap with a roughly $1.11T gap to the current #2 company and a roughly $656B gap to the current #3 company, with only about twelve days left until resolution.",
+      "base_rate_comment": "Minimum base rate. Alphabet would need an extraordinary late-March relative move versus both Apple and Microsoft to become #2 by March 31."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Alphabet must overtake at least Apple and Microsoft in market cap by March 31",
+          "status": "not_filled",
+          "comment": "As of March 19 Alphabet is about $2.94T versus Apple at about $4.05T and Microsoft at about $3.59T."
+        },
+        {
+          "name": "Alphabet must remain below exactly one company globally after those moves",
+          "status": "partial",
+          "comment": "NVIDIA is currently #1 at about $4.53T, so the likely path would be Alphabet rising above Apple and Microsoft while staying below NVIDIA."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Alphabet materially outperforms Apple and Microsoft over the final stretch of March",
+          "status": "not_filled",
+          "comment": "No current gap suggests this is likely in such a short window."
+        },
+        {
+          "name": "A negative catalyst hits Apple and/or Microsoft hard enough to collapse the gap",
+          "status": "unknown",
+          "comment": "Always possible in theory, but not visible in the current inputs."
+        },
+        {
+          "name": "The market has not misread the current ranking base",
+          "status": "unknown",
+          "comment": "Given the pricing, a market-structure or interpretation issue cannot be ruled out completely."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Alphabet is already one of the global mega-cap leaders",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Alphabet trails Apple by more than $1.1T",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "That gap is far too large for a normal twelve-day relative move."
+      },
+      {
+        "factor_name": "Alphabet also trails Microsoft by roughly $656B",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Even overtaking Microsoft alone would require a very large move, before even addressing Apple."
+      },
+      {
+        "factor_name": "Very short remaining time to March 31",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "There is simply not much calendar left for a multi-hundred-billion-dollar rank reversal."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The only serious contrary thesis is that the market or resolution convention is using a different capitalization basis than the current standard ranking, or that Apple and Microsoft suffer an abrupt simultaneous collapse while Alphabet rallies sharply.",
+      "top_3_failure_reasons": [
+        "A resolution convention mismatch or share-class interpretation could make the current ranking picture less straightforward than standard trackers imply.",
+        "A severe late-March negative shock to Apple and Microsoft could compress the gap more violently than base-rate logic expects.",
+        "The market may be pricing an information set or convention that is not visible in the standard market-cap sources."
+      ],
+      "market_might_be_right_because": "If the market is using a different reference convention than standard real-time trackers, the current apparent mispricing could be less absurd than it looks.",
+      "thesis_invalidation_trigger": "Evidence that the event resolves on a non-standard capitalization basis or a dramatic late-March collapse in Apple and Microsoft relative to Alphabet."
+    },
+    "research_notes": {
+      "primary_sources": "Current finance data for GOOGL, AAPL, NVDA, MSFT, AMZN and TSLA from the finance tool on March 19, 2026; CompaniesMarketCap/other market-cap trackers for Saudi Aramco as of March 2026; Polymarket event page.",
+      "historical_precedents": "Large-cap rankings can move materially over weeks, but multi-hundred-billion-dollar gaps are harder to erase than modest single-digit percentage gaps.",
+      "institutional_constraints": "The market resolves on the company that is second-largest in the world by market cap on March 31, 2026; practical resolution should rely on accepted market-cap rankings and end-of-period data.",
+      "timeline_recent": "As of March 19, 2026, NVIDIA was #1 at about $4.53T, Apple #2 at about $4.05T, Microsoft #3 at about $3.59T, Alphabet #4 at about $2.94T, Amazon at about $2.34T, Tesla at about $1.43T, and Saudi Aramco around $1.74T.",
+      "actors_and_incentives": "No actor controls market-cap rank directly; outcomes depend on equity-price moves, risk sentiment, earnings narratives and geopolitics.",
+      "key_uncertainties": "Magnitude of late-March relative moves among mega-cap tech leaders, month-end flows, AI sentiment and broader market volatility.",
+      "counterarguments": "A sharp late-month rotation can still alter rankings among the very top names, especially when gaps are only single-digit percentages.",
+      "dominant_market_narrative": "Apple is currently #2 by a wide margin over Microsoft and an even wider one over Alphabet, while NVIDIA is currently #1."
+    }
+  },
+  {
+    "market_id": "BATCH-009-15",
+    "thesis_id": "BATCH-009-15-TH1",
+    "analysis_id": "BATCH-009-15-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:00:37Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contract is straightforward and currently aligned with the observed ranking: Apple is already #2 by market cap on March 19."
+    },
+    "base_rate": {
+      "base_rate_value": 0.81,
+      "base_rate_reference_class": "Company currently ranked #2 by market cap with a cushion of roughly $455B over #3 and a deficit of roughly $477B to #1, with only about twelve days left to month-end.",
+      "base_rate_comment": "High base rate. Apple is already in the target slot and both the upside gap to #1 and downside cushion to #3 are of similar magnitude, making simple rank persistence the most likely outcome."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Apple must still be below exactly one company on March 31",
+          "status": "filled",
+          "comment": "As of March 19 Apple is below NVIDIA and above Microsoft."
+        },
+        {
+          "name": "Apple must avoid a late-month drawdown large enough to fall below Microsoft",
+          "status": "partial",
+          "comment": "The Microsoft gap is meaningful but not impossibly large."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "NVIDIA does not fall enough for Apple to become #1 instead of #2",
+          "status": "partial",
+          "comment": "Apple is only about $477B below NVIDIA, so a sharp relative move could send Apple to #1 rather than leave it at #2."
+        },
+        {
+          "name": "Microsoft does not rally enough relative to Apple to take #2",
+          "status": "partial",
+          "comment": "The cushion is substantial but not untouchable."
+        },
+        {
+          "name": "No resolution convention distorts the standard ranking picture",
+          "status": "unknown",
+          "comment": "A low-probability but still nonzero concern given unusual market pricing on related contracts."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Apple is already #2 by market cap",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Current rank persistence is the most natural base case."
+      },
+      {
+        "factor_name": "Roughly $455B cushion over Microsoft",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Microsoft needs a large relative move in a short window to overtake Apple."
+      },
+      {
+        "factor_name": "Apple is only about $477B below NVIDIA",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "A strong Apple rally or NVIDIA slip could move Apple to #1 rather than leave it at #2."
+      },
+      {
+        "factor_name": "Short but still nontrivial month-end volatility window",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 1
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market may still be too cautious because Apple already occupies the target slot and has a large enough cushion that only a meaningful late-March move changes the answer.",
+      "top_3_failure_reasons": [
+        "A late-March NVIDIA decline could lift Apple to #1 and invalidate the #2 thesis even if Apple outperforms.",
+        "Microsoft could catch Apple if AI or software sentiment sharply re-accelerates in its favor.",
+        "A non-standard resolution convention could produce a result that differs from ordinary real-time rankings."
+      ],
+      "market_might_be_right_because": "Apple is already exactly where this contract needs it to be, with a substantial buffer to the next company below.",
+      "thesis_invalidation_trigger": "A major relative move putting Microsoft near Apple or Apple near/past NVIDIA before month-end."
+    },
+    "research_notes": {
+      "primary_sources": "Current finance data for GOOGL, AAPL, NVDA, MSFT, AMZN and TSLA from the finance tool on March 19, 2026; CompaniesMarketCap/other market-cap trackers for Saudi Aramco as of March 2026; Polymarket event page.",
+      "historical_precedents": "Large-cap rankings can move materially over weeks, but multi-hundred-billion-dollar gaps are harder to erase than modest single-digit percentage gaps.",
+      "institutional_constraints": "The market resolves on the company that is second-largest in the world by market cap on March 31, 2026; practical resolution should rely on accepted market-cap rankings and end-of-period data.",
+      "timeline_recent": "As of March 19, 2026, NVIDIA was #1 at about $4.53T, Apple #2 at about $4.05T, Microsoft #3 at about $3.59T, Alphabet #4 at about $2.94T, Amazon at about $2.34T, Tesla at about $1.43T, and Saudi Aramco around $1.74T.",
+      "actors_and_incentives": "No actor controls market-cap rank directly; outcomes depend on equity-price moves, risk sentiment, earnings narratives and geopolitics.",
+      "key_uncertainties": "Magnitude of late-March relative moves among mega-cap tech leaders, month-end flows, AI sentiment and broader market volatility.",
+      "counterarguments": "A sharp late-month rotation can still alter rankings among the very top names, especially when gaps are only single-digit percentages.",
+      "dominant_market_narrative": "Apple is currently #2 by a wide margin over Microsoft and an even wider one over Alphabet, while NVIDIA is currently #1."
+    }
+  },
+  {
+    "market_id": "BATCH-009-14",
+    "thesis_id": "BATCH-009-14-TH1",
+    "analysis_id": "BATCH-009-14-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:00:37Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contract is analytically live because NVIDIA is currently #1, not far above Apple in percentage terms, so a move down one slot by March 31 is not impossible."
+    },
+    "base_rate": {
+      "base_rate_value": 0.17,
+      "base_rate_reference_class": "Company currently ranked #1 by market cap with only about a $477B lead over #2 and about a $932B lead over #3, over a roughly twelve-day window.",
+      "base_rate_comment": "Clearly above the market's 1%. NVIDIA would become #2 if Apple overtakes it while Microsoft stays below it, which is a plausible though still minority scenario in a volatile mega-cap environment."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Exactly one company must overtake NVIDIA by March 31",
+          "status": "partial",
+          "comment": "Apple is close enough that this is plausible."
+        },
+        {
+          "name": "NVIDIA must remain above Microsoft and the rest of the field",
+          "status": "filled",
+          "comment": "Its current cushion over Microsoft is roughly $932B."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Apple can close a roughly $477B gap by month-end",
+          "status": "partial",
+          "comment": "This is not the base case, but it is much more plausible than Alphabet closing its gap."
+        },
+        {
+          "name": "Microsoft does not simultaneously overtake NVIDIA",
+          "status": "partial",
+          "comment": "That requires a much larger relative move."
+        },
+        {
+          "name": "AI-mania leadership cools enough for NVIDIA to cede #1 but not collapse through #2",
+          "status": "partial",
+          "comment": "This is the cleanest path to a Yes outcome."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "NVIDIA is already at the very top of the ranking",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Gap to Apple is only about $477B",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "That is large in dollars but only around 10-12% of NVIDIA's market cap, which can move meaningfully in a short volatile window."
+      },
+      {
+        "factor_name": "Very large cushion over Microsoft",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "This supports the specific 'drop from #1 to #2' path rather than a deeper fall."
+      },
+      {
+        "factor_name": "NVIDIA must lose exactly one slot, not merely decline",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Still currently the largest company in the world",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 1
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market is likely underpricing NVIDIA because the easiest non-Apple scenario is not Alphabet or Microsoft catching #2, but Apple overtaking NVIDIA and pushing it neatly into the #2 slot.",
+      "top_3_failure_reasons": [
+        "A roughly 10-12% relative move versus Apple is entirely possible over twelve days in a volatile AI-led market.",
+        "NVIDIA has a huge cushion over Microsoft, which makes a one-slot drop cleaner than a broader collapse.",
+        "The market may be anchored to the idea that NVIDIA is either #1 or nowhere, overlooking the specific mechanics of becoming #2."
+      ],
+      "market_might_be_right_because": "If Apple's current #2 position persists and NVIDIA holds #1, then this contract still resolves No.",
+      "thesis_invalidation_trigger": "Late-March evidence that Apple is rapidly closing on NVIDIA while Microsoft remains well behind both."
+    },
+    "research_notes": {
+      "primary_sources": "Current finance data for GOOGL, AAPL, NVDA, MSFT, AMZN and TSLA from the finance tool on March 19, 2026; CompaniesMarketCap/other market-cap trackers for Saudi Aramco as of March 2026; Polymarket event page.",
+      "historical_precedents": "Large-cap rankings can move materially over weeks, but multi-hundred-billion-dollar gaps are harder to erase than modest single-digit percentage gaps.",
+      "institutional_constraints": "The market resolves on the company that is second-largest in the world by market cap on March 31, 2026; practical resolution should rely on accepted market-cap rankings and end-of-period data.",
+      "timeline_recent": "As of March 19, 2026, NVIDIA was #1 at about $4.53T, Apple #2 at about $4.05T, Microsoft #3 at about $3.59T, Alphabet #4 at about $2.94T, Amazon at about $2.34T, Tesla at about $1.43T, and Saudi Aramco around $1.74T.",
+      "actors_and_incentives": "No actor controls market-cap rank directly; outcomes depend on equity-price moves, risk sentiment, earnings narratives and geopolitics.",
+      "key_uncertainties": "Magnitude of late-March relative moves among mega-cap tech leaders, month-end flows, AI sentiment and broader market volatility.",
+      "counterarguments": "A sharp late-month rotation can still alter rankings among the very top names, especially when gaps are only single-digit percentages.",
+      "dominant_market_narrative": "Apple is currently #2 by a wide margin over Microsoft and an even wider one over Alphabet, while NVIDIA is currently #1."
+    }
+  },
+  {
+    "market_id": "BATCH-009-0",
+    "thesis_id": "BATCH-009-0-TH1",
+    "analysis_id": "BATCH-009-0-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:00:37Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contract is clear, and Microsoft is close enough to Apple that #2 is not a literal impossibility, even if the market price near zero looks too low."
+    },
+    "base_rate": {
+      "base_rate_value": 0.11,
+      "base_rate_reference_class": "Company currently ranked #3 with a roughly $455B gap to #2 and a much larger roughly $932B gap to #1, over about twelve days.",
+      "base_rate_comment": "Low but clearly above zero. Microsoft has a plausible direct path to #2 if it outperforms Apple materially while staying below NVIDIA."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Microsoft must overtake Apple by March 31",
+          "status": "partial",
+          "comment": "The gap is meaningful but not absurd over a volatile twelve-day window."
+        },
+        {
+          "name": "Microsoft must remain below exactly one company",
+          "status": "filled",
+          "comment": "NVIDIA's current lead over Microsoft is large enough that a move to #2 is the most plausible upside path."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Microsoft outperforms Apple sharply into month-end",
+          "status": "partial",
+          "comment": "This is the essential condition."
+        },
+        {
+          "name": "NVIDIA does not fall all the way below Microsoft as well",
+          "status": "partial",
+          "comment": "That would move Microsoft to #1, not #2, though it is less likely given the larger gap."
+        },
+        {
+          "name": "No other name leaps Microsoft simultaneously",
+          "status": "filled",
+          "comment": "Alphabet is far enough below that this is a secondary concern."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Microsoft is already #3",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Gap to Apple is roughly $455B",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "Large, but vastly smaller than Alphabet's gap and within outer-range late-month volatility."
+      },
+      {
+        "factor_name": "Market price near zero appears too compressed",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Microsoft still needs a large relative move versus Apple very quickly",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "This remains a minority scenario despite being plausible."
+      },
+      {
+        "factor_name": "NVIDIA remains far ahead",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market likely underprices Microsoft because it is only one slot and one large but not impossible gap away from the target ranking.",
+      "top_3_failure_reasons": [
+        "A sharp late-month relative move versus Apple is plausible in a volatile mega-cap market.",
+        "Microsoft's distance from Apple is much smaller than Alphabet's, making its true odds clearly nonzero.",
+        "The market may be mechanically focusing on current ranks rather than the distribution of plausible moves over twelve days."
+      ],
+      "market_might_be_right_because": "If Apple simply holds its current rank, Microsoft remains stuck at #3.",
+      "thesis_invalidation_trigger": "Evidence of strong Microsoft outperformance versus Apple in the final week of March."
+    },
+    "research_notes": {
+      "primary_sources": "Current finance data for GOOGL, AAPL, NVDA, MSFT, AMZN and TSLA from the finance tool on March 19, 2026; CompaniesMarketCap/other market-cap trackers for Saudi Aramco as of March 2026; Polymarket event page.",
+      "historical_precedents": "Large-cap rankings can move materially over weeks, but multi-hundred-billion-dollar gaps are harder to erase than modest single-digit percentage gaps.",
+      "institutional_constraints": "The market resolves on the company that is second-largest in the world by market cap on March 31, 2026; practical resolution should rely on accepted market-cap rankings and end-of-period data.",
+      "timeline_recent": "As of March 19, 2026, NVIDIA was #1 at about $4.53T, Apple #2 at about $4.05T, Microsoft #3 at about $3.59T, Alphabet #4 at about $2.94T, Amazon at about $2.34T, Tesla at about $1.43T, and Saudi Aramco around $1.74T.",
+      "actors_and_incentives": "No actor controls market-cap rank directly; outcomes depend on equity-price moves, risk sentiment, earnings narratives and geopolitics.",
+      "key_uncertainties": "Magnitude of late-March relative moves among mega-cap tech leaders, month-end flows, AI sentiment and broader market volatility.",
+      "counterarguments": "A sharp late-month rotation can still alter rankings among the very top names, especially when gaps are only single-digit percentages.",
+      "dominant_market_narrative": "Apple is currently #2 by a wide margin over Microsoft and an even wider one over Alphabet, while NVIDIA is currently #1."
+    }
+  },
+  {
+    "market_id": "BATCH-009-2",
+    "thesis_id": "BATCH-009-2-TH1",
+    "analysis_id": "BATCH-009-2-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:00:37Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contract is clear, and current market-cap data make the path extremely remote: Saudi Aramco is far below the top three as of March 2026."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Company currently around sixth globally with market cap near $1.74T, trailing the current #2 company by more than $2.3T over a twelve-day window.",
+      "base_rate_comment": "Minimum base rate. The gap is simply too large for a realistic move to #2 by month-end."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Saudi Aramco must leap from around #6 to #2 by March 31",
+          "status": "not_filled",
+          "comment": "Current trackers put Aramco near $1.74T, far below Apple, NVIDIA and Microsoft."
+        },
+        {
+          "name": "A massive positive oil-equity repricing must coincide with top-tech collapse",
+          "status": "not_filled",
+          "comment": "That combined scenario is extraordinary over twelve days."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Energy-price geopolitics remain supportive",
+          "status": "partial",
+          "comment": "Oil-war dynamics can help Aramco, but not enough on current gaps."
+        },
+        {
+          "name": "Tech megacaps simultaneously rerate downward sharply",
+          "status": "unknown",
+          "comment": "Possible in theory, but unsupported at the scale required."
+        },
+        {
+          "name": "Aramco ranking data align cleanly across sources",
+          "status": "filled",
+          "comment": "Market-cap trackers broadly place it far below the top three."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Aramco remains one of the world's biggest companies",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Current market cap near $1.74T is far below #2",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "The deficit to Apple is well over $2T."
+      },
+      {
+        "factor_name": "Very short time window",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "There is no realistic calendar for such a move before March 31."
+      },
+      {
+        "factor_name": "Would require simultaneous extraordinary oil upside and tech collapse",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "This is not a normal month-end rank-move scenario."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The only serious contrary thesis is an extreme energy shock combined with a violent global tech unwind, plus a specific data convention that helps Aramco.",
+      "top_3_failure_reasons": [
+        "A severe oil shock could produce an unusually large relative revaluation in Aramco.",
+        "Tech leaders could suffer a synchronized late-March valuation shock.",
+        "Resolution conventions across markets and currencies can sometimes generate unexpected rank outcomes."
+      ],
+      "market_might_be_right_because": "Aramco is at least a genuine mega-cap name, so the contract is not conceptually absurd in an open-ended sense.",
+      "thesis_invalidation_trigger": "A dramatic surge in Aramco's market cap combined with a broad collapse in top U.S. tech before month-end."
+    },
+    "research_notes": {
+      "primary_sources": "Current finance data for GOOGL, AAPL, NVDA, MSFT, AMZN and TSLA from the finance tool on March 19, 2026; CompaniesMarketCap/other market-cap trackers for Saudi Aramco as of March 2026; Polymarket event page.",
+      "historical_precedents": "Large-cap rankings can move materially over weeks, but multi-hundred-billion-dollar gaps are harder to erase than modest single-digit percentage gaps.",
+      "institutional_constraints": "The market resolves on the company that is second-largest in the world by market cap on March 31, 2026; practical resolution should rely on accepted market-cap rankings and end-of-period data.",
+      "timeline_recent": "As of March 19, 2026, NVIDIA was #1 at about $4.53T, Apple #2 at about $4.05T, Microsoft #3 at about $3.59T, Alphabet #4 at about $2.94T, Amazon at about $2.34T, Tesla at about $1.43T, and Saudi Aramco around $1.74T.",
+      "actors_and_incentives": "No actor controls market-cap rank directly; outcomes depend on equity-price moves, risk sentiment, earnings narratives and geopolitics.",
+      "key_uncertainties": "Magnitude of late-March relative moves among mega-cap tech leaders, month-end flows, AI sentiment and broader market volatility.",
+      "counterarguments": "A sharp late-month rotation can still alter rankings among the very top names, especially when gaps are only single-digit percentages.",
+      "dominant_market_narrative": "Apple is currently #2 by a wide margin over Microsoft and an even wider one over Alphabet, while NVIDIA is currently #1."
+    }
+  },
+  {
+    "market_id": "BATCH-009-16",
+    "thesis_id": "BATCH-009-16-TH1",
+    "analysis_id": "BATCH-009-16-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:00:37Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contract is clear and the current gap is overwhelmingly negative for Tesla: it is too far below the top cluster to reach #2 by March 31."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Company currently around $1.43T, trailing the current #2 company by over $2.6T with about twelve days left.",
+      "base_rate_comment": "Minimum base rate. Tesla would need one of the most extreme short-window repricings ever relative to the rest of mega-cap tech."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Tesla must leap from well outside the top three to #2 by March 31",
+          "status": "not_filled",
+          "comment": "Current market cap is far too low relative to Apple, NVIDIA and Microsoft."
+        },
+        {
+          "name": "A simultaneous collapse in the current top trio must occur",
+          "status": "not_filled",
+          "comment": "The path is not merely Tesla up, but Tesla up plus others down."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Tesla regains extreme momentum fast enough to compress a multi-trillion-dollar gap",
+          "status": "not_filled",
+          "comment": "No evidence supports a move of that scale in this window."
+        },
+        {
+          "name": "Month-end volatility favors Tesla disproportionately",
+          "status": "unknown",
+          "comment": "Even if true, the scale needed is extraordinary."
+        },
+        {
+          "name": "No data-convention issue alters standard rank ordering",
+          "status": "filled",
+          "comment": "Standard trackers show Tesla far outside realistic contention for #2."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Tesla remains a very large company",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Gap to Apple exceeds $2.6T",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "The math simply does not work on a normal twelve-day horizon."
+      },
+      {
+        "factor_name": "Requires both huge Tesla rally and huge declines in top names",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "This is a compounded-tail scenario."
+      },
+      {
+        "factor_name": "Very short time remaining",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Only an extreme multi-sigma Tesla surge plus simultaneous collapse across current leaders could make this remotely live.",
+      "top_3_failure_reasons": [
+        "Tesla can be unusually volatile and surprise on short horizons.",
+        "Mega-cap leadership can rotate violently in stressed markets.",
+        "Prediction markets sometimes preserve tiny tail probabilities better than static base-rate models."
+      ],
+      "market_might_be_right_because": "Tesla is still a real mega-cap company with unusually high historical volatility.",
+      "thesis_invalidation_trigger": "An unprecedented relative move in Tesla plus simultaneous breakdown in the current top three."
+    },
+    "research_notes": {
+      "primary_sources": "Current finance data for GOOGL, AAPL, NVDA, MSFT, AMZN and TSLA from the finance tool on March 19, 2026; CompaniesMarketCap/other market-cap trackers for Saudi Aramco as of March 2026; Polymarket event page.",
+      "historical_precedents": "Large-cap rankings can move materially over weeks, but multi-hundred-billion-dollar gaps are harder to erase than modest single-digit percentage gaps.",
+      "institutional_constraints": "The market resolves on the company that is second-largest in the world by market cap on March 31, 2026; practical resolution should rely on accepted market-cap rankings and end-of-period data.",
+      "timeline_recent": "As of March 19, 2026, NVIDIA was #1 at about $4.53T, Apple #2 at about $4.05T, Microsoft #3 at about $3.59T, Alphabet #4 at about $2.94T, Amazon at about $2.34T, Tesla at about $1.43T, and Saudi Aramco around $1.74T.",
+      "actors_and_incentives": "No actor controls market-cap rank directly; outcomes depend on equity-price moves, risk sentiment, earnings narratives and geopolitics.",
+      "key_uncertainties": "Magnitude of late-March relative moves among mega-cap tech leaders, month-end flows, AI sentiment and broader market volatility.",
+      "counterarguments": "A sharp late-month rotation can still alter rankings among the very top names, especially when gaps are only single-digit percentages.",
+      "dominant_market_narrative": "Apple is currently #2 by a wide margin over Microsoft and an even wider one over Alphabet, while NVIDIA is currently #1."
+    }
+  },
+  {
+    "market_id": "BATCH-009-17",
+    "thesis_id": "BATCH-009-17-TH1",
+    "analysis_id": "BATCH-009-17-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:00:37Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contract is clear, but Amazon is too far below the current #2 position to make a March 31 move realistic."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Company currently around $2.34T, trailing the current #2 company by roughly $1.71T with only about twelve days left.",
+      "base_rate_comment": "Minimum base rate. Amazon is a top global company, but not close enough to plausibly reach #2 by the end of March."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Amazon must overtake Apple, Microsoft and Alphabet and remain below exactly one company",
+          "status": "not_filled",
+          "comment": "Its current distance to the relevant cluster is too large."
+        },
+        {
+          "name": "A massive positive repricing must occur in a very short period",
+          "status": "not_filled",
+          "comment": "No current evidence supports a move of this magnitude."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Amazon materially outperforms the entire mega-cap pack into month-end",
+          "status": "not_filled",
+          "comment": "A very large relative move would be required."
+        },
+        {
+          "name": "The current leaders sell off sharply at the same time",
+          "status": "unknown",
+          "comment": "Possible in theory, but the combined scenario remains extraordinary."
+        },
+        {
+          "name": "Standard market-cap ranking conventions remain applicable",
+          "status": "filled",
+          "comment": "On standard rankings, Amazon is far from #2 at present."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Amazon is still a top-tier global mega-cap",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Gap to Apple is about $1.71T",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "That deficit is far too large for a normal month-end move."
+      },
+      {
+        "factor_name": "Would require multiple rank jumps in under two weeks",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Amazon is not one slot away; it is several positions and many hundreds of billions away."
+      },
+      {
+        "factor_name": "Short remaining window",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Only a very large Amazon rally combined with a synchronized selloff in the current leaders could make this outcome relevant.",
+      "top_3_failure_reasons": [
+        "A sharp late-month rotation into Amazon could occur unexpectedly.",
+        "Mega-cap rankings can move more violently than static models assume in stressed markets.",
+        "Prediction markets preserve tiny but nonzero tail scenarios."
+      ],
+      "market_might_be_right_because": "Amazon is at least a genuine member of the mega-cap cluster, unlike a purely fanciful candidate.",
+      "thesis_invalidation_trigger": "An abrupt multi-hundred-billion-dollar Amazon surge while Apple, Microsoft and Alphabet all weaken into month-end."
+    },
+    "research_notes": {
+      "primary_sources": "Current finance data for GOOGL, AAPL, NVDA, MSFT, AMZN and TSLA from the finance tool on March 19, 2026; CompaniesMarketCap/other market-cap trackers for Saudi Aramco as of March 2026; Polymarket event page.",
+      "historical_precedents": "Large-cap rankings can move materially over weeks, but multi-hundred-billion-dollar gaps are harder to erase than modest single-digit percentage gaps.",
+      "institutional_constraints": "The market resolves on the company that is second-largest in the world by market cap on March 31, 2026; practical resolution should rely on accepted market-cap rankings and end-of-period data.",
+      "timeline_recent": "As of March 19, 2026, NVIDIA was #1 at about $4.53T, Apple #2 at about $4.05T, Microsoft #3 at about $3.59T, Alphabet #4 at about $2.94T, Amazon at about $2.34T, Tesla at about $1.43T, and Saudi Aramco around $1.74T.",
+      "actors_and_incentives": "No actor controls market-cap rank directly; outcomes depend on equity-price moves, risk sentiment, earnings narratives and geopolitics.",
+      "key_uncertainties": "Magnitude of late-March relative moves among mega-cap tech leaders, month-end flows, AI sentiment and broader market volatility.",
+      "counterarguments": "A sharp late-month rotation can still alter rankings among the very top names, especially when gaps are only single-digit percentages.",
+      "dominant_market_narrative": "Apple is currently #2 by a wide margin over Microsoft and an even wider one over Alphabet, while NVIDIA is currently #1."
+    }
+  }
+]

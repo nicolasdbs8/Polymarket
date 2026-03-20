@@ -1,0 +1,81 @@
+{
+  "batch_id": "BATCH-002",
+  "event_title": "Hungary Parliamentary Election Winner",
+  "event_url": "https://polymarket.com/fr/event/hungary-parliamentary-election-winner",
+  "resolution_date": "2026-04-12T00:00:00Z",
+  "snapshot_time": "2026-03-18T17:44:13Z",
+  "contract_count": 10,
+  "contracts": [
+    {
+      "contract_id": "1",
+      "label": "Will TISZA – Respect and Freedom Party (TISZA) win the most seats in the next Hungarian parliamentary election?",
+      "price_yes": 0.665,
+      "price_no": 0.335,
+      "type": "binary"
+    },
+    {
+      "contract_id": "19",
+      "label": "Will Fidesz–KDNP win the most seats in the next Hungarian parliamentary election?",
+      "price_yes": 0.335,
+      "price_no": 0.665,
+      "type": "binary"
+    },
+    {
+      "contract_id": "0",
+      "label": "Will the Democratic Coalition (DK) win the most seats in the next Hungarian parliamentary election?",
+      "price_yes": 0.002,
+      "price_no": 0.998,
+      "type": "binary"
+    },
+    {
+      "contract_id": "12",
+      "label": "Will the Momentum Movement (Momentum) win the most seats in the next Hungarian parliamentary election?",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "2",
+      "label": "Will LMP – Hungary’s Green Party (LMP) win the most seats in the next Hungarian parliamentary election?",
+      "price_yes": 0.0005,
+      "price_no": 0.9995,
+      "type": "binary"
+    },
+    {
+      "contract_id": "11",
+      "label": "Will the Hungarian Socialist Party (MSZP) win the most seats in the next Hungarian parliamentary election?",
+      "price_yes": 0.0005,
+      "price_no": 0.9995,
+      "type": "binary"
+    },
+    {
+      "contract_id": "13",
+      "label": "Will Our Homeland Movement (Mi Hazánk) win the most seats in the next Hungarian parliamentary election?",
+      "price_yes": 0.0005,
+      "price_no": 0.9995,
+      "type": "binary"
+    },
+    {
+      "contract_id": "20",
+      "label": "Will Dialogue for Hungary (Párbeszéd) win the most seats in the next Hungarian parliamentary election?",
+      "price_yes": 0.0005,
+      "price_no": 0.9995,
+      "type": "binary"
+    },
+    {
+      "contract_id": "21",
+      "label": "Will Movement for a Better Hungary (Jobbik) win the most seats in the next Hungarian parliamentary election?",
+      "price_yes": 0.0005,
+      "price_no": 0.9995,
+      "type": "binary"
+    },
+    {
+      "contract_id": "29",
+      "label": "Will the Christian Democratic People’s Party (KDNP) win the most seats in the next Hungarian parliamentary election?",
+      "price_yes": 0.0005,
+      "price_no": 0.9995,
+      "type": "binary"
+    }
+  ],
+  "schema_version": "1.0"
+}

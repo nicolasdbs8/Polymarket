@@ -1,0 +1,39 @@
+{
+  "batch_id": "BATCH-007",
+  "event_title": "Israel military action against Yemen by...?",
+  "event_url": "https://polymarket.com/event/israel-strike-on-yemen-by-593",
+  "resolution_date": "2026-06-30T00:00:00Z",
+  "snapshot_time": "2026-03-19T14:28:10Z",
+  "contract_count": 4,
+  "contracts": [
+    {
+      "contract_id": "0",
+      "label": "Israel strike on Yemen by June 30, 2026?",
+      "price_yes": 0.59,
+      "price_no": 0.41,
+      "type": "binary"
+    },
+    {
+      "contract_id": "2",
+      "label": "Israel strike on Yemen by May 31, 2026?",
+      "price_yes": 0.525,
+      "price_no": 0.475,
+      "type": "binary"
+    },
+    {
+      "contract_id": "3",
+      "label": "Israel strike on Yemen by April 30, 2026?",
+      "price_yes": 0.45,
+      "price_no": 0.55,
+      "type": "binary"
+    },
+    {
+      "contract_id": "1",
+      "label": "Israel strike on Yemen by March 31, 2026?",
+      "price_yes": 0.24,
+      "price_no": 0.76,
+      "type": "binary"
+    }
+  ],
+  "schema_version": "1.0"
+}

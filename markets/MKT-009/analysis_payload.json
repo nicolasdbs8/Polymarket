@@ -1,0 +1,114 @@
+{
+  "market_id": "MKT-009",
+  "thesis_id": "MKT-009-TH1",
+  "analysis_id": "MKT-009-TH1-A1",
+  "analysis_timestamp": "2026-03-18T15:00:00Z",
+  "resolution_date": "2026-03-23T12:00:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+  "screening": {
+    "screening_status": "conditional",
+    "event_clarity": "high",
+    "resolution_clarity": "high",
+    "liquidity_quality": "low",
+    "information_accessibility": "medium",
+    "market_noise_level": "medium",
+    "screening_comment": "Le marché est analytiquement exploitable car la règle de résolution est précise et l'événement est clair, mais la liquidité observée sur cette branche est faible et aucune prévision publique robuste du week-end 3 n'a été identifiée."
+  },
+  "base_rate": {
+    "base_rate_value": 0.27,
+    "base_rate_reference_class": "Tranche étroite de 1.5M autour d'un week-end 3 mid-to-high teens pour un film d'animation/familial ayant déjà montré une bonne tenue au week-end 2.",
+    "base_rate_comment": "Base rate heuristique et prudent. Il ne prétend pas correspondre à une fréquence historique publiée unique ; il reflète surtout le fait qu'une fourchette de 1.5M reste mécaniquement difficile à toucher même pour un film en bonne tenue."
+  },
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "La règle de résolution Polymarket reste exploitable et vérifiable sur Box Office Mojo final",
+        "status": "filled",
+        "comment": "La source et la fenêtre de résolution sont explicites."
+      },
+      {
+        "name": "Le film enregistre bien un week-end domestique finalisable sur la période du 20 au 22 mars",
+        "status": "filled",
+        "comment": "Aucun élément ne suggère une impossibilité opérationnelle."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Le maintien du film reste dans une bande compatible avec 18-19.5M",
+        "status": "partial",
+        "comment": "La trajectoire est compatible, mais la tranche demande un calibrage assez précis du drop week-2 vers week-3."
+      },
+      {
+        "name": "Le contexte concurrentiel ne détériore pas brutalement la tenue en troisième week-end",
+        "status": "partial",
+        "comment": "Pas de signal majeur de choc concurrentiel direct, mais l'incertitude demeure."
+      }
+    ]
+  },
+  "factor_list": [
+    {
+      "factor_name": "Tenue week-end 2 solide",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "Le profil public observé au week-end 2 est clairement meilleur qu'un simple scénario de front-loading."
+    },
+    {
+      "factor_name": "Signaux d'audience favorables",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2
+    },
+    {
+      "factor_name": "Tranche de résolution très étroite",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Même avec une bonne tenue, viser exactement une fourchette de 1.5M réduit fortement la probabilité terminale."
+    },
+    {
+      "factor_name": "Sensibilité forte au drop week-2 vers week-3",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2
+    },
+    {
+      "factor_name": "Absence de prévision publique robuste identifiée pour le week-end 3",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2
+    }
+  ],
+  "confidence": {
+    "confidence_sources": "medium",
+    "confidence_model": "medium",
+    "confidence_context": "medium",
+    "confidence_overall": "medium"
+  },
+  "ambiguity": {
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low"
+  },
+  "contradiction_forced": {
+    "best_counter_thesis": "Le marché peut avoir raison parce que le profil de maintien de Hoppers est suffisamment fort pour faire de la zone 18-19.5M la modalité centrale la plus naturelle du week-end 3.",
+    "top_3_failure_reasons": [
+      "La bonne tenue observée au week-end 2 peut se prolonger presque mécaniquement au week-end 3.",
+      "L'absence de forecast public ne signifie pas absence de signal informatif chez les traders actifs.",
+      "La tranche 18-19.5M peut être précisément celle qui correspond au corridor le plus plausible de maintien."
+    ],
+    "market_might_be_right_because": "Le marché peut intégrer des lectures box-office plus fines que celles visibles dans les articles grand public, notamment sur la dynamique journalière et les comparables internes.",
+    "thesis_invalidation_trigger": "Publication d'estimations industrie crédibles plaçant explicitement Hoppers dans un corridor centré sur 18-19.5M pour le week-end du 20 au 22 mars."
+  },
+  "research_notes": {
+    "primary_sources": "Règle de résolution Polymarket ; chiffres publics Box Office Mojo et presse box-office sur l'ouverture et le week-end 2.",
+    "historical_precedents": "Les films familiaux/animation bien reçus peuvent afficher des holds de troisième week-end encore solides, mais cela ne supprime pas la difficulté d'une tranche finale aussi étroite.",
+    "institutional_constraints": "La résolution dépend du chiffre final Box Office Mojo Domestic Daily pour le 3-day weekend du 20 au 22 mars.",
+    "timeline_recent": "Ouverture solide, baisse modérée au week-end 2, puis maintien quotidien encore correct en début de semaine.",
+    "actors_and_incentives": "Le marché agrège des traders box-office et peut réagir rapidement à des signaux journaliers avant publication d'un consensus éditorial visible.",
+    "key_uncertainties": "Amplitude exacte du drop week-2 vers week-3 ; finesse de la trajectoire autour d'une tranche de 1.5M ; qualité informative réelle du prix sur un volume faible.",
+    "counterarguments": "Le profil de maintien de Hoppers est suffisamment bon pour que la tranche 18-19.5M soit plus naturelle qu'une lecture purement anti-bracket.",
+    "dominant_market_narrative": "Le marché semble traiter 18-19.5M comme l'issue centrale la plus plausible, tout en laissant un poids significatif à un scénario au-dessus de 21M."
+  }
+}

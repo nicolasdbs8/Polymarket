@@ -1,0 +1,112 @@
+{
+  "market_id": "MKT-002",
+  "thesis_id": "MKT-002-TH1",
+  "analysis_id": "MKT-002-TH1-A1",
+  "analysis_timestamp": "2026-03-16T20:10:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "high",
+    "resolution_clarity": "medium",
+    "liquidity_quality": "medium",
+    "information_accessibility": "medium",
+    "market_noise_level": "medium",
+    "screening_comment": "Evénement géopolitique clair (contrôle territorial). Ambiguïté possible sur la définition exacte de 'control'."
+  },
+
+  "base_rate": {
+    "base_rate_value": 0.05,
+    "base_rate_reference_class": "Perte de contrôle d'une infrastructure stratégique nationale en moins de 30 jours dans un contexte de tensions régionales.",
+    "base_rate_comment": "Historiquement très rare sans guerre ouverte ou invasion majeure."
+  },
+
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "Intervention militaire étrangère directe contre l'île",
+        "status": "not_filled",
+        "comment": "Aucun acteur n'a engagé d'opération militaire ouverte visant à capturer Kharg Island."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Escalade militaire régionale majeure",
+        "status": "partial",
+        "comment": "Tensions existantes mais pas de conflit direct majeur au moment du snapshot."
+      },
+      {
+        "name": "Capacité opérationnelle pour occuper l'île",
+        "status": "unknown",
+        "comment": "Un acteur pourrait théoriquement frapper l'île mais l'occuper durablement est plus difficile."
+      }
+    ]
+  },
+
+  "factor_list": [
+    {
+      "factor_name": "Importance stratégique extrême de Kharg Island pour l'Iran",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "L'île est le principal terminal d'export pétrolier iranien, donc fortement défendue."
+    },
+    {
+      "factor_name": "Absence de guerre ouverte impliquant occupation territoriale",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Une perte de contrôle nécessiterait probablement une opération militaire majeure."
+    },
+    {
+      "factor_name": "Possibilité de frappes aériennes ou sabotage",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2,
+      "factor_comment": "L'infrastructure pourrait être frappée, mais cela ne signifie pas forcément perte de contrôle territorial."
+    },
+    {
+      "factor_name": "Horizon temporel très court",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "Moins de deux semaines pour que l'événement se produise."
+    }
+  ],
+
+  "confidence": {
+    "confidence_sources": "medium",
+    "confidence_model": "medium",
+    "confidence_context": "medium",
+    "confidence_overall": "medium"
+  },
+
+  "ambiguity": {
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "medium"
+  },
+
+  "contradiction_forced": {
+    "best_counter_thesis": "Le marché pourrait anticiper une escalade militaire rapide dans le Golfe qui rendrait plausible une neutralisation ou occupation temporaire de Kharg Island.",
+    "top_3_failure_reasons": [
+      "Une escalade militaire majeure pourrait survenir très rapidement dans la région.",
+      "Une attaque ciblée pourrait rendre l'île non fonctionnelle et être interprétée comme perte de contrôle.",
+      "Le marché pourrait intégrer des signaux géopolitiques ou militaires non publics."
+    ],
+    "market_might_be_right_because": "Les marchés prédictifs peuvent parfois intégrer plus vite les signaux faibles d'escalade militaire.",
+    "thesis_invalidation_trigger": "Annonce ou preuve crédible d'une opération militaire directe visant Kharg Island."
+  },
+
+  "research_notes": {
+    "primary_sources": "Historique du rôle de Kharg Island dans l'export pétrolier iranien et contexte géopolitique du Golfe.",
+    "historical_precedents": "Attaques sur des infrastructures pétrolières dans le Golfe mais rarement accompagnées d'une perte de contrôle territorial.",
+    "institutional_constraints": "Toute occupation nécessiterait un engagement militaire majeur contre l'Iran.",
+    "timeline_recent": "Pas d'indication publique d'une opération militaire imminente ciblant l'île.",
+    "actors_and_incentives": "Acteurs régionaux peuvent vouloir perturber l'Iran mais éviter une guerre ouverte.",
+    "key_uncertainties": "Possibilité d'escalade rapide ou d'événement militaire imprévu.",
+    "counterarguments": "Un sabotage ou une frappe pourrait être interprété comme perte de contrôle.",
+    "dominant_market_narrative": "Le marché semble pricer un risque d'escalade régionale."
+  }
+}

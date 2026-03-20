@@ -1,0 +1,53 @@
+Tu dois produire une analyse groupée pour un événement Polymarket multi-contrats.
+
+# Événement
+Titre : 2nd largest company end of March?
+URL   : https://polymarket.com/event/2nd-largest-company-end-of-march
+Date de résolution : 2026-03-31T00:00:00Z
+Batch ID : BATCH-009
+
+# Contrats à analyser (7)
+  - [1] Will Alphabet be the second-largest company in the world by market cap on March 31? — YES 54% / NO 46%
+  - [15] Will Apple be the second-largest company in the world by market cap on March 31? — YES 42% / NO 58%
+  - [14] Will NVIDIA be the second-largest company in the world by market cap on March 31? — YES 1% / NO 99%
+  - [0] Will Microsoft be the second-largest company in the world by market cap on March 31? — YES 0% / NO 100%
+  - [2] Will Saudi Aramco be the second-largest company in the world by market cap on March 31? — YES 0% / NO 100%
+  - [16] Will Tesla be the second-largest company in the world by market cap on March 31? — YES 0% / NO 100%
+  - [17] Will Amazon be the second-largest company in the world by market cap on March 31? — YES 0% / NO 100%
+
+# Ce que tu dois produire
+
+Un fichier JSON unique nommé batch_payload.json contenant une liste d'objets analysis_payload,
+un par contrat listé ci-dessus.
+
+Chaque analysis_payload doit respecter exactement le schéma V2.3 habituel, avec :
+- market_id      : "BATCH-009-[contract_id]"  ex: "BATCH-009-38"
+- thesis_id      : market_id + "-TH1"
+- analysis_id    : thesis_id + "-A1"
+- analysis_version : "A1"
+- resolution_date : "2026-03-31T00:00:00Z"
+- protocol_version : "2.3"
+- schema_version : "1.0"
+- analysis_timestamp : heure actuelle ISO 8601
+
+Pour chaque contrat, tu dois analyser indépendamment :
+- le base_rate (fréquence historique pour ce type de candidat/équipe)
+- les prérequis bloquants et pondérants
+- les facteurs accélérateurs et freins spécifiques à ce contrat
+- la confiance
+- les ambiguïtés
+- la contradiction forcée obligatoire (best_counter_thesis + top_3_failure_reasons)
+
+# Format de sortie
+
+```json
+[
+  { analysis_payload complet pour contrat 1 },
+  { analysis_payload complet pour contrat 2 },
+  ...
+]
+```
+
+Le JSON doit être valide, indenté, sans commentaires.
+Rappel : top_3_failure_reasons doit contenir EXACTEMENT 3 éléments.
+Rappel : tous les enums en anglais : high/medium/low, accelerator/brake, etc.

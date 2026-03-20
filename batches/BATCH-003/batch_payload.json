@@ -1,0 +1,944 @@
+[
+  {
+    "market_id": "BATCH-003-7",
+    "thesis_id": "BATCH-003-7-TH1",
+    "analysis_id": "BATCH-003-7-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:50:00Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contrat très exploitable : le second tour est imminent, les rapports de premier tour sont publics et la règle de résolution Polymarket est claire."
+    },
+    "base_rate": {
+      "base_rate_value": 0.66,
+      "base_rate_reference_class": "Front-runner de gauche arrivé nettement en tête au premier tour dans une grande ville historiquement gouvernée par la gauche, entrant dans un second tour où la gauche reste divisée mais dominante en valeur absolue.",
+      "base_rate_comment": "Base rate élevé mais non écrasant. Grégoire part avec une avance significative, mais la fusion Dati-Bournazel et le retrait de Knafo renforcent le bloc de droite ; la triangulaire avec Chikirou réduit aussi la certitude terminale."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Emmanuel Grégoire doit rester candidat au second tour",
+          "status": "filled",
+          "comment": "Il conduit la liste socialiste arrivée en tête et reste le candidat central de la gauche modérée."
+        },
+        {
+          "name": "L'avance du premier tour doit résister à la consolidation de la droite",
+          "status": "partial",
+          "comment": "C'est plausible mais pas garanti après l'alliance Dati-Bournazel et le retrait de Knafo."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Les électeurs de gauche et écologistes restent majoritairement orientés vers Grégoire",
+          "status": "partial",
+          "comment": "Belliard et la gauche unie sont avec lui, mais Chikirou se maintient séparément."
+        },
+        {
+          "name": "Le report des voix Bournazel et Knafo vers Dati n'est pas intégral",
+          "status": "filled",
+          "comment": "La presse relève déjà des réticences chez certains soutiens de Bournazel."
+        },
+        {
+          "name": "La dynamique anti-Dati liée au procès corruption reste active",
+          "status": "partial",
+          "comment": "Le sujet existe politiquement mais son impact marginal reste difficile à quantifier."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Net leadership au premier tour avec environ 38%",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Grégoire est clairement arrivé premier du premier tour, loin devant Dati."
+      },
+      {
+        "factor_name": "Paris reste structurellement favorable à la gauche municipale",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 2,
+        "factor_comment": "La gauche contrôle Paris depuis 2001 et conserve un socle urbain fort."
+      },
+      {
+        "factor_name": "David Belliard et la gauche unie soutiennent Grégoire",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Fusion Dati-Bournazel au second tour",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La droite arrive plus consolidée qu'au soir du premier tour."
+      },
+      {
+        "factor_name": "Retrait de Sarah Knafo en faveur de la dynamique anti-gauche",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Maintien séparé de Sophia Chikirou",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut sous-estimer la capacité de Dati à agréger presque tout le vote Bournazel et une partie du vote Knafo, ce qui transformerait la triangulaire en piège classique pour la gauche.",
+      "top_3_failure_reasons": [
+        "Les reports de voix de droite peuvent être beaucoup plus disciplinés que prévu.",
+        "Le maintien de Chikirou peut coûter à Grégoire davantage que ce que reflète le prix actuel.",
+        "L'avance du premier tour peut être trompeuse si la coalition anti-gauche se mobilise plus fortement au second tour."
+      ],
+      "market_might_be_right_because": "Grégoire part avec la meilleure base électorale et demeure le front-runner clair du second tour.",
+      "thesis_invalidation_trigger": "Sondages ou estimations crédibles d'entre-deux-tours montrant Dati au contact ou devant après reports de voix."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 17 mars 2026 ; AP et The Guardian du 17 mars 2026 ; Le Monde des 16-18 mars 2026.",
+      "historical_precedents": "Dans les grandes villes françaises, arriver nettement en tête au premier tour confère un avantage réel, mais les fusions de listes entre les deux tours peuvent fortement rebattre les cartes.",
+      "institutional_constraints": "Le marché résout sur le candidat qui devient le prochain maire élu de Paris, second tour inclus, avec référence ultime au Ministère de l'Intérieur en cas d'ambiguïté.",
+      "timeline_recent": "Grégoire a terminé premier au premier tour ; Dati a fusionné avec Bournazel ; Knafo s'est retirée ; Chikirou se maintient.",
+      "actors_and_incentives": "Grégoire veut préserver la continuité de la gauche municipale ; Dati cherche à unifier tout le camp anti-Hidalgo ; Chikirou veut exister séparément malgré le risque de division.",
+      "key_uncertainties": "Discipline des reports de voix de droite, comportement des électeurs LFI au second tour, niveau d'abstention.",
+      "counterarguments": "La droite parisienne arrive dans une configuration plus unifiée qu'attendu et peut transformer l'entre-deux-tours en duel réel.",
+      "dominant_market_narrative": "Grégoire est le favori clair, mais pas un favori sans risque dans une triangulaire."
+    }
+  },
+  {
+    "market_id": "BATCH-003-0",
+    "thesis_id": "BATCH-003-0-TH1",
+    "analysis_id": "BATCH-003-0-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:50:00Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "conditional",
+      "event_clarity": "medium",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat atypique : aucune source crédible consultée ne montre un candidat majeur nommé Éric Grégoire dans cette élection. La présence d'Emmanuel Grégoire comme candidat réel suggère un risque de libellé erroné ou d'issue mal spécifiée."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Issue nominative apparemment mal libellée ou dépourvue de candidat réel identifiable dans une élection déjà structurée autour de candidats connus.",
+      "base_rate_comment": "Base rate minimal. Sans candidat crédible et identifiable correspondant à ce nom, la trajectoire vers la mairie est pratiquement nulle."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Éric Grégoire doit être un candidat réel et identifiable à la mairie de Paris",
+          "status": "not_filled",
+          "comment": "Aucune source consultée ne documente un tel candidat dans la course principale."
+        },
+        {
+          "name": "Le contrat doit pouvoir être résolu en faveur d'Éric Grégoire sur la base des résultats officiels",
+          "status": "partial",
+          "comment": "La résolution s'appuie sur les résultats officiels ; si le nom du contrat est erroné, cela crée une ambiguïté importante."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Le marché Polymarket maintient cette issue comme explicitement distincte",
+          "status": "filled",
+          "comment": "L'issue existe bien sur la page de marché."
+        },
+        {
+          "name": "Une interprétation permissive d'un éventuel libellé erroné est retenue",
+          "status": "unknown",
+          "comment": "Aucune garantie sans clarification explicite du marché."
+        },
+        {
+          "name": "Un candidat réel correspondant émerge des résultats officiels",
+          "status": "not_filled",
+          "comment": "Aucun signal en ce sens."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Existence technique de l'issue sur Polymarket",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Absence de candidat crédible nommé Éric Grégoire",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Toutes les sources crédibles identifient Emmanuel Grégoire, pas Éric Grégoire."
+      },
+      {
+        "factor_name": "Résolution fondée sur les résultats officiels du gouvernement",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Un nom erroné a peu de chances d'être sauvé par les résultats officiels si le contrat n'est pas clarifié."
+      },
+      {
+        "factor_name": "Concurrence réelle déjà captée par d'autres candidats identifiés",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "L'unique thèse contraire est qu'il s'agit d'un simple libellé erroné pour Emmanuel Grégoire et que le marché ou les resolvers choisiraient une interprétation économique plutôt que littérale.",
+      "top_3_failure_reasons": [
+        "Le marché peut implicitement vouloir désigner Emmanuel Grégoire malgré le prénom erroné.",
+        "Les resolvers peuvent privilégier l'intention du contrat plutôt que la lettre stricte du libellé.",
+        "L'existence de cette issue sur la page peut refléter une information interne ou un mapping que les sources publiques ne montrent pas."
+      ],
+      "market_might_be_right_because": "La seule raison pour laquelle le marché pourrait avoir raison serait une interprétation tolérante d'un libellé fautif.",
+      "thesis_invalidation_trigger": "Clarification officielle de Polymarket indiquant explicitement que l'issue Éric Grégoire doit être lue comme Emmanuel Grégoire."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 17 mars 2026 ; AP du 17 mars 2026 ; Le Monde des 16-18 mars 2026.",
+      "historical_precedents": "Les issues mal libellées sur des marchés nominaux peuvent créer de l'ambiguïté, mais sans clarification elles sont rarement de bonnes thèses haussières.",
+      "institutional_constraints": "La résolution renvoie aux résultats officiels du Ministère de l'Intérieur, ce qui défavorise fortement un nom ne figurant pas dans la course réelle.",
+      "timeline_recent": "La course réelle oppose Emmanuel Grégoire, Rachida Dati et Sophia Chikirou au second tour ; aucun Éric Grégoire n'apparaît dans les sources crédibles consultées.",
+      "actors_and_incentives": "Les resolvers ont intérêt à éviter une interprétation abusive non adossée aux résultats officiels.",
+      "key_uncertainties": "Tolérance ou non à un libellé erroné, éventuelle clarification du marché avant résolution.",
+      "counterarguments": "L'intention économique du contrat peut parfois l'emporter sur une erreur de prénom.",
+      "dominant_market_narrative": "Cette issue ressemble davantage à un problème de libellé qu'à une vraie candidature distincte."
+    }
+  },
+  {
+    "market_id": "BATCH-003-1",
+    "thesis_id": "BATCH-003-1-TH1",
+    "analysis_id": "BATCH-003-1-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:50:00Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contrat solide : Dati est la principale alternative à Grégoire et l'entre-deux-tours a clarifié sa stratégie de rassemblement à droite."
+    },
+    "base_rate": {
+      "base_rate_value": 0.27,
+      "base_rate_reference_class": "Candidate de droite arrivée deuxième au premier tour dans une grande ville de gauche, mais bénéficiant d'alliances et de retraits à droite avant le second tour.",
+      "base_rate_comment": "Base rate sérieuse mais sous 33%. Dati part de loin derrière Grégoire, mais l'unification partielle de la droite et le retrait de Knafo lui donnent un chemin crédible."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Rachida Dati doit rester la candidate unique du bloc droitier consolidé",
+          "status": "filled",
+          "comment": "La fusion avec Bournazel la renforce et Knafo s'est retirée."
+        },
+        {
+          "name": "Les reports de voix de droite doivent compenser l'avance de Grégoire",
+          "status": "partial",
+          "comment": "Possible en théorie, mais pas garanti compte tenu des frictions politiques et du maintien de Chikirou."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Les électeurs Bournazel et Knafo se reportent majoritairement sur Dati",
+          "status": "partial",
+          "comment": "Le report Knafo paraît plus probable que le report Bournazel intégral."
+        },
+        {
+          "name": "La droite mobilise davantage au second tour",
+          "status": "partial",
+          "comment": "C'est sa meilleure voie de victoire."
+        },
+        {
+          "name": "Le procès corruption de Dati ne dégrade pas fortement son attractivité",
+          "status": "partial",
+          "comment": "Le sujet existe et pèse sur sa coalition potentielle."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Alliance Dati-Bournazel conclue entre les deux tours",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "L'alliance renforce nettement Dati par rapport au premier tour."
+      },
+      {
+        "factor_name": "Retrait de Sarah Knafo au profit d'une dynamique anti-gauche",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Possibilité d'un vote de rejet de l'ère Hidalgo",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Retard important au premier tour",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Dati a fini largement derrière Grégoire au premier tour."
+      },
+      {
+        "factor_name": "Reports de voix imparfaits au sein de la droite et du centre",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Handicap lié au procès en corruption",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut sous-estimer Dati parce que la triangulaire et l'unification tardive de la droite peuvent suffire à transformer une seconde place au premier tour en victoire finale.",
+      "top_3_failure_reasons": [
+        "Les reports de voix Bournazel et Knafo peuvent être plus complets qu'anticipé.",
+        "La fatigue de l'ère Hidalgo peut produire un vote de bascule plus puissant qu'attendu.",
+        "Le maintien de Chikirou peut éroder davantage Grégoire que ne le suggère le prix de marché."
+      ],
+      "market_might_be_right_because": "Dati est la seule alternative de masse à Grégoire et bénéficie désormais d'un bloc plus large qu'au premier tour.",
+      "thesis_invalidation_trigger": "Sondages d'entre-deux-tours montrant l'alliance Dati-Bournazel nettement insuffisante pour combler l'écart avec Grégoire."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 17 mars 2026 ; AP et The Guardian du 17 mars 2026 ; Le Monde des 16-18 mars 2026.",
+      "historical_precedents": "Un deuxième du premier tour peut gagner s'il rassemble mieux entre les deux tours, surtout dans les triangulaires.",
+      "institutional_constraints": "Le marché résout sur le maire élu de Paris, second tour inclus.",
+      "timeline_recent": "Dati a terminé deuxième ; elle a fusionné avec Bournazel ; Knafo s'est retirée ; Chikirou se maintient.",
+      "actors_and_incentives": "Dati cherche à fédérer toute la droite et le centre anti-gauche ; Grégoire veut préserver la domination municipale de la gauche ; Chikirou veut maintenir une ligne LFI autonome.",
+      "key_uncertainties": "Qualité des reports de voix, mobilisation différentielle, impact du procès de Dati.",
+      "counterarguments": "L'écart du premier tour et la structure de Paris restent favorables à Grégoire.",
+      "dominant_market_narrative": "Dati a un vrai chemin de victoire, mais elle reste outsider."
+    }
+  },
+  {
+    "market_id": "BATCH-003-6",
+    "thesis_id": "BATCH-003-6-TH1",
+    "analysis_id": "BATCH-003-6-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:50:00Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat désormais très défavorable : Knafo a dépassé 10% au premier tour mais a retiré sa liste avant le second tour."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Candidate qualifiée pour le second tour mais se retirant explicitement avant le vote final dans une élection municipale française.",
+      "base_rate_comment": "Base rate minimal. Une candidate retirée n'a pratiquement plus de chemin normal vers la mairie."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Sarah Knafo doit revenir dans la course effective au second tour",
+          "status": "not_filled",
+          "comment": "Les reportages récents indiquent son retrait pour favoriser Dati."
+        },
+        {
+          "name": "La résolution doit pouvoir reconnaître une candidate retirée comme gagnante",
+          "status": "not_filled",
+          "comment": "Sans présence effective au vote final, le scénario de victoire est pratiquement nul."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Ses électeurs peuvent conserver un poids politique local",
+          "status": "filled",
+          "comment": "Son score du premier tour a été réel et lui donne des élus d'arrondissement."
+        },
+        {
+          "name": "Un retournement procédural ou politique la réintroduit",
+          "status": "unknown",
+          "comment": "Scénario purement théorique sans ancrage public."
+        },
+        {
+          "name": "Le retrait est réversible dans les faits",
+          "status": "not_filled",
+          "comment": "Aucun signal en ce sens."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Score à deux chiffres au premier tour",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Retrait officiel avant le second tour",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le retrait de Knafo casse la trajectoire de victoire."
+      },
+      {
+        "factor_name": "Soutien implicite donné à la dynamique Dati",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Ses voix sont politiquement orientées contre la gauche, pas vers une victoire autonome de Knafo."
+      },
+      {
+        "factor_name": "Absence de présence au vote final",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule contre-thèse est l'hypothèse extrême d'un rebondissement procédural réintroduisant Knafo ou d'une erreur de compréhension sur la liste finalement soumise.",
+      "top_3_failure_reasons": [
+        "Un développement procédural inattendu pourrait modifier la présence effective des listes au second tour.",
+        "Le marché peut parfois mal intégrer des calendriers administratifs précis entre retrait et clôture.",
+        "Une ambiguïté locale sur les listes d'arrondissement pourrait être mal lue par certains traders."
+      ],
+      "market_might_be_right_because": "Knafo a bien existé électoralement au premier tour, ce qui évite un zéro théorique absolu dans l'esprit de certains traders.",
+      "thesis_invalidation_trigger": "Toute information crédible montrant que la liste Knafo participe finalement au second tour malgré l'annonce de retrait."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters du 17 mars 2026 ; Le Monde du 17 et du 18 mars 2026 ; AP du 17 mars 2026.",
+      "historical_precedents": "Une candidature retirée entre les deux tours ne gagne normalement pas l'élection finale.",
+      "institutional_constraints": "La résolution porte sur le maire élu à l'issue du processus officiel, second tour compris.",
+      "timeline_recent": "Knafo a obtenu environ 10.4% au premier tour puis s'est retirée pour favoriser la droite anti-gauche.",
+      "actors_and_incentives": "Knafo cherche désormais surtout à peser sur le rapport de force à droite et à exister politiquement pour l'avenir.",
+      "key_uncertainties": "Existence d'un quelconque rebondissement procédural de dernière minute.",
+      "counterarguments": "La quasi-impossibilité pratique n'exclut jamais totalement un scénario administratif aberrant.",
+      "dominant_market_narrative": "Knafo n'est plus un scénario réel de victoire depuis son retrait."
+    }
+  },
+  {
+    "market_id": "BATCH-003-2",
+    "thesis_id": "BATCH-003-2-TH1",
+    "analysis_id": "BATCH-003-2-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:50:00Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très défavorable après l'entre-deux-tours : Bournazel a fusionné avec Dati et n'est plus en trajectoire autonome de victoire."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Candidat de centre-droit ayant franchi 10% au premier tour puis fusionnant sa liste avec un autre candidat sans se maintenir lui-même comme prétendant autonome.",
+      "base_rate_comment": "Base rate minimal. Une fusion derrière une autre tête de liste détruit presque entièrement la thèse de victoire autonome."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Pierre-Yves Bournazel doit rester une tête de liste autonome pour gagner",
+          "status": "not_filled",
+          "comment": "Il a accepté une fusion avec Dati et n'est plus le véhicule central de la droite modérée."
+        },
+        {
+          "name": "La résolution doit pouvoir reconnaître Bournazel malgré l'absence de trajectoire autonome finale",
+          "status": "not_filled",
+          "comment": "Aucune base publique sérieuse pour cela."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Son score du premier tour lui donne un capital de négociation",
+          "status": "filled",
+          "comment": "Il a dépassé 11% et obtenu un vrai levier d'entre-deux-tours."
+        },
+        {
+          "name": "Un retournement le replace en tête d'une coalition gagnante",
+          "status": "unknown",
+          "comment": "Scénario sans ancrage public crédible."
+        },
+        {
+          "name": "L'accord Dati-Bournazel le rend éligible à une interprétation de victoire personnelle",
+          "status": "not_filled",
+          "comment": "L'alliance renforce Dati, pas Bournazel."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Score significatif au premier tour",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Fusion avec Dati avant le second tour",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Bournazel a choisi de rejoindre Dati plutôt que de poursuivre une trajectoire autonome."
+      },
+      {
+        "factor_name": "Absence de tête de liste autonome finale",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Sans maintien autonome, la victoire personnelle devient quasi impossible."
+      },
+      {
+        "factor_name": "Marché réel désormais concentré entre Grégoire, Dati et Chikirou",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule contre-thèse est une lecture formaliste ou procédurale où Bournazel redeviendrait soudain un nom central de coalition, ce que rien ne documente.",
+      "top_3_failure_reasons": [
+        "Un détail procédural sur la composition finale des listes pourrait être mal compris par le marché.",
+        "Les traders peuvent parfois mal distinguer fusion de listes et retrait pur.",
+        "Un retournement politique de dernière minute reste toujours théoriquement imaginable."
+      ],
+      "market_might_be_right_because": "Bournazel a eu une vraie existence électorale au premier tour et un poids de négociation réel entre les deux tours.",
+      "thesis_invalidation_trigger": "Information crédible montrant que Bournazel reprend une position autonome ou devient officiellement la figure victorieuse de l'alliance de droite."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Le Monde du 17-18 mars 2026 ; The Guardian du 17 mars 2026.",
+      "historical_precedents": "Les candidats fusionnant derrière un autre entre les deux tours ne deviennent normalement pas vainqueurs à titre personnel.",
+      "institutional_constraints": "Le marché résout sur la personne qui gagne la mairie, pas sur un apporteur de voix dans une alliance.",
+      "timeline_recent": "Bournazel a obtenu environ 11.3% au premier tour puis a fusionné avec Dati.",
+      "actors_and_incentives": "Bournazel cherche à peser dans la future majorité de droite, pas à gagner personnellement la mairie depuis la fusion.",
+      "key_uncertainties": "Aucun vrai aléa substantiel hors improbable rebondissement procédural.",
+      "counterarguments": "Les marchés nominaux peuvent parfois mal intégrer les nuances de fusion de listes.",
+      "dominant_market_narrative": "Bournazel n'est plus un scénario réel de victoire autonome."
+    }
+  },
+  {
+    "market_id": "BATCH-003-3",
+    "thesis_id": "BATCH-003-3-TH1",
+    "analysis_id": "BATCH-003-3-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:50:00Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal : Belliard n'est pas candidat autonome à la mairie ; il fait partie de la coalition conduite par Emmanuel Grégoire."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Dirigeant allié de coalition intégré à la liste d'un autre candidat principal sans candidature autonome à la fonction exécutive.",
+      "base_rate_comment": "Base rate minimal. Être allié visible d'une coalition gagnante ne crée pas une trajectoire personnelle vers la mairie."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "David Belliard doit être candidat autonome au poste de maire",
+          "status": "not_filled",
+          "comment": "Les sources le montrent dans l'équipe Grégoire, pas comme tête de liste concurrente."
+        },
+        {
+          "name": "L'alliance de gauche doit choisir Belliard plutôt que Grégoire pour la mairie",
+          "status": "not_filled",
+          "comment": "Aucun signal crédible en ce sens."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Belliard conserve une forte visibilité dans la campagne",
+          "status": "filled",
+          "comment": "Il est un partenaire important de la coalition de gauche unie."
+        },
+        {
+          "name": "Un accord de coalition post-victoire le propulse à la mairie",
+          "status": "unknown",
+          "comment": "Scénario théorique sans appui public."
+        },
+        {
+          "name": "Les écologistes renversent le leadership interne de l'alliance",
+          "status": "not_filled",
+          "comment": "Aucune information ne l'indique."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Visibilité élevée comme allié écologiste de premier plan",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Intégration officielle dans la coalition Grégoire",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Absence de candidature autonome à la mairie",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Belliard est documenté comme membre de l'équipe Grégoire, pas comme rival autonome."
+      },
+      {
+        "factor_name": "Grégoire est le chef incontesté de la coalition",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La trajectoire normale d'une victoire de la gauche mène à Grégoire, pas à Belliard."
+      },
+      {
+        "factor_name": "Course finale structurée autour d'autres noms",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule contre-thèse est un scénario interne extraordinaire où la coalition victorieuse désignerait finalement Belliard à la place de Grégoire, malgré l'absence totale de signaux publics.",
+      "top_3_failure_reasons": [
+        "Un accord interne de coalition peut théoriquement produire une surprise de gouvernance.",
+        "Les traders peuvent confondre visibilité de campagne et absence de candidature autonome.",
+        "Des arrangements municipaux post-électoraux peuvent parfois être plus complexes qu'attendu."
+      ],
+      "market_might_be_right_because": "Belliard est bien une personnalité importante de la coalition de gauche et existe publiquement dans la campagne.",
+      "thesis_invalidation_trigger": "Annonce crédible de la coalition de gauche selon laquelle Belliard deviendrait finalement leur candidat pour la mairie."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Reuters Connect du 5 février 2026 ; Le Monde et résultats du premier tour de mars 2026.",
+      "historical_precedents": "Les numéros deux ou alliés de coalition n'accèdent presque jamais à la mairie à la place du chef de file sans signal public préalable.",
+      "institutional_constraints": "Le marché résout sur le candidat réellement élu maire, pas sur les membres importants de sa coalition.",
+      "timeline_recent": "Belliard est montré publiquement aux côtés de Grégoire comme membre de son équipe de campagne.",
+      "actors_and_incentives": "Belliard cherche à préserver l'influence écologiste au sein d'une victoire de la gauche plutôt qu'une conquête personnelle de la mairie.",
+      "key_uncertainties": "Presque uniquement des scénarios internes extraordinaires sans base publique.",
+      "counterarguments": "Les négociations municipales peuvent toujours produire des compromis surprenants, même si c'est extrêmement improbable ici.",
+      "dominant_market_narrative": "Belliard n'est pas un scénario réel de victoire personnelle."
+    }
+  },
+  {
+    "market_id": "BATCH-003-4",
+    "thesis_id": "BATCH-003-4-TH1",
+    "analysis_id": "BATCH-003-4-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:50:00Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contrat minoritaire mais réel : Chikirou s'est qualifiée pour le second tour et se maintient, mais elle part très loin derrière Grégoire et Dati."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Candidate troisième d'une triangulaire municipale, qualifiée avec autour de 12% au premier tour sans alliance avec le front-runner idéologiquement proche.",
+      "base_rate_comment": "Base rate minimal. Sa présence au second tour existe, mais la trajectoire de victoire exige une rupture de dynamique extrêmement inhabituelle."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Sophia Chikirou doit se maintenir effectivement au second tour",
+          "status": "filled",
+          "comment": "Les reportages récents indiquent qu'elle reste candidate après refus d'alliance avec Grégoire."
+        },
+        {
+          "name": "Elle doit dépasser simultanément Grégoire et Dati à partir d'une base d'environ 12%",
+          "status": "not_filled",
+          "comment": "Aucune donnée crédible ne montre une telle trajectoire."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Le vote protestataire de gauche se transfère massivement vers elle",
+          "status": "not_filled",
+          "comment": "Aucun signal de basculement de cette ampleur."
+        },
+        {
+          "name": "La triangulaire fracture fortement les deux autres blocs",
+          "status": "partial",
+          "comment": "Théoriquement possible mais insuffisant seul."
+        },
+        {
+          "name": "Sa dynamique de campagne dépasse le score du premier tour",
+          "status": "partial",
+          "comment": "Elle peut progresser marginalement, pas de manière crédible jusqu'à la victoire."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Présence effective au second tour",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "Contrairement à Knafo ou Bournazel, Chikirou reste en course."
+      },
+      {
+        "factor_name": "Socle LFI réel dans Paris",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Ecart massif avec Grégoire au premier tour",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Partir d'environ 11.7% contre près de 38% rend la victoire hautement improbable."
+      },
+      {
+        "factor_name": "Absence d'alliance avec la gauche arrivée en tête",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le refus d'union réduit ses chances et favorise surtout Dati en divisant la gauche."
+      },
+      {
+        "factor_name": "Compression stratégique du vote utile",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule vraie contre-thèse est qu'une campagne d'entre-deux-tours très conflictuelle fasse exploser les reports vers Grégoire et permette à Chikirou de capter un vote protestataire de gauche bien supérieur à son socle initial.",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent parfois écraser trop vite les triangulaires à troisième candidat maintenu.",
+        "Une forte démobilisation de l'électorat Grégoire pourrait ouvrir un espace plus grand que prévu à Chikirou.",
+        "La campagne d'entre-deux-tours peut devenir plus idéologique et plus favorable à une candidature LFI que ne l'anticipent les traders."
+      ],
+      "market_might_be_right_because": "Chikirou existe réellement au second tour, ce qui fait d'elle une possibilité juridique et électorale réelle, même très faible.",
+      "thesis_invalidation_trigger": "Sondages crédibles d'entre-deux-tours la montrant dans une dynamique de rattrapage majeure ou effondrement simultané de Grégoire et Dati."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Le Monde du 18 mars 2026 ; The Guardian et Reuters du 17 mars 2026.",
+      "historical_precedents": "Un troisième qualifié peut peser sur le vainqueur final, mais gagne rarement en partant aussi bas sans alliance.",
+      "institutional_constraints": "Le marché résout sur le maire élu à l'issue du second tour.",
+      "timeline_recent": "Chikirou a obtenu environ 11.7% au premier tour et se maintient faute d'accord avec Grégoire.",
+      "actors_and_incentives": "LFI veut exister séparément et ne pas se dissoudre dans la gauche socialiste ; cela maximise son autonomie mais pas sa probabilité de gagner la mairie.",
+      "key_uncertainties": "Niveau réel de mobilisation LFI au second tour, discipline des électeurs de gauche, éventuelles surprises de participation.",
+      "counterarguments": "Les triangulaires peuvent parfois se retourner de manière non linéaire en cas d'effondrement d'un favori.",
+      "dominant_market_narrative": "Chikirou est une candidate maintenue mais très loin d'un scénario central de victoire."
+    }
+  },
+  {
+    "market_id": "BATCH-003-5",
+    "thesis_id": "BATCH-003-5-TH1",
+    "analysis_id": "BATCH-003-5-TH1-A1",
+    "analysis_timestamp": "2026-03-18T17:50:00Z",
+    "resolution_date": "2026-03-31T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat quasi nul : Mariani a fait un score très faible au premier tour et n'a pas accédé au second tour."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Candidat éliminé dès le premier tour avec score très faible dans une grande ville où son camp est structurellement minoritaire.",
+      "base_rate_comment": "Base rate minimal. Une élimination dès le premier tour rend la victoire finale pratiquement impossible."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Thierry Mariani doit être qualifié ou réintroduit dans le second tour",
+          "status": "not_filled",
+          "comment": "Il a obtenu environ 1.61% et a été éliminé."
+        },
+        {
+          "name": "Le marché doit pouvoir reconnaître un candidat éliminé comme vainqueur final",
+          "status": "not_filled",
+          "comment": "Sans présence au second tour, aucun chemin normal ne subsiste."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Le RN conserve une existence politique à Paris",
+          "status": "filled",
+          "comment": "Le score n'est pas nul, mais très faible."
+        },
+        {
+          "name": "Un événement procédural le réintroduit",
+          "status": "unknown",
+          "comment": "Scénario purement théorique."
+        },
+        {
+          "name": "Le bloc RN récupère soudainement une centralité électorale parisienne",
+          "status": "not_filled",
+          "comment": "Rien ne l'indique ; le RN a au contraire très mal performé à Paris."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Existence du nom et d'un score réel au premier tour",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Elimination dès le premier tour",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Mariani n'a pas franchi le seuil lui permettant d'espérer le second tour."
+      },
+      {
+        "factor_name": "Score très faible d'environ 1.6%",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le RN a été très faible à Paris, loin de toute trajectoire vers la mairie."
+      },
+      {
+        "factor_name": "Absence de centralité du RN à Paris",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule contre-thèse est un accident procédural extrême ou une mauvaise compréhension du candidat réellement porté par l'extrême droite dans Paris, hypothèse sans base crédible ici.",
+      "top_3_failure_reasons": [
+        "Les très petites probabilités de marchés nominaux peuvent théoriquement survivre à des scénarios administratifs aberrants.",
+        "Le marché peut parfois mal capter les subtilités entre candidats RN, alliés ou retraits tactiques.",
+        "Un trader peut considérer qu'une probabilité strictement nulle n'existe jamais avant résolution formelle."
+      ],
+      "market_might_be_right_because": "Mariani a bien été candidat au premier tour, ce qui suffit à certains traders pour ne jamais ramener une issue à zéro absolu.",
+      "thesis_invalidation_trigger": "Information crédible montrant que Mariani figure finalement dans une configuration éligible au second tour ou dans une interprétation de résolution inattendue."
+    },
+    "research_notes": {
+      "primary_sources": "Règles Polymarket ; Le Monde du 16 mars 2026 sur les résultats ; données publiques de premier tour.",
+      "historical_precedents": "Un candidat éliminé au premier tour ne gagne normalement jamais l'élection finale.",
+      "institutional_constraints": "Le marché résout sur le maire élu, second tour inclus ; être éliminé au premier tour casse la trajectoire.",
+      "timeline_recent": "Mariani a obtenu environ 1.61% au premier tour et a été éliminé.",
+      "actors_and_incentives": "Le RN cherche à exister symboliquement à Paris, mais sans base suffisante pour viser la mairie.",
+      "key_uncertainties": "Uniquement des scénarios procéduraux aberrants.",
+      "counterarguments": "En théorie, aucune probabilité n'est strictement nulle avant résolution formelle.",
+      "dominant_market_narrative": "Mariani n'est pas un scénario réel de victoire."
+    }
+  }
+]

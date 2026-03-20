@@ -1,0 +1,60 @@
+{
+  "batch_id": "BATCH-009",
+  "event_title": "2nd largest company end of March?",
+  "event_url": "https://polymarket.com/event/2nd-largest-company-end-of-march",
+  "resolution_date": "2026-03-31T00:00:00Z",
+  "snapshot_time": "2026-03-19T14:54:15Z",
+  "contract_count": 7,
+  "contracts": [
+    {
+      "contract_id": "1",
+      "label": "Will Alphabet be the second-largest company in the world by market cap on March 31?",
+      "price_yes": 0.535,
+      "price_no": 0.465,
+      "type": "binary"
+    },
+    {
+      "contract_id": "15",
+      "label": "Will Apple be the second-largest company in the world by market cap on March 31?",
+      "price_yes": 0.415,
+      "price_no": 0.585,
+      "type": "binary"
+    },
+    {
+      "contract_id": "14",
+      "label": "Will NVIDIA be the second-largest company in the world by market cap on March 31?",
+      "price_yes": 0.006,
+      "price_no": 0.994,
+      "type": "binary"
+    },
+    {
+      "contract_id": "0",
+      "label": "Will Microsoft be the second-largest company in the world by market cap on March 31?",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "2",
+      "label": "Will Saudi Aramco be the second-largest company in the world by market cap on March 31?",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "16",
+      "label": "Will Tesla be the second-largest company in the world by market cap on March 31?",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "17",
+      "label": "Will Amazon be the second-largest company in the world by market cap on March 31?",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    }
+  ],
+  "schema_version": "1.0"
+}

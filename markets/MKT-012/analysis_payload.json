@@ -1,0 +1,128 @@
+{
+  "market_id": "MKT-012",
+  "thesis_id": "MKT-012-TH1",
+  "analysis_id": "MKT-012-TH1-A1",
+  "analysis_timestamp": "2026-03-18T17:05:00Z",
+  "resolution_date": "2026-04-04T00:00:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "high",
+    "resolution_clarity": "high",
+    "liquidity_quality": "high",
+    "information_accessibility": "medium",
+    "market_noise_level": "medium",
+    "screening_comment": "Marché propre : issue binaire claire, équipe identifiable, volume élevé. L'incertitude principale vient de la variance structurelle du tournoi NCAA."
+  },
+  "base_rate": {
+    "base_rate_value": 0.22,
+    "base_rate_reference_class": "Seeds n°1 du tournoi NCAA masculin considérées comme favorites ou co-favorites au moment du bracket.",
+    "base_rate_comment": "Les seeds n°1 dominent historiquement les titres, mais aucune équipe ne porte normalement une probabilité dominante dans un format à élimination directe sur six matchs."
+  },
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "Duke participe au tournoi NCAA 2026 et n'est pas éliminé au moment du snapshot",
+        "status": "filled",
+        "comment": "Duke est confirmé dans le bracket officiel."
+      },
+      {
+        "name": "La résolution Polymarket reste alignée sur le champion NCAA officiel",
+        "status": "filled",
+        "comment": "Condition standard, explicite et vérifiable."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Absence de blessure structurante dans le roster",
+        "status": "partial",
+        "comment": "Aucune alerte majeure identifiée dans l'analyse, mais l'incertitude joueur par joueur reste non nulle."
+      },
+      {
+        "name": "Chemin de bracket sans accumulation trop précoce d'adversaires élite",
+        "status": "partial",
+        "comment": "Même pour un seed n°1, le Sweet 16 et l'Elite Eight impliquent des tests de très haut niveau."
+      },
+      {
+        "name": "Capacité à maintenir le niveau sur six matchs consécutifs",
+        "status": "partial",
+        "comment": "C'est la contrainte structurelle du tournoi NCAA."
+      }
+    ]
+  },
+  "factor_list": [
+    {
+      "factor_name": "Statut de seed n°1",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "Facteur structurel majeur : les seeds n°1 concentrent historiquement une large part des titres."
+    },
+    {
+      "factor_name": "Programme élite avec historique de deep runs",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 2,
+      "factor_comment": "Duke est un programme structurellement performant en March Madness."
+    },
+    {
+      "factor_name": "Perception de favori par le marché",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 1
+    },
+    {
+      "factor_name": "Format single elimination sur six matchs",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Même une équipe dominante peut perdre sur un seul match ; la variance est structurellement élevée."
+    },
+    {
+      "factor_name": "Concentration d'équipes élites en fin de tournoi",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 2,
+      "factor_comment": "Les derniers tours opposent généralement des contenders de niveau comparable."
+    },
+    {
+      "factor_name": "Prix déjà élevé à 19.5%",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "Le marché price déjà Duke comme top contender, ce qui réduit mécaniquement la marge d'écart exploitable."
+    }
+  ],
+  "confidence": {
+    "confidence_sources": "medium",
+    "confidence_model": "medium",
+    "confidence_context": "medium",
+    "confidence_overall": "medium"
+  },
+  "ambiguity": {
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low"
+  },
+  "contradiction_forced": {
+    "best_counter_thesis": "Duke peut encore être sous-évalué si l'équipe est réellement au-dessus du reste du plateau des seeds n°1 et que son bracket se simplifie rapidement.",
+    "top_3_failure_reasons": [
+      "Le base rate retenu peut être trop conservateur pour un seed n°1 réellement supérieur au champ.",
+      "Le bracket peut devenir plus favorable que prévu via des éliminations précoces d'autres contenders.",
+      "Le marché peut sous-pricer l'écart réel de talent entre Duke et le reste du tournoi."
+    ],
+    "market_might_be_right_because": "Le marché intègre déjà correctement la force structurelle d'un seed n°1 tout en conservant une décote justifiée par la variance extrême du tournoi NCAA.",
+    "thesis_invalidation_trigger": "Parcours très convaincant de Duke dans les deux premiers tours combiné à l'élimination précoce de plusieurs autres prétendants majeurs."
+  },
+  "research_notes": {
+    "primary_sources": "Bracket NCAA 2026 ; pricing Polymarket ; données historiques générales sur les seeds n°1.",
+    "historical_precedents": "Les seeds n°1 remportent une part importante des titres NCAA, mais rarement avec une probabilité individuelle écrasante.",
+    "institutional_constraints": "Résolution strictement basée sur le champion NCAA officiel.",
+    "timeline_recent": "Duke entre dans le tournoi 2026 comme seed n°1 et favori important du marché.",
+    "actors_and_incentives": "Programme élite avec fortes attentes compétitives et forte attention de marché.",
+    "key_uncertainties": "Variance match-to-match, blessures, qualité réelle des matchups en deuxième semaine.",
+    "counterarguments": "Duke peut dominer le tournoi si l'écart de niveau avec les autres contenders est sous-estimé.",
+    "dominant_market_narrative": "Duke est vu comme un favori légitime, mais pas comme une équipe suffisamment dominante pour justifier une probabilité de titre vraiment extrême."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "market_id": "MKT-006",
+  "market_title": "Will JD Vance win the 2028 US Presidential Election?",
+  "platform": "polymarket",
+  "market_type": "binary",
+  "market_probability_yes": 0.2105,
+  "price_yes": 0.2105,
+  "price_no": 0.7895,
+  "market_probability_no": 0.7895,
+  "resolution_date": "2028-11-07T00:00:00Z",
+  "market_snapshot_time": "2026-03-18T14:57:02Z",
+  "category": "electoral_politics",
+  "market_url": "https://polymarket.com/fr/event/presidential-election-winner-2028",
+  "schema_version": "1.0",
+  "market_volume": 8300940.85
+}

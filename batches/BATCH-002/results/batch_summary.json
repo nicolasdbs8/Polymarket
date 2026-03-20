@@ -1,0 +1,126 @@
+{
+  "batch_id": "BATCH-002",
+  "results": [
+    {
+      "market_id": "BATCH-002-1",
+      "label": "TISZA – Respect and Freedom Party (TISZA)",
+      "price_yes": 0.665,
+      "p_estimated": 0.5287,
+      "adj_edge": -0.109,
+      "side": "no",
+      "decision": "small_paper_position",
+      "size": 20.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-002-19",
+      "label": "Fidesz–KDNP",
+      "price_yes": 0.335,
+      "p_estimated": 0.3207,
+      "adj_edge": -0.0114,
+      "side": "no",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-002-0",
+      "label": "the Democratic Coalition (DK)",
+      "price_yes": 0.002,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0043,
+      "side": "none",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": true,
+      "veto_reason": "marche extreme : prix YES 0% <= seuil 15% (moteur non fiable en dessous de ce seuil)"
+    },
+    {
+      "market_id": "BATCH-002-12",
+      "label": "the Momentum Movement (Momentum)",
+      "price_yes": 0.0015,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0046,
+      "side": "none",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": true,
+      "veto_reason": "marche extreme : prix YES 0% <= seuil 15% (moteur non fiable en dessous de ce seuil)"
+    },
+    {
+      "market_id": "BATCH-002-2",
+      "label": "LMP – Hungary’s Green Party (LMP)",
+      "price_yes": 0.0005,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0051,
+      "side": "none",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": true,
+      "veto_reason": "marche extreme : prix YES 0% <= seuil 15% (moteur non fiable en dessous de ce seuil)"
+    },
+    {
+      "market_id": "BATCH-002-11",
+      "label": "the Hungarian Socialist Party (MSZP)",
+      "price_yes": 0.0005,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0051,
+      "side": "none",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": true,
+      "veto_reason": "marche extreme : prix YES 0% <= seuil 15% (moteur non fiable en dessous de ce seuil)"
+    },
+    {
+      "market_id": "BATCH-002-13",
+      "label": "Our Homeland Movement (Mi Hazánk)",
+      "price_yes": 0.0005,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0051,
+      "side": "none",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": true,
+      "veto_reason": "marche extreme : prix YES 0% <= seuil 15% (moteur non fiable en dessous de ce seuil)"
+    },
+    {
+      "market_id": "BATCH-002-20",
+      "label": "Dialogue for Hungary (Párbeszéd)",
+      "price_yes": 0.0005,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0051,
+      "side": "none",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": true,
+      "veto_reason": "marche extreme : prix YES 0% <= seuil 15% (moteur non fiable en dessous de ce seuil)"
+    },
+    {
+      "market_id": "BATCH-002-21",
+      "label": "Movement for a Better Hungary (Jobbik)",
+      "price_yes": 0.0005,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0051,
+      "side": "none",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": true,
+      "veto_reason": "marche extreme : prix YES 0% <= seuil 15% (moteur non fiable en dessous de ce seuil)"
+    },
+    {
+      "market_id": "BATCH-002-29",
+      "label": "the Christian Democratic People’s Party (KDNP)",
+      "price_yes": 0.0005,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0044,
+      "side": "none",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": true,
+      "veto_reason": "marche extreme : prix YES 0% <= seuil 15% (moteur non fiable en dessous de ce seuil)"
+    }
+  ],
+  "errors": []
+}

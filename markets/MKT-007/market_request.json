@@ -1,0 +1,16 @@
+{
+  "market_id": "MKT-007",
+  "market_title": "Will the Slovenian Democratic Party (SDS) win the most seats in the 2026 Slovenian parliamentary election?",
+  "platform": "polymarket",
+  "market_type": "binary",
+  "market_probability_yes": 0.62,
+  "price_yes": 0.62,
+  "price_no": 0.38,
+  "market_probability_no": 0.38,
+  "resolution_date": "2026-03-31T00:00:00Z",
+  "market_snapshot_time": "2026-03-18T15:34:39Z",
+  "category": "electoral_politics",
+  "market_url": "https://polymarket.com/fr/event/slovenian-parliamentary-election-winner-791",
+  "schema_version": "1.0",
+  "market_volume": 273085.92
+}

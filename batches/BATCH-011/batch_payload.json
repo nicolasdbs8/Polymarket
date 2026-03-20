@@ -1,0 +1,1052 @@
+[
+  {
+    "market_id": "BATCH-011-5",
+    "thesis_id": "BATCH-011-5-TH1",
+    "analysis_id": "BATCH-011-5-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:32:29Z",
+    "resolution_date": "2026-04-10T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Marché macroéconomique fondé sur une publication BLS datée et standardisée. La règle de résolution Polymarket renvoie explicitement au CPI headline sur 12 mois pour mars 2026, non désaisonnalisé, avec fallback au mois précédent si la publication n'a pas lieu."
+    },
+    "base_rate": {
+      "base_rate_value": 0.12,
+      "base_rate_reference_class": "March headline CPI outcomes during upside inflation re-acceleration episodes where prior-month CPI was in the mid-2s but energy and producer-price pressure turned higher before the next print.",
+      "base_rate_comment": "This base rate is deliberately conservative because the threshold is far above the latest official 2.4% print and above the Cleveland Fed nowcast near 2.9%."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "BLS publishes the March 2026 CPI print in time for market resolution, or Polymarket fallback rule applies",
+          "status": "filled",
+          "comment": "Le BLS a déjà planifié la publication du CPI de mars 2026 pour le 10 avril 2026 à 08:30 ET, exactement le jour de résolution du marché."
+        },
+        {
+          "name": "Resolution metric remains headline CPI year-over-year for the 12 months ending March 2026, before seasonal adjustment",
+          "status": "filled",
+          "comment": "La règle Polymarket renvoie au headline CPI annual, avant ajustement saisonnier, tel que rapporté par le BLS."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Late-March energy spike is large enough to move headline materially",
+          "status": "partial",
+          "comment": "Oil and gasoline moved sharply higher, but much of the shock arrived late in the month."
+        },
+        {
+          "name": "Broader non-energy categories also re-accelerate rather than offset the fuel move",
+          "status": "unknown",
+          "comment": "A pure gasoline shock alone may not be enough to clear 3.4%."
+        },
+        {
+          "name": "Rounded BLS print lands at 3.4% or above instead of 3.3% or lower",
+          "status": "partial",
+          "comment": "This contract is very sensitive to one-decimal rounding near the upper tail."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Oil and gasoline shock in March",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "The March energy shock is the main reason the upper tail remains live at all."
+      },
+      {
+        "factor_name": "Hot February PPI and broader pipeline pressure",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "Producer-price strength raises the odds that headline inflation surprises to the upside."
+      },
+      {
+        "factor_name": "Cleveland Fed nowcast sits far below the threshold",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "A nowcast around 2.87% is not close to 3.4%; reaching this bracket would require a very large upside miss."
+      },
+      {
+        "factor_name": "February headline CPI was only 2.4% YoY",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "The starting point is too low for ≥3.4% to be anything other than a tail event."
+      },
+      {
+        "factor_name": "Late-month pass-through may hit April more than March",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "BLS collects prices through the month, so very late price spikes do not fully dominate the monthly print."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market may be correctly pricing a regime shift in inflation where the oil shock is so large that consensus and nowcasts are stale within days.",
+      "top_3_failure_reasons": [
+        "The March energy shock may transmit into CPI faster and more broadly than the base case assumes.",
+        "Consensus tools such as nowcasts may be lagging the speed of the geopolitical inflation shock.",
+        "A large food or transportation surprise could stack with gasoline and push the print into the upper tail."
+      ],
+      "market_might_be_right_because": "The market is reacting to a genuine upside inflation shock and to the fact that exact one-decimal CPI buckets can move sharply when the public estimate cluster shifts even slightly.",
+      "thesis_invalidation_trigger": "If reputable real-time nowcasts or major economist previews move clearly above 3.2% before release, the thesis against this upper-tail contract weakens materially."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules for March Inflation US - Annual (Higher Brackets); BLS CPI release schedule; BLS February 2026 CPI release; Cleveland Fed inflation nowcast; Reuters/AP coverage of February CPI and March inflation pressure.",
+      "historical_precedents": "Episodes 2021-2024 where headline CPI moved sharply with energy and food swings, plus more recent 2025-2026 disinflation plateau episodes where rounded 0.1-point bins clustered tightly around consensus.",
+      "institutional_constraints": "Resolution depends on a single official BLS headline CPI YoY print, not core CPI, not PCE, and not a private estimate.",
+      "timeline_recent": "January 2026 headline CPI: 2.4% YoY. February 2026 headline CPI: 2.4% YoY. Cleveland Fed nowcast for March 2026 headline CPI: about 2.87% YoY. Oil and gasoline prices surged sharply in March after the Iran-related shock, but late-month timing limits full pass-through into March CPI.",
+      "actors_and_incentives": "BLS provides the resolving number; Polymarket only maps the official print into outcome buckets. Macro traders are reacting to hot producer prices, higher oil, and a more hawkish Fed inflation tone.",
+      "key_uncertainties": "How much of the March energy shock enters the CPI sample window; whether food and shelter remain sticky; exact one-decimal rounding; whether any category reversal offsets gasoline.",
+      "counterarguments": "The market may overweight the most recent oil move even though CPI prices are collected throughout the month, so a late shock may matter more for April than for March.",
+      "dominant_market_narrative": "The dominant market narrative is that geopolitical energy inflation can abruptly break the recent 2.4%-ish plateau and send the print into a much higher bracket."
+    }
+  },
+  {
+    "market_id": "BATCH-011-4",
+    "thesis_id": "BATCH-011-4-TH1",
+    "analysis_id": "BATCH-011-4-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:32:29Z",
+    "resolution_date": "2026-04-10T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Marché macroéconomique fondé sur une publication BLS datée et standardisée. La règle de résolution Polymarket renvoie explicitement au CPI headline sur 12 mois pour mars 2026, non désaisonnalisé, avec fallback au mois précédent si la publication n'a pas lieu."
+    },
+    "base_rate": {
+      "base_rate_value": 0.11,
+      "base_rate_reference_class": "Exact one-decimal headline CPI outcomes in months where prior inflation was stable but new energy pressure appeared before the next release.",
+      "base_rate_comment": "Exact-bin markets are narrower than directional inflation calls, so the base rate stays modest even when upside pressure exists."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "BLS publishes the March 2026 CPI print in time for market resolution, or Polymarket fallback rule applies",
+          "status": "filled",
+          "comment": "Le BLS a déjà planifié la publication du CPI de mars 2026 pour le 10 avril 2026 à 08:30 ET, exactement le jour de résolution du marché."
+        },
+        {
+          "name": "Resolution metric remains headline CPI year-over-year for the 12 months ending March 2026, before seasonal adjustment",
+          "status": "filled",
+          "comment": "La règle Polymarket renvoie au headline CPI annual, avant ajustement saisonnier, tel que rapporté par le BLS."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "March CPI accelerates into the low-3s rather than staying in the high-2s",
+          "status": "partial",
+          "comment": "Upside pressure exists, but the current nowcast still centers below 3.0%."
+        },
+        {
+          "name": "Rounded BLS print lands exactly at 3.3%",
+          "status": "partial",
+          "comment": "Exact-bin risk is material because adjacent 3.2% and ≥3.4% brackets are close substitutes."
+        },
+        {
+          "name": "Energy upside is not fully offset by softer shelter or core goods",
+          "status": "unknown",
+          "comment": "Offset risk remains significant."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Upside inflation pressure from energy and PPI",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Without the March upside shock, 3.3% would barely be in discussion."
+      },
+      {
+        "factor_name": "Hawkish repricing of 2026 inflation outlook",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Nowcast center is below 3.0%",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "A 3.3% exact print still requires a large move above the best public nowcast."
+      },
+      {
+        "factor_name": "Exact-bin rounding risk",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "Even on an upside surprise, 3.2% or ≥3.4% can easily capture the realized print."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market may be right that 3.3% is the single best upside bin if energy pass-through is strong but not extreme.",
+      "top_3_failure_reasons": [
+        "The public nowcast may be materially understating the headline effect of gasoline in March.",
+        "An exact 3.3% print can win even if the general thesis is only 'higher inflation', because neighboring bins are narrow.",
+        "Food and transportation categories could reinforce energy without forcing the print all the way to 3.4%+."
+      ],
+      "market_might_be_right_because": "The market is reacting to a genuine upside inflation shock and to the fact that exact one-decimal CPI buckets can move sharply when the public estimate cluster shifts even slightly.",
+      "thesis_invalidation_trigger": "If the Cleveland Fed nowcast and major bank previews stay near 2.8%-2.9% into early April, the case for an exact 3.3% print weakens further."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules for March Inflation US - Annual (Higher Brackets); BLS CPI release schedule; BLS February 2026 CPI release; Cleveland Fed inflation nowcast; Reuters/AP coverage of February CPI and March inflation pressure.",
+      "historical_precedents": "Episodes 2021-2024 where headline CPI moved sharply with energy and food swings, plus more recent 2025-2026 disinflation plateau episodes where rounded 0.1-point bins clustered tightly around consensus.",
+      "institutional_constraints": "Resolution depends on a single official BLS headline CPI YoY print, not core CPI, not PCE, and not a private estimate.",
+      "timeline_recent": "January 2026 headline CPI: 2.4% YoY. February 2026 headline CPI: 2.4% YoY. Cleveland Fed nowcast for March 2026 headline CPI: about 2.87% YoY. Oil and gasoline prices surged sharply in March after the Iran-related shock, but late-month timing limits full pass-through into March CPI.",
+      "actors_and_incentives": "BLS provides the resolving number; Polymarket only maps the official print into outcome buckets. Macro traders are reacting to hot producer prices, higher oil, and a more hawkish Fed inflation tone.",
+      "key_uncertainties": "How much of the March energy shock enters the CPI sample window; whether food and shelter remain sticky; exact one-decimal rounding; whether any category reversal offsets gasoline.",
+      "counterarguments": "The market may overweight the most recent oil move even though CPI prices are collected throughout the month, so a late shock may matter more for April than for March.",
+      "dominant_market_narrative": "The dominant market narrative is a meaningful upside surprise, but not necessarily an extreme one."
+    }
+  },
+  {
+    "market_id": "BATCH-011-3",
+    "thesis_id": "BATCH-011-3-TH1",
+    "analysis_id": "BATCH-011-3-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:32:29Z",
+    "resolution_date": "2026-04-10T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Marché macroéconomique fondé sur une publication BLS datée et standardisée. La règle de résolution Polymarket renvoie explicitement au CPI headline sur 12 mois pour mars 2026, non désaisonnalisé, avec fallback au mois précédent si la publication n'a pas lieu."
+    },
+    "base_rate": {
+      "base_rate_value": 0.13,
+      "base_rate_reference_class": "Exact one-decimal headline CPI outcomes one to three tenths above prevailing nowcasts during mild upside inflation surprises.",
+      "base_rate_comment": "3.2% is still above the current public center, but it is less extreme than 3.3% or ≥3.4%."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "BLS publishes the March 2026 CPI print in time for market resolution, or Polymarket fallback rule applies",
+          "status": "filled",
+          "comment": "Le BLS a déjà planifié la publication du CPI de mars 2026 pour le 10 avril 2026 à 08:30 ET, exactement le jour de résolution du marché."
+        },
+        {
+          "name": "Resolution metric remains headline CPI year-over-year for the 12 months ending March 2026, before seasonal adjustment",
+          "status": "filled",
+          "comment": "La règle Polymarket renvoie au headline CPI annual, avant ajustement saisonnier, tel que rapporté par le BLS."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "March CPI accelerates clearly above 3.0%",
+          "status": "partial",
+          "comment": "Possible, but not the central public forecast."
+        },
+        {
+          "name": "Rounded BLS print lands exactly at 3.2%",
+          "status": "partial",
+          "comment": "Adjacent exact bins create substantial lottery risk."
+        },
+        {
+          "name": "Energy pass-through proves strong enough to beat current nowcasts",
+          "status": "partial",
+          "comment": "Needed for this bin to be live."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "March energy shock supports an upside miss",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Energy is the core reason 3.2% remains plausible."
+      },
+      {
+        "factor_name": "Pipeline inflation from PPI and sticky categories",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "Hot producer prices keep the upper bins from being dismissed."
+      },
+      {
+        "factor_name": "Nowcast remains around 2.87%",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3,
+        "factor_comment": "The most visible public estimate still points below 3.0%, so 3.2% needs a notable upside miss."
+      },
+      {
+        "factor_name": "Exact-bin competition from 3.1% and 3.3%",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "Even if inflation prints near this area, neighboring brackets can capture it."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market may be right that 3.2% is a realistic upside landing spot if the shock is material but not enough to clear the top bracket.",
+      "top_3_failure_reasons": [
+        "Energy may lift headline by more than the nowcast implies.",
+        "The distribution may be shifting upward fast enough that 3.2% becomes the modal upside bin.",
+        "Exact-bin markets can be misread if one treats them as simple directional inflation bets rather than narrow landing zones."
+      ],
+      "market_might_be_right_because": "The market is reacting to a genuine upside inflation shock and to the fact that exact one-decimal CPI buckets can move sharply when the public estimate cluster shifts even slightly.",
+      "thesis_invalidation_trigger": "If sell-side previews start clustering around 3.1%-3.2%, the bearish case on this contract loses force."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules for March Inflation US - Annual (Higher Brackets); BLS CPI release schedule; BLS February 2026 CPI release; Cleveland Fed inflation nowcast; Reuters/AP coverage of February CPI and March inflation pressure.",
+      "historical_precedents": "Episodes 2021-2024 where headline CPI moved sharply with energy and food swings, plus more recent 2025-2026 disinflation plateau episodes where rounded 0.1-point bins clustered tightly around consensus.",
+      "institutional_constraints": "Resolution depends on a single official BLS headline CPI YoY print, not core CPI, not PCE, and not a private estimate.",
+      "timeline_recent": "January 2026 headline CPI: 2.4% YoY. February 2026 headline CPI: 2.4% YoY. Cleveland Fed nowcast for March 2026 headline CPI: about 2.87% YoY. Oil and gasoline prices surged sharply in March after the Iran-related shock, but late-month timing limits full pass-through into March CPI.",
+      "actors_and_incentives": "BLS provides the resolving number; Polymarket only maps the official print into outcome buckets. Macro traders are reacting to hot producer prices, higher oil, and a more hawkish Fed inflation tone.",
+      "key_uncertainties": "How much of the March energy shock enters the CPI sample window; whether food and shelter remain sticky; exact one-decimal rounding; whether any category reversal offsets gasoline.",
+      "counterarguments": "The market may overweight the most recent oil move even though CPI prices are collected throughout the month, so a late shock may matter more for April than for March.",
+      "dominant_market_narrative": "The dominant market narrative is that inflation is likely higher than February, but the exact landing point is uncertain."
+    }
+  },
+  {
+    "market_id": "BATCH-011-8",
+    "thesis_id": "BATCH-011-8-TH1",
+    "analysis_id": "BATCH-011-8-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:32:29Z",
+    "resolution_date": "2026-04-10T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Marché macroéconomique fondé sur une publication BLS datée et standardisée. La règle de résolution Polymarket renvoie explicitement au CPI headline sur 12 mois pour mars 2026, non désaisonnalisé, avec fallback au mois précédent si la publication n'a pas lieu."
+    },
+    "base_rate": {
+      "base_rate_value": 0.16,
+      "base_rate_reference_class": "Exact one-decimal CPI outcomes slightly above the public nowcast in months with moderate upside pressure.",
+      "base_rate_comment": "Because 3.1% is close enough to a 2.9%-ish center to be plausible, its base rate is higher than deeper upper-tail bins."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "BLS publishes the March 2026 CPI print in time for market resolution, or Polymarket fallback rule applies",
+          "status": "filled",
+          "comment": "Le BLS a déjà planifié la publication du CPI de mars 2026 pour le 10 avril 2026 à 08:30 ET, exactement le jour de résolution du marché."
+        },
+        {
+          "name": "Resolution metric remains headline CPI year-over-year for the 12 months ending March 2026, before seasonal adjustment",
+          "status": "filled",
+          "comment": "La règle Polymarket renvoie au headline CPI annual, avant ajustement saisonnier, tel que rapporté par le BLS."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "March headline CPI lands just above 3.0%",
+          "status": "partial",
+          "comment": "A modest upside miss versus nowcasts would be sufficient."
+        },
+        {
+          "name": "Rounded print lands exactly at 3.1%",
+          "status": "partial",
+          "comment": "Exact-bin sensitivity remains meaningful."
+        },
+        {
+          "name": "Energy upside is only partial, not explosive",
+          "status": "unknown",
+          "comment": "A too-large pass-through would push the print to 3.2% or higher."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Energy shock makes a low-3s outcome plausible",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 3,
+        "factor_comment": "This bracket benefits from upside pressure without needing an extreme tail outcome."
+      },
+      {
+        "factor_name": "March nowcast is not dramatically below the target",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "Relative to higher bins, 3.1% is closer to the public estimate band."
+      },
+      {
+        "factor_name": "Central public estimate still sits below 3.0%",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "This remains an upside call rather than the base case."
+      },
+      {
+        "factor_name": "Exact-bin competition from 3.0% and 3.2%",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "A small rounding shift can kill the contract."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market may be underpricing how natural a 3.1% print becomes if March energy pass-through is meaningful but not extreme.",
+      "top_3_failure_reasons": [
+        "A moderate upside surprise can place the print exactly in the 3.1% bucket.",
+        "The current nowcast is close enough that one strong category move could shift the realized rounded value upward.",
+        "The market may be overconcentrated on 2.8%-2.9% from stale pre-shock anchors."
+      ],
+      "market_might_be_right_because": "The market is reacting to a genuine upside inflation shock and to the fact that exact one-decimal CPI buckets can move sharply when the public estimate cluster shifts even slightly.",
+      "thesis_invalidation_trigger": "If energy prices retrace hard before the CPI collection window closes, or if previews stay firmly below 3.0%, the 3.1% case weakens."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules for March Inflation US - Annual (Higher Brackets); BLS CPI release schedule; BLS February 2026 CPI release; Cleveland Fed inflation nowcast; Reuters/AP coverage of February CPI and March inflation pressure.",
+      "historical_precedents": "Episodes 2021-2024 where headline CPI moved sharply with energy and food swings, plus more recent 2025-2026 disinflation plateau episodes where rounded 0.1-point bins clustered tightly around consensus.",
+      "institutional_constraints": "Resolution depends on a single official BLS headline CPI YoY print, not core CPI, not PCE, and not a private estimate.",
+      "timeline_recent": "January 2026 headline CPI: 2.4% YoY. February 2026 headline CPI: 2.4% YoY. Cleveland Fed nowcast for March 2026 headline CPI: about 2.87% YoY. Oil and gasoline prices surged sharply in March after the Iran-related shock, but late-month timing limits full pass-through into March CPI.",
+      "actors_and_incentives": "BLS provides the resolving number; Polymarket only maps the official print into outcome buckets. Macro traders are reacting to hot producer prices, higher oil, and a more hawkish Fed inflation tone.",
+      "key_uncertainties": "How much of the March energy shock enters the CPI sample window; whether food and shelter remain sticky; exact one-decimal rounding; whether any category reversal offsets gasoline.",
+      "counterarguments": "The market may overweight the most recent oil move even though CPI prices are collected throughout the month, so a late shock may matter more for April than for March.",
+      "dominant_market_narrative": "The dominant market narrative is that 3.1% is an upside alternative but not yet the consensus center."
+    }
+  },
+  {
+    "market_id": "BATCH-011-7",
+    "thesis_id": "BATCH-011-7-TH1",
+    "analysis_id": "BATCH-011-7-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:32:29Z",
+    "resolution_date": "2026-04-10T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Marché macroéconomique fondé sur une publication BLS datée et standardisée. La règle de résolution Polymarket renvoie explicitement au CPI headline sur 12 mois pour mars 2026, non désaisonnalisé, avec fallback au mois précédent si la publication n'a pas lieu."
+    },
+    "base_rate": {
+      "base_rate_value": 0.17,
+      "base_rate_reference_class": "Exact one-decimal CPI outcomes centered near 3.0% when prior-month inflation was 2.4% and the next print faced moderate upside energy pressure.",
+      "base_rate_comment": "3.0% is a natural round-number bucket near the center of an upside-shifted distribution, but exact-bin structure keeps the base rate below a directional call."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "BLS publishes the March 2026 CPI print in time for market resolution, or Polymarket fallback rule applies",
+          "status": "filled",
+          "comment": "Le BLS a déjà planifié la publication du CPI de mars 2026 pour le 10 avril 2026 à 08:30 ET, exactement le jour de résolution du marché."
+        },
+        {
+          "name": "Resolution metric remains headline CPI year-over-year for the 12 months ending March 2026, before seasonal adjustment",
+          "status": "filled",
+          "comment": "La règle Polymarket renvoie au headline CPI annual, avant ajustement saisonnier, tel que rapporté par le BLS."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "March CPI rounds to exactly 3.0%",
+          "status": "partial",
+          "comment": "The main obstacle is exact rounding rather than pure directional plausibility."
+        },
+        {
+          "name": "Upside pressure is enough to lift inflation from 2.4% to around 3.0%, but not beyond 3.1%",
+          "status": "partial",
+          "comment": "A narrow landing strip is required."
+        },
+        {
+          "name": "Core offsets do not pull the print back into 2.8%-2.9%",
+          "status": "unknown",
+          "comment": "Offset risk remains real."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Public nowcast is close to the 3.0% neighborhood",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "A nowcast near 2.87% makes a rounded 3.0% print mechanically plausible."
+      },
+      {
+        "factor_name": "Energy and producer-price upside",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "These pressures help move the distribution upward from the recent 2.4% plateau."
+      },
+      {
+        "factor_name": "Exact-bin crowding around 2.9%, 3.0%, and 3.1%",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3,
+        "factor_comment": "Being close to the center does not eliminate resolution risk; adjacent one-decimal buckets remain highly competitive."
+      },
+      {
+        "factor_name": "Late-month shock timing still limits full pass-through",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 1
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market may be too dismissive of 3.0% because it is focusing on 2.8%-2.9% anchors rather than the arithmetic impact of an upside shock on a 2.87% nowcast.",
+      "top_3_failure_reasons": [
+        "A nowcast near 2.87% already puts 3.0% within normal rounding distance.",
+        "A modest additional upside surprise in gasoline or food could make 3.0% the realized print without requiring a major miss.",
+        "Round-number anchoring can sometimes cause traders to over- or underprice adjacent exact bins."
+      ],
+      "market_might_be_right_because": "The market is reacting to a genuine upside inflation shock and to the fact that exact one-decimal CPI buckets can move sharply when the public estimate cluster shifts even slightly.",
+      "thesis_invalidation_trigger": "If updated nowcasts drift down toward 2.7%-2.8%, the exact 3.0% thesis weakens substantially."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules for March Inflation US - Annual (Higher Brackets); BLS CPI release schedule; BLS February 2026 CPI release; Cleveland Fed inflation nowcast; Reuters/AP coverage of February CPI and March inflation pressure.",
+      "historical_precedents": "Episodes 2021-2024 where headline CPI moved sharply with energy and food swings, plus more recent 2025-2026 disinflation plateau episodes where rounded 0.1-point bins clustered tightly around consensus.",
+      "institutional_constraints": "Resolution depends on a single official BLS headline CPI YoY print, not core CPI, not PCE, and not a private estimate.",
+      "timeline_recent": "January 2026 headline CPI: 2.4% YoY. February 2026 headline CPI: 2.4% YoY. Cleveland Fed nowcast for March 2026 headline CPI: about 2.87% YoY. Oil and gasoline prices surged sharply in March after the Iran-related shock, but late-month timing limits full pass-through into March CPI.",
+      "actors_and_incentives": "BLS provides the resolving number; Polymarket only maps the official print into outcome buckets. Macro traders are reacting to hot producer prices, higher oil, and a more hawkish Fed inflation tone.",
+      "key_uncertainties": "How much of the March energy shock enters the CPI sample window; whether food and shelter remain sticky; exact one-decimal rounding; whether any category reversal offsets gasoline.",
+      "counterarguments": "The market may overweight the most recent oil move even though CPI prices are collected throughout the month, so a late shock may matter more for April than for March.",
+      "dominant_market_narrative": "The dominant market narrative is still below 3.0%, which may leave the 3.0% bucket under-discussed."
+    }
+  },
+  {
+    "market_id": "BATCH-011-0",
+    "thesis_id": "BATCH-011-0-TH1",
+    "analysis_id": "BATCH-011-0-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:32:29Z",
+    "resolution_date": "2026-04-10T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Marché macroéconomique fondé sur une publication BLS datée et standardisée. La règle de résolution Polymarket renvoie explicitement au CPI headline sur 12 mois pour mars 2026, non désaisonnalisé, avec fallback au mois précédent si la publication n'a pas lieu."
+    },
+    "base_rate": {
+      "base_rate_value": 0.16,
+      "base_rate_reference_class": "Exact one-decimal headline CPI outcomes in months where the public nowcast is just under 2.9% and the prior print was materially lower.",
+      "base_rate_comment": "2.9% sits almost exactly on the current nowcast neighborhood, which makes it one of the most natural exact bins before contract-specific factors are applied."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "BLS publishes the March 2026 CPI print in time for market resolution, or Polymarket fallback rule applies",
+          "status": "filled",
+          "comment": "Le BLS a déjà planifié la publication du CPI de mars 2026 pour le 10 avril 2026 à 08:30 ET, exactement le jour de résolution du marché."
+        },
+        {
+          "name": "Resolution metric remains headline CPI year-over-year for the 12 months ending March 2026, before seasonal adjustment",
+          "status": "filled",
+          "comment": "La règle Polymarket renvoie au headline CPI annual, avant ajustement saisonnier, tel que rapporté par le BLS."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "March CPI lands in the high-2s rather than the low-3s",
+          "status": "filled",
+          "comment": "This remains the central public expectation band."
+        },
+        {
+          "name": "Rounded BLS print lands exactly at 2.9%",
+          "status": "partial",
+          "comment": "Exact-bin dependence remains important because 2.8% and 3.0% are close."
+        },
+        {
+          "name": "Late-March energy shock does not push the final rounded print above 2.9%",
+          "status": "partial",
+          "comment": "This is the main risk to the contract."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Cleveland Fed nowcast around 2.87%",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "This is the strongest public anchor for a 2.9% exact print."
+      },
+      {
+        "factor_name": "February CPI at 2.4% leaves room for a meaningful but not extreme rebound",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "A move from 2.4% to 2.9% is large but still well short of tail scenarios."
+      },
+      {
+        "factor_name": "Exact-bin competition from 2.8% and 3.0%",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3,
+        "factor_comment": "Even a correct central view can lose because of one-decimal bucket structure."
+      },
+      {
+        "factor_name": "Energy shock could push the print into the low-3s",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "The biggest threat to 2.9% is not downside but an upside overshoot."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market may be underestimating how directly the public nowcast maps to an exact 2.9% resolution.",
+      "top_3_failure_reasons": [
+        "The best public nowcast is already almost exactly 2.9%.",
+        "A moderate rather than extreme energy pass-through favors this bucket over low-3s outcomes.",
+        "The market may be overweighting the drama of the oil shock relative to the CPI collection window."
+      ],
+      "market_might_be_right_because": "The market is reacting to a genuine upside inflation shock and to the fact that exact one-decimal CPI buckets can move sharply when the public estimate cluster shifts even slightly.",
+      "thesis_invalidation_trigger": "If reputable previews rise above 3.0% in the final days before release, the 2.9% thesis loses its core anchor."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules for March Inflation US - Annual (Higher Brackets); BLS CPI release schedule; BLS February 2026 CPI release; Cleveland Fed inflation nowcast; Reuters/AP coverage of February CPI and March inflation pressure.",
+      "historical_precedents": "Episodes 2021-2024 where headline CPI moved sharply with energy and food swings, plus more recent 2025-2026 disinflation plateau episodes where rounded 0.1-point bins clustered tightly around consensus.",
+      "institutional_constraints": "Resolution depends on a single official BLS headline CPI YoY print, not core CPI, not PCE, and not a private estimate.",
+      "timeline_recent": "January 2026 headline CPI: 2.4% YoY. February 2026 headline CPI: 2.4% YoY. Cleveland Fed nowcast for March 2026 headline CPI: about 2.87% YoY. Oil and gasoline prices surged sharply in March after the Iran-related shock, but late-month timing limits full pass-through into March CPI.",
+      "actors_and_incentives": "BLS provides the resolving number; Polymarket only maps the official print into outcome buckets. Macro traders are reacting to hot producer prices, higher oil, and a more hawkish Fed inflation tone.",
+      "key_uncertainties": "How much of the March energy shock enters the CPI sample window; whether food and shelter remain sticky; exact one-decimal rounding; whether any category reversal offsets gasoline.",
+      "counterarguments": "The market may overweight the most recent oil move even though CPI prices are collected throughout the month, so a late shock may matter more for April than for March.",
+      "dominant_market_narrative": "The dominant market narrative is that 2.8%-2.9% remains the center, with upside shock risk as the main challenge."
+    }
+  },
+  {
+    "market_id": "BATCH-011-1",
+    "thesis_id": "BATCH-011-1-TH1",
+    "analysis_id": "BATCH-011-1-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:32:29Z",
+    "resolution_date": "2026-04-10T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Marché macroéconomique fondé sur une publication BLS datée et standardisée. La règle de résolution Polymarket renvoie explicitement au CPI headline sur 12 mois pour mars 2026, non désaisonnalisé, avec fallback au mois précédent si la publication n'a pas lieu."
+    },
+    "base_rate": {
+      "base_rate_value": 0.05,
+      "base_rate_reference_class": "Lower-tail headline CPI outcomes after a flat 2.4% prior print, in settings where expected energy pass-through stays very small and core disinflation reasserts itself.",
+      "base_rate_comment": "The lower tail remains non-zero because official CPI can still surprise on shelter, vehicles, or food offsets, but current conditions do not favor it."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "BLS publishes the March 2026 CPI print in time for market resolution, or Polymarket fallback rule applies",
+          "status": "filled",
+          "comment": "Le BLS a déjà planifié la publication du CPI de mars 2026 pour le 10 avril 2026 à 08:30 ET, exactement le jour de résolution du marché."
+        },
+        {
+          "name": "Resolution metric remains headline CPI year-over-year for the 12 months ending March 2026, before seasonal adjustment",
+          "status": "filled",
+          "comment": "La règle Polymarket renvoie au headline CPI annual, avant ajustement saisonnier, tel que rapporté par le BLS."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Energy shock has little net effect on March CPI",
+          "status": "partial",
+          "comment": "Possible if timing matters a lot, but not the dominant setup."
+        },
+        {
+          "name": "Core disinflation offsets food and energy enough to keep CPI at 2.6% or lower",
+          "status": "unknown",
+          "comment": "This would require multiple favorable offsets simultaneously."
+        },
+        {
+          "name": "Rounded print lands at 2.6% or below rather than 2.7%-2.9%",
+          "status": "partial",
+          "comment": "The central public forecast band is above this threshold."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Late-month timing limits some energy pass-through",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "February CPI was only 2.4%",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Cleveland Fed nowcast is above the threshold",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "A nowcast near 2.87% makes ≤2.6% clearly counter-consensus."
+      },
+      {
+        "factor_name": "Oil, gasoline, and hot PPI all point upward, not downward",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "The incoming macro tape is almost uniformly hostile to a low-tail inflation print."
+      },
+      {
+        "factor_name": "Fed and economist narratives shifted toward re-acceleration",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "The dominant information flow is not consistent with a benign headline surprise."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market may be correct that the lower tail is almost dead because too many contemporaneous signals point to higher inflation.",
+      "top_3_failure_reasons": [
+        "The energy shock may prove smaller in the measured March sample than markets assume.",
+        "Shelter, goods, or food categories may soften enough to create an offsetting downside surprise.",
+        "The market may be extrapolating geopolitical headlines into the wrong CPI month."
+      ],
+      "market_might_be_right_because": "The market is reacting to a genuine upside inflation shock and to the fact that exact one-decimal CPI buckets can move sharply when the public estimate cluster shifts even slightly.",
+      "thesis_invalidation_trigger": "If updated nowcasts fall toward 2.6% or lower, this thesis is wrong and the lower-tail contract becomes materially more live."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules for March Inflation US - Annual (Higher Brackets); BLS CPI release schedule; BLS February 2026 CPI release; Cleveland Fed inflation nowcast; Reuters/AP coverage of February CPI and March inflation pressure.",
+      "historical_precedents": "Episodes 2021-2024 where headline CPI moved sharply with energy and food swings, plus more recent 2025-2026 disinflation plateau episodes where rounded 0.1-point bins clustered tightly around consensus.",
+      "institutional_constraints": "Resolution depends on a single official BLS headline CPI YoY print, not core CPI, not PCE, and not a private estimate.",
+      "timeline_recent": "January 2026 headline CPI: 2.4% YoY. February 2026 headline CPI: 2.4% YoY. Cleveland Fed nowcast for March 2026 headline CPI: about 2.87% YoY. Oil and gasoline prices surged sharply in March after the Iran-related shock, but late-month timing limits full pass-through into March CPI.",
+      "actors_and_incentives": "BLS provides the resolving number; Polymarket only maps the official print into outcome buckets. Macro traders are reacting to hot producer prices, higher oil, and a more hawkish Fed inflation tone.",
+      "key_uncertainties": "How much of the March energy shock enters the CPI sample window; whether food and shelter remain sticky; exact one-decimal rounding; whether any category reversal offsets gasoline.",
+      "counterarguments": "The market may overweight the most recent oil move even though CPI prices are collected throughout the month, so a late shock may matter more for April than for March.",
+      "dominant_market_narrative": "The dominant market narrative is that a benign low-tail print is inconsistent with the current macro tape."
+    }
+  },
+  {
+    "market_id": "BATCH-011-2",
+    "thesis_id": "BATCH-011-2-TH1",
+    "analysis_id": "BATCH-011-2-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:32:29Z",
+    "resolution_date": "2026-04-10T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Marché macroéconomique fondé sur une publication BLS datée et standardisée. La règle de résolution Polymarket renvoie explicitement au CPI headline sur 12 mois pour mars 2026, non désaisonnalisé, avec fallback au mois précédent si la publication n'a pas lieu."
+    },
+    "base_rate": {
+      "base_rate_value": 0.15,
+      "base_rate_reference_class": "Exact one-decimal headline CPI outcomes just below a 2.9% nowcast center in a month with modest upside skew.",
+      "base_rate_comment": "2.8% is highly plausible if the public nowcast is slightly overstated or if late-month energy pass-through is more limited than feared."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "BLS publishes the March 2026 CPI print in time for market resolution, or Polymarket fallback rule applies",
+          "status": "filled",
+          "comment": "Le BLS a déjà planifié la publication du CPI de mars 2026 pour le 10 avril 2026 à 08:30 ET, exactement le jour de résolution du marché."
+        },
+        {
+          "name": "Resolution metric remains headline CPI year-over-year for the 12 months ending March 2026, before seasonal adjustment",
+          "status": "filled",
+          "comment": "La règle Polymarket renvoie au headline CPI annual, avant ajustement saisonnier, tel que rapporté par le BLS."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "March CPI stays in the upper-2s despite upside energy headlines",
+          "status": "filled",
+          "comment": "Still consistent with the main public nowcast zone."
+        },
+        {
+          "name": "Rounded print lands exactly at 2.8%",
+          "status": "partial",
+          "comment": "2.8% competes directly with 2.9% in a narrow central band."
+        },
+        {
+          "name": "Upside shock is not large enough to round the print to 2.9% or higher",
+          "status": "partial",
+          "comment": "This is the key contract-specific risk."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Cleveland Fed nowcast is near but slightly above this bucket",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 3,
+        "factor_comment": "A 2.87% nowcast leaves 2.8% live if realized inflation comes in just under the model center."
+      },
+      {
+        "factor_name": "Timing frictions may limit how much of the oil shock enters March CPI",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "This is the main reason 2.8% remains competitive with higher bins."
+      },
+      {
+        "factor_name": "Exact-bin competition from 2.9%",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3,
+        "factor_comment": "Because the public nowcast sits closer to 2.9 than 2.8, neighboring-bin risk is substantial."
+      },
+      {
+        "factor_name": "Upside macro tone from energy and PPI",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "The information flow leans upward, making 2.8% less comfortable than it would have been before the shock."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market may be missing that 2.8% is still very compatible with a 2.87% nowcast once one-decimal rounding is considered.",
+      "top_3_failure_reasons": [
+        "A nowcast below 2.85% in late updates would make 2.8% much more natural.",
+        "The oil shock may mostly matter for April CPI rather than March CPI.",
+        "The market may be over-biasing toward higher bins because headlines arrived after many traders anchored to fear rather than collection mechanics."
+      ],
+      "market_might_be_right_because": "The market is reacting to a genuine upside inflation shock and to the fact that exact one-decimal CPI buckets can move sharply when the public estimate cluster shifts even slightly.",
+      "thesis_invalidation_trigger": "If final previews cluster at 2.9%-3.0% and gasoline stays elevated through the measurement window, the 2.8% thesis weakens sharply."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules for March Inflation US - Annual (Higher Brackets); BLS CPI release schedule; BLS February 2026 CPI release; Cleveland Fed inflation nowcast; Reuters/AP coverage of February CPI and March inflation pressure.",
+      "historical_precedents": "Episodes 2021-2024 where headline CPI moved sharply with energy and food swings, plus more recent 2025-2026 disinflation plateau episodes where rounded 0.1-point bins clustered tightly around consensus.",
+      "institutional_constraints": "Resolution depends on a single official BLS headline CPI YoY print, not core CPI, not PCE, and not a private estimate.",
+      "timeline_recent": "January 2026 headline CPI: 2.4% YoY. February 2026 headline CPI: 2.4% YoY. Cleveland Fed nowcast for March 2026 headline CPI: about 2.87% YoY. Oil and gasoline prices surged sharply in March after the Iran-related shock, but late-month timing limits full pass-through into March CPI.",
+      "actors_and_incentives": "BLS provides the resolving number; Polymarket only maps the official print into outcome buckets. Macro traders are reacting to hot producer prices, higher oil, and a more hawkish Fed inflation tone.",
+      "key_uncertainties": "How much of the March energy shock enters the CPI sample window; whether food and shelter remain sticky; exact one-decimal rounding; whether any category reversal offsets gasoline.",
+      "counterarguments": "The market may overweight the most recent oil move even though CPI prices are collected throughout the month, so a late shock may matter more for April than for March.",
+      "dominant_market_narrative": "The dominant market narrative is that 2.8% is plausible but threatened by late-month upside inflation headlines."
+    }
+  },
+  {
+    "market_id": "BATCH-011-6",
+    "thesis_id": "BATCH-011-6-TH1",
+    "analysis_id": "BATCH-011-6-TH1-A1",
+    "analysis_timestamp": "2026-03-19T15:32:29Z",
+    "resolution_date": "2026-04-10T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Marché macroéconomique fondé sur une publication BLS datée et standardisée. La règle de résolution Polymarket renvoie explicitement au CPI headline sur 12 mois pour mars 2026, non désaisonnalisé, avec fallback au mois précédent si la publication n'a pas lieu."
+    },
+    "base_rate": {
+      "base_rate_value": 0.08,
+      "base_rate_reference_class": "Lower-central exact one-decimal CPI outcomes just above the prior month but below the current public nowcast center.",
+      "base_rate_comment": "2.7% is not impossible, but it requires both limited energy pass-through and an exact-bin landing below the main public estimate band."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "BLS publishes the March 2026 CPI print in time for market resolution, or Polymarket fallback rule applies",
+          "status": "filled",
+          "comment": "Le BLS a déjà planifié la publication du CPI de mars 2026 pour le 10 avril 2026 à 08:30 ET, exactement le jour de résolution du marché."
+        },
+        {
+          "name": "Resolution metric remains headline CPI year-over-year for the 12 months ending March 2026, before seasonal adjustment",
+          "status": "filled",
+          "comment": "La règle Polymarket renvoie au headline CPI annual, avant ajustement saisonnier, tel que rapporté par le BLS."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "March CPI rises only modestly from February rather than jumping into 2.8%-3.0%",
+          "status": "partial",
+          "comment": "Possible if offsets are strong and energy timing matters."
+        },
+        {
+          "name": "Rounded print lands exactly at 2.7%",
+          "status": "partial",
+          "comment": "Exact-bin structure is unfavorable because 2.7% is neither the prior print nor the current center."
+        },
+        {
+          "name": "Broader categories soften enough to offset part of the energy move",
+          "status": "unknown",
+          "comment": "Needed to keep the print in this lower-central slot."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Late-month shock timing could cap the March impact",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "Without timing friction, 2.7% would be much less defensible."
+      },
+      {
+        "factor_name": "Prior headline CPI was only 2.4%",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Nowcast sits materially above 2.7%",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "The current public estimate does not naturally map to this bucket."
+      },
+      {
+        "factor_name": "Energy and pipeline inflation skew the distribution upward",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3,
+        "factor_comment": "The macro tape argues for 2.8%+ more than for 2.7%."
+      },
+      {
+        "factor_name": "Exact-bin competition from ≤2.6 and 2.8",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 1
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "The market may be right that 2.7% is a squeezed middle bucket with neither the downside nor central-case narrative behind it.",
+      "top_3_failure_reasons": [
+        "The March energy shock may mostly miss the effective CPI collection window.",
+        "Core categories could cool enough to keep headline inflation below the upper-2s center.",
+        "The market may be too aggressively collapsing all sub-2.9 scenarios into near-zero."
+      ],
+      "market_might_be_right_because": "The market is reacting to a genuine upside inflation shock and to the fact that exact one-decimal CPI buckets can move sharply when the public estimate cluster shifts even slightly.",
+      "thesis_invalidation_trigger": "If late nowcasts remain near 2.85%-2.95%, this already-weak 2.7% thesis becomes difficult to defend."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules for March Inflation US - Annual (Higher Brackets); BLS CPI release schedule; BLS February 2026 CPI release; Cleveland Fed inflation nowcast; Reuters/AP coverage of February CPI and March inflation pressure.",
+      "historical_precedents": "Episodes 2021-2024 where headline CPI moved sharply with energy and food swings, plus more recent 2025-2026 disinflation plateau episodes where rounded 0.1-point bins clustered tightly around consensus.",
+      "institutional_constraints": "Resolution depends on a single official BLS headline CPI YoY print, not core CPI, not PCE, and not a private estimate.",
+      "timeline_recent": "January 2026 headline CPI: 2.4% YoY. February 2026 headline CPI: 2.4% YoY. Cleveland Fed nowcast for March 2026 headline CPI: about 2.87% YoY. Oil and gasoline prices surged sharply in March after the Iran-related shock, but late-month timing limits full pass-through into March CPI.",
+      "actors_and_incentives": "BLS provides the resolving number; Polymarket only maps the official print into outcome buckets. Macro traders are reacting to hot producer prices, higher oil, and a more hawkish Fed inflation tone.",
+      "key_uncertainties": "How much of the March energy shock enters the CPI sample window; whether food and shelter remain sticky; exact one-decimal rounding; whether any category reversal offsets gasoline.",
+      "counterarguments": "The market may overweight the most recent oil move even though CPI prices are collected throughout the month, so a late shock may matter more for April than for March.",
+      "dominant_market_narrative": "The dominant market narrative is that 2.7% sits below the public center and lacks a strong independent catalyst."
+    }
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "market_id": "MKT-010",
+  "thesis_id": "MKT-010-TH1",
+  "analysis_id": "MKT-010-TH1-A1",
+  "analysis_timestamp": "2026-03-18T16:55:00Z",
+  "resolution_date": "2026-04-04T00:00:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "high",
+    "resolution_clarity": "high",
+    "liquidity_quality": "high",
+    "information_accessibility": "medium",
+    "market_noise_level": "medium",
+    "screening_comment": "Marché admissible : équipe, événement et règle de résolution sont clairs ; la liquidité observée est élevée ; l'incertitude principale vient du caractère intrinsèquement volatil d'un tournoi à élimination directe."
+  },
+  "base_rate": {
+    "base_rate_value": 0.08,
+    "base_rate_reference_class": "No. 1 seeds dans le tournoi NCAA masculin, ajustés à la hausse pour une équipe championne sortante encore classée dans le premier groupe de favoris.",
+    "base_rate_comment": "Le base rate part d'un niveau modéré : un seed n°1 a une vraie chance de titre, mais une équipe individuelle reste loin d'une probabilité dominante dans un tableau à six matchs couperets."
+  },
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "Florida doit rester en vie dans le bracket",
+        "status": "filled",
+        "comment": "Au moment du snapshot, Florida est bien qualifiée et non éliminée."
+      },
+      {
+        "name": "La résolution du marché doit rester déterminée par le champion officiel NCAA",
+        "status": "filled",
+        "comment": "La règle Polymarket est explicite et la source de résolution est la NCAA."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Santé fonctionnelle du noyau principal",
+        "status": "partial",
+        "comment": "Aucun signal de forfait massif identifié, mais Haugh sortait récemment d'un souci pied/cheville."
+      },
+      {
+        "name": "Chemin régional praticable jusqu'au Final Four",
+        "status": "partial",
+        "comment": "Florida bénéficie d'un seed n°1 mais la région comporte des adversaires de haut niveau, notamment Houston."
+      },
+      {
+        "name": "Florida reste dans le groupe de favoris crédibles au titre",
+        "status": "filled",
+        "comment": "Les cotes externes le placent toujours dans le premier peloton."
+      }
+    ]
+  },
+  "factor_list": [
+    {
+      "factor_name": "Seed n°1 et champion en titre",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "Le profil de départ de Florida est objectivement celui d'un vrai candidat au titre, pas d'un outsider marginal."
+    },
+    {
+      "factor_name": "Forme récente très forte avant la défaite SEC",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 2,
+      "factor_comment": "La série de 12 victoires et les marges dominantes soutiennent la thèse d'une équipe calibrée pour une deep run."
+    },
+    {
+      "factor_name": "Prix externes encore dans le haut du marché",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2
+    },
+    {
+      "factor_name": "Défaite nette contre Vanderbilt juste avant le tournoi",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2
+    },
+    {
+      "factor_name": "South region difficile avec présence de Houston",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Le chemin n'est pas vide ; même un seed n°1 doit survivre à plusieurs tests de niveau Final Four."
+    },
+    {
+      "factor_name": "Variance structurelle du tournoi NCAA",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Six matchs à élimination directe compressent mécaniquement la probabilité de titre de toute équipe individuelle."
+    }
+  ],
+  "confidence": {
+    "confidence_sources": "medium",
+    "confidence_model": "medium",
+    "confidence_context": "medium",
+    "confidence_overall": "medium"
+  },
+  "ambiguity": {
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low"
+  },
+  "contradiction_forced": {
+    "best_counter_thesis": "Le marché sous-estime Florida : un seed n°1 tenant du titre, encore coté dans le groupe de tête et placé sur un site de premier week-end favorable, devrait être plus proche d'une probabilité à deux chiffres élevés.",
+    "top_3_failure_reasons": [
+      "Le base rate retenu peut rester trop conservateur pour un champion sortant encore seed n°1.",
+      "La difficulté régionale peut être surestimée si Houston ou d'autres menaces tombent tôt.",
+      "La défaite contre Vanderbilt peut n'être qu'un accident sans valeur prédictive négative."
+    ],
+    "market_might_be_right_because": "Le prix Polymarket est cohérent avec un statut de contender sérieux mais non dominant dans un tournoi à très forte variance.",
+    "thesis_invalidation_trigger": "Victoire convaincante de Florida dans les premiers tours accompagnée d'une élimination précoce d'un ou plusieurs principaux rivaux du South bracket."
+  },
+  "research_notes": {
+    "primary_sources": "Polymarket resolution rules ; NCAA official bracket/schedule ; AP et Reuters sur le seed, la forme récente et l'état de l'équipe ; ESPN Betting sur les prix de titre.",
+    "historical_precedents": "Les seeds n°1 gagnent une part importante des titres, mais la probabilité individuelle d'un champion reste limitée par la structure à élimination directe.",
+    "institutional_constraints": "Le marché résout selon le champion officiel NCAA ; élimination de Florida = résolution immédiate à No.",
+    "timeline_recent": "Florida a enchaîné 12 victoires avant de chuter lourdement contre Vanderbilt en demi-finale SEC, puis a reçu un seed n°1.",
+    "actors_and_incentives": "Florida bénéficie d'un pedigree élite ; le marché incorpore simultanément la réputation du programme, le seed, la forme, et la difficulté du bracket.",
+    "key_uncertainties": "Impact réel de la défaite SEC ; niveau de santé effectif du noyau ; danger réel de Houston et du reste de la région.",
+    "counterarguments": "Le marché pourrait être trop bas sur Florida au regard de son seed, de son statut de champion sortant et de ses prix externes encore forts.",
+    "dominant_market_narrative": "Florida est vu comme un vrai contender, mais pas comme l'équipe la plus probable à elle seule pour gagner tout le tournoi."
+  }
+}

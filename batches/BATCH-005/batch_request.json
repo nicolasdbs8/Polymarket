@@ -1,0 +1,319 @@
+{
+  "batch_id": "BATCH-005",
+  "event_title": "Democratic Presidential Nominee 2028",
+  "event_url": "https://polymarket.com/fr/event/democratic-presidential-nominee-2028",
+  "resolution_date": "2028-11-07T00:00:00Z",
+  "snapshot_time": "2026-03-18T19:13:33Z",
+  "contract_count": 44,
+  "contracts": [
+    {
+      "contract_id": "116",
+      "label": "Will Gavin Newsom win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.247,
+      "price_no": 0.753,
+      "type": "binary"
+    },
+    {
+      "contract_id": "51",
+      "label": "Will Alexandria Ocasio-Cortez win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0835,
+      "price_no": 0.9165,
+      "type": "binary"
+    },
+    {
+      "contract_id": "18",
+      "label": "Will Jon Ossoff win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.057,
+      "price_no": 0.943,
+      "type": "binary"
+    },
+    {
+      "contract_id": "101",
+      "label": "Will Kamala Harris win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.053,
+      "price_no": 0.947,
+      "type": "binary"
+    },
+    {
+      "contract_id": "90",
+      "label": "Will Josh Shapiro win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0395,
+      "price_no": 0.9605,
+      "type": "binary"
+    },
+    {
+      "contract_id": "17",
+      "label": "Will Pete Buttigieg win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0365,
+      "price_no": 0.9635,
+      "type": "binary"
+    },
+    {
+      "contract_id": "12",
+      "label": "Will James Talarico win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0275,
+      "price_no": 0.9725,
+      "type": "binary"
+    },
+    {
+      "contract_id": "66",
+      "label": "Will J.B. Pritzker win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.027,
+      "price_no": 0.973,
+      "type": "binary"
+    },
+    {
+      "contract_id": "39",
+      "label": "Will Mark Kelly win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0255,
+      "price_no": 0.9745,
+      "type": "binary"
+    },
+    {
+      "contract_id": "11",
+      "label": "Will Andy Beshear win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.023,
+      "price_no": 0.977,
+      "type": "binary"
+    },
+    {
+      "contract_id": "31",
+      "label": "Will Jon Stewart win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0225,
+      "price_no": 0.9775,
+      "type": "binary"
+    },
+    {
+      "contract_id": "55",
+      "label": "Will Ruben Gallego win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.018,
+      "price_no": 0.982,
+      "type": "binary"
+    },
+    {
+      "contract_id": "1",
+      "label": "Will Gretchen Whitmer win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0155,
+      "price_no": 0.9845,
+      "type": "binary"
+    },
+    {
+      "contract_id": "40",
+      "label": "Will Liz Cheney win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0155,
+      "price_no": 0.9845,
+      "type": "binary"
+    },
+    {
+      "contract_id": "65",
+      "label": "Will Wes Moore win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.015,
+      "price_no": 0.985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "46",
+      "label": "Will Michelle Obama win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0135,
+      "price_no": 0.9865,
+      "type": "binary"
+    },
+    {
+      "contract_id": "52",
+      "label": "Will Rahm Emanuel win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0125,
+      "price_no": 0.9875,
+      "type": "binary"
+    },
+    {
+      "contract_id": "87",
+      "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0125,
+      "price_no": 0.9875,
+      "type": "binary"
+    },
+    {
+      "contract_id": "0",
+      "label": "Will Stephen A. Smith win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0115,
+      "price_no": 0.9885,
+      "type": "binary"
+    },
+    {
+      "contract_id": "2",
+      "label": "Will Oprah Winfrey win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0105,
+      "price_no": 0.9895,
+      "type": "binary"
+    },
+    {
+      "contract_id": "19",
+      "label": "Will Gina Raimondo win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0105,
+      "price_no": 0.9895,
+      "type": "binary"
+    },
+    {
+      "contract_id": "47",
+      "label": "Will Zohran Mamdani win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0105,
+      "price_no": 0.9895,
+      "type": "binary"
+    },
+    {
+      "contract_id": "62",
+      "label": "Will Phil Murphy win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0105,
+      "price_no": 0.9895,
+      "type": "binary"
+    },
+    {
+      "contract_id": "67",
+      "label": "Will LeBron James win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0105,
+      "price_no": 0.9895,
+      "type": "binary"
+    },
+    {
+      "contract_id": "78",
+      "label": "Will Dwayne 'The Rock' Johnson win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0105,
+      "price_no": 0.9895,
+      "type": "binary"
+    },
+    {
+      "contract_id": "82",
+      "label": "Will Chris Murphy win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0105,
+      "price_no": 0.9895,
+      "type": "binary"
+    },
+    {
+      "contract_id": "30",
+      "label": "Will Cory Booker win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0095,
+      "price_no": 0.9905,
+      "type": "binary"
+    },
+    {
+      "contract_id": "53",
+      "label": "Will John Fetterman win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0095,
+      "price_no": 0.9905,
+      "type": "binary"
+    },
+    {
+      "contract_id": "61",
+      "label": "Will Mark Cuban win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0095,
+      "price_no": 0.9905,
+      "type": "binary"
+    },
+    {
+      "contract_id": "81",
+      "label": "Will MrBeast win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0095,
+      "price_no": 0.9905,
+      "type": "binary"
+    },
+    {
+      "contract_id": "25",
+      "label": "Will Barack Obama win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0085,
+      "price_no": 0.9915,
+      "type": "binary"
+    },
+    {
+      "contract_id": "48",
+      "label": "Will Andrew Yang win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0085,
+      "price_no": 0.9915,
+      "type": "binary"
+    },
+    {
+      "contract_id": "54",
+      "label": "Will Kim Kardashian win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0085,
+      "price_no": 0.9915,
+      "type": "binary"
+    },
+    {
+      "contract_id": "75",
+      "label": "Will Chelsea Clinton win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0085,
+      "price_no": 0.9915,
+      "type": "binary"
+    },
+    {
+      "contract_id": "91",
+      "label": "Will Roy Cooper win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0085,
+      "price_no": 0.9915,
+      "type": "binary"
+    },
+    {
+      "contract_id": "41",
+      "label": "Will Beto O’Rourke win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0075,
+      "price_no": 0.9925,
+      "type": "binary"
+    },
+    {
+      "contract_id": "59",
+      "label": "Will Jared Polis win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0075,
+      "price_no": 0.9925,
+      "type": "binary"
+    },
+    {
+      "contract_id": "68",
+      "label": "Will Hunter Biden win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0075,
+      "price_no": 0.9925,
+      "type": "binary"
+    },
+    {
+      "contract_id": "24",
+      "label": "Will Raphael Warnock win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0065,
+      "price_no": 0.9935,
+      "type": "binary"
+    },
+    {
+      "contract_id": "26",
+      "label": "Will George Clooney win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0065,
+      "price_no": 0.9935,
+      "type": "binary"
+    },
+    {
+      "contract_id": "35",
+      "label": "Will Tim Walz win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0065,
+      "price_no": 0.9935,
+      "type": "binary"
+    },
+    {
+      "contract_id": "92",
+      "label": "Will Jasmine Crockett win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0065,
+      "price_no": 0.9935,
+      "type": "binary"
+    },
+    {
+      "contract_id": "102",
+      "label": "Will Hillary Clinton win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0065,
+      "price_no": 0.9935,
+      "type": "binary"
+    },
+    {
+      "contract_id": "36",
+      "label": "Will Bernie Sanders win the 2028 Democratic presidential nomination?",
+      "price_yes": 0.0055,
+      "price_no": 0.9945,
+      "type": "binary"
+    }
+  ],
+  "schema_version": "1.0"
+}

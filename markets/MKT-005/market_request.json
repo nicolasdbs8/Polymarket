@@ -1,0 +1,15 @@
+{
+  "market_id": "MKT-005",
+  "market_title": "OKX IPO in 2026?",
+  "platform": "polymarket",
+  "market_probability_yes": 0.13,
+  "price_yes": 0.13,
+  "price_no": 0.87,
+  "market_probability_no": 0.87,
+  "resolution_date": "2027-01-01T05:00:00Z",
+  "market_snapshot_time": "2026-03-16T20:45:45Z",
+  "category": "tech_companies",
+  "market_url": "https://polymarket.com/fr/event/okx-ipo-in-2026",
+  "schema_version": "1.0",
+  "market_volume": 501863.48
+}

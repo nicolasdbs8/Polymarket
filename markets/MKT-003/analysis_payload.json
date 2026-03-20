@@ -1,0 +1,112 @@
+{
+  "market_id": "MKT-003",
+  "thesis_id": "MKT-003-TH1",
+  "analysis_id": "MKT-003-TH1-A1",
+  "analysis_timestamp": "2026-03-16T20:30:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "medium",
+    "resolution_clarity": "medium",
+    "liquidity_quality": "medium",
+    "information_accessibility": "medium",
+    "market_noise_level": "medium",
+    "screening_comment": "Marché géopolitique clair dans l'intention mais ambigu sur la définition précise de 'chute du régime'."
+  },
+
+  "base_rate": {
+    "base_rate_value": 0.02,
+    "base_rate_reference_class": "Chutes de régimes politiques centralisés en moins de 30 jours sans guerre totale ou intervention étrangère directe.",
+    "base_rate_comment": "Historiquement extrêmement rare. Les transitions politiques rapides se produisent généralement dans un contexte de guerre majeure, coup d'État militaire ou effondrement institutionnel prolongé."
+  },
+
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "Effondrement rapide du pouvoir central iranien",
+        "status": "not_filled",
+        "comment": "Aucun signal d'effondrement institutionnel imminent au moment du snapshot."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Soulèvement populaire massif et coordonné",
+        "status": "unknown",
+        "comment": "Des protestations peuvent exister mais pas de mobilisation nationale massive observable."
+      },
+      {
+        "name": "Division ou défection majeure dans les forces de sécurité",
+        "status": "not_filled",
+        "comment": "Les appareils sécuritaires semblent rester loyaux au régime."
+      }
+    ]
+  },
+
+  "factor_list": [
+    {
+      "factor_name": "Solidité institutionnelle du régime iranien",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Le régime a démontré une capacité de survie importante face à des crises internes et externes."
+    },
+    {
+      "factor_name": "Horizon temporel extrêmement court",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Moins de deux semaines pour une chute complète du régime."
+    },
+    {
+      "factor_name": "Pressions économiques et géopolitiques sur l'Iran",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2,
+      "factor_comment": "Sanctions et tensions régionales peuvent fragiliser le système."
+    },
+    {
+      "factor_name": "Capacité répressive de l'appareil sécuritaire",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "Les forces de sécurité disposent de moyens importants pour contenir les protestations."
+    }
+  ],
+
+  "confidence": {
+    "confidence_sources": "medium",
+    "confidence_model": "medium",
+    "confidence_context": "medium",
+    "confidence_overall": "medium"
+  },
+
+  "ambiguity": {
+    "event_ambiguity": "medium",
+    "resolution_ambiguity": "medium"
+  },
+
+  "contradiction_forced": {
+    "best_counter_thesis": "Le marché pourrait anticiper un événement politique soudain ou une escalade militaire régionale provoquant un effondrement rapide du pouvoir iranien.",
+    "top_3_failure_reasons": [
+      "Une crise interne majeure pourrait émerger soudainement et déclencher une réaction en chaîne.",
+      "Une escalade militaire régionale pourrait provoquer un effondrement rapide des structures politiques.",
+      "Le marché pourrait intégrer des signaux faibles ou des informations non publiques."
+    ],
+    "market_might_be_right_because": "Les marchés prédictifs peuvent parfois capter plus rapidement les risques extrêmes que les analyses traditionnelles.",
+    "thesis_invalidation_trigger": "Annonce crédible de défections massives dans les forces de sécurité ou perte de contrôle de grandes villes."
+  },
+
+  "research_notes": {
+    "primary_sources": "Analyses historiques des changements de régime et études sur la stabilité institutionnelle iranienne.",
+    "historical_precedents": "Chutes de régimes autoritaires généralement précédées de crises prolongées ou de conflits ouverts.",
+    "institutional_constraints": "Le système iranien possède plusieurs centres de pouvoir et des structures de sécurité solides.",
+    "timeline_recent": "Aucun signal public d'effondrement imminent du régime.",
+    "actors_and_incentives": "Les acteurs régionaux peuvent chercher à affaiblir l'Iran mais une chute du régime reste un scénario extrême à court terme.",
+    "key_uncertainties": "Possibilité d'événements déclencheurs imprévisibles dans un contexte de tension régionale.",
+    "counterarguments": "Un événement inattendu pourrait provoquer une crise politique rapide.",
+    "dominant_market_narrative": "Le marché semble pricer une faible probabilité d'événement extrême."
+  }
+}

@@ -1,0 +1,52 @@
+Tu dois produire une analyse groupée pour un événement Polymarket multi-contrats.
+
+# Événement
+Titre : Next Prime Minister of Hungary
+URL   : https://polymarket.com/fr/event/next-prime-minister-of-hungary
+Date de résolution : 2026-04-12T00:00:00Z
+Batch ID : BATCH-001
+
+# Contrats à analyser (6)
+  - [8] Will the next Prime Minister of Hungary be Péter Magyar? — YES 64% / NO 36%
+  - [6] Will the next Prime Minister of Hungary be Viktor Orbán? — YES 34% / NO 66%
+  - [10] Will the next Prime Minister of Hungary be László Toroczkai? — YES 1% / NO 99%
+  - [11] Will the next Prime Minister of Hungary be István Kapitány? — YES 0% / NO 100%
+  - [12] Will the next Prime Minister of Hungary be János Lázár? — YES 0% / NO 100%
+  - [9] Will the next Prime Minister of Hungary be Klára Dobrev? — YES 0% / NO 100%
+
+# Ce que tu dois produire
+
+Un fichier JSON unique nommé batch_payload.json contenant une liste d'objets analysis_payload,
+un par contrat listé ci-dessus.
+
+Chaque analysis_payload doit respecter exactement le schéma V2.3 habituel, avec :
+- market_id      : "BATCH-001-[contract_id]"  ex: "BATCH-001-38"
+- thesis_id      : market_id + "-TH1"
+- analysis_id    : thesis_id + "-A1"
+- analysis_version : "A1"
+- resolution_date : "2026-04-12T00:00:00Z"
+- protocol_version : "2.3"
+- schema_version : "1.0"
+- analysis_timestamp : heure actuelle ISO 8601
+
+Pour chaque contrat, tu dois analyser indépendamment :
+- le base_rate (fréquence historique pour ce type de candidat/équipe)
+- les prérequis bloquants et pondérants
+- les facteurs accélérateurs et freins spécifiques à ce contrat
+- la confiance
+- les ambiguïtés
+- la contradiction forcée obligatoire (best_counter_thesis + top_3_failure_reasons)
+
+# Format de sortie
+
+```json
+[
+  { analysis_payload complet pour contrat 1 },
+  { analysis_payload complet pour contrat 2 },
+  ...
+]
+```
+
+Le JSON doit être valide, indenté, sans commentaires.
+Rappel : top_3_failure_reasons doit contenir EXACTEMENT 3 éléments.
+Rappel : tous les enums en anglais : high/medium/low, accelerator/brake, etc.

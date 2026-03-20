@@ -1,0 +1,153 @@
+{
+  "market_id": "MKT-006",
+  "thesis_id": "MKT-006-TH1",
+  "analysis_id": "MKT-006-TH1-A1",
+  "analysis_timestamp": "2026-03-18T14:57:02Z",
+  "resolution_date": "2028-11-07T00:00:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "high",
+    "resolution_clarity": "high",
+    "liquidity_quality": "high",
+    "information_accessibility": "medium",
+    "market_noise_level": "high",
+    "screening_comment": "Marché admissible : l'événement et la règle de résolution sont clairs, la liquidité est excellente, mais l'horizon électoral reste très lointain et très sensible au bruit politique, aux primaires et aux chocs exogènes."
+  },
+  "base_rate": {
+    "base_rate_value": 0.18,
+    "base_rate_reference_class": "Candidats de succession du parti au pouvoir dans des présidentielles américaines open-seat, avec sous-classe plus étroite des vice-présidents ou héritiers quasi officiels essayant de prolonger une administration sortante.",
+    "base_rate_comment": "Le taux de base n'est pas celui d'un simple favori de primaire : il faut à la fois gagner l'investiture puis l'élection générale après plusieurs années d'aléas. L'avantage de position d'un vice-président est réel, mais l'histoire montre aussi que la continuité partisane après un mandat présidentiel chargé est difficile."
+  },
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "JD Vance obtient l'investiture républicaine de 2028",
+        "status": "partial",
+        "comment": "Il est l'un des héritiers naturels du trumpisme mais aucune investiture n'est sécurisée à ce stade, et Rubio reste une alternative sérieuse."
+      },
+      {
+        "name": "Le Parti républicain reste compétitif nationalement en 2028",
+        "status": "filled",
+        "comment": "Le GOP est clairement compétitif à l'échelle nationale ; le problème n'est pas la viabilité du parti mais le candidat final et le contexte de 2028."
+      },
+      {
+        "name": "Aucune rupture politique majeure ne disqualifie Vance avant la campagne générale",
+        "status": "unknown",
+        "comment": "L'horizon de plus de deux ans laisse place à des chocs politiques, judiciaires, sanitaires, géopolitiques ou économiques encore impossibles à borner."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Appui clair de Donald Trump au moment décisif des primaires",
+        "status": "partial",
+        "comment": "Trump loue Vance mais refuse encore d'arbitrer explicitement entre Vance et Rubio."
+      },
+      {
+        "name": "Infrastructure nationale de financement et de donateurs",
+        "status": "filled",
+        "comment": "Le rôle de finance chair du RNC et les levées de fonds 2026 renforcent déjà l'écosystème financier de Vance."
+      },
+      {
+        "name": "Popularité personnelle assez solide pour gagner une générale",
+        "status": "partial",
+        "comment": "Son emprise sur la base républicaine semble bonne, mais ses chiffres nationaux auprès du grand public sont moins convaincants."
+      },
+      {
+        "name": "Absence d'un candidat démocrate nettement plus fédérateur",
+        "status": "unknown",
+        "comment": "Le champ démocrate 2028 n'est pas consolidé ; un candidat plus consensuel pourrait réduire fortement le plafond de Vance."
+      }
+    ]
+  },
+  "factor_list": [
+    {
+      "factor_name": "Avantage structurel du vice-président en exercice",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "Vance occupe déjà la vice-présidence, bénéficie d'une visibilité nationale permanente et incarne la continuité naturelle de l'administration républicaine."
+    },
+    {
+      "factor_name": "Accès précoce au réseau de grands donateurs républicains",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "Le poste de finance chair du RNC et les levées de fonds de 2026 lui donnent un accès inhabituellement fort aux bailleurs de fonds qui compteront pour 2028."
+    },
+    {
+      "factor_name": "Position de leader actuel sur Polymarket",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 1,
+      "factor_comment": "Il est le premier prix du marché agrégé à date, ce qui confirme qu'il fait partie du petit groupe de scénarios centraux."
+    },
+    {
+      "factor_name": "Trump ne l'a pas encore officiellement adoubé",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "Trump valorise aussi Rubio et a explicitement refusé de trancher en février 2026."
+    },
+    {
+      "factor_name": "Concurrence interne sérieuse de Marco Rubio et d'autres républicains",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Vance n'est pas face à un parti vide : Rubio est publiquement traité comme alternative plausible, et les primaires 2028 restent ouvertes."
+    },
+    {
+      "factor_name": "Image nationale encore polarisante",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Les données de mars 2026 du sondage Economist/YouGov suggèrent une approbation nette négative pour Vance comme vice-président, ce qui pèse sur sa crédibilité de candidat de générale."
+    },
+    {
+      "factor_name": "Horizon temporel très long avant 2028",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 2,
+      "factor_comment": "Il reste les midterms 2026, l'évolution de l'économie, la guerre avec l'Iran, la popularité de Trump et toute la séquence des primaires ; trop de variables ne sont pas encore réalisées."
+    },
+    {
+      "factor_name": "Risque de backlash contre la continuité trumpiste",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "Si l'administration Trump reste impopulaire ou si les républicains subissent les midterms, Vance héritera directement du passif du pouvoir."
+    }
+  ],
+  "confidence": {
+    "confidence_sources": "high",
+    "confidence_model": "medium",
+    "confidence_context": "low",
+    "confidence_overall": "medium"
+  },
+  "ambiguity": {
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low"
+  },
+  "contradiction_forced": {
+    "best_counter_thesis": "Le marché peut encore sous-pricer la voie la plus simple : un vice-président déjà au centre de l'appareil républicain, soutenu par les donateurs et par l'aura de continuité trumpiste, peut très bien verrouiller l'investiture puis gagner une élection générale si les démocrates restent fragmentés.",
+    "top_3_failure_reasons": [
+      "L'importance donnée à la faiblesse actuelle de ses chiffres nationaux peut être excessive pour un scrutin encore lointain.",
+      "Trump pourrait finir par l'endosser clairement, ce qui changerait brutalement l'équilibre des primaires républicaines.",
+      "Le camp démocrate pourrait arriver en 2028 avec un candidat médiocre ou clivant, rendant Vance plus électable qu'il n'apparaît aujourd'hui."
+    ],
+    "market_might_be_right_because": "Le marché voit correctement qu'un vice-président en exercice n'a pas besoin d'être probable à plus de 50% pour rester malgré tout le scénario individuel le plus plausible dans un champ très fragmenté.",
+    "thesis_invalidation_trigger": "Annonce explicite de Trump soutenant Vance comme héritier de 2028, combinée à des sondages républicains nationaux montrant un avantage durable et net sur Rubio et les autres concurrents."
+  },
+  "research_notes": {
+    "primary_sources": "Polymarket market page and rules; Reuters reporting on Trump's refusal to choose between Vance and Rubio in February 2026; Reuters reporting on Vance becoming RNC finance chair in March 2025; Economist/YouGov March 13-16 2026 poll PDF for Vance approval.",
+    "historical_precedents": "Les campagnes de succession du parti au pouvoir par un vice-président ou héritier officiel offrent un parallèle utile, mais imparfait, car elles dépendent fortement de la popularité de l'administration sortante, de l'économie et du contexte géopolitique.",
+    "institutional_constraints": "Le marché se résout au gagnant de l'élection présidentielle américaine de 2028, selon AP, Fox News et NBC ; si les trois n'ont pas appelé le même candidat avant l'investiture du 20 janvier 2029, la résolution se fera selon la personne effectivement investie.",
+    "timeline_recent": "Mars 2025 : Vance devient finance chair du RNC ; août 2025 : Trump le décrit comme son héritier le plus probable ; février 2026 : Trump refuse pourtant encore de choisir entre Vance et Rubio ; mars 2026 : Vance mène ce sous-marché Polymarket autour de 21% et continue à lever des fonds.",
+    "actors_and_incentives": "Vance veut préserver sa position d'héritier trumpiste sans déclencher trop tôt une guerre de succession ; Trump maximise son levier en gardant plusieurs héritiers crédibles ; Rubio et d'autres républicains ont intérêt à empêcher une consolidation précoce ; les démocrates cherchent encore leur propre figure dominante.",
+    "key_uncertainties": "Résultat des midterms 2026, trajectoire de popularité de Trump, éventuelle guerre de succession GOP, qualité du futur nominee démocrate, situation économique en 2027-2028 et évolution de l'image nationale de Vance.",
+    "counterarguments": "Le meilleur argument haussier pour YES est qu'il cumule déjà presque tous les actifs rares d'un futur candidat majeur : poste institutionnel, réseau donateurs, base MAGA, visibilité quotidienne et plausibilité de continuité.",
+    "dominant_market_narrative": "Le marché traite Vance comme favori individuel mais pas comme quasi-certitude, ce qui est cohérent avec un champ immense, un horizon long et une investiture républicaine encore ouverte."
+  }
+}

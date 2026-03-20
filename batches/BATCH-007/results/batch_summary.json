@@ -1,0 +1,54 @@
+{
+  "batch_id": "BATCH-007",
+  "results": [
+    {
+      "market_id": "BATCH-007-1",
+      "label": "Israel strike on Yemen by March 31, 2026?",
+      "price_yes": 0.24,
+      "p_estimated": 0.096,
+      "adj_edge": -0.1037,
+      "side": "no",
+      "decision": "small_paper_position",
+      "size": 20.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-007-3",
+      "label": "Israel strike on Yemen by April 30, 2026?",
+      "price_yes": 0.45,
+      "p_estimated": 0.2817,
+      "adj_edge": -0.1212,
+      "side": "no",
+      "decision": "standard_paper_position",
+      "size": 50.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-007-2",
+      "label": "Israel strike on Yemen by May 31, 2026?",
+      "price_yes": 0.525,
+      "p_estimated": 0.4225,
+      "adj_edge": -0.0738,
+      "side": "no",
+      "decision": "small_paper_position",
+      "size": 20.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-007-0",
+      "label": "Israel strike on Yemen by June 30, 2026?",
+      "price_yes": 0.59,
+      "p_estimated": 0.5061,
+      "adj_edge": -0.0604,
+      "side": "no",
+      "decision": "small_paper_position",
+      "size": 20.0,
+      "veto": false,
+      "veto_reason": ""
+    }
+  ],
+  "errors": []
+}

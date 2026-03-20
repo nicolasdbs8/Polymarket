@@ -1,0 +1,135 @@
+{
+  "market_id": "MKT-013",
+  "thesis_id": "MKT-013-TH1",
+  "analysis_id": "MKT-013-TH1-A1",
+  "analysis_timestamp": "2026-03-18T17:10:00Z",
+  "resolution_date": "2026-04-04T00:00:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "high",
+    "resolution_clarity": "high",
+    "liquidity_quality": "high",
+    "information_accessibility": "medium",
+    "market_noise_level": "medium",
+    "screening_comment": "Marché admissible : équipe, événement et règle de résolution sont clairs ; la liquidité observée est élevée ; l'incertitude principale vient de la variance structurelle du tournoi NCAA et du fait que le marché price déjà Michigan comme contender de premier rang."
+  },
+  "base_rate": {
+    "base_rate_value": 0.14,
+    "base_rate_reference_class": "Seeds n°1 du tournoi NCAA masculin classés dans le tout premier groupe de favoris mais n'étant pas l'overall No. 1 seed.",
+    "base_rate_comment": "Base rate volontairement prudent : un seed n°1 a une vraie probabilité de titre, mais une équipe individuelle reste mécaniquement loin d'une probabilité dominante dans un format à élimination directe sur six matchs."
+  },
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "Michigan doit rester en vie dans le bracket NCAA",
+        "status": "filled",
+        "comment": "Au moment du snapshot, Michigan est qualifié, seed n°1 et non éliminé."
+      },
+      {
+        "name": "La résolution Polymarket doit rester alignée sur le champion officiel NCAA",
+        "status": "filled",
+        "comment": "La règle de résolution est explicite et vérifiable."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "Le noyau principal reste fonctionnel pendant le tournoi",
+        "status": "filled",
+        "comment": "Aucune blessure structurante ou indisponibilité majeure n'a été identifiée dans les sources consultées."
+      },
+      {
+        "name": "Le chemin régional jusqu'au Final Four reste praticable",
+        "status": "partial",
+        "comment": "Le premier tour est favorable, mais la deuxième semaine du tournoi implique de toute façon des matchups de niveau élite."
+      },
+      {
+        "name": "Michigan maintient son niveau après la défaite contre Purdue",
+        "status": "partial",
+        "comment": "La défaite en finale du Big Ten n'invalide pas le profil global, mais elle introduit un léger doute de momentum."
+      }
+    ]
+  },
+  "factor_list": [
+    {
+      "factor_name": "Statut de seed n°1 dans le Midwest",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "Michigan bénéficie du meilleur statut de seed dans sa région, ce qui augmente matériellement sa probabilité de deep run."
+    },
+    {
+      "factor_name": "Saison globale de très haut niveau",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 2,
+      "factor_comment": "Le dossier récent reste celui d'une équipe d'élite nationale avec un excellent bilan et une forte reconnaissance AP."
+    },
+    {
+      "factor_name": "Présence d'une vedette All-America structurante",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2,
+      "factor_comment": "Yaxel Lendeborg donne à Michigan une ancre star-level crédible pour survivre à des matchs serrés."
+    },
+    {
+      "factor_name": "Premier tour favorable contre Howard",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 1
+    },
+    {
+      "factor_name": "Défaite récente en finale du Big Ten contre Purdue",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 2,
+      "factor_comment": "Ce n'est pas rédhibitoire, mais cela empêche de pousser la thèse haussière trop loin."
+    },
+    {
+      "factor_name": "Prix déjà très élevé à 18.5%",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Le marché price déjà Michigan comme l'un des tout premiers favoris ; cela réduit fortement la marge d'écart exploitable."
+    },
+    {
+      "factor_name": "Variance structurelle du tournoi NCAA",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Même une équipe top-seed peut être éliminée sur un seul mauvais match ; six victoires successives restent très difficiles."
+    }
+  ],
+  "confidence": {
+    "confidence_sources": "medium",
+    "confidence_model": "medium",
+    "confidence_context": "medium",
+    "confidence_overall": "medium"
+  },
+  "ambiguity": {
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low"
+  },
+  "contradiction_forced": {
+    "best_counter_thesis": "Le marché peut encore sous-estimer Michigan : un seed n°1 avec un profil AP elite, une star All-America et un premier tour très favorable peut valoir plus que 18.5 % si le bracket s'ouvre rapidement.",
+    "top_3_failure_reasons": [
+      "Le base rate retenu peut être trop conservateur pour une équipe que certains classements et lectures de marché plaçaient au sommet ou tout près du sommet.",
+      "Le poids négatif attribué au prix déjà élevé peut être excessif si Michigan est réellement meilleur que les autres seeds n°1 hors Duke.",
+      "La défaite contre Purdue peut être surinterprétée alors qu'elle n'efface pas une saison entière de domination."
+    ],
+    "market_might_be_right_because": "Le marché peut correctement intégrer à la fois la qualité réelle de Michigan et le fait qu'un favori NCAA ne doit presque jamais être pricé comme quasi-dominant dans un tournoi aussi volatile.",
+    "thesis_invalidation_trigger": "Victoires nettes de Michigan dans les deux premiers tours combinées à l'élimination précoce d'un ou plusieurs autres prétendants majeurs au titre."
+  },
+  "research_notes": {
+    "primary_sources": "Bracket officiel NCAA 2026 ; règle de résolution Polymarket ; Reuters sur Michigan avant et après le Big Ten tournament ; AP sur les seeds n°1 et le classement final ; Reuters sur l'AP All-America team.",
+    "historical_precedents": "Les seeds n°1 concentrent une part importante des titres NCAA, mais la probabilité individuelle d'un champion reste limitée par la structure à élimination directe.",
+    "institutional_constraints": "Résolution selon le champion officiel NCAA ; élimination de Michigan = résolution immédiate à No.",
+    "timeline_recent": "Michigan a atteint la finale du Big Ten, a perdu contre Purdue, puis a reçu un seed n°1 dans le Midwest et affrontera Howard au premier tour.",
+    "actors_and_incentives": "Michigan combine seed maximal, star power, statut AP élevé et forte attention du marché ; le pricing reflète déjà largement cette qualité.",
+    "key_uncertainties": "Capacité à transformer un seed n°1 en six victoires consécutives ; qualité réelle des matchups en deuxième semaine ; résistance mentale après la défaite contre Purdue.",
+    "counterarguments": "Michigan peut parfaitement justifier ou dépasser ce prix si son niveau de plafond est plus proche d'un top favori absolu que d'un simple seed n°1 standard.",
+    "dominant_market_narrative": "Michigan est vu comme l'un des très grands favoris du tournoi, mais pas comme une équipe suffisamment au-dessus du champ pour mériter un prix beaucoup plus extrême."
+  }
+}

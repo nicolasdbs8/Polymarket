@@ -1,0 +1,908 @@
+[
+  {
+    "market_id": "BATCH-006-5",
+    "thesis_id": "BATCH-006-5-TH1",
+    "analysis_id": "BATCH-006-5-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:11:32Z",
+    "resolution_date": "UNKNOWN",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "medium",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "medium",
+      "information_accessibility": "medium",
+      "market_noise_level": "high",
+      "screening_comment": "Ceasefire definition ambiguous"
+    },
+    "base_rate": {
+      "base_rate_value": 0.28,
+      "base_rate_reference_class": "US-Iran ceasefire within time window",
+      "base_rate_comment": "Short-term ceasefires are rare"
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Ceasefire agreement occurs",
+          "status": "partial"
+        },
+        {
+          "name": "Both sides acknowledge ceasefire",
+          "status": "partial"
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Diplomatic channel exists",
+          "status": "partial"
+        },
+        {
+          "name": "Regional escalation",
+          "status": "unknown"
+        },
+        {
+          "name": "US political incentives",
+          "status": "partial"
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Ongoing US-Iran tensions without active negotiation framework",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Short timeline reduces probability of formal ceasefire",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Potential backchannel diplomacy",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Longer horizon allows geopolitical shifts",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "low",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Rapid diplomatic breakthrough could happen",
+      "top_3_failure_reasons": [
+        "Hidden negotiations may exist",
+        "External pressure may accelerate deal",
+        "Sudden geopolitical shifts"
+      ],
+      "market_might_be_right_because": "Markets price tail events",
+      "thesis_invalidation_trigger": "Confirmed talks"
+    },
+    "research_notes": {
+      "primary_sources": "General geopolitics",
+      "historical_precedents": "Rare events",
+      "institutional_constraints": "No formal war",
+      "timeline_recent": "No talks",
+      "actors_and_incentives": "Deterrence",
+      "key_uncertainties": "Definition",
+      "counterarguments": "Sudden shifts",
+      "dominant_market_narrative": "Short-term unlikely"
+    }
+  },
+  {
+    "market_id": "BATCH-006-6",
+    "thesis_id": "BATCH-006-6-TH1",
+    "analysis_id": "BATCH-006-6-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:11:32Z",
+    "resolution_date": "UNKNOWN",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "medium",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "medium",
+      "information_accessibility": "medium",
+      "market_noise_level": "high",
+      "screening_comment": "Ceasefire definition ambiguous"
+    },
+    "base_rate": {
+      "base_rate_value": 0.18,
+      "base_rate_reference_class": "US-Iran ceasefire within time window",
+      "base_rate_comment": "Short-term ceasefires are rare"
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Ceasefire agreement occurs",
+          "status": "partial"
+        },
+        {
+          "name": "Both sides acknowledge ceasefire",
+          "status": "partial"
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Diplomatic channel exists",
+          "status": "partial"
+        },
+        {
+          "name": "Regional escalation",
+          "status": "unknown"
+        },
+        {
+          "name": "US political incentives",
+          "status": "partial"
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Ongoing US-Iran tensions without active negotiation framework",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Short timeline reduces probability of formal ceasefire",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Potential backchannel diplomacy",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "low",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Rapid diplomatic breakthrough could happen",
+      "top_3_failure_reasons": [
+        "Hidden negotiations may exist",
+        "External pressure may accelerate deal",
+        "Sudden geopolitical shifts"
+      ],
+      "market_might_be_right_because": "Markets price tail events",
+      "thesis_invalidation_trigger": "Confirmed talks"
+    },
+    "research_notes": {
+      "primary_sources": "General geopolitics",
+      "historical_precedents": "Rare events",
+      "institutional_constraints": "No formal war",
+      "timeline_recent": "No talks",
+      "actors_and_incentives": "Deterrence",
+      "key_uncertainties": "Definition",
+      "counterarguments": "Sudden shifts",
+      "dominant_market_narrative": "Short-term unlikely"
+    }
+  },
+  {
+    "market_id": "BATCH-006-7",
+    "thesis_id": "BATCH-006-7-TH1",
+    "analysis_id": "BATCH-006-7-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:11:32Z",
+    "resolution_date": "UNKNOWN",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "medium",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "medium",
+      "information_accessibility": "medium",
+      "market_noise_level": "high",
+      "screening_comment": "Ceasefire definition ambiguous"
+    },
+    "base_rate": {
+      "base_rate_value": 0.18,
+      "base_rate_reference_class": "US-Iran ceasefire within time window",
+      "base_rate_comment": "Short-term ceasefires are rare"
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Ceasefire agreement occurs",
+          "status": "partial"
+        },
+        {
+          "name": "Both sides acknowledge ceasefire",
+          "status": "partial"
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Diplomatic channel exists",
+          "status": "partial"
+        },
+        {
+          "name": "Regional escalation",
+          "status": "unknown"
+        },
+        {
+          "name": "US political incentives",
+          "status": "partial"
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Ongoing US-Iran tensions without active negotiation framework",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Short timeline reduces probability of formal ceasefire",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Potential backchannel diplomacy",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "low",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Rapid diplomatic breakthrough could happen",
+      "top_3_failure_reasons": [
+        "Hidden negotiations may exist",
+        "External pressure may accelerate deal",
+        "Sudden geopolitical shifts"
+      ],
+      "market_might_be_right_because": "Markets price tail events",
+      "thesis_invalidation_trigger": "Confirmed talks"
+    },
+    "research_notes": {
+      "primary_sources": "General geopolitics",
+      "historical_precedents": "Rare events",
+      "institutional_constraints": "No formal war",
+      "timeline_recent": "No talks",
+      "actors_and_incentives": "Deterrence",
+      "key_uncertainties": "Definition",
+      "counterarguments": "Sudden shifts",
+      "dominant_market_narrative": "Short-term unlikely"
+    }
+  },
+  {
+    "market_id": "BATCH-006-1",
+    "thesis_id": "BATCH-006-1-TH1",
+    "analysis_id": "BATCH-006-1-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:11:32Z",
+    "resolution_date": "UNKNOWN",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "medium",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "medium",
+      "information_accessibility": "medium",
+      "market_noise_level": "high",
+      "screening_comment": "Ceasefire definition ambiguous"
+    },
+    "base_rate": {
+      "base_rate_value": 0.12,
+      "base_rate_reference_class": "US-Iran ceasefire within time window",
+      "base_rate_comment": "Short-term ceasefires are rare"
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Ceasefire agreement occurs",
+          "status": "partial"
+        },
+        {
+          "name": "Both sides acknowledge ceasefire",
+          "status": "partial"
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Diplomatic channel exists",
+          "status": "partial"
+        },
+        {
+          "name": "Regional escalation",
+          "status": "unknown"
+        },
+        {
+          "name": "US political incentives",
+          "status": "partial"
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Ongoing US-Iran tensions without active negotiation framework",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Short timeline reduces probability of formal ceasefire",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Potential backchannel diplomacy",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "low",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Rapid diplomatic breakthrough could happen",
+      "top_3_failure_reasons": [
+        "Hidden negotiations may exist",
+        "External pressure may accelerate deal",
+        "Sudden geopolitical shifts"
+      ],
+      "market_might_be_right_because": "Markets price tail events",
+      "thesis_invalidation_trigger": "Confirmed talks"
+    },
+    "research_notes": {
+      "primary_sources": "General geopolitics",
+      "historical_precedents": "Rare events",
+      "institutional_constraints": "No formal war",
+      "timeline_recent": "No talks",
+      "actors_and_incentives": "Deterrence",
+      "key_uncertainties": "Definition",
+      "counterarguments": "Sudden shifts",
+      "dominant_market_narrative": "Short-term unlikely"
+    }
+  },
+  {
+    "market_id": "BATCH-006-8",
+    "thesis_id": "BATCH-006-8-TH1",
+    "analysis_id": "BATCH-006-8-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:11:32Z",
+    "resolution_date": "UNKNOWN",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "medium",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "medium",
+      "information_accessibility": "medium",
+      "market_noise_level": "high",
+      "screening_comment": "Ceasefire definition ambiguous"
+    },
+    "base_rate": {
+      "base_rate_value": 0.12,
+      "base_rate_reference_class": "US-Iran ceasefire within time window",
+      "base_rate_comment": "Short-term ceasefires are rare"
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Ceasefire agreement occurs",
+          "status": "partial"
+        },
+        {
+          "name": "Both sides acknowledge ceasefire",
+          "status": "partial"
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Diplomatic channel exists",
+          "status": "partial"
+        },
+        {
+          "name": "Regional escalation",
+          "status": "unknown"
+        },
+        {
+          "name": "US political incentives",
+          "status": "partial"
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Ongoing US-Iran tensions without active negotiation framework",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Short timeline reduces probability of formal ceasefire",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Potential backchannel diplomacy",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "low",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Rapid diplomatic breakthrough could happen",
+      "top_3_failure_reasons": [
+        "Hidden negotiations may exist",
+        "External pressure may accelerate deal",
+        "Sudden geopolitical shifts"
+      ],
+      "market_might_be_right_because": "Markets price tail events",
+      "thesis_invalidation_trigger": "Confirmed talks"
+    },
+    "research_notes": {
+      "primary_sources": "General geopolitics",
+      "historical_precedents": "Rare events",
+      "institutional_constraints": "No formal war",
+      "timeline_recent": "No talks",
+      "actors_and_incentives": "Deterrence",
+      "key_uncertainties": "Definition",
+      "counterarguments": "Sudden shifts",
+      "dominant_market_narrative": "Short-term unlikely"
+    }
+  },
+  {
+    "market_id": "BATCH-006-0",
+    "thesis_id": "BATCH-006-0-TH1",
+    "analysis_id": "BATCH-006-0-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:11:32Z",
+    "resolution_date": "UNKNOWN",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "medium",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "medium",
+      "information_accessibility": "medium",
+      "market_noise_level": "high",
+      "screening_comment": "Ceasefire definition ambiguous"
+    },
+    "base_rate": {
+      "base_rate_value": 0.03,
+      "base_rate_reference_class": "US-Iran ceasefire within time window",
+      "base_rate_comment": "Short-term ceasefires are rare"
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Ceasefire agreement occurs",
+          "status": "partial"
+        },
+        {
+          "name": "Both sides acknowledge ceasefire",
+          "status": "partial"
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Diplomatic channel exists",
+          "status": "partial"
+        },
+        {
+          "name": "Regional escalation",
+          "status": "unknown"
+        },
+        {
+          "name": "US political incentives",
+          "status": "partial"
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Ongoing US-Iran tensions without active negotiation framework",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Short timeline reduces probability of formal ceasefire",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Potential backchannel diplomacy",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "low",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Rapid diplomatic breakthrough could happen",
+      "top_3_failure_reasons": [
+        "Hidden negotiations may exist",
+        "External pressure may accelerate deal",
+        "Sudden geopolitical shifts"
+      ],
+      "market_might_be_right_because": "Markets price tail events",
+      "thesis_invalidation_trigger": "Confirmed talks"
+    },
+    "research_notes": {
+      "primary_sources": "General geopolitics",
+      "historical_precedents": "Rare events",
+      "institutional_constraints": "No formal war",
+      "timeline_recent": "No talks",
+      "actors_and_incentives": "Deterrence",
+      "key_uncertainties": "Definition",
+      "counterarguments": "Sudden shifts",
+      "dominant_market_narrative": "Short-term unlikely"
+    }
+  },
+  {
+    "market_id": "BATCH-006-2",
+    "thesis_id": "BATCH-006-2-TH1",
+    "analysis_id": "BATCH-006-2-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:11:32Z",
+    "resolution_date": "UNKNOWN",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "medium",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "medium",
+      "information_accessibility": "medium",
+      "market_noise_level": "high",
+      "screening_comment": "Ceasefire definition ambiguous"
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "US-Iran ceasefire within time window",
+      "base_rate_comment": "Short-term ceasefires are rare"
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Ceasefire agreement occurs",
+          "status": "partial"
+        },
+        {
+          "name": "Both sides acknowledge ceasefire",
+          "status": "partial"
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Diplomatic channel exists",
+          "status": "partial"
+        },
+        {
+          "name": "Regional escalation",
+          "status": "unknown"
+        },
+        {
+          "name": "US political incentives",
+          "status": "partial"
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Ongoing US-Iran tensions without active negotiation framework",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Short timeline reduces probability of formal ceasefire",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Potential backchannel diplomacy",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "low",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Rapid diplomatic breakthrough could happen",
+      "top_3_failure_reasons": [
+        "Hidden negotiations may exist",
+        "External pressure may accelerate deal",
+        "Sudden geopolitical shifts"
+      ],
+      "market_might_be_right_because": "Markets price tail events",
+      "thesis_invalidation_trigger": "Confirmed talks"
+    },
+    "research_notes": {
+      "primary_sources": "General geopolitics",
+      "historical_precedents": "Rare events",
+      "institutional_constraints": "No formal war",
+      "timeline_recent": "No talks",
+      "actors_and_incentives": "Deterrence",
+      "key_uncertainties": "Definition",
+      "counterarguments": "Sudden shifts",
+      "dominant_market_narrative": "Short-term unlikely"
+    }
+  },
+  {
+    "market_id": "BATCH-006-3",
+    "thesis_id": "BATCH-006-3-TH1",
+    "analysis_id": "BATCH-006-3-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:11:32Z",
+    "resolution_date": "UNKNOWN",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "medium",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "medium",
+      "information_accessibility": "medium",
+      "market_noise_level": "high",
+      "screening_comment": "Ceasefire definition ambiguous"
+    },
+    "base_rate": {
+      "base_rate_value": 0.03,
+      "base_rate_reference_class": "US-Iran ceasefire within time window",
+      "base_rate_comment": "Short-term ceasefires are rare"
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Ceasefire agreement occurs",
+          "status": "partial"
+        },
+        {
+          "name": "Both sides acknowledge ceasefire",
+          "status": "partial"
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Diplomatic channel exists",
+          "status": "partial"
+        },
+        {
+          "name": "Regional escalation",
+          "status": "unknown"
+        },
+        {
+          "name": "US political incentives",
+          "status": "partial"
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Ongoing US-Iran tensions without active negotiation framework",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Short timeline reduces probability of formal ceasefire",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Potential backchannel diplomacy",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "low",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Rapid diplomatic breakthrough could happen",
+      "top_3_failure_reasons": [
+        "Hidden negotiations may exist",
+        "External pressure may accelerate deal",
+        "Sudden geopolitical shifts"
+      ],
+      "market_might_be_right_because": "Markets price tail events",
+      "thesis_invalidation_trigger": "Confirmed talks"
+    },
+    "research_notes": {
+      "primary_sources": "General geopolitics",
+      "historical_precedents": "Rare events",
+      "institutional_constraints": "No formal war",
+      "timeline_recent": "No talks",
+      "actors_and_incentives": "Deterrence",
+      "key_uncertainties": "Definition",
+      "counterarguments": "Sudden shifts",
+      "dominant_market_narrative": "Short-term unlikely"
+    }
+  },
+  {
+    "market_id": "BATCH-006-4",
+    "thesis_id": "BATCH-006-4-TH1",
+    "analysis_id": "BATCH-006-4-TH1-A1",
+    "analysis_timestamp": "2026-03-19T14:11:32Z",
+    "resolution_date": "UNKNOWN",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "medium",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "medium",
+      "information_accessibility": "medium",
+      "market_noise_level": "high",
+      "screening_comment": "Ceasefire definition ambiguous"
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "US-Iran ceasefire within time window",
+      "base_rate_comment": "Short-term ceasefires are rare"
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Ceasefire agreement occurs",
+          "status": "partial"
+        },
+        {
+          "name": "Both sides acknowledge ceasefire",
+          "status": "partial"
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Diplomatic channel exists",
+          "status": "partial"
+        },
+        {
+          "name": "Regional escalation",
+          "status": "unknown"
+        },
+        {
+          "name": "US political incentives",
+          "status": "partial"
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Ongoing US-Iran tensions without active negotiation framework",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Short timeline reduces probability of formal ceasefire",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3
+      },
+      {
+        "factor_name": "Potential backchannel diplomacy",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "low",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Rapid diplomatic breakthrough could happen",
+      "top_3_failure_reasons": [
+        "Hidden negotiations may exist",
+        "External pressure may accelerate deal",
+        "Sudden geopolitical shifts"
+      ],
+      "market_might_be_right_because": "Markets price tail events",
+      "thesis_invalidation_trigger": "Confirmed talks"
+    },
+    "research_notes": {
+      "primary_sources": "General geopolitics",
+      "historical_precedents": "Rare events",
+      "institutional_constraints": "No formal war",
+      "timeline_recent": "No talks",
+      "actors_and_incentives": "Deterrence",
+      "key_uncertainties": "Definition",
+      "counterarguments": "Sudden shifts",
+      "dominant_market_narrative": "Short-term unlikely"
+    }
+  }
+]

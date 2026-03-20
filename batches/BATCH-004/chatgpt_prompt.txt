@@ -1,0 +1,60 @@
+Tu dois produire une analyse groupée pour un événement Polymarket multi-contrats.
+
+# Événement
+Titre : 2026 Seoul Mayoral Election Winner
+URL   : https://polymarket.com/fr/event/2026-seoul-mayoral-election-winner
+Date de résolution : 2026-06-03T00:00:00Z
+Batch ID : BATCH-004
+
+# Contrats à analyser (14)
+  - [4] Will Chong Won-oh win the 2026 Seoul Mayoral Election — YES 82% / NO 18%
+  - [0] Will Oh Se-hoon win the 2026 Seoul Mayoral Election — YES 14% / NO 86%
+  - [35] Will Park Ju-min win the 2026 Seoul Mayoral Election — YES 4% / NO 96%
+  - [2] Will Ahn Cheol-soo win the 2026 Seoul Mayoral Election — YES 0% / NO 100%
+  - [1] Will Cho Eun-hee win the 2026 Seoul Mayoral Election — YES 0% / NO 100%
+  - [3] Will Park Yong-jin win the 2026 Seoul Mayoral Election — YES 0% / NO 100%
+  - [5] Will Hong Ihk-pyo win the 2026 Seoul Mayoral Election — YES 0% / NO 100%
+  - [6] Will Cho Kuk win the 2026 Seoul Mayoral Election — YES 0% / NO 100%
+  - [7] Will Kang Hoon-sik win the 2026 Seoul Mayoral Election — YES 0% / NO 100%
+  - [33] Will Na Kyung-won win the 2026 Seoul Mayoral Election — YES 0% / NO 100%
+  - [34] Will Han Dong-hoon win the 2026 Seoul Mayoral Election — YES 0% / NO 100%
+  - [36] Will Park Hong-keun win the 2026 Seoul Mayoral Election — YES 0% / NO 100%
+  - [37] Will Seo Young-kyo win the 2026 Seoul Mayoral Election — YES 0% / NO 100%
+  - [38] Will Jeon Hyun-heui win the 2026 Seoul Mayoral Election — YES 0% / NO 100%
+
+# Ce que tu dois produire
+
+Un fichier JSON unique nommé batch_payload.json contenant une liste d'objets analysis_payload,
+un par contrat listé ci-dessus.
+
+Chaque analysis_payload doit respecter exactement le schéma V2.3 habituel, avec :
+- market_id      : "BATCH-004-[contract_id]"  ex: "BATCH-004-38"
+- thesis_id      : market_id + "-TH1"
+- analysis_id    : thesis_id + "-A1"
+- analysis_version : "A1"
+- resolution_date : "2026-06-03T00:00:00Z"
+- protocol_version : "2.3"
+- schema_version : "1.0"
+- analysis_timestamp : heure actuelle ISO 8601
+
+Pour chaque contrat, tu dois analyser indépendamment :
+- le base_rate (fréquence historique pour ce type de candidat/équipe)
+- les prérequis bloquants et pondérants
+- les facteurs accélérateurs et freins spécifiques à ce contrat
+- la confiance
+- les ambiguïtés
+- la contradiction forcée obligatoire (best_counter_thesis + top_3_failure_reasons)
+
+# Format de sortie
+
+```json
+[
+  { analysis_payload complet pour contrat 1 },
+  { analysis_payload complet pour contrat 2 },
+  ...
+]
+```
+
+Le JSON doit être valide, indenté, sans commentaires.
+Rappel : top_3_failure_reasons doit contenir EXACTEMENT 3 éléments.
+Rappel : tous les enums en anglais : high/medium/low, accelerator/brake, etc.

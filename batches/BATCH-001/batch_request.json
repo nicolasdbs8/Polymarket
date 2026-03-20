@@ -1,0 +1,53 @@
+{
+  "batch_id": "BATCH-001",
+  "event_title": "Next Prime Minister of Hungary",
+  "event_url": "https://polymarket.com/fr/event/next-prime-minister-of-hungary",
+  "resolution_date": "2026-04-12T00:00:00Z",
+  "snapshot_time": "2026-03-18T17:31:24Z",
+  "contract_count": 6,
+  "contracts": [
+    {
+      "contract_id": "8",
+      "label": "Will the next Prime Minister of Hungary be Péter Magyar?",
+      "price_yes": 0.645,
+      "price_no": 0.355,
+      "type": "binary"
+    },
+    {
+      "contract_id": "6",
+      "label": "Will the next Prime Minister of Hungary be Viktor Orbán?",
+      "price_yes": 0.345,
+      "price_no": 0.655,
+      "type": "binary"
+    },
+    {
+      "contract_id": "10",
+      "label": "Will the next Prime Minister of Hungary be László Toroczkai?",
+      "price_yes": 0.0095,
+      "price_no": 0.9905,
+      "type": "binary"
+    },
+    {
+      "contract_id": "11",
+      "label": "Will the next Prime Minister of Hungary be István Kapitány?",
+      "price_yes": 0.0035,
+      "price_no": 0.9965,
+      "type": "binary"
+    },
+    {
+      "contract_id": "12",
+      "label": "Will the next Prime Minister of Hungary be János Lázár?",
+      "price_yes": 0.0035,
+      "price_no": 0.9965,
+      "type": "binary"
+    },
+    {
+      "contract_id": "9",
+      "label": "Will the next Prime Minister of Hungary be Klára Dobrev?",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    }
+  ],
+  "schema_version": "1.0"
+}

@@ -1,0 +1,90 @@
+Tu dois produire une analyse groupée pour un événement Polymarket multi-contrats.
+
+# Événement
+Titre : Democratic Presidential Nominee 2028
+URL   : https://polymarket.com/fr/event/democratic-presidential-nominee-2028
+Date de résolution : 2028-11-07T00:00:00Z
+Batch ID : BATCH-005
+
+# Contrats à analyser (44)
+  - [116] Will Gavin Newsom win the 2028 Democratic presidential nomination? — YES 25% / NO 75%
+  - [51] Will Alexandria Ocasio-Cortez win the 2028 Democratic presidential nomination? — YES 8% / NO 92%
+  - [18] Will Jon Ossoff win the 2028 Democratic presidential nomination? — YES 6% / NO 94%
+  - [101] Will Kamala Harris win the 2028 Democratic presidential nomination? — YES 5% / NO 95%
+  - [90] Will Josh Shapiro win the 2028 Democratic presidential nomination? — YES 4% / NO 96%
+  - [17] Will Pete Buttigieg win the 2028 Democratic presidential nomination? — YES 4% / NO 96%
+  - [12] Will James Talarico win the 2028 Democratic presidential nomination? — YES 3% / NO 97%
+  - [66] Will J.B. Pritzker win the 2028 Democratic presidential nomination? — YES 3% / NO 97%
+  - [39] Will Mark Kelly win the 2028 Democratic presidential nomination? — YES 3% / NO 97%
+  - [11] Will Andy Beshear win the 2028 Democratic presidential nomination? — YES 2% / NO 98%
+  - [31] Will Jon Stewart win the 2028 Democratic presidential nomination? — YES 2% / NO 98%
+  - [55] Will Ruben Gallego win the 2028 Democratic presidential nomination? — YES 2% / NO 98%
+  - [1] Will Gretchen Whitmer win the 2028 Democratic presidential nomination? — YES 2% / NO 98%
+  - [40] Will Liz Cheney win the 2028 Democratic presidential nomination? — YES 2% / NO 98%
+  - [65] Will Wes Moore win the 2028 Democratic presidential nomination? — YES 2% / NO 98%
+  - [46] Will Michelle Obama win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [52] Will Rahm Emanuel win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [87] Will Ro Khanna win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [0] Will Stephen A. Smith win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [2] Will Oprah Winfrey win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [19] Will Gina Raimondo win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [47] Will Zohran Mamdani win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [62] Will Phil Murphy win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [67] Will LeBron James win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [78] Will Dwayne 'The Rock' Johnson win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [82] Will Chris Murphy win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [30] Will Cory Booker win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [53] Will John Fetterman win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [61] Will Mark Cuban win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [81] Will MrBeast win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [25] Will Barack Obama win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [48] Will Andrew Yang win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [54] Will Kim Kardashian win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [75] Will Chelsea Clinton win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [91] Will Roy Cooper win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [41] Will Beto O’Rourke win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [59] Will Jared Polis win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [68] Will Hunter Biden win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [24] Will Raphael Warnock win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [26] Will George Clooney win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [35] Will Tim Walz win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [92] Will Jasmine Crockett win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [102] Will Hillary Clinton win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+  - [36] Will Bernie Sanders win the 2028 Democratic presidential nomination? — YES 1% / NO 99%
+
+# Ce que tu dois produire
+
+Un fichier JSON unique nommé batch_payload.json contenant une liste d'objets analysis_payload,
+un par contrat listé ci-dessus.
+
+Chaque analysis_payload doit respecter exactement le schéma V2.3 habituel, avec :
+- market_id      : "BATCH-005-[contract_id]"  ex: "BATCH-005-38"
+- thesis_id      : market_id + "-TH1"
+- analysis_id    : thesis_id + "-A1"
+- analysis_version : "A1"
+- resolution_date : "2028-11-07T00:00:00Z"
+- protocol_version : "2.3"
+- schema_version : "1.0"
+- analysis_timestamp : heure actuelle ISO 8601
+
+Pour chaque contrat, tu dois analyser indépendamment :
+- le base_rate (fréquence historique pour ce type de candidat/équipe)
+- les prérequis bloquants et pondérants
+- les facteurs accélérateurs et freins spécifiques à ce contrat
+- la confiance
+- les ambiguïtés
+- la contradiction forcée obligatoire (best_counter_thesis + top_3_failure_reasons)
+
+# Format de sortie
+
+```json
+[
+  { analysis_payload complet pour contrat 1 },
+  { analysis_payload complet pour contrat 2 },
+  ...
+]
+```
+
+Le JSON doit être valide, indenté, sans commentaires.
+Rappel : top_3_failure_reasons doit contenir EXACTEMENT 3 éléments.
+Rappel : tous les enums en anglais : high/medium/low, accelerator/brake, etc.

@@ -1,0 +1,67 @@
+{
+  "batch_id": "BATCH-003",
+  "event_title": "Paris Mayoral Election",
+  "event_url": "https://polymarket.com/fr/event/paris-mayoral-election",
+  "resolution_date": "2026-03-31T00:00:00Z",
+  "snapshot_time": "2026-03-18T17:56:48Z",
+  "contract_count": 8,
+  "contracts": [
+    {
+      "contract_id": "7",
+      "label": "Will Emmanuel Grégoire win the Paris mayor election?",
+      "price_yes": 0.725,
+      "price_no": 0.275,
+      "type": "binary"
+    },
+    {
+      "contract_id": "0",
+      "label": "Will Éric Grégoire win the Paris mayor election?",
+      "price_yes": 0.33,
+      "price_no": 0.67,
+      "type": "binary"
+    },
+    {
+      "contract_id": "1",
+      "label": "Will Rachida Dati win the Paris mayor election?",
+      "price_yes": 0.275,
+      "price_no": 0.725,
+      "type": "binary"
+    },
+    {
+      "contract_id": "6",
+      "label": "Will Sarah Knafo win the Paris mayor election?",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "2",
+      "label": "Will Pierre-Yves Bournazel win the Paris mayor election?",
+      "price_yes": 0.0005,
+      "price_no": 0.9995,
+      "type": "binary"
+    },
+    {
+      "contract_id": "3",
+      "label": "Will David Belliard win the Paris mayor election?",
+      "price_yes": 0.0005,
+      "price_no": 0.9995,
+      "type": "binary"
+    },
+    {
+      "contract_id": "4",
+      "label": "Will Sophia Chikirou win the Paris mayor election?",
+      "price_yes": 0.0005,
+      "price_no": 0.9995,
+      "type": "binary"
+    },
+    {
+      "contract_id": "5",
+      "label": "Will Thierry Mariani win the Paris mayor election?",
+      "price_yes": 0.0005,
+      "price_no": 0.9995,
+      "type": "binary"
+    }
+  ],
+  "schema_version": "1.0"
+}

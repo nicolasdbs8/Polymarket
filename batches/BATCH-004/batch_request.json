@@ -1,0 +1,109 @@
+{
+  "batch_id": "BATCH-004",
+  "event_title": "2026 Seoul Mayoral Election Winner",
+  "event_url": "https://polymarket.com/fr/event/2026-seoul-mayoral-election-winner",
+  "resolution_date": "2026-06-03T00:00:00Z",
+  "snapshot_time": "2026-03-18T18:15:19Z",
+  "contract_count": 14,
+  "contracts": [
+    {
+      "contract_id": "4",
+      "label": "Will Chong Won-oh win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.815,
+      "price_no": 0.185,
+      "type": "binary"
+    },
+    {
+      "contract_id": "0",
+      "label": "Will Oh Se-hoon win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.14,
+      "price_no": 0.86,
+      "type": "binary"
+    },
+    {
+      "contract_id": "35",
+      "label": "Will Park Ju-min win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.041,
+      "price_no": 0.959,
+      "type": "binary"
+    },
+    {
+      "contract_id": "2",
+      "label": "Will Ahn Cheol-soo win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.002,
+      "price_no": 0.998,
+      "type": "binary"
+    },
+    {
+      "contract_id": "1",
+      "label": "Will Cho Eun-hee win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "3",
+      "label": "Will Park Yong-jin win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "5",
+      "label": "Will Hong Ihk-pyo win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "6",
+      "label": "Will Cho Kuk win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "7",
+      "label": "Will Kang Hoon-sik win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "33",
+      "label": "Will Na Kyung-won win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "34",
+      "label": "Will Han Dong-hoon win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "36",
+      "label": "Will Park Hong-keun win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "37",
+      "label": "Will Seo Young-kyo win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    },
+    {
+      "contract_id": "38",
+      "label": "Will Jeon Hyun-heui win the 2026 Seoul Mayoral Election",
+      "price_yes": 0.0015,
+      "price_no": 0.9985,
+      "type": "binary"
+    }
+  ],
+  "schema_version": "1.0"
+}

@@ -1,0 +1,56 @@
+Tu dois produire une analyse groupée pour un événement Polymarket multi-contrats.
+
+# Événement
+Titre : Hungary Parliamentary Election Winner
+URL   : https://polymarket.com/fr/event/hungary-parliamentary-election-winner
+Date de résolution : 2026-04-12T00:00:00Z
+Batch ID : BATCH-002
+
+# Contrats à analyser (10)
+  - [1] Will TISZA – Respect and Freedom Party (TISZA) win the most seats in the next Hungarian parliamentary election? — YES 66% / NO 34%
+  - [19] Will Fidesz–KDNP win the most seats in the next Hungarian parliamentary election? — YES 34% / NO 66%
+  - [0] Will the Democratic Coalition (DK) win the most seats in the next Hungarian parliamentary election? — YES 0% / NO 100%
+  - [12] Will the Momentum Movement (Momentum) win the most seats in the next Hungarian parliamentary election? — YES 0% / NO 100%
+  - [2] Will LMP – Hungary’s Green Party (LMP) win the most seats in the next Hungarian parliamentary election? — YES 0% / NO 100%
+  - [11] Will the Hungarian Socialist Party (MSZP) win the most seats in the next Hungarian parliamentary election? — YES 0% / NO 100%
+  - [13] Will Our Homeland Movement (Mi Hazánk) win the most seats in the next Hungarian parliamentary election? — YES 0% / NO 100%
+  - [20] Will Dialogue for Hungary (Párbeszéd) win the most seats in the next Hungarian parliamentary election? — YES 0% / NO 100%
+  - [21] Will Movement for a Better Hungary (Jobbik) win the most seats in the next Hungarian parliamentary election? — YES 0% / NO 100%
+  - [29] Will the Christian Democratic People’s Party (KDNP) win the most seats in the next Hungarian parliamentary election? — YES 0% / NO 100%
+
+# Ce que tu dois produire
+
+Un fichier JSON unique nommé batch_payload.json contenant une liste d'objets analysis_payload,
+un par contrat listé ci-dessus.
+
+Chaque analysis_payload doit respecter exactement le schéma V2.3 habituel, avec :
+- market_id      : "BATCH-002-[contract_id]"  ex: "BATCH-002-38"
+- thesis_id      : market_id + "-TH1"
+- analysis_id    : thesis_id + "-A1"
+- analysis_version : "A1"
+- resolution_date : "2026-04-12T00:00:00Z"
+- protocol_version : "2.3"
+- schema_version : "1.0"
+- analysis_timestamp : heure actuelle ISO 8601
+
+Pour chaque contrat, tu dois analyser indépendamment :
+- le base_rate (fréquence historique pour ce type de candidat/équipe)
+- les prérequis bloquants et pondérants
+- les facteurs accélérateurs et freins spécifiques à ce contrat
+- la confiance
+- les ambiguïtés
+- la contradiction forcée obligatoire (best_counter_thesis + top_3_failure_reasons)
+
+# Format de sortie
+
+```json
+[
+  { analysis_payload complet pour contrat 1 },
+  { analysis_payload complet pour contrat 2 },
+  ...
+]
+```
+
+Le JSON doit être valide, indenté, sans commentaires.
+Rappel : top_3_failure_reasons doit contenir EXACTEMENT 3 éléments.
+Rappel : tous les enums en anglais : high/medium/low, accelerator/brake, etc.

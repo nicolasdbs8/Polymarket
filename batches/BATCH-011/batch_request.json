@@ -1,0 +1,74 @@
+{
+  "batch_id": "BATCH-011",
+  "event_title": "March Inflation US - Annual (Higher Brackets)",
+  "event_url": "https://polymarket.com/event/march-inflation-us-annual-higher-brackets",
+  "resolution_date": "2026-04-10T00:00:00Z",
+  "snapshot_time": "2026-03-19T15:30:00Z",
+  "contract_count": 9,
+  "contracts": [
+    {
+      "contract_id": "5",
+      "label": "Will annual inflation increase by ≥3.4% in March?",
+      "price_yes": 0.5275,
+      "price_no": 0.4725,
+      "type": "binary"
+    },
+    {
+      "contract_id": "4",
+      "label": "Will annual inflation increase by 3.3% in March?",
+      "price_yes": 0.2795,
+      "price_no": 0.7205,
+      "type": "binary"
+    },
+    {
+      "contract_id": "3",
+      "label": "Will annual inflation increase by 3.2% in March?",
+      "price_yes": 0.095,
+      "price_no": 0.905,
+      "type": "binary"
+    },
+    {
+      "contract_id": "8",
+      "label": "Will annual inflation increase by 3.1% in March?",
+      "price_yes": 0.0455,
+      "price_no": 0.9545,
+      "type": "binary"
+    },
+    {
+      "contract_id": "7",
+      "label": "Will annual inflation increase by 3.0% in March?",
+      "price_yes": 0.0305,
+      "price_no": 0.9695,
+      "type": "binary"
+    },
+    {
+      "contract_id": "0",
+      "label": "Will annual inflation increase by 2.9% in March?",
+      "price_yes": 0.021,
+      "price_no": 0.979,
+      "type": "binary"
+    },
+    {
+      "contract_id": "1",
+      "label": "Will annual inflation increase by ≤2.6% in March?",
+      "price_yes": 0.0085,
+      "price_no": 0.9915,
+      "type": "binary"
+    },
+    {
+      "contract_id": "2",
+      "label": "Will annual inflation increase by 2.8% in March?",
+      "price_yes": 0.0085,
+      "price_no": 0.9915,
+      "type": "binary"
+    },
+    {
+      "contract_id": "6",
+      "label": "Will annual inflation increase by 2.7% in March?",
+      "price_yes": 0.0045,
+      "price_no": 0.9955,
+      "type": "binary"
+    }
+  ],
+  "schema_version": "1.0"
+}

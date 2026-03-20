@@ -1,0 +1,67 @@
+Tu dois produire une analyse groupée pour un événement Polymarket multi-contrats.
+
+# Événement
+Titre : Colombia Presidential Election
+URL   : https://polymarket.com/event/colombia-presidential-election
+Date de résolution : 2026-06-21T14:00:00Z
+Batch ID : BATCH-012
+
+# Contrats à analyser (20)
+  - [23] Will Candidate M win the 2026 Colombian presidential election? — YES 50% / NO 50%
+  - [12] Will Ivan Cepeda Castro win the 2026 Colombian presidential election? — YES 41% / NO 59%
+  - [17] Will Paloma Valencia win the 2026 Colombian presidential election? — YES 41% / NO 59%
+  - [10] Will Abelardo de la Espriella  win the 2026 Colombian presidential election? — YES 14% / NO 86%
+  - [1] Will Luis Gilberto Murillo win the 2026 Colombian presidential election? — YES 2% / NO 98%
+  - [7] Will Sergio Fajardo win the 2026 Colombian presidential election? — YES 1% / NO 99%
+  - [18] Will Carlos Felipe Córdoba win the 2026 Colombian presidential election? — YES 1% / NO 99%
+  - [2] Will Claudia López win the 2026 Colombian presidential election? — YES 0% / NO 100%
+  - [14] Will Roy Barreras win the 2026 Colombian presidential election? — YES 0% / NO 100%
+  - [4] Will Juan Daniel Oviedo win the 2026 Colombian presidential election? — YES 0% / NO 100%
+  - [9] Will Germán Vargas Lleras win the 2026 Colombian presidential election? — YES 0% / NO 100%
+  - [0] Will Vicky Dávila win the 2026 Colombian presidential election? — YES 0% / NO 100%
+  - [3] Will David Luna Sánchez win the 2026 Colombian presidential election? — YES 0% / NO 100%
+  - [6] Will Gustavo Bolívar win the 2026 Colombian presidential election? — YES 0% / NO 100%
+  - [8] Will Juan Manuel Galán win the 2026 Colombian presidential election? — YES 0% / NO 100%
+  - [11] Will Mauricio Cardenas win the 2026 Colombian presidential election? — YES 0% / NO 100%
+  - [13] Will Daniel Quintero win the 2026 Colombian presidential election? — YES 0% / NO 100%
+  - [15] Will Enrique Peñalosa win the 2026 Colombian presidential election? — YES 0% / NO 100%
+  - [16] Will Juan Carlos Pinzón win the 2026 Colombian presidential election? — YES 0% / NO 100%
+  - [5] Will Miguel Uribe Turbay win the 2026 Colombian presidential election? — YES 0% / NO 100%
+
+# Ce que tu dois produire
+
+Un fichier JSON unique nommé batch_payload.json contenant une liste d'objets analysis_payload,
+un par contrat listé ci-dessus.
+
+Chaque analysis_payload doit respecter exactement le schéma V2.3 habituel, avec :
+- market_id      : "BATCH-012-[contract_id]"  ex: "BATCH-012-38"
+- thesis_id      : market_id + "-TH1"
+- analysis_id    : thesis_id + "-A1"
+- analysis_version : "A1"
+- resolution_date : "2026-06-21T14:00:00Z"
+- protocol_version : "2.3"
+- schema_version : "1.0"
+- analysis_timestamp : heure actuelle ISO 8601
+
+Pour chaque contrat, tu dois analyser indépendamment :
+- le base_rate (fréquence historique pour ce type de candidat/équipe)
+- les prérequis bloquants et pondérants
+- les facteurs accélérateurs et freins spécifiques à ce contrat
+- la confiance
+- les ambiguïtés
+- la contradiction forcée obligatoire (best_counter_thesis + top_3_failure_reasons)
+
+# Format de sortie
+
+```json
+[
+  { analysis_payload complet pour contrat 1 },
+  { analysis_payload complet pour contrat 2 },
+  ...
+]
+```
+
+Le JSON doit être valide, indenté, sans commentaires.
+Rappel : top_3_failure_reasons doit contenir EXACTEMENT 3 éléments.
+Rappel : tous les enums en anglais : high/medium/low, accelerator/brake, etc.
+Rappel : tu dois impérativement te référer au modèle batch_payload_exemple.json dans les fichiers source du projet.

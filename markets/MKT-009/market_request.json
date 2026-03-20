@@ -1,0 +1,16 @@
+{
+  "market_id": "MKT-009",
+  "market_title": "Will \"Hoppers\" 3rd Weekend Box Office be between 18m and 19.5m?",
+  "platform": "polymarket",
+  "market_type": "binary",
+  "market_probability_yes": 0.42,
+  "price_yes": 0.42,
+  "price_no": 0.58,
+  "market_probability_no": 0.58,
+  "resolution_date": "2026-03-23T12:00:00Z",
+  "market_snapshot_time": "2026-03-18T16:39:48Z",
+  "category": "other",
+  "market_url": "https://polymarket.com/fr/event/hoppers-3rd-weekend-box-office/will-hoppers-3rd-weekend-box-office-be-between-18m-and-19pt5m",
+  "schema_version": "1.0",
+  "market_volume": 596.83
+}

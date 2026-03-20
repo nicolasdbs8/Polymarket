@@ -1,0 +1,90 @@
+{
+  "batch_id": "BATCH-008",
+  "results": [
+    {
+      "market_id": "BATCH-008-0",
+      "label": "Trump announces end of military operations against Iran by March 1st?",
+      "price_yes": 0.0,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0085,
+      "side": "yes",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-008-1",
+      "label": "Trump announces end of military operations against Iran by March 2nd?",
+      "price_yes": 0.0,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0085,
+      "side": "yes",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-008-2",
+      "label": "Trump announces end of military operations against Iran by March 7th?",
+      "price_yes": 0.0,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0085,
+      "side": "yes",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-008-3",
+      "label": "Trump announces end of military operations against Iran by March 15th?",
+      "price_yes": 0.0,
+      "p_estimated": 0.01,
+      "adj_edge": 0.0085,
+      "side": "yes",
+      "decision": "no_trade",
+      "size": 0.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-008-4",
+      "label": "Trump announces end of military operations against Iran by March 31st?",
+      "price_yes": 0.095,
+      "p_estimated": 0.01,
+      "adj_edge": -0.068,
+      "side": "no",
+      "decision": "small_paper_position",
+      "size": 20.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-008-5",
+      "label": "Trump announces end of military operations against Iran by April 30th?",
+      "price_yes": 0.525,
+      "p_estimated": 0.351,
+      "adj_edge": -0.1392,
+      "side": "no",
+      "decision": "standard_paper_position",
+      "size": 50.0,
+      "veto": false,
+      "veto_reason": ""
+    },
+    {
+      "market_id": "BATCH-008-6",
+      "label": "Trump announces end of military operations against Iran by June 30th?",
+      "price_yes": 0.74,
+      "p_estimated": 0.6565,
+      "adj_edge": -0.0668,
+      "side": "no",
+      "decision": "small_paper_position",
+      "size": 20.0,
+      "veto": false,
+      "veto_reason": ""
+    }
+  ],
+  "errors": []
+}

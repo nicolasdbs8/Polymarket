@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "market_request.schema.json",
+  "title": "market_request",
+  "description": "Objet d'entrée initiale fourni par l'utilisateur pour soumettre un marché à analyse.",
+  "type": "object",
+  "required": [
+    "market_id",
+    "market_title",
+    "platform",
+    "market_probability_yes",
+    "price_yes",
+    "resolution_date",
+    "market_snapshot_time",
+    "category",
+    "schema_version"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "market_id": {
+      "type": "string",
+      "description": "Identifiant unique local du marché.",
+      "pattern": "^MKT-[0-9]{3,}$"
+    },
+    "market_title": {
+      "type": "string",
+      "description": "Titre exact du marché tel qu'il apparaît sur la plateforme.",
+      "minLength": 5
+    },
+    "platform": {
+      "type": "string",
+      "description": "Plateforme source.",
+      "enum": ["polymarket", "metaculus", "manifold", "kalshi", "other"]
+    },
+    "market_probability_yes": {
+      "type": "number",
+      "description": "Probabilité implicite YES observée sur le marché.",
+      "minimum": 0.01,
+      "maximum": 0.99
+    },
+    "price_yes": {
+      "type": "number",
+      "description": "Prix YES au moment du snapshot (peut être identique à market_probability_yes).",
+      "minimum": 0.01,
+      "maximum": 0.99
+    },
+    "price_no": {
+      "type": "number",
+      "description": "Prix NO au moment du snapshot (optionnel).",
+      "minimum": 0.01,
+      "maximum": 0.99
+    },
+    "market_probability_no": {
+      "type": "number",
+      "description": "Probabilité implicite NO (calculable : 1 - market_probability_yes).",
+      "minimum": 0.01,
+      "maximum": 0.99
+    },
+    "resolution_date": {
+      "type": "string",
+      "description": "Date de résolution prévue au format ISO 8601.",
+      "format": "date-time"
+    },
+    "market_snapshot_time": {
+      "type": "string",
+      "description": "Horodatage exact du snapshot de prix. Obligatoire.",
+      "format": "date-time"
+    },
+    "category": {
+      "type": "string",
+      "description": "Catégorie principale du marché.",
+      "enum": [
+        "electoral_politics",
+        "geopolitics",
+        "macroeconomics",
+        "institutions_justice",
+        "tech_companies",
+        "other"
+      ]
+    },
+    "market_url": {
+      "type": "string",
+      "description": "URL source du marché (optionnel)."
+    },
+    "market_volume": {
+      "type": "number",
+      "description": "Volume observé au moment du snapshot (optionnel).",
+      "minimum": 0
+    },
+    "notes": {
+      "type": "string",
+      "description": "Remarque libre de l'utilisateur (optionnel)."
+    },
+    "schema_version": {
+      "type": "string",
+      "description": "Version du schéma utilisé.",
+      "const": "1.0"
+    }
+  }
+}

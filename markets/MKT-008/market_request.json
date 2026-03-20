@@ -1,0 +1,16 @@
+{
+  "market_id": "MKT-008",
+  "market_title": "Will the Freedom Movement (GS) win the most seats in the 2026 Slovenian parliamentary election?",
+  "platform": "polymarket",
+  "market_type": "binary",
+  "market_probability_yes": 0.355,
+  "price_yes": 0.355,
+  "price_no": 0.645,
+  "market_probability_no": 0.645,
+  "resolution_date": "2026-03-31T00:00:00Z",
+  "market_snapshot_time": "2026-03-18T15:45:41Z",
+  "category": "electoral_politics",
+  "market_url": "https://polymarket.com/fr/event/slovenian-parliamentary-election-winner-791",
+  "schema_version": "1.0",
+  "market_volume": 187492.73
+}

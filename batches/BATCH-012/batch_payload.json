@@ -1,0 +1,2302 @@
+[
+  {
+    "market_id": "BATCH-012-23",
+    "thesis_id": "BATCH-012-23-TH1",
+    "analysis_id": "BATCH-012-23-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "conditional",
+      "event_clarity": "medium",
+      "resolution_clarity": "medium",
+      "liquidity_quality": "high",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Colombian presidential winner market with a clear official resolution path. Candidate-specific information quality varies by contract."
+    },
+    "base_rate": {
+      "base_rate_value": 0.18,
+      "base_rate_reference_class": "Opaque or placeholder-listed frontrunner in a Colombian presidential multi-outcome market.",
+      "base_rate_comment": "The base rate is conservative because the label is opaque. Without a clearly identified real-world actor, any stronger analogue would be overconfident."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves before year-end 2026",
+          "status": "filled",
+          "comment": "Official calendar sets 31 May first round and 21 June runoff, well inside the market window."
+        },
+        {
+          "name": "The Polymarket label 'Candidate M' remains a valid listed outcome through resolution",
+          "status": "partial",
+          "comment": "The label is visible, but the underlying identity is not transparently exposed in public snippets."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Public information is sufficient to identify Candidate M's coalition and ballot status",
+          "status": "partial",
+          "comment": "Information access is impaired by the opaque label."
+        },
+        {
+          "name": "Candidate M is one of the top two vote-getters entering the runoff path",
+          "status": "unknown",
+          "comment": "The market prices M highly, but external reporting does not independently identify this actor."
+        },
+        {
+          "name": "Candidate M can build a majority coalition beyond a first-round plurality",
+          "status": "unknown",
+          "comment": "No reliable coalition map is possible without clear identity."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Market-implied frontrunner status",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Polymarket prices Candidate M at the top of this event, so the contract is clearly not a tail outcome inside the market microstructure."
+      },
+      {
+        "factor_name": "Opaque candidate identity",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Without a clearly identified actor, it is impossible to verify ballot status, coalition backing, ideology, or independent polling."
+      },
+      {
+        "factor_name": "Fragmented field can reward a real frontrunner",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "In a split field, a genuine leader can benefit from fragmentation if already near the top."
+      },
+      {
+        "factor_name": "Runoff coalition uncertainty",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "Even a first-round leader can lose once anti-front-runner voters coordinate."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "low",
+      "confidence_context": "low",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "medium",
+      "resolution_ambiguity": "medium"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "If Candidate M is in fact a clearly dominant, well-polled real candidate with broad runoff appeal, the current market price could be justified and the conservative prior would be too low.",
+      "top_3_failure_reasons": [
+        "The analysis may be too skeptical simply because public snippets obscure Candidate M's identity while traders may know exactly who the label refers to.",
+        "A true polling leader in a fragmented field can be undervalued by generic historical priors.",
+        "Runoff coalition math may actually favor Candidate M once the identity is known."
+      ],
+      "market_might_be_right_because": "The market may correctly incorporate private or hard-to-scrape information linking Candidate M to the actual top-tier contender.",
+      "thesis_invalidation_trigger": "Clear public confirmation of Candidate M's identity plus repeated reputable polls showing that person leading both first-round and runoff matchups."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Candidate M: Opaque or placeholder-listed frontrunner in a Colombian presidential multi-outcome market.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "If Candidate M is in fact a clearly dominant, well-polled real candidate with broad runoff appeal, the current market price could be justified and the conservative prior would be too low.",
+      "dominant_market_narrative": "Candidate M is one of the contracts Polymarket traders are using to express views on Colombia's fragmented 2026 race."
+    }
+  },
+  {
+    "market_id": "BATCH-012-12",
+    "thesis_id": "BATCH-012-12-TH1",
+    "analysis_id": "BATCH-012-12-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Colombian presidential winner market with a clear official resolution path. Candidate-specific information quality varies by contract."
+    },
+    "base_rate": {
+      "base_rate_value": 0.24,
+      "base_rate_reference_class": "Left-wing nationally prominent candidate leading or near-leading polls in a two-round Colombian presidential race.",
+      "base_rate_comment": "The base rate reflects that leading candidates from major ideological blocs frequently make the runoff and can win, but Petro-aligned continuity candidates still face material anti-incumbent drag."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 presidential calendar fits the contract window."
+        },
+        {
+          "name": "Iván Cepeda remains an active presidential candidate on the ballot",
+          "status": "filled",
+          "comment": "Reuters and AS/COA describe him as a live non-primary contender in the May field."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Cepeda sustains top-two polling through the first round",
+          "status": "partial",
+          "comment": "AS/COA says he leads most polls, but the margin is not dominant."
+        },
+        {
+          "name": "The left consolidates rather than splits around him",
+          "status": "partial",
+          "comment": "Roy Barreras also emerged from the left primary, which can complicate lane consolidation."
+        },
+        {
+          "name": "He can broaden beyond Petro's base in a runoff",
+          "status": "unknown",
+          "comment": "That is the decisive unresolved question."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Leads most polls in mid-March",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "AS/COA described Cepeda as leading most polls after the March 8 primaries."
+      },
+      {
+        "factor_name": "Historic Pact organizational base",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "He benefits from the incumbent left's existing machinery and an identifiable ideological electorate."
+      },
+      {
+        "factor_name": "Petro continuity drag",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Cepeda is framed as a continuation candidate for Petro-era policies, creating a serious ceiling problem."
+      },
+      {
+        "factor_name": "Fragmented Congress implies coalition difficulty",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "Reuters highlighted a fragmented Congress, implying any eventual winner needs broad alliances."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Cepeda may be overrated because first-round polling leadership does not guarantee a runoff win once anti-Petro forces coordinate behind a single alternative.",
+      "top_3_failure_reasons": [
+        "The analysis may understate the electoral ceiling of a Petro-aligned continuity message in a polarized environment.",
+        "Right and center voters could unify more effectively in a runoff than first-round polling suggests.",
+        "The left lane may be less consolidated than it appears."
+      ],
+      "market_might_be_right_because": "The market may correctly see Cepeda as the best-positioned single candidate to reach the runoff from the left.",
+      "thesis_invalidation_trigger": "Credible runoff polling showing Cepeda consistently losing to both the leading right and center alternatives."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Ivan Cepeda Castro: Left-wing nationally prominent candidate leading or near-leading polls in a two-round Colombian presidential race.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Cepeda may be overrated because first-round polling leadership does not guarantee a runoff win once anti-Petro forces coordinate behind a single alternative.",
+      "dominant_market_narrative": "Ivan Cepeda Castro is one of the contracts Polymarket traders are using to express views on Colombia's fragmented 2026 race."
+    }
+  },
+  {
+    "market_id": "BATCH-012-17",
+    "thesis_id": "BATCH-012-17-TH1",
+    "analysis_id": "BATCH-012-17-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Colombian presidential winner market with a clear official resolution path. Candidate-specific information quality varies by contract."
+    },
+    "base_rate": {
+      "base_rate_value": 0.2,
+      "base_rate_reference_class": "Major opposition senator emerging from a successful right-wing primary in a fragmented two-round presidential system.",
+      "base_rate_comment": "The base rate captures the advantage of an officially selected right-wing primary winner with national visibility, but tempers it because she was not described as the overall polling leader after the primaries."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "The official calendar places both rounds before the contract resolution date."
+        },
+        {
+          "name": "Paloma Valencia remains the right-wing primary-backed candidate in the general election",
+          "status": "filled",
+          "comment": "Reuters reported she won the right-wing primary on 8 March."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Primary momentum translates into top-two first-round standing",
+          "status": "partial",
+          "comment": "AS/COA says she gained momentum, but not that she overtook both front-runners."
+        },
+        {
+          "name": "The anti-left vote consolidates behind her rather than de la Espriella",
+          "status": "partial",
+          "comment": "Competition with another strong right-wing figure remains the main obstacle."
+        },
+        {
+          "name": "She becomes acceptable to centrist runoff voters",
+          "status": "unknown",
+          "comment": "That coalition test remains unresolved."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Won the right-wing primary decisively",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Reuters reported she emerged as the right-wing primary winner, and AS/COA described a real momentum boost."
+      },
+      {
+        "factor_name": "Recognizable party structure and ideological lane",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "As a Democratic Center senator, she has clearer apparatus than many minor candidates."
+      },
+      {
+        "factor_name": "Right-of-center vote split",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Abelardo de la Espriella remains a serious competitor on the same broad ideological side."
+      },
+      {
+        "factor_name": "Runoff electability uncertainty",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "A strong primary result does not automatically solve her appeal problem with moderates."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Valencia could be stronger than this analysis assumes because a primary victory can create fast-moving focal-point effects on the right.",
+      "top_3_failure_reasons": [
+        "The analysis may overstate the durability of the right-wing split if de la Espriella fades.",
+        "Valencia may inherit a large anti-Petro tactical vote late in the campaign.",
+        "Runoff voters may prefer a conventional party politician over more polarizing alternatives."
+      ],
+      "market_might_be_right_because": "The market may be right that Valencia has one of the clearest institutional paths from primary win to runoff viability.",
+      "thesis_invalidation_trigger": "Multiple reputable polls placing Valencia clearly behind both Cepeda and de la Espriella."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Paloma Valencia: Major opposition senator emerging from a successful right-wing primary in a fragmented two-round presidential system.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Valencia could be stronger than this analysis assumes because a primary victory can create fast-moving focal-point effects on the right.",
+      "dominant_market_narrative": "Paloma Valencia is one of the contracts Polymarket traders are using to express views on Colombia's fragmented 2026 race."
+    }
+  },
+  {
+    "market_id": "BATCH-012-10",
+    "thesis_id": "BATCH-012-10-TH1",
+    "analysis_id": "BATCH-012-10-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Colombian presidential winner market with a clear official resolution path. Candidate-specific information quality varies by contract."
+    },
+    "base_rate": {
+      "base_rate_value": 0.14,
+      "base_rate_reference_class": "Security-focused outsider/right-populist contender in a fragmented first round.",
+      "base_rate_comment": "The base rate is higher than for minor candidates because Reuters and AS/COA treat him as a real frontrunner, but lower than the very top tier because outsider figures face coalition and runoff conversion risk."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official calendar fits."
+        },
+        {
+          "name": "De la Espriella remains an active presidential candidate outside the primary route",
+          "status": "filled",
+          "comment": "Reuters explicitly described him as a live non-primary contender."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "He remains top-two in first-round polling",
+          "status": "partial",
+          "comment": "AS/COA says he is just behind Cepeda, but the field is volatile."
+        },
+        {
+          "name": "He consolidates most of the anti-left vote",
+          "status": "partial",
+          "comment": "Paloma Valencia is a direct competitor for that electorate."
+        },
+        {
+          "name": "His hard-line message is acceptable in a runoff",
+          "status": "unknown",
+          "comment": "The security platform can mobilize but also alienate moderates."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Recognized as a top-tier contender by Reuters and AS/COA",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "He is not a fringe name in current reporting; he is treated as one of the real competitors."
+      },
+      {
+        "factor_name": "Security-first outsider profile",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "A hard-line security stance can gain traction where public order remains salient."
+      },
+      {
+        "factor_name": "Vote split with Paloma Valencia",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "The right is visibly divided, which is the core obstacle to a clean runoff path."
+      },
+      {
+        "factor_name": "Coalition breadth risk in second round",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "An outsider law-and-order message may have a ceiling once the electorate compresses."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "De la Espriella may be underrated because security anxiety and outsider energy can compress the field quickly and displace more institutional rivals.",
+      "top_3_failure_reasons": [
+        "The analysis may underestimate voter appetite for a sharper anti-establishment and anti-Petro message.",
+        "Valencia may fail to convert primary momentum into broad support, leaving him as the dominant right-wing option.",
+        "Late security shocks could disproportionately benefit his candidacy."
+      ],
+      "market_might_be_right_because": "The market may correctly price that a genuine top-two outsider can win once the electorate polarizes around security and change.",
+      "thesis_invalidation_trigger": "Reputable polls showing de la Espriella falling clearly into third place behind both Cepeda and Valencia."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Abelardo de la Espriella: Security-focused outsider/right-populist contender in a fragmented first round.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "De la Espriella may be underrated because security anxiety and outsider energy can compress the field quickly and displace more institutional rivals.",
+      "dominant_market_narrative": "Abelardo de la Espriella is one of the contracts Polymarket traders are using to express views on Colombia's fragmented 2026 race."
+    }
+  },
+  {
+    "market_id": "BATCH-012-1",
+    "thesis_id": "BATCH-012-1-TH1",
+    "analysis_id": "BATCH-012-1-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.03,
+      "base_rate_reference_class": "Former foreign minister / establishment diplomat without clear current top-tier polling.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Luis Gilberto Murillo does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Luis Gilberto Murillo remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place Luis Gilberto Murillo securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Luis Gilberto Murillo's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place Luis Gilberto Murillo among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Luis Gilberto Murillo competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Luis Gilberto Murillo has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if Luis Gilberto Murillo outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Luis Gilberto Murillo could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Luis Gilberto Murillo.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Luis Gilberto Murillo because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Luis Gilberto Murillo clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Luis Gilberto Murillo: Former foreign minister / establishment diplomat without clear current top-tier polling.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Luis Gilberto Murillo is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Luis Gilberto Murillo is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-7",
+    "thesis_id": "BATCH-012-7-TH1",
+    "analysis_id": "BATCH-012-7-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.08,
+      "base_rate_reference_class": "Centrist former Medellín mayor with national name recognition but weak current momentum.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Sergio Fajardo does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Sergio Fajardo remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "partial",
+          "comment": "Available reporting does not currently place Sergio Fajardo securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Sergio Fajardo's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "National name recognition",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "Sergio Fajardo has enough national visibility that the contract is not purely theoretical."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "Sergio Fajardo competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Sergio Fajardo has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "Even if Sergio Fajardo outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Sergio Fajardo could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Sergio Fajardo.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Sergio Fajardo because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Sergio Fajardo clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Sergio Fajardo: Centrist former Medellín mayor with national name recognition but weak current momentum.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Sergio Fajardo is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Sergio Fajardo is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-18",
+    "thesis_id": "BATCH-012-18-TH1",
+    "analysis_id": "BATCH-012-18-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.02,
+      "base_rate_reference_class": "Lower-visibility institutional figure lacking evidence of top-tier presidential traction.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Carlos Felipe Córdoba does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Carlos Felipe Córdoba remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place Carlos Felipe Córdoba securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Carlos Felipe Córdoba's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place Carlos Felipe Córdoba among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Carlos Felipe Córdoba competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Carlos Felipe Córdoba has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if Carlos Felipe Córdoba outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Carlos Felipe Córdoba could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Carlos Felipe Córdoba.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Carlos Felipe Córdoba because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Carlos Felipe Córdoba clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Carlos Felipe Córdoba: Lower-visibility institutional figure lacking evidence of top-tier presidential traction.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Carlos Felipe Córdoba is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Carlos Felipe Córdoba is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-2",
+    "thesis_id": "BATCH-012-2-TH1",
+    "analysis_id": "BATCH-012-2-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.09,
+      "base_rate_reference_class": "Centrist ex-mayor who won the center primary but still faces severe fragmentation and runoff path uncertainty.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Claudia López does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Claudia López remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "partial",
+          "comment": "Available reporting does not currently place Claudia López securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Claudia López's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "National name recognition",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "Claudia López has enough national visibility that the contract is not purely theoretical."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "Claudia López competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Claudia López has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "Even if Claudia López outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Claudia López could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Claudia López.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Claudia López because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Claudia López clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Claudia López: Centrist ex-mayor who won the center primary but still faces severe fragmentation and runoff path uncertainty.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Claudia López is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Claudia López is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-14",
+    "thesis_id": "BATCH-012-14-TH1",
+    "analysis_id": "BATCH-012-14-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.05,
+      "base_rate_reference_class": "Left-primary winner whose lane overlaps with the stronger Petro-aligned figure Iván Cepeda.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Roy Barreras does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Roy Barreras remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place Roy Barreras securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Roy Barreras's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place Roy Barreras among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Roy Barreras competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Roy Barreras has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if Roy Barreras outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Roy Barreras could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Roy Barreras.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Roy Barreras because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Roy Barreras clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Roy Barreras: Left-primary winner whose lane overlaps with the stronger Petro-aligned figure Iván Cepeda.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Roy Barreras is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Roy Barreras is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-4",
+    "thesis_id": "BATCH-012-4-TH1",
+    "analysis_id": "BATCH-012-4-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.03,
+      "base_rate_reference_class": "Technocratic centrist figure with some visibility but little evidence of a winning coalition.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Juan Daniel Oviedo does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Juan Daniel Oviedo remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place Juan Daniel Oviedo securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Juan Daniel Oviedo's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place Juan Daniel Oviedo among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Juan Daniel Oviedo competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Juan Daniel Oviedo has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if Juan Daniel Oviedo outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Juan Daniel Oviedo could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Juan Daniel Oviedo.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Juan Daniel Oviedo because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Juan Daniel Oviedo clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Juan Daniel Oviedo: Technocratic centrist figure with some visibility but little evidence of a winning coalition.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Juan Daniel Oviedo is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Juan Daniel Oviedo is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-9",
+    "thesis_id": "BATCH-012-9-TH1",
+    "analysis_id": "BATCH-012-9-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.04,
+      "base_rate_reference_class": "Traditional establishment heavyweight but with limited visible current momentum.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Germán Vargas Lleras does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Germán Vargas Lleras remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place Germán Vargas Lleras securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Germán Vargas Lleras's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place Germán Vargas Lleras among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Germán Vargas Lleras competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Germán Vargas Lleras has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if Germán Vargas Lleras outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Germán Vargas Lleras could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Germán Vargas Lleras.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Germán Vargas Lleras because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Germán Vargas Lleras clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Germán Vargas Lleras: Traditional establishment heavyweight but with limited visible current momentum.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Germán Vargas Lleras is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Germán Vargas Lleras is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-0",
+    "thesis_id": "BATCH-012-0-TH1",
+    "analysis_id": "BATCH-012-0-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.07,
+      "base_rate_reference_class": "High-name-recognition media figure who once polled well but is not treated as top-tier in the latest March reporting.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Vicky Dávila does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Vicky Dávila remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "partial",
+          "comment": "Available reporting does not currently place Vicky Dávila securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Vicky Dávila's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "National name recognition",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "Vicky Dávila has enough national visibility that the contract is not purely theoretical."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "Vicky Dávila competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Vicky Dávila has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2,
+        "factor_comment": "Even if Vicky Dávila outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Vicky Dávila could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Vicky Dávila.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Vicky Dávila because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Vicky Dávila clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Vicky Dávila: High-name-recognition media figure who once polled well but is not treated as top-tier in the latest March reporting.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Vicky Dávila is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Vicky Dávila is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-3",
+    "thesis_id": "BATCH-012-3-TH1",
+    "analysis_id": "BATCH-012-3-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.02,
+      "base_rate_reference_class": "Recognizable politician but not a currently visible national frontrunner.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; David Luna Sánchez does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "David Luna Sánchez remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place David Luna Sánchez securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "David Luna Sánchez's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place David Luna Sánchez among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "David Luna Sánchez competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "David Luna Sánchez has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if David Luna Sánchez outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "David Luna Sánchez could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by David Luna Sánchez.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting David Luna Sánchez because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing David Luna Sánchez clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "David Luna Sánchez: Recognizable politician but not a currently visible national frontrunner.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "David Luna Sánchez is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because David Luna Sánchez is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-6",
+    "thesis_id": "BATCH-012-6-TH1",
+    "analysis_id": "BATCH-012-6-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.06,
+      "base_rate_reference_class": "Petro-aligned figure with some base appeal but clearly behind the better-positioned left options.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Gustavo Bolívar does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Gustavo Bolívar remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place Gustavo Bolívar securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Gustavo Bolívar's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place Gustavo Bolívar among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Gustavo Bolívar competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Gustavo Bolívar has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if Gustavo Bolívar outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Gustavo Bolívar could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Gustavo Bolívar.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Gustavo Bolívar because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Gustavo Bolívar clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Gustavo Bolívar: Petro-aligned figure with some base appeal but clearly behind the better-positioned left options.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Gustavo Bolívar is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Gustavo Bolívar is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-8",
+    "thesis_id": "BATCH-012-8-TH1",
+    "analysis_id": "BATCH-012-8-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.03,
+      "base_rate_reference_class": "Centrist establishment surname with modest but non-leading profile.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Juan Manuel Galán does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Juan Manuel Galán remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place Juan Manuel Galán securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Juan Manuel Galán's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place Juan Manuel Galán among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Juan Manuel Galán competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Juan Manuel Galán has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if Juan Manuel Galán outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Juan Manuel Galán could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Juan Manuel Galán.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Juan Manuel Galán because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Juan Manuel Galán clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Juan Manuel Galán: Centrist establishment surname with modest but non-leading profile.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Juan Manuel Galán is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Juan Manuel Galán is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-11",
+    "thesis_id": "BATCH-012-11-TH1",
+    "analysis_id": "BATCH-012-11-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.03,
+      "base_rate_reference_class": "Technocratic former minister lacking current top-tier momentum.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Mauricio Cardenas does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Mauricio Cardenas remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place Mauricio Cardenas securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Mauricio Cardenas's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place Mauricio Cardenas among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Mauricio Cardenas competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Mauricio Cardenas has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if Mauricio Cardenas outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Mauricio Cardenas could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Mauricio Cardenas.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Mauricio Cardenas because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Mauricio Cardenas clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Mauricio Cardenas: Technocratic former minister lacking current top-tier momentum.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Mauricio Cardenas is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Mauricio Cardenas is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-13",
+    "thesis_id": "BATCH-012-13-TH1",
+    "analysis_id": "BATCH-012-13-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.04,
+      "base_rate_reference_class": "Polarizing former Medellín mayor with some recognition but uncertain national path.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Daniel Quintero does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Daniel Quintero remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place Daniel Quintero securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Daniel Quintero's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place Daniel Quintero among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Daniel Quintero competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Daniel Quintero has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if Daniel Quintero outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Daniel Quintero could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Daniel Quintero.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Daniel Quintero because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Daniel Quintero clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Daniel Quintero: Polarizing former Medellín mayor with some recognition but uncertain national path.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Daniel Quintero is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Daniel Quintero is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-15",
+    "thesis_id": "BATCH-012-15-TH1",
+    "analysis_id": "BATCH-012-15-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.02,
+      "base_rate_reference_class": "Former Bogotá mayor with legacy recognition but weak evidence of current viability.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Enrique Peñalosa does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Enrique Peñalosa remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place Enrique Peñalosa securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Enrique Peñalosa's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place Enrique Peñalosa among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Enrique Peñalosa competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Enrique Peñalosa has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if Enrique Peñalosa outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Enrique Peñalosa could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Enrique Peñalosa.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Enrique Peñalosa because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Enrique Peñalosa clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Enrique Peñalosa: Former Bogotá mayor with legacy recognition but weak evidence of current viability.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Enrique Peñalosa is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Enrique Peñalosa is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-16",
+    "thesis_id": "BATCH-012-16-TH1",
+    "analysis_id": "BATCH-012-16-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.02,
+      "base_rate_reference_class": "Former defense minister without visible top-tier positioning in the current field.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Juan Carlos Pinzón does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Juan Carlos Pinzón remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place Juan Carlos Pinzón securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Juan Carlos Pinzón's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place Juan Carlos Pinzón among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Juan Carlos Pinzón competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Juan Carlos Pinzón has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if Juan Carlos Pinzón outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Juan Carlos Pinzón could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Juan Carlos Pinzón.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Juan Carlos Pinzón because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Juan Carlos Pinzón clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Juan Carlos Pinzón: Former defense minister without visible top-tier positioning in the current field.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Juan Carlos Pinzón is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Juan Carlos Pinzón is not currently described in March reporting as a leading contender."
+    }
+  },
+  {
+    "market_id": "BATCH-012-5",
+    "thesis_id": "BATCH-012-5-TH1",
+    "analysis_id": "BATCH-012-5-TH1-A1",
+    "analysis_timestamp": "2026-03-19T17:11:18Z",
+    "resolution_date": "2026-06-21T14:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Standard Colombian presidential winner contract with clear official resolution path, but this specific candidate is not treated as top-tier in the latest March reporting."
+    },
+    "base_rate": {
+      "base_rate_value": 0.05,
+      "base_rate_reference_class": "Well-known right-of-center figure but overshadowed by Valencia and de la Espriella in current March reporting.",
+      "base_rate_comment": "The base rate is intentionally modest because Colombia's two-round system usually rewards candidates who are already clearly top-tier in polling, coalition-building and national organization; Miguel Uribe Turbay does not currently meet that standard in the latest reporting."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "The election is held on schedule and resolves within the market window",
+          "status": "filled",
+          "comment": "Official 2026 calendar places both rounds before the contract date."
+        },
+        {
+          "name": "Miguel Uribe Turbay remains an active presidential option on the ballot",
+          "status": "filled",
+          "comment": "The candidate appears as a listed outcome on Polymarket and is treated as a real political figure in the race universe."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Candidate breaks into or remains in the national top tier before the first round",
+          "status": "not_filled",
+          "comment": "Available reporting does not currently place Miguel Uribe Turbay securely in the top two."
+        },
+        {
+          "name": "Candidate consolidates their ideological lane rather than being diluted by rivals",
+          "status": "partial",
+          "comment": "Miguel Uribe Turbay's path depends heavily on coalition consolidation and rival weakness."
+        },
+        {
+          "name": "Candidate proves runoff electability against a stronger rival",
+          "status": "unknown",
+          "comment": "This cannot be assumed from current public evidence."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Limited current top-tier polling evidence",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Current March reporting does not place Miguel Uribe Turbay among the clear top-tier contenders."
+      },
+      {
+        "factor_name": "Crowded ideological lane",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Miguel Uribe Turbay competes in a crowded lane, making a top-two finish materially harder."
+      },
+      {
+        "factor_name": "Institutional or public visibility",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1,
+        "factor_comment": "Miguel Uribe Turbay has some prior national visibility, which prevents the candidacy from being entirely marginal."
+      },
+      {
+        "factor_name": "Runoff coalition hurdle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 2,
+        "factor_comment": "Even if Miguel Uribe Turbay outperformed expectations in the first round, building a majority coalition in the runoff would remain difficult."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "medium",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Miguel Uribe Turbay could still be materially undervalued if late coalition shifts, elite endorsements, or a debate-driven surge suddenly elevate them into the top two before the runoff cutoff.",
+      "top_3_failure_reasons": [
+        "The analysis may anchor too heavily on mid-March visibility and miss a rapid late-campaign breakout by Miguel Uribe Turbay.",
+        "The candidate's coalition potential may be stronger behind the scenes than current public reporting suggests.",
+        "A major scandal, security event, or alliance collapse affecting a front-runner could abruptly reopen the field."
+      ],
+      "market_might_be_right_because": "The market may be correctly discounting Miguel Uribe Turbay because current public evidence does not show a strong path to a top-two finish.",
+      "thesis_invalidation_trigger": "Two or more reputable polls showing Miguel Uribe Turbay clearly in the national top two, or a major alliance endorsement that consolidates their lane around them."
+    },
+    "research_notes": {
+      "primary_sources": "Polymarket market rules page for 'Colombia Presidential Election'; Registraduria 2026 presidential calendar; Reuters on 6 and 8 March 2026 elections/primaries; AS/COA Poll Tracker updated 16 March 2026.",
+      "historical_precedents": "Colombia uses a two-round presidential system; historically, nationally visible figures with strong ideological lanes and coalition capacity dominate, while low-visibility aspirants almost never convert from far behind into a presidential win.",
+      "institutional_constraints": "First round is scheduled for 31 May 2026 and runoff for 21 June 2026 if no candidate clears 50%. The market resolves to the listed candidate who wins, including any second round, with fallback to Registraduria if needed.",
+      "timeline_recent": "6 March 2026: Reuters previewed a fragmented field and highlighted Iván Cepeda and Abelardo de la Espriella as notable non-primary contenders. 8 March 2026: Reuters reported Paloma Valencia won the right-wing primary, Roy Barreras the left primary, and Claudia López the centrist primary. 16 March 2026: AS/COA described Cepeda as leading most polls, de la Espriella just behind, and Valencia benefiting from primary momentum.",
+      "actors_and_incentives": "Miguel Uribe Turbay: Well-known right-of-center figure but overshadowed by Valencia and de la Espriella in current March reporting.",
+      "key_uncertainties": "Runoff matchups, coalition endorsements between rounds, turnout composition, late security shocks, and whether anti-Petro or pro-continuity sentiment hardens before 31 May.",
+      "counterarguments": "Miguel Uribe Turbay is not impossible; Colombia's field is fragmented and late coalition shocks can change runoff entrants.",
+      "dominant_market_narrative": "The contract is priced as a low-probability outcome because Miguel Uribe Turbay is not currently described in March reporting as a leading contender."
+    }
+  }
+]

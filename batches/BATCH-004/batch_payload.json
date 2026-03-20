@@ -1,0 +1,1558 @@
+[
+  {
+    "market_id": "BATCH-004-4",
+    "thesis_id": "BATCH-004-4-TH1",
+    "analysis_id": "BATCH-004-4-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Marché exploitable et liquide. Chong Won-oh est un candidat réel, en tête des sondages de la course de Séoul, mais il doit encore sécuriser l'investiture du Democratic Party avant de convertir cette avance en victoire générale."
+    },
+    "base_rate": {
+      "base_rate_value": 0.62,
+      "base_rate_reference_class": "Candidat de parti présidentiel/ruling party menant les sondages locaux à moins de trois mois du scrutin municipal, mais devant encore sortir d'une primaire compétitive.",
+      "base_rate_comment": "Base rate élevée sans aller jusqu'aux niveaux du marché. Chong mène nettement les enquêtes disponibles, mais 82% suppose presque déjà une primaire gagnée et une élection générale peu compétitive, ce qui est agressif."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Chong Won-oh doit remporter la primaire du Democratic Party of Korea",
+          "status": "partial",
+          "comment": "Il est le favori visible du camp démocrate, mais la primaire reste ouverte avec plusieurs concurrents officiels."
+        },
+        {
+          "name": "Le candidat démocrate doit conserver un avantage général sur le PPP dans Séoul",
+          "status": "partial",
+          "comment": "Le contexte national favorise le camp présidentiel, mais Séoul reste hautement compétitive."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "L'avance de Chong dans les sondages reste stable jusqu'à la primaire",
+          "status": "filled",
+          "comment": "Les enquêtes récentes le placent largement devant Oh Se-hoon et devant les autres démocrates."
+        },
+        {
+          "name": "La primaire démocrate ne se reconfigure pas brutalement autour d'un autre nom",
+          "status": "partial",
+          "comment": "Park Ju-min et Jeon Hyun-heui restent formellement en lice."
+        },
+        {
+          "name": "Le climat politique national continue de pénaliser le PPP à Séoul",
+          "status": "partial",
+          "comment": "Les difficultés internes des conservateurs aident le camp démocrate, mais la dynamique peut évoluer."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Tête dans les sondages locaux récents",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Des enquêtes de mars donnent Chong autour de 37.8% contre environ 23.7% pour Oh Se-hoon."
+      },
+      {
+        "factor_name": "Image de gouvernance locale après douze ans à Seongdong",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 2,
+        "factor_comment": "Son expérience exécutive municipale est un argument central de sa campagne."
+      },
+      {
+        "factor_name": "Affaiblissement et divisions persistantes du PPP",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Primaire démocrate pas encore gagnée",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le marché le price presque comme s'il était déjà investi, ce qui est prématuré."
+      },
+      {
+        "factor_name": "Oh Se-hoon reste un sortant puissant et identifiable",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Élection municipale de grande métropole très sensible au contexte de campagne",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 1
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut avoir raison si Chong Won-oh transforme sans accroc son avance sondagière en victoire en primaire puis profite d'un PPP encore désorganisé pour verrouiller Séoul.",
+      "top_3_failure_reasons": [
+        "La primaire démocrate peut être plus disputée que ne le suggère le prix de marché.",
+        "Oh Se-hoon conserve une vraie capacité de rebond s'il réunit la droite conservatrice.",
+        "Le marché peut sur-pondérer des sondages précoces dans une course municipale encore longue."
+      ],
+      "market_might_be_right_because": "Chong combine momentum, notoriété locale et un environnement national plus favorable au camp démocrate qu'au PPP.",
+      "thesis_invalidation_trigger": "Sondages crédibles montrant un fort resserrement avec Oh Se-hoon ou primaire démocrate se reconfigurant clairement contre Chong."
+    },
+    "research_notes": {
+      "primary_sources": "Yonhap du 9 mars 2026 ; JJCTV du 11 mars 2026 ; Seoul Economic Daily du 17 mars 2026 ; page Polymarket.",
+      "historical_precedents": "Les favoris de primaire municipale bien installés peuvent convertir leur avance, mais le passage primaire puis générale réduit mécaniquement la probabilité terminale.",
+      "institutional_constraints": "Le marché résout sur le vainqueur officiel de l'élection municipale de Séoul, pas sur le seul vainqueur de primaire.",
+      "timeline_recent": "Chong a officiellement déclaré sa candidature début mars, s'est imposé comme favori des sondages et reste au centre de la primaire démocrate.",
+      "actors_and_incentives": "Le Democratic Party veut reprendre Séoul ; Chong veut monétiser sa réputation locale ; les conservateurs doivent d'abord sortir de leurs luttes internes.",
+      "key_uncertainties": "Issue réelle de la primaire démocrate, capacité de remobilisation d'Oh, évolution du contexte national sud-coréen.",
+      "counterarguments": "Un favori de sondage précoce n'est pas automatiquement un quasi-lock électoral quand l'investiture n'est même pas encore obtenue.",
+      "dominant_market_narrative": "Chong Won-oh est le clair favori, mais le marché semble déjà lui accorder une probabilité très haute pour une course encore à deux étages."
+    }
+  },
+  {
+    "market_id": "BATCH-004-0",
+    "thesis_id": "BATCH-004-0-TH1",
+    "analysis_id": "BATCH-004-0-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "high",
+      "information_accessibility": "high",
+      "market_noise_level": "medium",
+      "screening_comment": "Contrat exploitable : Oh Se-hoon est le maire sortant et un candidat réel, mais il entre en campagne sur fond de crise durable du PPP."
+    },
+    "base_rate": {
+      "base_rate_value": 0.18,
+      "base_rate_reference_class": "Maire sortant d'une grande métropole affrontant une usure de mandat et une crise de son parti, tout en conservant un fort capital de notoriété et une machine électorale existante.",
+      "base_rate_comment": "Base rate supérieure au prix des petits outsiders mais inférieure à celle de Chong. L'incumbency aide, mais la faiblesse actuelle du PPP et les sondages défavorables limitent fortement son upside."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Oh Se-hoon doit obtenir l'investiture PPP",
+          "status": "filled",
+          "comment": "Il a annoncé le 17 mars qu'il déposerait bien sa candidature à l'investiture du PPP."
+        },
+        {
+          "name": "Le PPP doit redevenir électoralement viable à Séoul d'ici juin",
+          "status": "partial",
+          "comment": "Le parti reste fragilisé par ses querelles internes et par l'après-Yoon."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "L'avantage de l'incumbency doit compenser le retard sondagier",
+          "status": "partial",
+          "comment": "Possible, mais non confirmé par les enquêtes actuelles."
+        },
+        {
+          "name": "La droite se regroupe effectivement derrière Oh",
+          "status": "partial",
+          "comment": "Oh semble central, mais les tensions internes au PPP restent fortes."
+        },
+        {
+          "name": "Le camp démocrate sort de sa primaire avec des traces ou divisions",
+          "status": "unknown",
+          "comment": "Scénario plausible mais non démontré."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Maire sortant avec forte notoriété",
+        "factor_type": "accelerator",
+        "factor_score": 2,
+        "factor_weight": 3,
+        "factor_comment": "Oh Se-hoon reste le visage le plus connu et le plus institutionnellement crédible du camp conservateur à Séoul."
+      },
+      {
+        "factor_name": "Machine d'incumbent et expérience de campagne",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2
+      },
+      {
+        "factor_name": "Sondages récents nettement défavorables face à Chong",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les enquêtes publiques le placent très loin derrière Chong Won-oh."
+      },
+      {
+        "factor_name": "Crise et divisions internes du PPP",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Oh lui-même a retardé son dépôt de candidature pour protester contre la direction du parti."
+      },
+      {
+        "factor_name": "Fatigue d'un mandat long et exposition aux critiques de gestion",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut sous-estimer Oh Se-hoon si l'incumbency, la notoriété et une réunification tardive de la droite suffisent à combler le déficit sondagier d'ici juin.",
+      "top_3_failure_reasons": [
+        "Les sondages précoces peuvent sous-estimer la résilience électorale d'un maire sortant.",
+        "Le PPP peut finalement se discipliner davantage qu'attendu derrière Oh.",
+        "La primaire démocrate peut coûter plus cher au camp Chong que ce que reflète actuellement le marché."
+      ],
+      "market_might_be_right_because": "Oh reste un sortant puissant dans une ville où la droite peut rebondir si elle répare suffisamment sa marque.",
+      "thesis_invalidation_trigger": "Nouveaux sondages montrant Oh toujours très loin derrière même après stabilisation du PPP."
+    },
+    "research_notes": {
+      "primary_sources": "Yonhap du 17 mars 2026 ; Korea JoongAng Daily du 17 mars 2026 ; Korea Times du 12 mars 2026 ; JJCTV du 11 mars 2026 ; page Polymarket.",
+      "historical_precedents": "Les maires sortants ont des ressources spécifiques, mais l'incumbency ne suffit pas quand le parti d'appui traverse une crise de légitimité profonde.",
+      "institutional_constraints": "Le marché résout sur l'élection générale de Séoul, après primaires partisanes.",
+      "timeline_recent": "Oh a d'abord retardé sa candidature PPP avant de revenir dans la course le 17 mars.",
+      "actors_and_incentives": "Oh veut garder Séoul tout en forçant une réforme de son parti ; le PPP a besoin de lui mais l'abîme aussi politiquement.",
+      "key_uncertainties": "Capacité réelle du PPP à se réunifier, robustesse des sondages, force de l'effet sortant à Séoul.",
+      "counterarguments": "Le retard actuel et le chaos partisan peuvent être trop importants pour qu'Oh revienne vraiment au niveau de Chong.",
+      "dominant_market_narrative": "Oh Se-hoon est le seul challenger sérieux de Chong, mais il reste nettement outsider à ce stade."
+    }
+  },
+  {
+    "market_id": "BATCH-004-35",
+    "thesis_id": "BATCH-004-35-TH1",
+    "analysis_id": "BATCH-004-35-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "medium",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat valide sur un candidat réel de la primaire démocrate. Park Ju-min existe comme prétendant, mais il n'est pas le leader du champ."
+    },
+    "base_rate": {
+      "base_rate_value": 0.05,
+      "base_rate_reference_class": "Candidat de primaire du parti au pouvoir disposant d'une visibilité nationale mais largement derrière le leader sondagier local à moins de trois mois du scrutin.",
+      "base_rate_comment": "Base rate modeste. Park est un vrai acteur de la primaire, mais il lui faut d'abord surprendre Chong puis gagner la générale."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Park Ju-min doit renverser la primaire démocrate",
+          "status": "partial",
+          "comment": "Il est officiellement dans la primaire, mais pas en position de favori."
+        },
+        {
+          "name": "Le vainqueur démocrate doit conserver l'avantage à la générale",
+          "status": "partial",
+          "comment": "Condition plausible mais non automatique."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Park convertit sa visibilité nationale en dynamique locale",
+          "status": "partial",
+          "comment": "Il existe dans le champ, mais les sondages disponibles le situent très en dessous de Chong."
+        },
+        {
+          "name": "La primaire démocrate se resserre fortement",
+          "status": "partial",
+          "comment": "Possible, mais rien ne le montre encore fortement."
+        },
+        {
+          "name": "Le PPP reste assez faible pour laisser un avantage au candidat démocrate",
+          "status": "filled",
+          "comment": "À ce stade, le contexte reste plutôt favorable au camp démocrate."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Candidature officielle dans la primaire démocrate",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "Park fait partie des cinq candidats qui débattent officiellement dans la primaire."
+      },
+      {
+        "factor_name": "Visibilité nationale et profil parlementaire",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Retard important sur Chong dans les sondages",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les chiffres publics disponibles le placent loin derrière le favori Chong Won-oh."
+      },
+      {
+        "factor_name": "Double hurdle primaire puis générale",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Même un candidat démocrate réel part ici d'une probabilité composée faible."
+      },
+      {
+        "factor_name": "Marché déjà centré sur Chong et Oh",
+        "factor_type": "brake",
+        "factor_score": -1,
+        "factor_weight": 2
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "medium",
+      "confidence_context": "medium",
+      "confidence_overall": "medium"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Le marché peut sous-estimer Park Ju-min s'il bénéficie d'un brusque retournement de primaire et d'un profil plus nationalement mobilisateur que Chong au moment décisif.",
+      "top_3_failure_reasons": [
+        "La primaire démocrate peut bouger plus vite que ne le reflètent des sondages précoces.",
+        "La notoriété parlementaire de Park peut peser davantage dans les débats télévisés à venir.",
+        "Le marché peut trop simplifier la course en duel Chong-Oh alors qu'une primaire est encore ouverte."
+      ],
+      "market_might_be_right_because": "Park Ju-min est au moins un candidat réel, visible, et encore vivant dans la compétition de primaire.",
+      "thesis_invalidation_trigger": "Sondages de primaire ou débats montrant Park recoller clairement à Chong ou dépasser les autres challengers démocrates."
+    },
+    "research_notes": {
+      "primary_sources": "Seoul Economic Daily du 17 mars 2026 ; JJCTV du 11 mars 2026 ; page Polymarket.",
+      "historical_precedents": "Les challengers de primaire peuvent parfois émerger tardivement, mais ils ont rarement de fortes probabilités quand un favori local net s'est déjà détaché.",
+      "institutional_constraints": "Le marché résout sur l'élection générale de Séoul, après passage obligatoire par la primaire.",
+      "timeline_recent": "Park participe officiellement aux débats et à la primaire démocrate, mais reste nettement derrière Chong dans les enquêtes rendues publiques.",
+      "actors_and_incentives": "Park veut convaincre qu'il incarne mieux la capitale que les autres profils démocrates ; le parti cherche un candidat capable de battre Oh.",
+      "key_uncertainties": "Elasticité réelle de la primaire, effet des débats, capacité de Park à transformer sa marque nationale en traction locale.",
+      "counterarguments": "Son retard actuel est assez important pour que la probabilité terminale reste faible malgré son statut officiel de candidat.",
+      "dominant_market_narrative": "Park Ju-min est perçu comme un outsider sérieux de primaire, mais pas comme un scénario central de victoire finale."
+    }
+  },
+  {
+    "market_id": "BATCH-004-2",
+    "thesis_id": "BATCH-004-2-TH1",
+    "analysis_id": "BATCH-004-2-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal : Ahn Cheol-soo est un nom politiquement connu, mais aucune source récente crédible consultée ne le place au cœur de la course de Séoul."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Figure politique nationale connue mais non identifiée comme candidat central de la course à la mairie de Séoul en mars 2026.",
+      "base_rate_comment": "Base rate minimale. La notoriété nationale seule ne suffit pas quand aucune dynamique récente de candidature sérieuse n'est observable pour la mairie de Séoul."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Ahn Cheol-soo doit entrer réellement dans la course de Séoul",
+          "status": "not_filled",
+          "comment": "Aucune source récente consultée ne documente une candidature active pour cette mairie."
+        },
+        {
+          "name": "Il doit devenir compétitif face aux principaux candidats déjà installés",
+          "status": "not_filled",
+          "comment": "Le champ réel est actuellement structuré autour de Chong, Oh et quelques candidats de primaire démocrate."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Sa notoriété nationale reste intacte",
+          "status": "filled",
+          "comment": "Ahn reste une personnalité politique connue du public sud-coréen."
+        },
+        {
+          "name": "Un repositionnement tardif le ramène dans la course municipale",
+          "status": "unknown",
+          "comment": "Scénario théorique, sans ancrage public récent."
+        },
+        {
+          "name": "Le PPP ou un autre véhicule politique le choisit finalement",
+          "status": "not_filled",
+          "comment": "Aucun signal crédible en ce sens."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Forte notoriété nationale",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Absence de candidature active documentée",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Ahn n'apparaît pas dans les développements récents de la course à Séoul."
+      },
+      {
+        "factor_name": "Course déjà structurée autour d'autres candidats",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les développements de mars concernent Chong, Oh et la primaire démocrate officielle."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule vraie thèse contraire est qu'un choc politique ou procédural remette Ahn Cheol-soo au centre d'une course où il ou elle n'est actuellement pas central(e).",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent écraser trop vite les faibles probabilités de reconfiguration politique.",
+        "Une candidature ou réactivation tardive peut parfois intervenir plus vite que prévu en politique locale.",
+        "L'absence de signaux publics forts aujourd'hui n'exclut jamais totalement un retournement organisationnel."
+      ],
+      "market_might_be_right_because": "Ahn Cheol-soo possède au moins une existence politique publique identifiable, même si sa trajectoire vers la mairie est très faible.",
+      "thesis_invalidation_trigger": "Annonce officielle de candidature crédible ou série de sondages montrant Ahn Cheol-soo comme acteur réellement compétitif de la course."
+    },
+    "research_notes": {
+      "primary_sources": "Yonhap, Seoul Economic Daily, Korea JoongAng Daily et autres sources de mars 2026 sur la course à Séoul.",
+      "historical_precedents": "Les personnalités nationales non engagées formellement ont rarement une forte probabilité municipale sans entrée explicite en course.",
+      "institutional_constraints": "Le marché résout sur le vainqueur officiel de l'élection municipale de Séoul.",
+      "timeline_recent": "Les informations récentes sur Séoul ne font pas d'Ahn un candidat central.",
+      "actors_and_incentives": "Ahn conserve une marque politique mais n'est pas visible comme compétiteur municipal actif ici.",
+      "key_uncertainties": "Réactivation tardive ou repositionnement stratégique inattendu.",
+      "counterarguments": "La politique sud-coréenne peut reconfigurer vite autour de personnalités connues.",
+      "dominant_market_narrative": "Ahn Cheol-soo n'est pas considéré comme un scénario réel à ce stade."
+    }
+  },
+  {
+    "market_id": "BATCH-004-1",
+    "thesis_id": "BATCH-004-1-TH1",
+    "analysis_id": "BATCH-004-1-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat marginal : Cho Eun-hee est visible dans les discussions partisanes autour de Séoul, mais pas comme candidate centrale de la course."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Législatrice PPP proche d'Oh Se-hoon, visible dans les débats de parti mais non documentée comme candidate centrale à la mairie de Séoul en mars 2026.",
+      "base_rate_comment": "Base rate minimale. Être une voix interne du camp conservateur n'approche pas une trajectoire réelle de victoire municipale sans candidature compétitive identifiée."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Cho Eun-hee doit devenir candidate réelle de la course de Séoul",
+          "status": "not_filled",
+          "comment": "Les sources récentes la montrent surtout comme voix interne pro-Oh au sein du PPP."
+        },
+        {
+          "name": "Elle doit dépasser Oh Se-hoon et les autres noms déjà installés",
+          "status": "not_filled",
+          "comment": "Aucune dynamique publique ne va dans ce sens."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Elle conserve une visibilité politique dans le PPP",
+          "status": "filled",
+          "comment": "Cho Eun-hee reste citée dans les débats internes du parti."
+        },
+        {
+          "name": "Le PPP bascule soudain vers une autre figure que Oh",
+          "status": "unknown",
+          "comment": "Hypothèse théorique sans ancrage récent fort."
+        },
+        {
+          "name": "Elle obtient une légitimité de candidature crédible",
+          "status": "not_filled",
+          "comment": "Aucune source récente consultée ne montre cela."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Visibilité dans les débats internes du PPP",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Absence de candidature compétitive documentée",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les informations récentes la décrivent comme pro-Oh, pas comme candidate centrale."
+      },
+      {
+        "factor_name": "Oh Se-hoon domine complètement l'espace conservateur à Séoul",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le PPP réouvre et adapte sa procédure principalement pour Oh Se-hoon."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule vraie thèse contraire est qu'un choc politique ou procédural remette Cho Eun-hee au centre d'une course où il ou elle n'est actuellement pas central(e).",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent écraser trop vite les faibles probabilités de reconfiguration politique.",
+        "Une candidature ou réactivation tardive peut parfois intervenir plus vite que prévu en politique locale.",
+        "L'absence de signaux publics forts aujourd'hui n'exclut jamais totalement un retournement organisationnel."
+      ],
+      "market_might_be_right_because": "Cho Eun-hee possède au moins une existence politique publique identifiable, même si sa trajectoire vers la mairie est très faible.",
+      "thesis_invalidation_trigger": "Annonce officielle de candidature crédible ou série de sondages montrant Cho Eun-hee comme acteur réellement compétitif de la course."
+    },
+    "research_notes": {
+      "primary_sources": "Maeil Business Newspaper du 18 mars 2026 ; Yonhap et Korea JoongAng Daily sur la course PPP.",
+      "historical_precedents": "Les soutiens ou factions de parti ne remplacent pas facilement le candidat principal en fin de pré-campagne.",
+      "institutional_constraints": "Le marché résout sur le maire élu, non sur les figures d'appareil du PPP.",
+      "timeline_recent": "Cho Eun-hee intervient dans les débats autour de la stratégie du PPP à Séoul, sans émerger comme favorite.",
+      "actors_and_incentives": "Son rôle visible semble surtout lié aux rapports de force internes du PPP.",
+      "key_uncertainties": "Éventuelle rupture majeure dans le camp conservateur.",
+      "counterarguments": "Un parti en crise peut parfois faire émerger très vite un nom secondaire.",
+      "dominant_market_narrative": "Cho Eun-hee n'est pas vue comme une vraie candidate gagnante."
+    }
+  },
+  {
+    "market_id": "BATCH-004-3",
+    "thesis_id": "BATCH-004-3-TH1",
+    "analysis_id": "BATCH-004-3-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat marginal mais pas absurde : Park Yong-jin a été vu comme un potentiel candidat démocrate et a même avancé des propositions de campagne, mais il n'apparaît pas dans le noyau actuel de la primaire de Séoul."
+    },
+    "base_rate": {
+      "base_rate_value": 0.02,
+      "base_rate_reference_class": "Ancien parlementaire identifié comme potentiel candidat à une primaire municipale, mais absent du groupe resserré des favoris ou des débats centraux à date.",
+      "base_rate_comment": "Base rate faible mais un peu supérieure au strict minimum car Park a bien été présenté comme potentiel candidat et a fait des propositions politiques liées à Séoul."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Park Yong-jin doit redevenir un candidat effectif de la primaire démocrate de Séoul",
+          "status": "not_filled",
+          "comment": "Les développements les plus récents sur la primaire mettent plutôt en avant d'autres noms."
+        },
+        {
+          "name": "Il doit ensuite remporter la primaire puis l'élection générale",
+          "status": "not_filled",
+          "comment": "Double condition actuellement très éloignée."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Sa visibilité nationale lui permet un retour tardif",
+          "status": "partial",
+          "comment": "Il garde un profil politique connu et a formulé des propositions pour Séoul."
+        },
+        {
+          "name": "La primaire démocrate se reconfigure fortement",
+          "status": "unknown",
+          "comment": "Scénario non central à ce stade."
+        },
+        {
+          "name": "Le parti préfère un autre profil que Chong ou Park Ju-min",
+          "status": "unknown",
+          "comment": "Pas impossible en théorie, mais peu visible dans les sources récentes."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Propositions politiques explicites sur Séoul",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Notoriété comme ancien député",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Absence du groupe central des cinq candidats débattant dans la primaire",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les débats officiels de primaire listent d'autres candidats, pas Park Yong-jin."
+      },
+      {
+        "factor_name": "Course déjà structurée autour de Chong et Oh",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Même dans le camp démocrate, Park n'est pas le scénario central."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Park Yong-jin pourrait être sous-pricé uniquement si la primaire démocrate se renverse soudainement en faveur d'un profil plus national et que son retour prend de vitesse les favoris actuels.",
+      "top_3_failure_reasons": [
+        "La primaire démocrate peut bouger plus vite qu'attendu autour d'un nom de recours.",
+        "Ses propositions sur le logement et l'aéroport peuvent attirer davantage d'attention qu'anticipé.",
+        "Le marché peut écraser trop vite les profils non centraux mais encore politiquement actifs."
+      ],
+      "market_might_be_right_because": "Park Yong-jin a au moins laissé des traces de candidature potentielle et de plateforme séoulite.",
+      "thesis_invalidation_trigger": "Annonce officielle le remettant dans la primaire avec sondages crédibles montrant une traction réelle."
+    },
+    "research_notes": {
+      "primary_sources": "Financial News du 27 février 2026 ; Seoul Economic Daily du 17 mars 2026.",
+      "historical_precedents": "Les candidatures potentielles non consolidées peuvent parfois ressurgir, mais la probabilité terminale reste faible quand la primaire est déjà bien structurée.",
+      "institutional_constraints": "La victoire finale exige d'abord un retour crédible dans la primaire puis un succès à l'élection municipale.",
+      "timeline_recent": "Park a avancé des idées pour Séoul, mais n'apparaît pas dans le groupe central des candidats débattant officiellement.",
+      "actors_and_incentives": "Il garde un intérêt politique à exister sur les enjeux de Séoul, mais sans centralité récente.",
+      "key_uncertainties": "Réactivation tardive, stratégie du Democratic Party, degré de reconfiguration de la primaire.",
+      "counterarguments": "Le fait d'être hors du noyau principal de la primaire rend la trajectoire très faible.",
+      "dominant_market_narrative": "Park Yong-jin est un nom périphérique, pas un vrai scénario central de victoire."
+    }
+  },
+  {
+    "market_id": "BATCH-004-5",
+    "thesis_id": "BATCH-004-5-TH1",
+    "analysis_id": "BATCH-004-5-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal : Hong Ihk-pyo a pris début janvier un poste présidentiel de premier plan, ce qui l'éloigne d'une candidature compétitive à Séoul."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Ancien floor leader démocrate désormais secrétaire présidentiel aux affaires politiques, absent du champ central de la course séoulite.",
+      "base_rate_comment": "Base rate minimale. Son rôle actuel au Blue House réduit fortement la crédibilité d'une trajectoire immédiate vers la mairie de Séoul."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Hong Ihk-pyo doit quitter sa fonction présidentielle pour entrer réellement dans la course",
+          "status": "not_filled",
+          "comment": "Il vient d'être nommé secrétaire présidentiel aux affaires politiques."
+        },
+        {
+          "name": "Il doit ensuite devenir compétitif face aux candidats déjà installés",
+          "status": "not_filled",
+          "comment": "Aucune dynamique de ce type n'est visible."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Sa proximité avec la présidence lui donne une visibilité politique",
+          "status": "filled",
+          "comment": "Son poste le maintient au centre du jeu politique national."
+        },
+        {
+          "name": "Un basculement stratégique le réoriente vers Séoul",
+          "status": "unknown",
+          "comment": "Hypothèse théorique sans ancrage public récent."
+        },
+        {
+          "name": "Le Democratic Party reconfigure brutalement sa primaire",
+          "status": "unknown",
+          "comment": "Peu probable à ce stade."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Visibilité nationale via fonction présidentielle",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Nomination comme secrétaire politique présidentiel",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Son rôle institutionnel actuel le détourne de la course municipale."
+      },
+      {
+        "factor_name": "Absence du champ principal de la primaire de Séoul",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les développements de mars ne le situent pas parmi les candidats centraux."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule vraie thèse contraire est qu'un choc politique ou procédural remette Hong Ihk-pyo au centre d'une course où il ou elle n'est actuellement pas central(e).",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent écraser trop vite les faibles probabilités de reconfiguration politique.",
+        "Une candidature ou réactivation tardive peut parfois intervenir plus vite que prévu en politique locale.",
+        "L'absence de signaux publics forts aujourd'hui n'exclut jamais totalement un retournement organisationnel."
+      ],
+      "market_might_be_right_because": "Hong Ihk-pyo possède au moins une existence politique publique identifiable, même si sa trajectoire vers la mairie est très faible.",
+      "thesis_invalidation_trigger": "Annonce officielle de candidature crédible ou série de sondages montrant Hong Ihk-pyo comme acteur réellement compétitif de la course."
+    },
+    "research_notes": {
+      "primary_sources": "KBS World du 18 janvier 2026 ; sources de mars 2026 sur la primaire de Séoul.",
+      "historical_precedents": "Les secrétaires présidentiels actifs ne basculent pas facilement à la dernière minute vers une grande mairie sans préparation visible.",
+      "institutional_constraints": "La victoire supposerait d'abandonner son rôle actuel puis de construire une candidature compétitive à très court terme.",
+      "timeline_recent": "Hong a été nommé secrétaire politique présidentiel en janvier, et n'apparaît pas au centre de la course séoulite en mars.",
+      "actors_and_incentives": "Son intérêt politique immédiat semble être la gestion présidentielle, pas une bataille municipale.",
+      "key_uncertainties": "Remaniement, repositionnement inattendu, crise de primaire.",
+      "counterarguments": "Les systèmes présidentiels peuvent parfois réallouer très vite des cadres de haut niveau vers des batailles locales clés.",
+      "dominant_market_narrative": "Hong Ihk-pyo n'est pas perçu comme un vrai candidat à la mairie de Séoul."
+    }
+  },
+  {
+    "market_id": "BATCH-004-6",
+    "thesis_id": "BATCH-004-6-TH1",
+    "analysis_id": "BATCH-004-6-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal : Cho Kuk reste un acteur national, mais les sources récentes le montrent dans des discussions de ligne et de solidarité, pas comme candidat central à Séoul."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Chef d'un petit parti national (Rebuilding Korea / Cho Kuk Innovation Party) discutant de solidarité avec les démocrates, sans candidature séoulite crédible documentée.",
+      "base_rate_comment": "Base rate minimale. Sa stature nationale existe, mais rien n'indique une trajectoire de candidat crédible à la mairie de Séoul en mars 2026."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Cho Kuk doit entrer formellement dans la course de Séoul",
+          "status": "not_filled",
+          "comment": "Aucune source récente consultée ne le montre comme candidat actif de cette mairie."
+        },
+        {
+          "name": "Il doit dépasser les candidats démocrates et conservateurs déjà installés",
+          "status": "not_filled",
+          "comment": "Aucun signal en ce sens."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Cho Kuk conserve une notoriété nationale significative",
+          "status": "filled",
+          "comment": "Il reste le chef d'un parti identifiable au niveau national."
+        },
+        {
+          "name": "Un accord ou conflit partisan le projette à Séoul",
+          "status": "unknown",
+          "comment": "Hypothèse sans base récente solide."
+        },
+        {
+          "name": "Le champ principal se vide brutalement",
+          "status": "unknown",
+          "comment": "Scénario extrême."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Notoriété nationale et leadership partisan",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Absence de candidature séoulite documentée",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les sources récentes le situent sur des enjeux de parti et de solidarité, pas dans la course de Séoul."
+      },
+      {
+        "factor_name": "Course déjà saturée par des candidats identifiés",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Chong, Oh et la primaire démocrate occupent déjà l'espace compétitif."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule vraie thèse contraire est qu'un choc politique ou procédural remette Cho Kuk au centre d'une course où il ou elle n'est actuellement pas central(e).",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent écraser trop vite les faibles probabilités de reconfiguration politique.",
+        "Une candidature ou réactivation tardive peut parfois intervenir plus vite que prévu en politique locale.",
+        "L'absence de signaux publics forts aujourd'hui n'exclut jamais totalement un retournement organisationnel."
+      ],
+      "market_might_be_right_because": "Cho Kuk possède au moins une existence politique publique identifiable, même si sa trajectoire vers la mairie est très faible.",
+      "thesis_invalidation_trigger": "Annonce officielle de candidature crédible ou série de sondages montrant Cho Kuk comme acteur réellement compétitif de la course."
+    },
+    "research_notes": {
+      "primary_sources": "Korea Herald et Seoul Economic Daily de février-mars 2026 ; articles de mars sur Cho Kuk et son parti.",
+      "historical_precedents": "Une notoriété nationale sans entrée formelle en course donne rarement une vraie probabilité municipale.",
+      "institutional_constraints": "Le marché résout sur le vainqueur de l'élection séoulite, ce qui suppose d'abord une candidature réelle.",
+      "timeline_recent": "Cho Kuk est visible dans les débats nationaux et partisans, pas comme prétendant séoulite installé.",
+      "actors_and_incentives": "Son intérêt principal paraît être la stratégie nationale de son parti plutôt qu'une bataille municipale à Séoul.",
+      "key_uncertainties": "Réallocation stratégique, accord d'opposition imprévu, choc politique.",
+      "counterarguments": "Les figures nationales peuvent parfois être parachutées dans des courses locales emblématiques.",
+      "dominant_market_narrative": "Cho Kuk n'est pas considéré comme un scénario réaliste pour la mairie de Séoul."
+    }
+  },
+  {
+    "market_id": "BATCH-004-7",
+    "thesis_id": "BATCH-004-7-TH1",
+    "analysis_id": "BATCH-004-7-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal : Kang Hoon-sik exerce actuellement une fonction présidentielle de premier plan et n'apparaît pas comme candidat installé à Séoul."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Chief of staff présidentiel, souvent mentionné dans les rumeurs électorales générales mais non établi comme candidat central à la mairie de Séoul.",
+      "base_rate_comment": "Base rate minimale. Être chef de cabinet du président est plus cohérent avec une influence nationale qu'avec une course municipale immédiate à Séoul."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Kang Hoon-sik doit quitter son rôle de chief of staff pour entrer dans la course",
+          "status": "not_filled",
+          "comment": "Il est encore en fonction et communiqué comme tel le 18 mars."
+        },
+        {
+          "name": "Il doit acquérir une base électorale séoulite crédible à très court terme",
+          "status": "not_filled",
+          "comment": "Aucun signal public récent ne le montre."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Sa position au sommet de l'Etat lui donne une visibilité politique",
+          "status": "filled",
+          "comment": "Kang reste une figure très visible du camp présidentiel."
+        },
+        {
+          "name": "Des rumeurs générales d'élections locales se cristallisent sur Séoul",
+          "status": "unknown",
+          "comment": "Aucune confirmation crédible pour cette course spécifique."
+        },
+        {
+          "name": "Le parti cherche un recours tardif de très haut niveau",
+          "status": "unknown",
+          "comment": "Hypothèse sans appui public récent."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Visibilité institutionnelle élevée",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Fonction présidentielle incompatible avec une candidature séoulite immédiate",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Son rôle actuel l'éloigne d'une campagne municipale à très court terme."
+      },
+      {
+        "factor_name": "Aucune dynamique de campagne locale documentée",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les nouvelles de mars le décrivent comme chef de cabinet en activité, pas comme candidat."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule vraie thèse contraire est qu'un choc politique ou procédural remette Kang Hoon-sik au centre d'une course où il ou elle n'est actuellement pas central(e).",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent écraser trop vite les faibles probabilités de reconfiguration politique.",
+        "Une candidature ou réactivation tardive peut parfois intervenir plus vite que prévu en politique locale.",
+        "L'absence de signaux publics forts aujourd'hui n'exclut jamais totalement un retournement organisationnel."
+      ],
+      "market_might_be_right_because": "Kang Hoon-sik possède au moins une existence politique publique identifiable, même si sa trajectoire vers la mairie est très faible.",
+      "thesis_invalidation_trigger": "Annonce officielle de candidature crédible ou série de sondages montrant Kang Hoon-sik comme acteur réellement compétitif de la course."
+    },
+    "research_notes": {
+      "primary_sources": "Korea JoongAng Daily du 18 mars 2026 ; Korea Herald du 5 mars 2026 ; couverture générale de la course à Séoul.",
+      "historical_precedents": "Les très hauts collaborateurs présidentiels peuvent être rebasculés localement, mais pas sans préparation visible ni annonce formelle.",
+      "institutional_constraints": "La victoire nécessite un saut immédiat de fonction nationale vers compétition municipale.",
+      "timeline_recent": "Kang apparaît dans l'actualité comme chief of staff présidentiel, notamment sur les dossiers énergétiques et diplomatiques.",
+      "actors_and_incentives": "Son rôle semble être la stabilisation de la présidence, pas une bataille pour Séoul.",
+      "key_uncertainties": "Remaniement imprévu, décision de parachutage politique, crise de candidat dans le camp démocrate.",
+      "counterarguments": "Le pouvoir peut parfois déplacer vite un cadre stratégique vers une course symbolique.",
+      "dominant_market_narrative": "Kang Hoon-sik n'est pas perçu comme un candidat réel à la mairie de Séoul."
+    }
+  },
+  {
+    "market_id": "BATCH-004-33",
+    "thesis_id": "BATCH-004-33-TH1",
+    "analysis_id": "BATCH-004-33-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal : Na Kyung-won a été mentionnée comme possible candidate mais a publiquement annoncé qu'elle ne courrait pas."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Poids lourd PPP explicitement cité comme ayant renoncé à la primaire séoulite début mars.",
+      "base_rate_comment": "Base rate minimale. Un retrait explicite avant la structuration finale de la course coupe presque entièrement la trajectoire de victoire."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Na Kyung-won doit revenir sur sa décision de ne pas courir",
+          "status": "not_filled",
+          "comment": "Elle a explicitement déclaré le 8 mars qu'elle ne serait pas candidate."
+        },
+        {
+          "name": "Elle doit ensuite dépasser Oh Se-hoon dans le camp conservateur",
+          "status": "not_filled",
+          "comment": "Oh occupe désormais l'espace principal du PPP à Séoul."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Na conserve une stature nationale importante au PPP",
+          "status": "filled",
+          "comment": "Elle reste une figure connue du parti."
+        },
+        {
+          "name": "Le PPP subit une reconfiguration radicale contre Oh",
+          "status": "unknown",
+          "comment": "Possible en théorie, mais non visible à ce stade."
+        },
+        {
+          "name": "Son retrait est réversible politiquement",
+          "status": "unknown",
+          "comment": "Pas impossible en théorie, sans signal concret."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Notoriété nationale et poids partisan",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Annonce explicite de non-candidature",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Na Kyung-won a déclaré publiquement qu'elle ne se présenterait pas."
+      },
+      {
+        "factor_name": "Espace conservateur désormais dominé par Oh",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Même sans retrait, la dynamique du PPP à Séoul s'est recentrée sur Oh Se-hoon."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule vraie thèse contraire est qu'un choc politique ou procédural remette Na Kyung-won au centre d'une course où il ou elle n'est actuellement pas central(e).",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent écraser trop vite les faibles probabilités de reconfiguration politique.",
+        "Une candidature ou réactivation tardive peut parfois intervenir plus vite que prévu en politique locale.",
+        "L'absence de signaux publics forts aujourd'hui n'exclut jamais totalement un retournement organisationnel."
+      ],
+      "market_might_be_right_because": "Na Kyung-won possède au moins une existence politique publique identifiable, même si sa trajectoire vers la mairie est très faible.",
+      "thesis_invalidation_trigger": "Annonce officielle de candidature crédible ou série de sondages montrant Na Kyung-won comme acteur réellement compétitif de la course."
+    },
+    "research_notes": {
+      "primary_sources": "Asiae du 8 mars 2026 ; Yonhap et Korea JoongAng Daily sur l'évolution du champ PPP.",
+      "historical_precedents": "Les retraits explicites peuvent être réversibles, mais la probabilité terminale tombe très bas sans signal de retour.",
+      "institutional_constraints": "Le marché résout sur le vainqueur officiel, ce qui suppose d'abord une présence réelle dans la course.",
+      "timeline_recent": "Na a été mentionnée comme option PPP avant d'annoncer son retrait le 8 mars.",
+      "actors_and_incentives": "Elle a choisi de se mettre au service du parti plutôt que de lancer sa propre course séoulite.",
+      "key_uncertainties": "Retour tardif, crise interne majeure au PPP.",
+      "counterarguments": "Les partis en crise peuvent parfois rappeler rapidement un poids lourd retiré.",
+      "dominant_market_narrative": "Na Kyung-won n'est plus un scénario central de la course à Séoul."
+    }
+  },
+  {
+    "market_id": "BATCH-004-34",
+    "thesis_id": "BATCH-004-34-TH1",
+    "analysis_id": "BATCH-004-34-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal : Han Dong-hoon reste une figure nationale du conservatisme, mais ses mouvements récents pointent vers une reconstruction nationale et une éventuelle partielle, pas vers Séoul."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Ancien chef du PPP, désormais expulsé du parti et tourné vers une tournée nationale avec horizon de législative partielle plutôt que mairie de Séoul.",
+      "base_rate_comment": "Base rate minimale. La notoriété existe, mais il n'y a pas de trajectoire documentée vers la mairie de Séoul en mars 2026."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Han Dong-hoon doit redevenir candidat crédible pour Séoul",
+          "status": "not_filled",
+          "comment": "Les sources récentes le décrivent en tournée nationale et orienté vers Daegu/by-elections."
+        },
+        {
+          "name": "Il doit surmonter son absence du PPP et l'espace déjà occupé par Oh",
+          "status": "not_filled",
+          "comment": "Condition double très éloignée."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Han garde une forte notoriété nationale",
+          "status": "filled",
+          "comment": "Sa stature politique reste réelle malgré son exclusion du PPP."
+        },
+        {
+          "name": "Une recomposition conservatrice le ramène à Séoul",
+          "status": "unknown",
+          "comment": "Théorie possible, sans base récente solide."
+        },
+        {
+          "name": "Le PPP s'effondre comme véhicule d'Oh",
+          "status": "unknown",
+          "comment": "Hypothèse extrême."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Notoriété nationale élevée",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Orientation politique récente vers Daegu et les partielles",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les articles récents le situent dans une stratégie nationale conservatrice, pas à Séoul."
+      },
+      {
+        "factor_name": "Absence du champ concret des candidats de Séoul",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La course séoulite se structure sans lui."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule vraie thèse contraire est qu'un choc politique ou procédural remette Han Dong-hoon au centre d'une course où il ou elle n'est actuellement pas central(e).",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent écraser trop vite les faibles probabilités de reconfiguration politique.",
+        "Une candidature ou réactivation tardive peut parfois intervenir plus vite que prévu en politique locale.",
+        "L'absence de signaux publics forts aujourd'hui n'exclut jamais totalement un retournement organisationnel."
+      ],
+      "market_might_be_right_because": "Han Dong-hoon possède au moins une existence politique publique identifiable, même si sa trajectoire vers la mairie est très faible.",
+      "thesis_invalidation_trigger": "Annonce officielle de candidature crédible ou série de sondages montrant Han Dong-hoon comme acteur réellement compétitif de la course."
+    },
+    "research_notes": {
+      "primary_sources": "Seoul Economic Daily du 23 février 2026 ; The Diplomat de mars 2026 ; sources sur la course séoulite.",
+      "historical_precedents": "Les figures nationales ex-parti peuvent revenir vite, mais rarement dans une grande course locale déjà cadrée sans annonce claire.",
+      "institutional_constraints": "La victoire supposerait d'abord une entrée réelle dans la course et une réintégration politique compétitive.",
+      "timeline_recent": "Han a lancé une tournée nationale à partir de Daegu et est décrit comme visant davantage une reconstruction conservatrice ou des partielles.",
+      "actors_and_incentives": "Son intérêt immédiat semble national et partisan, pas municipal à Séoul.",
+      "key_uncertainties": "Réconciliation conservatrice, rebranding, repositionnement tactique.",
+      "counterarguments": "Les crises partisanes peuvent faire émerger des alternatives inattendues.",
+      "dominant_market_narrative": "Han Dong-hoon n'est pas un candidat réel de la course séoulite à ce stade."
+    }
+  },
+  {
+    "market_id": "BATCH-004-36",
+    "thesis_id": "BATCH-004-36-TH1",
+    "analysis_id": "BATCH-004-36-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal : Park Hong-keun était un vrai nom de la primaire, mais sa nomination comme ministre du Budget a, de fait, stoppé sa trajectoire séoulite."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Poids lourd démocrate qui avait annoncé sa candidature à Séoul avant d'être nommé ministre du Budget et de quitter de fait la course.",
+      "base_rate_comment": "Base rate minimale. La nomination gouvernementale a transformé un candidat réel en quasi-non-candidat."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Park Hong-keun doit quitter ou ne pas prendre son poste ministériel pour revenir dans la course",
+          "status": "not_filled",
+          "comment": "Sa nomination comme ministre du Budget l'a retiré du champ central de Séoul."
+        },
+        {
+          "name": "Il doit réintégrer une primaire déjà structurée sans lui",
+          "status": "not_filled",
+          "comment": "Les débats récents listent d'autres candidats."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Park conserve une stature politique importante",
+          "status": "filled",
+          "comment": "Il reste un poids lourd démocrate reconnu."
+        },
+        {
+          "name": "Sa nomination gouvernementale échoue ou change",
+          "status": "unknown",
+          "comment": "Hypothèse théorique, sans signal récent."
+        },
+        {
+          "name": "Le parti le rappelle en urgence sur Séoul",
+          "status": "unknown",
+          "comment": "Peu probable sans choc politique."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Notoriété et ancien statut de candidat réel",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Nomination comme ministre du Budget",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Son entrée au gouvernement a neutralisé sa trajectoire séoulite."
+      },
+      {
+        "factor_name": "Absence des débats centraux de primaire",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La primaire démocrate se poursuit sans Park Hong-keun."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule vraie thèse contraire est qu'un choc politique ou procédural remette Park Hong-keun au centre d'une course où il ou elle n'est actuellement pas central(e).",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent écraser trop vite les faibles probabilités de reconfiguration politique.",
+        "Une candidature ou réactivation tardive peut parfois intervenir plus vite que prévu en politique locale.",
+        "L'absence de signaux publics forts aujourd'hui n'exclut jamais totalement un retournement organisationnel."
+      ],
+      "market_might_be_right_because": "Park Hong-keun possède au moins une existence politique publique identifiable, même si sa trajectoire vers la mairie est très faible.",
+      "thesis_invalidation_trigger": "Annonce officielle de candidature crédible ou série de sondages montrant Park Hong-keun comme acteur réellement compétitif de la course."
+    },
+    "research_notes": {
+      "primary_sources": "Seoul Economic Daily du 2 mars 2026 ; Asiae et sources de mars sur la primaire démocrate de Séoul.",
+      "historical_precedents": "Une nomination ministérielle avant une élection locale majeure coupe généralement la trajectoire de candidature locale.",
+      "institutional_constraints": "La victoire exige un retour réel dans une primaire déjà avancée puis un succès à la générale.",
+      "timeline_recent": "Park a été nommé ministre du Budget début mars et a disparu du noyau opérationnel de la primaire séoulite.",
+      "actors_and_incentives": "Le président Lee semble préférer utiliser Park au gouvernement plutôt qu'à la mairie.",
+      "key_uncertainties": "Retournement de nomination, crise ministérielle, rappel partisan.",
+      "counterarguments": "Les remaniements et retraits de nomination peuvent toujours survenir.",
+      "dominant_market_narrative": "Park Hong-keun n'est plus un vrai scénario de victoire séoulite."
+    }
+  },
+  {
+    "market_id": "BATCH-004-37",
+    "thesis_id": "BATCH-004-37-TH1",
+    "analysis_id": "BATCH-004-37-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "medium",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat très marginal : Seo Young-kyo a explicitement retiré sa candidature avant l'accélération finale de la primaire."
+    },
+    "base_rate": {
+      "base_rate_value": 0.01,
+      "base_rate_reference_class": "Députée démocrate ayant officiellement annoncé sa candidature en janvier puis retiré sa candidature le 23 février.",
+      "base_rate_comment": "Base rate minimale. Une candidate retirée avant la phase décisive n'a presque plus de trajectoire normale vers la mairie."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Seo Young-kyo doit revenir officiellement sur son retrait",
+          "status": "not_filled",
+          "comment": "Elle a annoncé le 23 février qu'elle se retirait pour la victoire collective du parti."
+        },
+        {
+          "name": "Elle doit reconstituer une base compétitive dans la primaire",
+          "status": "not_filled",
+          "comment": "La primaire a avancé sans elle."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Seo conserve une visibilité nationale comme députée",
+          "status": "filled",
+          "comment": "Elle reste une personnalité politique reconnue."
+        },
+        {
+          "name": "Son retrait est réversible politiquement",
+          "status": "unknown",
+          "comment": "Possible en théorie, sans signal concret."
+        },
+        {
+          "name": "Le parti souhaite la réintroduire",
+          "status": "not_filled",
+          "comment": "Aucune indication récente en ce sens."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Existence d'une vraie candidature initiale",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Retrait explicite annoncé le 23 février",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le retrait a été public, clair et formulé comme soutien à l'objectif collectif du parti."
+      },
+      {
+        "factor_name": "Primaire démocrate a continué sans elle",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Le champ de mars ne la compte plus parmi les cinq candidats débattant."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "La seule vraie thèse contraire est qu'un choc politique ou procédural remette Seo Young-kyo au centre d'une course où il ou elle n'est actuellement pas central(e).",
+      "top_3_failure_reasons": [
+        "Les marchés peuvent écraser trop vite les faibles probabilités de reconfiguration politique.",
+        "Une candidature ou réactivation tardive peut parfois intervenir plus vite que prévu en politique locale.",
+        "L'absence de signaux publics forts aujourd'hui n'exclut jamais totalement un retournement organisationnel."
+      ],
+      "market_might_be_right_because": "Seo Young-kyo possède au moins une existence politique publique identifiable, même si sa trajectoire vers la mairie est très faible.",
+      "thesis_invalidation_trigger": "Annonce officielle de candidature crédible ou série de sondages montrant Seo Young-kyo comme acteur réellement compétitif de la course."
+    },
+    "research_notes": {
+      "primary_sources": "Seoul Economic Daily du 15 janvier 2026 et du 23 février 2026 ; Seoul Economic Daily du 17 mars 2026.",
+      "historical_precedents": "Les retraits explicites avant la phase décisive réduisent presque à zéro la probabilité terminale, sauf retournement exceptionnel.",
+      "institutional_constraints": "Le marché résout sur le vainqueur officiel, ce qui suppose d'abord un retour effectif dans la compétition.",
+      "timeline_recent": "Seo est entrée dans la course en janvier puis s'est retirée le 23 février pour soutenir une victoire d'équipe du Democratic Party.",
+      "actors_and_incentives": "Son comportement récent indique une logique d'unité partisane, pas une ambition séoulite maintenue.",
+      "key_uncertainties": "Retour tardif exceptionnel, choc de primaire.",
+      "counterarguments": "La politique peut toujours rouvrir des candidatures retirées en cas de crise.",
+      "dominant_market_narrative": "Seo Young-kyo n'est plus un scénario réel de victoire."
+    }
+  },
+  {
+    "market_id": "BATCH-004-38",
+    "thesis_id": "BATCH-004-38-TH1",
+    "analysis_id": "BATCH-004-38-TH1-A1",
+    "analysis_timestamp": "2026-03-18T18:05:00Z",
+    "resolution_date": "2026-06-03T00:00:00Z",
+    "protocol_version": "2.3",
+    "schema_version": "1.0",
+    "analysis_version": "A1",
+    "screening": {
+      "screening_status": "admissible",
+      "event_clarity": "high",
+      "resolution_clarity": "high",
+      "liquidity_quality": "low",
+      "information_accessibility": "high",
+      "market_noise_level": "low",
+      "screening_comment": "Contrat faible mais réel : Jeon Hyun-heui est candidate officielle de la primaire démocrate, mais elle ne figure pas parmi les favoris du moment."
+    },
+    "base_rate": {
+      "base_rate_value": 0.03,
+      "base_rate_reference_class": "Candidate officielle de primaire du parti au pouvoir, disposant d'une base personnelle mais loin derrière le leader sondagier local.",
+      "base_rate_comment": "Base rate faible mais supérieure au strict minimum car Jeon est bien candidate officielle et non simple nom théorique."
+    },
+    "prerequisites": {
+      "blocking": [
+        {
+          "name": "Jeon Hyun-heui doit remporter la primaire démocrate",
+          "status": "partial",
+          "comment": "Elle participe officiellement à la primaire, mais part loin derrière Chong."
+        },
+        {
+          "name": "La candidate démocrate doit ensuite battre le PPP à la générale",
+          "status": "partial",
+          "comment": "Condition plausible pour le camp, mais encore ouverte."
+        }
+      ],
+      "weighted": [
+        {
+          "name": "Jeon transforme sa visibilité en dynamique de primaire",
+          "status": "partial",
+          "comment": "Elle reste dans le champ, mais sans preuve forte de percée à ce stade."
+        },
+        {
+          "name": "La primaire démocrate se fragmente contre Chong",
+          "status": "partial",
+          "comment": "Possible si aucun rival ne se détache derrière lui."
+        },
+        {
+          "name": "Le PPP reste structurellement affaibli jusqu'en juin",
+          "status": "filled",
+          "comment": "C'est encore le contexte général visible à la mi-mars."
+        }
+      ]
+    },
+    "factor_list": [
+      {
+        "factor_name": "Candidature officielle et active dans la primaire",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 2,
+        "factor_comment": "Jeon figure bien parmi les cinq candidats débattant dans la primaire démocrate."
+      },
+      {
+        "factor_name": "Profil connu au sein du camp démocrate",
+        "factor_type": "accelerator",
+        "factor_score": 1,
+        "factor_weight": 1
+      },
+      {
+        "factor_name": "Retard important sur Chong dans les sondages publics",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "Les enquêtes disponibles la situent loin derrière le leader Chong."
+      },
+      {
+        "factor_name": "Double hurdle primaire puis générale",
+        "factor_type": "brake",
+        "factor_score": -2,
+        "factor_weight": 3,
+        "factor_comment": "La combinaison des deux étapes maintient sa probabilité terminale à un niveau très bas."
+      }
+    ],
+    "confidence": {
+      "confidence_sources": "high",
+      "confidence_model": "high",
+      "confidence_context": "high",
+      "confidence_overall": "high"
+    },
+    "ambiguity": {
+      "event_ambiguity": "low",
+      "resolution_ambiguity": "low"
+    },
+    "contradiction_forced": {
+      "best_counter_thesis": "Jeon Hyun-heui pourrait être sous-pricée si la primaire démocrate se fragmente et si son profil parvient à émerger tardivement comme compromis gagnant.",
+      "top_3_failure_reasons": [
+        "Les débats de primaire peuvent modifier les rapports de force plus que prévu.",
+        "Une fragmentation anti-Chong dans la primaire peut ouvrir un corridor inattendu à Jeon.",
+        "Le marché peut trop comprimer les probabilités des candidats officiels mais non favoris."
+      ],
+      "market_might_be_right_because": "Jeon est une candidate bien réelle et encore vivante dans la primaire, ce qui justifie une probabilité non nulle.",
+      "thesis_invalidation_trigger": "Sondage crédible de primaire montrant Jeon remonter franchement ou se hisser en alternative principale à Chong."
+    },
+    "research_notes": {
+      "primary_sources": "Financial News du 2 février 2026 ; Seoul Economic Daily du 17 mars 2026 ; JJCTV du 11 mars 2026.",
+      "historical_precedents": "Les candidats officiels de primaire non favoris gardent toujours une option tactique, mais leur probabilité reste basse face à un leader déjà installé.",
+      "institutional_constraints": "La victoire finale suppose d'abord une surprise en primaire puis un succès à l'élection municipale.",
+      "timeline_recent": "Jeon a officiellement lancé sa candidature début février et figure encore parmi les cinq candidats débattant en mars.",
+      "actors_and_incentives": "Jeon cherche à exister dans la primaire démocrate comme option crédible, mais sans l'élan de Chong.",
+      "key_uncertainties": "Elasticité de la primaire, impact des débats, qualité réelle de son socle électoral séoulite.",
+      "counterarguments": "Le fossé actuel avec Chong demeure suffisamment grand pour garder sa probabilité terminale très faible.",
+      "dominant_market_narrative": "Jeon Hyun-heui est un nom réel de la primaire démocrate, mais pas un scénario central de victoire."
+    }
+  }
+]

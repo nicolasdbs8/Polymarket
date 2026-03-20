@@ -1,0 +1,129 @@
+{
+  "market_id": "MKT-015",
+  "thesis_id": "MKT-015-TH1",
+  "analysis_id": "MKT-015-TH1-A1",
+  "analysis_timestamp": "2026-03-18T17:20:00Z",
+  "resolution_date": "2026-03-20T00:00:00Z",
+  "protocol_version": "2.3",
+  "schema_version": "1.0",
+  "analysis_version": "A1",
+  "screening": {
+    "screening_status": "admissible",
+    "event_clarity": "high",
+    "resolution_clarity": "high",
+    "liquidity_quality": "medium",
+    "information_accessibility": "high",
+    "market_noise_level": "low",
+    "screening_comment": "Marché admissible : la réunion, la variable résolue et la source officielle sont explicites. L'information publique est abondante et récente. Le seul vrai risque analytique est un hold surprise malgré un consensus presque unanime sur une baisse."
+  },
+  "base_rate": {
+    "base_rate_value": 0.82,
+    "base_rate_reference_class": "Réunions de banque centrale à très court terme avec consensus public quasi unanime en faveur d'une baisse et signal préalable de poursuite potentielle de l'assouplissement.",
+    "base_rate_comment": "Base rate élevé mais volontairement inférieur au prix de marché. Il reflète un cas où la direction attendue est très consensuelle, sans pour autant éliminer le risque d'une pause de dernière minute lié au choc pétrolier et aux risques inflationnistes."
+  },
+  "prerequisites": {
+    "blocking": [
+      {
+        "name": "La réunion du 20 mars 2026 a bien lieu et produit une communication officielle exploitable",
+        "status": "filled",
+        "comment": "La réunion figure au calendrier officiel de la Banque de Russie et Polymarket s'y réfère explicitement."
+      },
+      {
+        "name": "La résolution reste fondée sur la comparaison avec le niveau de taux antérieur à la réunion",
+        "status": "filled",
+        "comment": "La règle de résolution Polymarket est claire et ne dépend pas d'une interprétation qualitative."
+      }
+    ],
+    "weighted": [
+      {
+        "name": "La dynamique de désinflation reste suffisamment crédible pour justifier une nouvelle baisse immédiate",
+        "status": "filled",
+        "comment": "La Banque de Russie a déjà présenté l'accélération précédente des prix comme largement liée à des facteurs ponctuels et Reuters rapporte un léger apaisement de l'inflation et des anticipations."
+      },
+      {
+        "name": "Le choc pétrolier ne provoque pas un changement de ton de dernière minute vers une pause",
+        "status": "partial",
+        "comment": "La hausse du pétrole aide la Russie budgétairement mais crée aussi des risques pro-inflationnistes susceptibles de rendre la banque centrale plus prudente."
+      },
+      {
+        "name": "Le signal de février sur de nouvelles baisses reste opérant à la réunion de mars",
+        "status": "filled",
+        "comment": "Le résumé de discussion et les dépêches Reuters indiquaient explicitement que de nouvelles réductions restaient sur la table."
+      }
+    ]
+  },
+  "factor_list": [
+    {
+      "factor_name": "Consensus Reuters unanime pour une baisse",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "Les 23 analystes interrogés anticipent une baisse de 50 points de base à la réunion du 20 mars."
+    },
+    {
+      "factor_name": "Signal officiel post-février orienté vers de nouvelles baisses",
+      "factor_type": "accelerator",
+      "factor_score": 2,
+      "factor_weight": 3,
+      "factor_comment": "La Banque de Russie a indiqué qu'elle évaluerait la nécessité d'une nouvelle baisse lors des réunions suivantes."
+    },
+    {
+      "factor_name": "Taux actuel déjà abaissé à 15.50% avec trajectoire 2026 plus basse",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2,
+      "factor_comment": "La décision de février a déjà enclenché un cycle plus accommodant et la communication officielle n'a pas fermé la porte à sa poursuite."
+    },
+    {
+      "factor_name": "Ralentissement des anticipations d'inflation des ménages",
+      "factor_type": "accelerator",
+      "factor_score": 1,
+      "factor_weight": 2,
+      "factor_comment": "Reuters a présenté ce recul comme un élément facilitant de nouvelles baisses de taux."
+    },
+    {
+      "factor_name": "Risque pro-inflationniste lié au choc pétrolier et géopolitique",
+      "factor_type": "brake",
+      "factor_score": -1,
+      "factor_weight": 3,
+      "factor_comment": "La flambée de l'énergie complique potentiellement le calendrier d'assouplissement même si elle soutient aussi les revenus russes."
+    },
+    {
+      "factor_name": "Prix de marché déjà extrêmement élevé à 90.5%",
+      "factor_type": "brake",
+      "factor_score": -2,
+      "factor_weight": 3,
+      "factor_comment": "Le marché intègre déjà presque entièrement le scénario de baisse ; la marge pour un edge supplémentaire est mécaniquement faible."
+    }
+  ],
+  "confidence": {
+    "confidence_sources": "high",
+    "confidence_model": "medium",
+    "confidence_context": "medium",
+    "confidence_overall": "high"
+  },
+  "ambiguity": {
+    "event_ambiguity": "low",
+    "resolution_ambiguity": "low"
+  },
+  "contradiction_forced": {
+    "best_counter_thesis": "Le marché peut avoir raison parce que le dossier public est exceptionnellement aligné en faveur d'une baisse immédiate, avec signal officiel préalable et consensus quasi unanime des analystes.",
+    "top_3_failure_reasons": [
+      "Le choc pétrolier peut pousser la Banque de Russie à suspendre la baisse au dernier moment malgré les attentes publiques.",
+      "Le prix élevé peut rester justifié si la probabilité réelle est encore supérieure à 90.5%.",
+      "Le risque contraire principal est un hold surprise, pas nécessairement bien capté par un simple raisonnement de continuité du cycle de baisse."
+    ],
+    "market_might_be_right_because": "Le marché s'aligne sur un cas où l'information publique de court terme est très convergente et où la banque centrale a déjà préparé le terrain à une nouvelle baisse.",
+    "thesis_invalidation_trigger": "Toute communication officielle ou fuite crédible avant la réunion suggérant qu'un hold redevient l'option centrale en raison des risques inflationnistes liés au pétrole."
+  },
+  "research_notes": {
+    "primary_sources": "Calendrier officiel de la Banque de Russie ; page Polymarket de résolution ; communiqué et résumé de discussion de février ; sondage Reuters du 16 mars 2026.",
+    "historical_precedents": "Les marchés de décision de banque centrale très proches de l'événement et soutenus par un consensus public quasi unanime tendent à avoir une forte probabilité de réaliser le scénario central, mais pas une certitude absolue.",
+    "institutional_constraints": "La résolution dépend exclusivement de la décision officielle de la Banque de Russie du 20 mars 2026 relativement au niveau précédent de 15.50%.",
+    "timeline_recent": "Baisse surprise de 50 pdb le 13 février à 15.50%, puis signal d'ouverture à de nouvelles baisses ; au 16 mars, Reuters rapporte un consensus unanime pour une nouvelle coupe à 15.0%.",
+    "actors_and_incentives": "La Banque de Russie doit arbitrer entre soutien à une économie ralentie et vigilance face aux risques inflationnistes ; le gouvernement bénéficie de la hausse du pétrole mais celle-ci complique aussi le cadre monétaire.",
+    "key_uncertainties": "Effet net du choc pétrolier sur la fonction de réaction de la banque centrale ; possibilité d'une prudence de dernière minute ; calibrage exact de la baisse éventuelle.",
+    "counterarguments": "Le principal contre-argument n'est pas une hausse mais une pause, justifiée par les nouveaux risques inflationnistes et la nécessité de conserver de la flexibilité.",
+    "dominant_market_narrative": "Le marché considère qu'une nouvelle baisse après février est le scénario central très probable, avec un risque résiduel de hold."
+  }
+}

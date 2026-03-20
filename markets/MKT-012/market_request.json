@@ -1,0 +1,16 @@
+{
+  "market_id": "MKT-012",
+  "market_title": "Will Duke win the 2026 NCAA Tournament?",
+  "platform": "polymarket",
+  "market_type": "binary",
+  "market_probability_yes": 0.195,
+  "price_yes": 0.195,
+  "price_no": 0.805,
+  "market_probability_no": 0.805,
+  "resolution_date": "2026-04-04T00:00:00Z",
+  "market_snapshot_time": "2026-03-18T16:49:54Z",
+  "category": "other",
+  "market_url": "https://polymarket.com/fr/event/2026-ncaa-tournament-winner",
+  "schema_version": "1.0",
+  "market_volume": 300816.97
+}
