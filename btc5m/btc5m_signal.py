@@ -41,8 +41,8 @@ except ImportError as e:
 # Constantes
 # ─────────────────────────────────────────────────────────────────────────────
 
-BINANCE_KLINES_URL   = "https://api.binance.com/api/v3/klines"
-BINANCE_TICKER_URL   = "https://api.binance.com/api/v3/ticker/price"
+KRAKEN_OHLC_URL      = "https://api.kraken.com/0/public/OHLC"
+KRAKEN_TICKER_URL    = "https://api.kraken.com/0/public/Ticker"
 GAMMA_MARKETS_URL    = "https://gamma-api.polymarket.com/markets"
 
 MODEL_FILE    = Path(__file__).parent / "phase1_results_365j.json"
@@ -100,43 +100,64 @@ def load_model() -> tuple:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def fetch_recent_candles(n: int = 100) -> pd.DataFrame:
-    """Récupère les N dernières bougies BTC/USDT 5m depuis Binance."""
+    """
+    Récupère les N dernières bougies BTC/USD 5m depuis Kraken.
+    Kraken OHLC retourne les bougies les plus récentes en dernier.
+    """
     params = {
-        "symbol": "BTCUSDT",
-        "interval": "5m",
-        "limit": n,
+        "pair":     "XBTUSD",
+        "interval": 5,        # 5 minutes
     }
     try:
-        r = requests.get(BINANCE_KLINES_URL, params=params, timeout=10)
+        r = requests.get(KRAKEN_OHLC_URL, params=params, timeout=10)
         r.raise_for_status()
-        candles = r.json()
+        data = r.json()
     except requests.RequestException as e:
-        print(f"\n[ERREUR] Binance API : {e}")
+        print(f"\n[ERREUR] Kraken API : {e}")
         sys.exit(1)
 
+    if data.get("error"):
+        print(f"\n[ERREUR] Kraken : {data['error']}")
+        sys.exit(1)
+
+    # Kraken retourne les données sous data["result"]["XXBTZUSD"]
+    result = data.get("result", {})
+    key    = next(iter(result.keys()), None)  # "XXBTZUSD" ou "last"
+    if not key or key == "last":
+        key = [k for k in result.keys() if k != "last"][0]
+
+    candles = result[key]
+
+    # Format Kraken : [time, open, high, low, close, vwap, volume, count]
     df = pd.DataFrame(candles, columns=[
-        "open_time","open","high","low","close","volume",
-        "close_time","quote_volume","trades",
-        "taker_buy_base","taker_buy_quote","ignore"
+        "open_time", "open", "high", "low", "close", "vwap", "volume", "count"
     ])
-    df["open_time"]  = pd.to_datetime(df["open_time"],  unit="ms", utc=True)
-    df["close_time"] = pd.to_datetime(df["close_time"], unit="ms", utc=True)
-    for col in ["open","high","low","close","volume"]:
+    df["open_time"] = pd.to_datetime(df["open_time"].astype(int), unit="s", utc=True)
+    for col in ["open", "high", "low", "close", "volume"]:
         df[col] = pd.to_numeric(df[col])
 
-    # Exclut la dernière bougie si elle est encore ouverte
-    now = datetime.now(timezone.utc)
-    df = df[df["close_time"] < pd.Timestamp(now)].copy()
+    # Ajoute close_time = open_time + 5 minutes - 1 seconde
+    df["close_time"] = df["open_time"] + pd.Timedelta(minutes=5) - pd.Timedelta(seconds=1)
 
-    return df.reset_index(drop=True)
+    # Exclut la bougie courante (pas encore fermée)
+    now = datetime.now(timezone.utc)
+    df  = df[df["close_time"] < pd.Timestamp(now)].copy()
+
+    # Garde les N dernières
+    return df.tail(n).reset_index(drop=True)
 
 
 def get_btc_price() -> float:
-    """Prix BTC actuel."""
+    """Prix BTC actuel depuis Kraken."""
     try:
-        r = requests.get(BINANCE_TICKER_URL,
-                         params={"symbol": "BTCUSDT"}, timeout=5)
-        return float(r.json()["price"])
+        r = requests.get(KRAKEN_TICKER_URL,
+                         params={"pair": "XBTUSD"}, timeout=5)
+        data = r.json()
+        result = data.get("result", {})
+        key    = next((k for k in result if k != "last"), None)
+        if key:
+            return float(result[key]["c"][0])  # "c" = last trade price
+        return 0.0
     except Exception:
         return 0.0
 
@@ -782,8 +803,8 @@ except ImportError as e:
 # Constantes
 # ─────────────────────────────────────────────────────────────────────────────
 
-BINANCE_KLINES_URL   = "https://api.binance.com/api/v3/klines"
-BINANCE_TICKER_URL   = "https://api.binance.com/api/v3/ticker/price"
+KRAKEN_OHLC_URL      = "https://api.kraken.com/0/public/OHLC"
+KRAKEN_TICKER_URL    = "https://api.kraken.com/0/public/Ticker"
 GAMMA_MARKETS_URL    = "https://gamma-api.polymarket.com/markets"
 
 MODEL_FILE    = Path(__file__).parent / "phase1_results_365j.json"
@@ -841,43 +862,64 @@ def load_model() -> tuple:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def fetch_recent_candles(n: int = 100) -> pd.DataFrame:
-    """Récupère les N dernières bougies BTC/USDT 5m depuis Binance."""
+    """
+    Récupère les N dernières bougies BTC/USD 5m depuis Kraken.
+    Kraken OHLC retourne les bougies les plus récentes en dernier.
+    """
     params = {
-        "symbol": "BTCUSDT",
-        "interval": "5m",
-        "limit": n,
+        "pair":     "XBTUSD",
+        "interval": 5,        # 5 minutes
     }
     try:
-        r = requests.get(BINANCE_KLINES_URL, params=params, timeout=10)
+        r = requests.get(KRAKEN_OHLC_URL, params=params, timeout=10)
         r.raise_for_status()
-        candles = r.json()
+        data = r.json()
     except requests.RequestException as e:
-        print(f"\n[ERREUR] Binance API : {e}")
+        print(f"\n[ERREUR] Kraken API : {e}")
         sys.exit(1)
 
+    if data.get("error"):
+        print(f"\n[ERREUR] Kraken : {data['error']}")
+        sys.exit(1)
+
+    # Kraken retourne les données sous data["result"]["XXBTZUSD"]
+    result = data.get("result", {})
+    key    = next(iter(result.keys()), None)  # "XXBTZUSD" ou "last"
+    if not key or key == "last":
+        key = [k for k in result.keys() if k != "last"][0]
+
+    candles = result[key]
+
+    # Format Kraken : [time, open, high, low, close, vwap, volume, count]
     df = pd.DataFrame(candles, columns=[
-        "open_time","open","high","low","close","volume",
-        "close_time","quote_volume","trades",
-        "taker_buy_base","taker_buy_quote","ignore"
+        "open_time", "open", "high", "low", "close", "vwap", "volume", "count"
     ])
-    df["open_time"]  = pd.to_datetime(df["open_time"],  unit="ms", utc=True)
-    df["close_time"] = pd.to_datetime(df["close_time"], unit="ms", utc=True)
-    for col in ["open","high","low","close","volume"]:
+    df["open_time"] = pd.to_datetime(df["open_time"].astype(int), unit="s", utc=True)
+    for col in ["open", "high", "low", "close", "volume"]:
         df[col] = pd.to_numeric(df[col])
 
-    # Exclut la dernière bougie si elle est encore ouverte
-    now = datetime.now(timezone.utc)
-    df = df[df["close_time"] < pd.Timestamp(now)].copy()
+    # Ajoute close_time = open_time + 5 minutes - 1 seconde
+    df["close_time"] = df["open_time"] + pd.Timedelta(minutes=5) - pd.Timedelta(seconds=1)
 
-    return df.reset_index(drop=True)
+    # Exclut la bougie courante (pas encore fermée)
+    now = datetime.now(timezone.utc)
+    df  = df[df["close_time"] < pd.Timestamp(now)].copy()
+
+    # Garde les N dernières
+    return df.tail(n).reset_index(drop=True)
 
 
 def get_btc_price() -> float:
-    """Prix BTC actuel."""
+    """Prix BTC actuel depuis Kraken."""
     try:
-        r = requests.get(BINANCE_TICKER_URL,
-                         params={"symbol": "BTCUSDT"}, timeout=5)
-        return float(r.json()["price"])
+        r = requests.get(KRAKEN_TICKER_URL,
+                         params={"pair": "XBTUSD"}, timeout=5)
+        data = r.json()
+        result = data.get("result", {})
+        key    = next((k for k in result if k != "last"), None)
+        if key:
+            return float(result[key]["c"][0])  # "c" = last trade price
+        return 0.0
     except Exception:
         return 0.0
 
