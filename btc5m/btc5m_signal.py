@@ -583,6 +583,17 @@ def cmd_signal(friction: float, watch: bool):
             and pm_found  # on ne logue que si on a un slug pour l'auto-resolve
         )
         if is_tradeable:
+            # Vérification anti-doublon : même slug + même bougie déjà loggés ?
+            existing_log = load_signal_log()
+            already_logged = any(
+                e.get("pm_slug") == pm_market.get("_slug")
+                and e.get("candle_open") == last_candle["open_time"].strftime("%Y-%m-%dT%H:%M:%SZ")
+                for e in existing_log
+            )
+            if already_logged:
+                is_tradeable = False  # skip silencieusement
+
+        if is_tradeable:
             log_entry = {
                 "ts":           now_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "btc_price":    round(btc_price, 2),
@@ -1345,6 +1356,17 @@ def cmd_signal(friction: float, watch: bool):
             and pm_found  # on ne logue que si on a un slug pour l'auto-resolve
         )
         if is_tradeable:
+            # Vérification anti-doublon : même slug + même bougie déjà loggés ?
+            existing_log = load_signal_log()
+            already_logged = any(
+                e.get("pm_slug") == pm_market.get("_slug")
+                and e.get("candle_open") == last_candle["open_time"].strftime("%Y-%m-%dT%H:%M:%SZ")
+                for e in existing_log
+            )
+            if already_logged:
+                is_tradeable = False  # skip silencieusement
+
+        if is_tradeable:
             log_entry = {
                 "ts":           now_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "btc_price":    round(btc_price, 2),
@@ -1639,9 +1661,10 @@ def cmd_review(last: int):
         print(f"  Baseline Phase 1   : 52.8%  (edge_0.02 OOS)")
     print(f"{'─' * 65}\n")
 
-    print(f"  {'#':<4} {'Heure':>16} {'BTC':>10} {'Signal':>22} {'Edge':>7} {'Résultat':>10}")
-    print(f"  {'─'*4} {'─'*16} {'─'*10} {'─'*22} {'─'*7} {'─'*10}")
+    print(f"  {'#':<4} {'Heure':>16} {'BTC':>10} {'Signal':>22} {'Raw':>6} {'Net':>6} {'Résultat':>10}")
+    print(f"  {'─'*4} {'─'*16} {'─'*10} {'─'*22} {'─'*6} {'─'*6} {'─'*10}")
 
+    offset = max(0, total - last)
     for i, e in enumerate(entries):
         ts      = e.get("ts","")[:16].replace("T"," ")
         btc     = f"${e.get('btc_price',0):,.0f}"
@@ -1652,7 +1675,8 @@ def cmd_review(last: int):
         if e.get("result"):
             correct = (e["direction"]=="UP" and e["result"]=="up") or                       (e["direction"]=="DOWN" and e["result"]=="down")
             icon = "✓" if correct else "✗"
-        print(f"  {total-last+i+1:<4} {ts:>16} {btc:>10} {dec:>22} {edge:>7} {icon} {result}")
+        raw  = f"{e.get('raw_edge', 0):+.2%}"
+        print(f"  {offset+i+1:<4} {ts:>16} {btc:>10} {dec:>22} {raw:>6} {edge:>6} {icon} {result}")
 
     print(f"\n{'═' * 65}\n")
 
