@@ -40,8 +40,9 @@ except ImportError as e:
 # 1. Collecte des données BTC 5m via Binance API (publique, sans clé)
 # ─────────────────────────────────────────────────────────────────────────────
 
-BINANCE_KLINES_URL = "https://api.binance.com/api/v3/klines"
-MAX_CANDLES_PER_REQUEST = 1000
+
+KRAKEN_OHLC_URL = "https://api.kraken.com/0/public/OHLC"
+KRAKEN_MAX_CANDLES = 720
 
 def fetch_btc_5m(days: int) -> pd.DataFrame:
     """
@@ -50,7 +51,7 @@ def fetch_btc_5m(days: int) -> pd.DataFrame:
     """
     end_ms   = int(datetime.now(timezone.utc).timestamp() * 1000)
     start_ms = end_ms - days * 24 * 3600 * 1000
-    interval = "5m"
+    interval = 5  # Kraken interval in minutes
 
     all_candles = []
     current_start = start_ms
@@ -68,7 +69,7 @@ def fetch_btc_5m(days: int) -> pd.DataFrame:
             "limit":     MAX_CANDLES_PER_REQUEST,
         }
         try:
-            r = requests.get(BINANCE_KLINES_URL, params=params, timeout=15)
+            r = requests.get(KRAKEN_OHLC_URL, params={"pair":"XBTUSD","interval":5,"since":current_start//1000}, timeout=15)
             r.raise_for_status()
             batch = r.json()
         except requests.RequestException as e:
