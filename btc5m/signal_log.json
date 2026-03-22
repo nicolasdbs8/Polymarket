@@ -829,7 +829,7 @@
       "range_pos_20": 0.067633,
       "close_vs_ma10": -0.001406
     },
-    "result": null
+    "result": "down"
   },
   {
     "ts": "2026-03-22T17:46:00Z",
@@ -855,6 +855,6 @@
       "range_pos_20": 0.0,
       "close_vs_ma10": -0.001609
     },
-    "result": null
+    "result": "up"
   }
 ]
