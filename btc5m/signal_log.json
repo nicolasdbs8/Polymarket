@@ -2363,7 +2363,7 @@
       "range_pos_20": 0.906646,
       "close_vs_ma10": 0.004151
     },
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-03-24T07:30:51Z",
@@ -2389,7 +2389,7 @@
       "range_pos_20": 0.877423,
       "close_vs_ma10": 0.003392
     },
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-03-24T07:40:42Z",
