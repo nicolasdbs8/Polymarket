@@ -58,6 +58,10 @@ EDGE_THRESHOLD = 0.02
 # Friction estimée sur Polymarket BTC 5m (mesurée ou estimée)
 DEFAULT_FRICTION = 0.005  # spread/2 mesuré sur marchés BTC 5m Polymarket
 
+# Fenêtre de trading Phase 2b (win rate 64.7% dans fenêtre vs 39.5% hors)
+TRADE_WINDOW_UTC = (10, 22)   # heures UTC : [10h, 22h[
+CURRENT_PHASE    = "2b"
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 1. Chargement du modèle sauvegardé
@@ -529,6 +533,9 @@ def cmd_signal(friction: float, watch: bool):
         candle_time = last_candle["open_time"].strftime("%H:%M")
         now_utc     = datetime.now(timezone.utc)
 
+        # Fenêtre de trading
+        in_window = TRADE_WINDOW_UTC[0] <= now_utc.hour < TRADE_WINDOW_UTC[1]
+
         # Prochaine bougie
         next_open  = last_candle["close_time"] + pd.Timedelta(seconds=1)
         next_close = next_open + pd.Timedelta(minutes=5)
@@ -580,7 +587,8 @@ def cmd_signal(friction: float, watch: bool):
             "SIGNAL" in decision
             and "PAS DE SIGNAL" not in decision
             and "ABSORBÉ" not in decision
-            and pm_found  # on ne logue que si on a un slug pour l'auto-resolve
+            and pm_found      # on ne logue que si on a un slug pour l'auto-resolve
+            and in_window     # hors fenêtre 10h-22h UTC : pas de log (Phase 2b)
         )
         if is_tradeable:
             # Vérification anti-doublon : même slug + même bougie déjà loggés ?
@@ -609,6 +617,7 @@ def cmd_signal(friction: float, watch: bool):
                 "pm_mins_left": round(pm_mins, 1),
                 "candle_open":  last_candle["open_time"].strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "features":     {k: round(v, 6) for k, v in features.items()},
+                "phase":        CURRENT_PHASE,
                 "result":       None,
             }
             log_signal(log_entry)
@@ -653,6 +662,9 @@ def cmd_signal(friction: float, watch: bool):
             icon = "🟢"
         print(f"  {icon}  DÉCISION : {decision}")
         print(f"           {reason}")
+        if not in_window:
+            print(f"  ⚠  HORS FENETRE : signal non loggué "
+                  f"(fenêtre {TRADE_WINDOW_UTC[0]}h-{TRADE_WINDOW_UTC[1]}h UTC)")
         print(f"{'═' * 62}")
 
         # Features détail (optionnel)
@@ -753,6 +765,8 @@ Commandes :
     p_rev = sub.add_parser("review",  help="Affiche les signaux enregistrés")
     p_rev.add_argument("--last", type=int, default=20,
                        help="Nombre de signaux à afficher (défaut: 20)")
+    p_rev.add_argument("--phase", type=str, default=None,
+                       help="Filtre par phase (ex: 2, 2b)")
 
     sub.add_parser("resolve",      help="Saisie interactive des résultats manquants")
     sub.add_parser("auto-resolve", help="Résolution automatique via API Polymarket")
@@ -764,7 +778,7 @@ Commandes :
     elif args.command == "signal":
         cmd_signal(args.friction, args.watch)
     elif args.command == "review":
-        cmd_review(args.last)
+        cmd_review(args.last, args.phase)
     elif args.command == "resolve":
         cmd_resolve()
     elif args.command == "auto-resolve":
@@ -831,6 +845,10 @@ EDGE_THRESHOLD = 0.02
 # Friction estimée sur Polymarket BTC 5m (mesurée ou estimée)
 DEFAULT_FRICTION = 0.005  # spread/2 mesuré sur marchés BTC 5m Polymarket
 
+# Fenêtre de trading Phase 2b (win rate 64.7% dans fenêtre vs 39.5% hors)
+TRADE_WINDOW_UTC = (10, 22)   # heures UTC : [10h, 22h[
+CURRENT_PHASE    = "2b"
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 1. Chargement du modèle sauvegardé
@@ -1302,6 +1320,9 @@ def cmd_signal(friction: float, watch: bool):
         candle_time = last_candle["open_time"].strftime("%H:%M")
         now_utc     = datetime.now(timezone.utc)
 
+        # Fenêtre de trading
+        in_window = TRADE_WINDOW_UTC[0] <= now_utc.hour < TRADE_WINDOW_UTC[1]
+
         # Prochaine bougie
         next_open  = last_candle["close_time"] + pd.Timedelta(seconds=1)
         next_close = next_open + pd.Timedelta(minutes=5)
@@ -1353,7 +1374,8 @@ def cmd_signal(friction: float, watch: bool):
             "SIGNAL" in decision
             and "PAS DE SIGNAL" not in decision
             and "ABSORBÉ" not in decision
-            and pm_found  # on ne logue que si on a un slug pour l'auto-resolve
+            and pm_found      # on ne logue que si on a un slug pour l'auto-resolve
+            and in_window     # hors fenêtre 10h-22h UTC : pas de log (Phase 2b)
         )
         if is_tradeable:
             # Vérification anti-doublon : même slug + même bougie déjà loggés ?
@@ -1382,6 +1404,7 @@ def cmd_signal(friction: float, watch: bool):
                 "pm_mins_left": round(pm_mins, 1),
                 "candle_open":  last_candle["open_time"].strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "features":     {k: round(v, 6) for k, v in features.items()},
+                "phase":        CURRENT_PHASE,
                 "result":       None,
             }
             log_signal(log_entry)
@@ -1426,6 +1449,9 @@ def cmd_signal(friction: float, watch: bool):
             icon = "🟢"
         print(f"  {icon}  DÉCISION : {decision}")
         print(f"           {reason}")
+        if not in_window:
+            print(f"  ⚠  HORS FENETRE : signal non loggué "
+                  f"(fenêtre {TRADE_WINDOW_UTC[0]}h-{TRADE_WINDOW_UTC[1]}h UTC)")
         print(f"{'═' * 62}")
 
         # Features détail (optionnel)
@@ -1526,6 +1552,8 @@ Commandes :
     p_rev = sub.add_parser("review",  help="Affiche les signaux enregistrés")
     p_rev.add_argument("--last", type=int, default=20,
                        help="Nombre de signaux à afficher (défaut: 20)")
+    p_rev.add_argument("--phase", type=str, default=None,
+                       help="Filtre par phase (ex: 2, 2b)")
 
     sub.add_parser("resolve",      help="Saisie interactive des résultats manquants")
     sub.add_parser("auto-resolve", help="Résolution automatique via API Polymarket")
@@ -1537,7 +1565,7 @@ Commandes :
     elif args.command == "signal":
         cmd_signal(args.friction, args.watch)
     elif args.command == "review":
-        cmd_review(args.last)
+        cmd_review(args.last, args.phase)
     elif args.command == "resolve":
         cmd_resolve()
     elif args.command == "auto-resolve":
@@ -1625,40 +1653,86 @@ def cmd_debug():
     print(f"\n{'═' * 62}\n")
 
 
-def cmd_review(last: int):
+def cmd_review(last: int, phase: str | None = None):
     """
     Affiche les derniers signaux enregistrés et permet de saisir les résultats.
     Usage :
-      python btc5m/btc5m_signal.py review          ← affiche les 20 derniers
+      python btc5m/btc5m_signal.py review           ← affiche les 20 derniers
       python btc5m/btc5m_signal.py review --last 50
-      python btc5m/btc5m_signal.py review --resolve ← saisie interactive des résultats
+      python btc5m/btc5m_signal.py review --phase 2b
     """
     log = load_signal_log()
     if not log:
         print("\n  Aucun signal enregistré.\n")
         return
 
+    # Filtre par phase si demandé
+    if phase:
+        log = [e for e in log if e.get("phase") == phase]
+        if not log:
+            print(f"\n  Aucun signal pour la phase '{phase}'.\n")
+            return
+
     entries = log[-last:]
     total   = len(log)
 
-    # Stats globales
+    def _is_signal(e):
+        d = e.get("decision", "")
+        return "SIGNAL" in d and "PAS" not in d and "ABSORBÉ" not in d
+
+    def _win(e):
+        return (e["direction"] == "UP"   and e["result"] == "up") or \
+               (e["direction"] == "DOWN" and e["result"] == "down")
+
+    # Stats globales (toutes phases)
+    all_log    = load_signal_log()
+    resolved_all  = [e for e in all_log if e.get("result") is not None and _is_signal(e)]
+    wins_all      = [e for e in resolved_all if _win(e)]
+
+    # Stats phase 2 (toutes heures)
+    p2_log     = [e for e in all_log if e.get("phase") == "2"]
+    p2_res     = [e for e in p2_log if e.get("result") is not None and _is_signal(e)]
+    p2_wins    = [e for e in p2_res if _win(e)]
+
+    # Stats phase 2b (filtre 10h-22h)
+    p2b_log    = [e for e in all_log if e.get("phase") == "2b"]
+    p2b_res    = [e for e in p2b_log if e.get("result") is not None and _is_signal(e)]
+    p2b_wins   = [e for e in p2b_res if _win(e)]
+
     resolved   = [e for e in log if e.get("result") is not None]
-    n_signals  = sum(1 for e in log if "SIGNAL" in e.get("decision","") and "PAS" not in e.get("decision","") and "ABSORBÉ" not in e.get("decision",""))
-    n_res_sig  = [e for e in resolved if "SIGNAL" in e.get("decision","") and "PAS" not in e.get("decision","") and "ABSORBÉ" not in e.get("decision","")]
-    wins       = [e for e in n_res_sig if
-                  (e["direction"] == "UP"   and e["result"] == "up") or
-                  (e["direction"] == "DOWN" and e["result"] == "down")]
+    n_signals  = sum(1 for e in log if _is_signal(e))
+    n_res_sig  = [e for e in resolved if _is_signal(e)]
+    wins       = [e for e in n_res_sig if _win(e)]
 
     print(f"\n{'═' * 65}")
     print(f"  BTC 5M — JOURNAL DES SIGNAUX")
     print(f"{'═' * 65}")
-    print(f"  Total enregistrés  : {total}")
+    print(f"  Total enregistrés  : {total}" + (f"  (filtre phase={phase})" if phase else ""))
     print(f"  Signaux tradables  : {n_signals}")
     print(f"  Résultats saisis   : {len(resolved)}")
     if n_res_sig:
         wr = len(wins) / len(n_res_sig)
         print(f"  Win rate live      : {wr:.1%}  ({len(wins)}/{len(n_res_sig)})")
         print(f"  Baseline Phase 1   : 52.8%  (edge_0.02 OOS)")
+
+    # ── Stats par phase ───────────────────────────────────────────
+    print(f"{'─' * 65}")
+    print(f"  STATS PAR PHASE")
+    print(f"{'─' * 65}")
+    n_p2_total = sum(1 for e in all_log if e.get("phase") == "2" and _is_signal(e))
+    if p2_res:
+        wr2 = len(p2_wins) / len(p2_res)
+        print(f"  Phase 2  ({n_p2_total:>3} signaux) : {wr2:.1%}  ({len(p2_wins)}/{len(p2_res)})  — toutes heures")
+    elif n_p2_total:
+        print(f"  Phase 2  ({n_p2_total:>3} signaux) : —  (résultats en attente)")
+
+    n_p2b_total = sum(1 for e in all_log if e.get("phase") == "2b" and _is_signal(e))
+    if p2b_res:
+        wr2b = len(p2b_wins) / len(p2b_res)
+        print(f"  Phase 2b ({n_p2b_total:>3} signaux) : {wr2b:.1%}  ({len(p2b_wins)}/{len(p2b_res)})  — filtre 10h-22h UTC")
+    elif n_p2b_total:
+        print(f"  Phase 2b ({n_p2b_total:>3} signaux) : —  (résultats en attente)")
+
     print(f"{'─' * 65}\n")
 
     print(f"  {'#':<4} {'Heure':>16} {'BTC':>10} {'Signal':>22} {'Raw':>6} {'Net':>6} {'Résultat':>10}")
@@ -1678,6 +1752,71 @@ def cmd_review(last: int):
         raw  = f"{e.get('raw_edge', 0):+.2%}"
         print(f"  {offset+i+1:<4} {ts:>16} {btc:>10} {dec:>22} {raw:>6} {edge:>6} {icon} {result}")
 
+    # ── Analyse par edge_net ──────────────────────────────────────
+    print(f"{'─' * 65}")
+    print(f"  ANALYSE PAR EDGE_NET")
+    print(f"{'─' * 65}")
+    res_sig_all = [e for e in log if e.get("result")]
+    for label, lo, hi in [
+        ("edge_net < 1%",  0,    0.01),
+        ("edge_net 1–2%",  0.01, 0.02),
+        ("edge_net 2–4%",  0.02, 0.04),
+        ("edge_net > 4%",  0.04, 1.0),
+    ]:
+        g = [e for e in res_sig_all if lo <= abs(e.get("edge_net", 0)) < hi]
+        if not g:
+            continue
+        w = sum(1 for e in g if (e["direction"] == "UP"   and e["result"] == "up") or
+                                 (e["direction"] == "DOWN" and e["result"] == "down"))
+        print(f"  {label:<18} : {w}/{len(g)} = {w/len(g):.1%}")
+
+    # ── Analyse par direction ─────────────────────────────────────
+    print(f"{'─' * 65}")
+    print(f"  ANALYSE PAR DIRECTION")
+    print(f"{'─' * 65}")
+    for d in ["UP", "DOWN"]:
+        g = [e for e in res_sig_all if e.get("direction") == d]
+        if not g:
+            continue
+        w = sum(1 for e in g if (e["direction"] == "UP"   and e["result"] == "up") or
+                                 (e["direction"] == "DOWN" and e["result"] == "down"))
+        print(f"  SIGNAL {d:<4}         : {w}/{len(g)} = {w/len(g):.1%}")
+
+    # ── Analyse par heure UTC ─────────────────────────────────────
+    from collections import defaultdict
+    print(f"{'─' * 65}")
+    print(f"  ANALYSE PAR HEURE UTC")
+    print(f"{'─' * 65}")
+    print(f"  {'Heure':<10} {'N':>4}   Win rate")
+    bh = defaultdict(list)
+    for e in res_sig_all:
+        try:
+            h = int(e["ts"][11:13])
+        except (KeyError, ValueError, TypeError):
+            continue
+        bh[h].append(
+            (e["direction"] == "UP"   and e["result"] == "up") or
+            (e["direction"] == "DOWN" and e["result"] == "down")
+        )
+    for h in sorted(bh):
+        g = bh[h]
+        print(f"  {h:02d}h UTC      {len(g):>4}   {sum(g)/len(g):.1%}")
+
+    # ── Signaux suspects ──────────────────────────────────────────
+    print(f"{'─' * 65}")
+    print(f"  SIGNAUX SUSPECTS  (edge_net >> raw_edge + 5%)")
+    print(f"{'─' * 65}")
+    suspects = [e for e in log if abs(e.get("edge_net", 0)) > abs(e.get("raw_edge", 0)) + 0.05]
+    if suspects:
+        print(f"  {len(suspects)} signal(s) suspect(s) :")
+        for e in suspects:
+            res = e.get("result") or "—"
+            print(f"    {e['ts'][:16]}  raw={e['raw_edge']:+.2%}  net={e['edge_net']:+.2%}  {res}")
+    else:
+        print(f"  Aucun signal suspect détecté.")
+
+    print(f"{'─' * 65}")
+    print(f"  Fenetre active : {TRADE_WINDOW_UTC[0]}h-{TRADE_WINDOW_UTC[1]}h UTC (Phase {CURRENT_PHASE})")
     print(f"\n{'═' * 65}\n")
 
 
