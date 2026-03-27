@@ -5398,5 +5398,59 @@
     },
     "result": "up",
     "phase": "2"
+  },
+  {
+    "ts": "2026-03-27T18:01:05Z",
+    "btc_price": 65620.1,
+    "p_up": 0.521,
+    "p_down": 0.479,
+    "raw_edge": 0.021,
+    "direction": "UP",
+    "decision": "SIGNAL UP — PETIT",
+    "edge_net": 0.001,
+    "pm_slug": "btc-updown-5m-1774634400",
+    "pm_up": 0.515,
+    "pm_down": 0.485,
+    "pm_mins_left": 3.9,
+    "candle_open": "2026-03-27T17:55:00Z",
+    "features": {
+      "ret_1": -0.000548,
+      "ret_cum5": -0.003994,
+      "ret_cum10": -0.008278,
+      "n_green_5": 2.0,
+      "n_green_10": 4.0,
+      "close_pos": 0.225214,
+      "range_pos_20": 0.054507,
+      "close_vs_ma10": -0.003373
+    },
+    "result": "up",
+    "phase": "2"
+  },
+  {
+    "ts": "2026-03-27T19:20:47Z",
+    "btc_price": 65830.1,
+    "p_up": 0.4758,
+    "p_down": 0.5242,
+    "raw_edge": 0.0242,
+    "direction": "DOWN",
+    "decision": "SIGNAL DOWN — PETIT",
+    "edge_net": 0.0242,
+    "pm_slug": "btc-updown-5m-1774639200",
+    "pm_up": 0.505,
+    "pm_down": 0.495,
+    "pm_mins_left": 4.2,
+    "candle_open": "2026-03-27T19:15:00Z",
+    "features": {
+      "ret_1": 0.002118,
+      "ret_cum5": 0.000952,
+      "ret_cum10": 0.001871,
+      "n_green_5": 3.0,
+      "n_green_10": 5.0,
+      "close_pos": 0.889785,
+      "range_pos_20": 0.916755,
+      "close_vs_ma10": 0.001354
+    },
+    "result": "down",
+    "phase": "2"
   }
 ]
