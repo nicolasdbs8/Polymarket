@@ -1,0 +1,37 @@
+name: BTC 5m Orderbook Snapshot
+
+on:
+  workflow_dispatch: # déclenché par cron-job.org toutes les 10 min
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run orderbook snapshot
+        run: python btc5m/orderbook_snapshot.py
+        continue-on-error: true
+
+      - name: Commit orderbook log if updated
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add btc5m/orderbook_log.json
+          git diff --staged --quiet || git commit -m "orderbook snapshot [$(date -u '+%H:%M UTC')]"
+          git push
+        continue-on-error: true
