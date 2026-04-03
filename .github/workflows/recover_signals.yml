@@ -1,0 +1,54 @@
+name: Recover Missing Signals
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Nombre de jours à remonter"
+        required: false
+        default: "3"
+  schedule:
+    # Tous les jours à 03:00 UTC (hors fenêtre de trading)
+    - cron: '0 3 * * *'
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: write   # pour git push
+      actions: read     # pour lire les logs des autres runs
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run recover_signals
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python recover_signals.py \
+            --owner nicolasdbs8 \
+            --repo Polymarket \
+            --days ${{ github.event.inputs.days || '3' }}
+
+      - name: Commit recovered signals
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add btc5m/signal_log.json
+          git diff --staged --quiet || git commit -m "recover signals [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git push
+        continue-on-error: true
