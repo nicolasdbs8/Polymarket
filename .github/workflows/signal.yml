@@ -36,6 +36,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          POLYMARKET_WALLET_ADDR: ${{ secrets.POLYMARKET_WALLET_ADDR }}
         run: python btc5m/btc5m_notify.py
         continue-on-error: true
 
@@ -43,6 +44,8 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Synchronise d'abord pour réduire la fenêtre de race
+          git pull --rebase origin main
           git add btc5m/signal_log.json
           # Ne commit que si le fichier a changé
           git diff --staged --quiet || git commit -m "signal log [$(date -u '+%H:%M UTC')]"
