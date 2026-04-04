@@ -32,7 +32,12 @@ MAX_AGE_MIN = 15   # ignore les signaux plus vieux que ça (cron externe = déla
 TELEGRAM_API = "https://api.telegram.org/bot{token}/sendMessage"
 
 # USDC sur Polygon (Polymarket utilise les deux selon l'ancienneté du compte)
-POLYGON_RPC    = "https://polygon-rpc.com"
+POLYGON_RPCS = [
+    "https://polygon.llamarpc.com",
+    "https://rpc.ankr.com/polygon",
+    "https://1rpc.io/matic",
+    "https://polygon-rpc.com",
+]
 USDC_CONTRACTS = [
     "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",  # USDC.e (bridgé)
     "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",  # USDC natif
@@ -79,8 +84,7 @@ def fetch_usdc_balance(wallet: str) -> float | None:
     padded = wallet[2:].lower().zfill(64)
     data   = "0x70a08231" + padded
 
-    total = 0.0
-    for contract in USDC_CONTRACTS:
+    def call_rpc(rpc_url: str, contract: str) -> float | None:
         payload = {
             "jsonrpc": "2.0",
             "method":  "eth_call",
@@ -88,12 +92,22 @@ def fetch_usdc_balance(wallet: str) -> float | None:
             "id":      1,
         }
         try:
-            r = requests.post(POLYGON_RPC, json=payload, timeout=8)
+            r = requests.post(rpc_url, json=payload, timeout=6)
             if r.ok:
-                raw = r.json().get("result", "0x0") or "0x0"
-                total += int(raw, 16) / 1e6  # USDC = 6 décimales
+                j = r.json()
+                if "result" in j and j["result"] and "error" not in j:
+                    return int(j["result"], 16) / 1e6
         except Exception:
             pass
+        return None
+
+    total = 0.0
+    for contract in USDC_CONTRACTS:
+        for rpc in POLYGON_RPCS:
+            val = call_rpc(rpc, contract)
+            if val is not None:
+                total += val
+                break  # RPC OK pour ce contrat, passe au suivant
 
     return round(total, 2) if total > 0 else None
 
