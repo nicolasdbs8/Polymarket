@@ -11552,7 +11552,7 @@
       "range_pos_20": 0.9992,
       "close_vs_ma10": 0.00072
     },
-    "result": null,
+    "result": "down",
     "recovered": true
   },
   {
@@ -11579,7 +11579,7 @@
       "range_pos_20": 0.02345,
       "close_vs_ma10": -0.00055
     },
-    "result": null,
+    "result": "up",
     "recovered": true
   },
   {
@@ -11606,7 +11606,7 @@
       "range_pos_20": 0.01967,
       "close_vs_ma10": -0.00042
     },
-    "result": null,
+    "result": "down",
     "recovered": true
   },
   {
@@ -11633,7 +11633,7 @@
       "range_pos_20": 0.0,
       "close_vs_ma10": -0.00032
     },
-    "result": null,
+    "result": "up",
     "recovered": true
   },
   {
@@ -11660,7 +11660,7 @@
       "range_pos_20": 0.00083,
       "close_vs_ma10": -0.00042
     },
-    "result": null,
+    "result": "down",
     "recovered": true
   },
   {
@@ -11687,7 +11687,7 @@
       "range_pos_20": 0.00125,
       "close_vs_ma10": -0.00019
     },
-    "result": null,
+    "result": "up",
     "recovered": true
   },
   {
@@ -11714,7 +11714,7 @@
       "range_pos_20": 0.00094,
       "close_vs_ma10": -0.0006
     },
-    "result": null,
+    "result": "up",
     "recovered": true
   },
   {
@@ -11741,7 +11741,7 @@
       "range_pos_20": 0.98145,
       "close_vs_ma10": 0.00063
     },
-    "result": null,
+    "result": "down",
     "recovered": true
   },
   {
@@ -11768,7 +11768,7 @@
       "range_pos_20": 1.0,
       "close_vs_ma10": 0.00085
     },
-    "result": null,
+    "result": "up",
     "recovered": true
   },
   {
@@ -11795,7 +11795,7 @@
       "range_pos_20": 0.91131,
       "close_vs_ma10": 0.0007
     },
-    "result": null,
+    "result": "down",
     "recovered": true
   },
   {
@@ -11822,7 +11822,7 @@
       "range_pos_20": 0.00086,
       "close_vs_ma10": -0.00096
     },
-    "result": null,
+    "result": "up",
     "recovered": true
   },
   {
@@ -11930,7 +11930,7 @@
       "range_pos_20": 0.86797,
       "close_vs_ma10": 0.00192
     },
-    "result": null,
+    "result": "down",
     "recovered": true
   },
   {
@@ -11957,7 +11957,7 @@
       "range_pos_20": 0.03104,
       "close_vs_ma10": -0.00154
     },
-    "result": null,
+    "result": "up",
     "recovered": true
   },
   {
@@ -11984,7 +11984,7 @@
       "range_pos_20": 1.0,
       "close_vs_ma10": 0.00167
     },
-    "result": null,
+    "result": "up",
     "recovered": true
   }
 ]
