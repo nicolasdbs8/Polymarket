@@ -23,7 +23,7 @@ except ImportError:
     sys.exit(0)
 
 SIGNAL_LOG  = Path(__file__).parent / "signal_log.json"
-MAX_AGE_MIN = 15   # ignore les signaux plus vieux que ça (workflow delayed)
+MAX_AGE_MIN = 15   # ignore les signaux plus vieux que ça (cron externe = délai ~2 min max)
 
 TELEGRAM_API = "https://api.telegram.org/bot{token}/sendMessage"
 
@@ -72,6 +72,8 @@ def build_message(e: dict) -> str:
     dir_icon  = "🟢📈" if direction == "UP" else "🔴📉"
     size_icon = "⚡" if is_standard else "·"
 
+    pm_url = f"https://polymarket.com/event/{pm_slug}"
+
     lines = [
         f"{dir_icon} *SIGNAL BTC 5M — {direction} {'STANDARD' if is_standard else 'PETIT'}* {size_icon}",
         f"",
@@ -81,7 +83,7 @@ def build_message(e: dict) -> str:
         f"💼 Mise conseillée : `{size_pct}` du portefeuille",
         f"",
         f"⏰ `{ts} UTC`",
-        f"🔗 `{pm_slug}`",
+        f"🔗 [Ouvrir sur Polymarket]({pm_url})",
     ]
     return "\n".join(lines)
 
