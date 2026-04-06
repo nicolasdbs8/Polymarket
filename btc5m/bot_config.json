@@ -39,12 +39,13 @@
     "small_pct": 0.02,
     "standard_pct": 0.05,
     "small_edge_threshold": 0.03,
+    "min_usdc": 2.0,
     "max_usdc": 200.0
   },
 
   "safety": {
     "min_minutes_left": 1.5,
     "max_signal_age_s": 90,
-    "fallback_portfolio_usdc": 50
+    "fallback_portfolio_usdc": 100
   }
 }
