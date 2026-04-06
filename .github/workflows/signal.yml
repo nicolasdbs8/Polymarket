@@ -1,10 +1,7 @@
 name: BTC 5m Signal
 
 on:
-  schedule:
-    # Toutes les 10 minutes (minimum GitHub = 5min, mais 10min économise le quota)
-    - cron: '*/10 * * * *'
-  workflow_dispatch:  # permet de déclencher manuellement depuis GitHub
+  workflow_dispatch:  # déclenché uniquement par cron-job.org (évite le double trigger avec le cron GitHub natif)
 
 jobs:
   signal:
