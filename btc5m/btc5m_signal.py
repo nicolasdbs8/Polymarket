@@ -563,7 +563,9 @@ def cmd_signal(friction: float, watch: bool):
             # Friction effective = spread / 2 (coût d'entrée au mid)
             friction_eff = max(friction, pm_spread / 2)
             pm_price = pm_up if direction == "UP" else pm_down
-            edge_vs_market = abs(p_up - pm_up) if direction == "UP" else abs(p_down - pm_down)
+            # Edge signé : positif = contrat sous-coté par le marché dans la direction du modèle
+            # abs() était incorrect — il cachait les cas où le marché sur-cotait déjà la direction
+            edge_vs_market = (p_up - pm_up) if direction == "UP" else (p_down - pm_down)
             edge_net = edge_vs_market - friction_eff
         else:
             pm_price = 0.5
@@ -574,6 +576,9 @@ def cmd_signal(friction: float, watch: bool):
         if raw_edge < EDGE_THRESHOLD:
             decision = "PAS DE SIGNAL"
             reason   = f"edge brut {raw_edge:.2%} < seuil {EDGE_THRESHOLD:.2%}"
+        elif pm_found and pm_mins < 2:
+            decision = "SIGNAL ABSORBÉ — MARCHÉ EXPIRANT"
+            reason   = f"résolution dans {pm_mins:.1f} min (< 2 min) — prix reflet de l'outcome"
         elif edge_net <= 0:
             decision = "SIGNAL ABSORBÉ PAR LA FRICTION"
             reason   = f"edge net {edge_net:+.2%} après friction {friction:.2%}"
@@ -1350,7 +1355,9 @@ def cmd_signal(friction: float, watch: bool):
             # Friction effective = spread / 2 (coût d'entrée au mid)
             friction_eff = max(friction, pm_spread / 2)
             pm_price = pm_up if direction == "UP" else pm_down
-            edge_vs_market = abs(p_up - pm_up) if direction == "UP" else abs(p_down - pm_down)
+            # Edge signé : positif = contrat sous-coté par le marché dans la direction du modèle
+            # abs() était incorrect — il cachait les cas où le marché sur-cotait déjà la direction
+            edge_vs_market = (p_up - pm_up) if direction == "UP" else (p_down - pm_down)
             edge_net = edge_vs_market - friction_eff
         else:
             pm_price = 0.5
@@ -1361,6 +1368,9 @@ def cmd_signal(friction: float, watch: bool):
         if raw_edge < EDGE_THRESHOLD:
             decision = "PAS DE SIGNAL"
             reason   = f"edge brut {raw_edge:.2%} < seuil {EDGE_THRESHOLD:.2%}"
+        elif pm_found and pm_mins < 2:
+            decision = "SIGNAL ABSORBÉ — MARCHÉ EXPIRANT"
+            reason   = f"résolution dans {pm_mins:.1f} min (< 2 min) — prix reflet de l'outcome"
         elif edge_net <= 0:
             decision = "SIGNAL ABSORBÉ PAR LA FRICTION"
             reason   = f"edge net {edge_net:+.2%} après friction {friction:.2%}"
