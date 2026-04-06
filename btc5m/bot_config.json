@@ -1,0 +1,49 @@
+{
+  "enabled": false,
+  "strategy": "up_only_10_22",
+
+  "presets": {
+    "up_only_10_22": {
+      "description": "UP only, fen\u00eatre 10h-22h UTC \u2014 Phase 3 (strat\u00e9gie active)",
+      "direction": "UP",
+      "time_window_utc": [10, 22],
+      "min_edge_net": 0.02
+    },
+    "both_10_22": {
+      "description": "UP + DOWN, fen\u00eatre 10h-22h UTC",
+      "direction": "BOTH",
+      "time_window_utc": [10, 22],
+      "min_edge_net": 0.02
+    },
+    "no_window": {
+      "description": "UP + DOWN, 24h/24 (sans filtre horaire)",
+      "direction": "BOTH",
+      "time_window_utc": null,
+      "min_edge_net": 0.02
+    },
+    "edge5_up": {
+      "description": "UP only, edge net > 5%, fen\u00eatre 10h-22h UTC",
+      "direction": "UP",
+      "time_window_utc": [10, 22],
+      "min_edge_net": 0.05
+    },
+    "up_only_no_window": {
+      "description": "UP only, 24h/24",
+      "direction": "UP",
+      "time_window_utc": null,
+      "min_edge_net": 0.02
+    }
+  },
+
+  "sizing": {
+    "small_pct": 0.02,
+    "standard_pct": 0.05,
+    "small_edge_threshold": 0.03,
+    "max_usdc": 200.0
+  },
+
+  "safety": {
+    "min_minutes_left": 1.5,
+    "max_signal_age_s": 90
+  }
+}
