@@ -27,7 +27,7 @@ except ImportError:
     sys.exit(0)
 
 SIGNAL_LOG  = Path(__file__).parent / "signal_log.json"
-MAX_AGE_MIN = 15   # ignore les signaux plus vieux que ça (cron externe = délai ~2 min max)
+MAX_AGE_MIN = 12   # ignore les signaux plus vieux que ça (cron-job.org = toutes les 5-10 min)
 
 TELEGRAM_API = "https://api.telegram.org/bot{token}/sendMessage"
 
@@ -48,17 +48,36 @@ POLYMARKET_DATA_API = "https://data-api.polymarket.com"
 
 # ─────────────────────────────────────────────────────────────────────────────
 
-def load_last_signal() -> dict | None:
+def load_signal_log() -> list:
     if not SIGNAL_LOG.exists():
-        return None
+        return []
     with open(SIGNAL_LOG, encoding="utf-8") as f:
-        log = json.load(f)
-    return log[-1] if log else None
+        return json.load(f)
+
+
+def load_last_signal() -> tuple[dict | None, list]:
+    """Retourne (dernier_signal, log_complet)."""
+    log = load_signal_log()
+    return (log[-1] if log else None), log
+
+
+def mark_notified(log: list) -> None:
+    """Marque le dernier signal comme notifié et sauvegarde le log."""
+    if not log:
+        return
+    log[-1]["notified_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    with open(SIGNAL_LOG, "w", encoding="utf-8") as f:
+        json.dump(log, f, indent=2, ensure_ascii=False)
 
 
 def is_tradeable(entry: dict) -> bool:
     d = entry.get("decision", "")
     return "SIGNAL" in d and "PAS" not in d and "ABSORBÉ" not in d
+
+
+def already_notified(entry: dict) -> bool:
+    """True si ce signal a déjà déclenché une notification Telegram."""
+    return bool(entry.get("notified_at"))
 
 
 def is_recent(entry: dict) -> bool:
@@ -222,13 +241,17 @@ def main():
         print("[notify] TELEGRAM_BOT_TOKEN ou TELEGRAM_CHAT_ID manquant — skip")
         sys.exit(0)
 
-    last = load_last_signal()
+    last, log = load_last_signal()
     if last is None:
         print("[notify] Aucun signal dans le log.")
         sys.exit(0)
 
     if not is_tradeable(last):
         print(f"[notify] Dernier signal non tradeable : {last.get('decision','?')}")
+        sys.exit(0)
+
+    if already_notified(last):
+        print(f"[notify] Signal déjà notifié à {last['notified_at']} — skip (anti-doublon)")
         sys.exit(0)
 
     if not is_recent(last):
@@ -248,7 +271,8 @@ def main():
 
     msg = build_message(last, cash, positions_val)
     print(f"[notify] Envoi signal : {last.get('decision','?')}")
-    send_telegram(token, chat_id, msg)
+    if send_telegram(token, chat_id, msg):
+        mark_notified(log)  # persiste notified_at → le prochain run skippera ce signal
 
 
 if __name__ == "__main__":
