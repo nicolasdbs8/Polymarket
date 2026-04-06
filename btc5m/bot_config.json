@@ -45,6 +45,6 @@
   "safety": {
     "min_minutes_left": 1.5,
     "max_signal_age_s": 90,
-    "fallback_portfolio_usdc": 100
+    "fallback_portfolio_usdc": 50
   }
 }
