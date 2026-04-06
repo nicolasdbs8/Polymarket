@@ -60,7 +60,7 @@ DEFAULT_FRICTION = 0.005  # spread/2 mesuré sur marchés BTC 5m Polymarket
 
 # Fenêtre de trading Phase 2b (win rate 64.7% dans fenêtre vs 39.5% hors)
 TRADE_WINDOW_UTC = (10, 22)   # heures UTC : [10h, 22h[
-CURRENT_PHASE    = "2b"
+CURRENT_PHASE    = "3"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -587,15 +587,19 @@ def cmd_signal(friction: float, watch: bool):
             decision = f"SIGNAL {direction} — {size}"
             reason   = f"edge net {edge_net:+.2%}"
 
-        # ── Enregistrement dans le journal (signaux tradables uniquement) ──────
-        is_tradeable = (
+        # ── Enregistrement dans le journal ────────────────────────────────────
+        is_signal = (
             "SIGNAL" in decision
             and "PAS DE SIGNAL" not in decision
             and "ABSORBÉ" not in decision
             and pm_found      # on ne logue que si on a un slug pour l'auto-resolve
-            and in_window     # hors fenêtre 10h-22h UTC : pas de log (Phase 2b)
+            and in_window     # hors fenêtre 10h-22h UTC : pas de log
         )
-        if is_tradeable:
+        # Phase 3 : UP tradé, DOWN loggué en watch-only pour continuer la collecte
+        is_tradeable = is_signal and direction == "UP"
+        is_watchable = is_signal and direction == "DOWN"
+
+        if is_signal:
             # Vérification anti-doublon : même slug + même bougie déjà loggés ?
             existing_log = load_signal_log()
             already_logged = any(
@@ -604,9 +608,11 @@ def cmd_signal(friction: float, watch: bool):
                 for e in existing_log
             )
             if already_logged:
-                is_tradeable = False  # skip silencieusement
+                is_tradeable = False
+                is_watchable = False
 
-        if is_tradeable:
+        if is_tradeable or is_watchable:
+            log_phase = CURRENT_PHASE if is_tradeable else "3_watch"
             log_entry = {
                 "ts":           now_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "btc_price":    round(btc_price, 2),
@@ -622,7 +628,7 @@ def cmd_signal(friction: float, watch: bool):
                 "pm_mins_left": round(pm_mins, 1),
                 "candle_open":  last_candle["open_time"].strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "features":     {k: round(v, 6) for k, v in features.items()},
-                "phase":        CURRENT_PHASE,
+                "phase":        log_phase,
                 "result":       None,
             }
             log_signal(log_entry)
@@ -852,7 +858,7 @@ DEFAULT_FRICTION = 0.005  # spread/2 mesuré sur marchés BTC 5m Polymarket
 
 # Fenêtre de trading Phase 2b (win rate 64.7% dans fenêtre vs 39.5% hors)
 TRADE_WINDOW_UTC = (10, 22)   # heures UTC : [10h, 22h[
-CURRENT_PHASE    = "2b"
+CURRENT_PHASE    = "3"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1379,15 +1385,19 @@ def cmd_signal(friction: float, watch: bool):
             decision = f"SIGNAL {direction} — {size}"
             reason   = f"edge net {edge_net:+.2%}"
 
-        # ── Enregistrement dans le journal (signaux tradables uniquement) ──────
-        is_tradeable = (
+        # ── Enregistrement dans le journal ────────────────────────────────────
+        is_signal = (
             "SIGNAL" in decision
             and "PAS DE SIGNAL" not in decision
             and "ABSORBÉ" not in decision
             and pm_found      # on ne logue que si on a un slug pour l'auto-resolve
-            and in_window     # hors fenêtre 10h-22h UTC : pas de log (Phase 2b)
+            and in_window     # hors fenêtre 10h-22h UTC : pas de log
         )
-        if is_tradeable:
+        # Phase 3 : UP tradé, DOWN loggué en watch-only pour continuer la collecte
+        is_tradeable = is_signal and direction == "UP"
+        is_watchable = is_signal and direction == "DOWN"
+
+        if is_signal:
             # Vérification anti-doublon : même slug + même bougie déjà loggés ?
             existing_log = load_signal_log()
             already_logged = any(
@@ -1396,9 +1406,11 @@ def cmd_signal(friction: float, watch: bool):
                 for e in existing_log
             )
             if already_logged:
-                is_tradeable = False  # skip silencieusement
+                is_tradeable = False
+                is_watchable = False
 
-        if is_tradeable:
+        if is_tradeable or is_watchable:
+            log_phase = CURRENT_PHASE if is_tradeable else "3_watch"
             log_entry = {
                 "ts":           now_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "btc_price":    round(btc_price, 2),
@@ -1414,7 +1426,7 @@ def cmd_signal(friction: float, watch: bool):
                 "pm_mins_left": round(pm_mins, 1),
                 "candle_open":  last_candle["open_time"].strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "features":     {k: round(v, 6) for k, v in features.items()},
-                "phase":        CURRENT_PHASE,
+                "phase":        log_phase,
                 "result":       None,
             }
             log_signal(log_entry)
