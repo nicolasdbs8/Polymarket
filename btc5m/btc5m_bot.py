@@ -700,6 +700,16 @@ def main():
 
     # ── Sizing ────────────────────────────────────────────────────────────────
     size_usdc = compute_trade_size(signal, cfg, portfolio)
+    min_usdc  = cfg.get("sizing", {}).get("min_usdc", 2.0)
+    if size_usdc < min_usdc:
+        reason_size = f"taille ordre {size_usdc:.2f} USDC < minimum {min_usdc:.2f} USDC (portefeuille trop petit)"
+        print(f"  ↳ {reason_size}")
+        append_exec_log({
+            "ts_signal": ts_str, "ts_bot": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "pm_slug": pm_slug, "candle_open": candle_open, "direction": direction,
+            "status": "skipped", "skip_reason": reason_size, "dry_run": dry_run,
+        })
+        return
     fee_rate  = calc_taker_fee(best_ask)
     fee_usdc  = round(size_usdc * fee_rate, 3)
     size_label = "STANDARD" if "STANDARD" in signal.get("decision", "") else "PETIT"
