@@ -108,6 +108,32 @@ Seuil minimum : `EDGE_THRESHOLD = 0.02`
 
 ---
 
+## Slippage orderbook et cap de mise
+
+Analyse sur **453 snapshots** du carnet d'ordres (`btc5m/orderbook_log.json`, `orderbook_snapshot.py`) :
+
+| Taille mise | Slippage médian | Slippage moyen | Coût total (+ friction 0.5%) |
+|---|---|---|---|
+| 10 USDC | 0.00% | 0.06% | ~0.6% |
+| 50 USDC | 0.00% | 0.31% | ~0.8% |
+| 100 USDC | 0.45% | 0.56% | ~1.1% |
+| **200 USDC** | **0.80%** | **0.96%** | **~1.5%** |
+| 500 USDC | 1.68% | 1.96% | ~2.5% ⚠ |
+
+Depth ask médiane : **55 000 USDC** — liquidité suffisante, mais le slippage croît vite au-delà de 200 USDC.
+
+**Cap retenu : 200 USDC par trade** (`MAX_MISE = 200.0` dans `btc5m_projection.py`)
+
+Justification : à 200 USDC, le coût total (slippage médian 0.80% + friction 0.50%) reste à ~1.3%, soit en-dessous de l'edge_net minimum de 2%. À 500 USDC, le slippage seul (1.96%) dévore la quasi-totalité de l'edge sur les signaux PETIT.
+
+> Le cap s'active quand le portefeuille dépasse `MAX_MISE / taux_sizing` :
+> - Sizing STANDARD 5% → cap actif dès ~4 000 USDC de portefeuille
+> - Sizing PETIT 2% → cap actif dès ~10 000 USDC
+>
+> En-deçà de ces seuils, la croissance est exponentielle ; au-delà, linéaire (mise fixe à 200 USDC).
+
+---
+
 ## Calcul des frais (taker fee dynamique Polymarket)
 
 Effectif à partir du 30 mars 2026 sur les marchés crypto 5m :
@@ -155,6 +181,24 @@ fee = p × 0.018 × (4 × p × (1-p))
 | edge>3% + 10h–22h | 39 | 108.56$ | +8.6% | -40.41$ | 1.99 |
 | edge>4% + 10h–22h | 18 | 110.25$ | +10.2% | -18.90$ | 2.69 |
 
+### UP seul 10h–22h — 113 trades (`btc5m_kelly_up.py`, 2026-04-06)
+
+| Stratégie | Final | ROI | MaxDD | Sharpe | Mise moy |
+|---|---|---|---|---|---|
+| **A — Fixe actuel (PETIT=2% / STANDARD=5%)** | **212$** | **+112%** | **9.8%** | **4.67** | 2.3% |
+| B — Kelly/4 statique | 568$ | +468% | 28.5% | 4.20 | 6.2% |
+| C — Kelly/4 dynamique | 467$ | +367% | 22.2% | 4.27 | 5.3% |
+| D — Kelly/4 incertitude | 805$ | +705% | 25.1% | 4.62 | 7.6% |
+
+**IC win rate 95% : [59.6% — 76.7%]** (n=113) — borne basse confirme l'edge hors bruit statistique.
+
+**Kelly recommandé :** f = 0.363 → **Kelly/4 = 9.1%** — soit ~1.8× le sizing STANDARD actuel (5%).
+
+**Conclusion sizing (2026-04-06) :**
+- Le sizing fixe actuel (2%/5%) est **conservateur** par rapport à Kelly/4 mais présente le meilleur profil risque/rendement : Sharpe 4.67 avec MaxDD de seulement 9.8%.
+- Kelly (B/C/D) multiplie le ROI au prix d'un MaxDD 22–28% — inadapté à ce stade.
+- **Ne pas augmenter le sizing avant 200 trades UP Phase 3** (OOS complet). À ce stade, Kelly/4 = 9.1% sera recalculé sur base plus large.
+
 ### Filtre edge>3% + 10h–22h — 39 trades (`btc5m_kelly_filtered.py`, 2026-04-06)
 
 | Stratégie | Final | ROI | MaxDD | Sharpe |
@@ -165,7 +209,6 @@ fee = p × 0.018 × (4 × p × (1-p))
 | Kelly/4 incertitude | 107.14$ | +7.1% | 33.2% | 0.95 |
 
 > Sharpe en baisse vs snapshot précédent (3.0 → 1.34) avec 39 vs 26 trades — le segment se normalise.
-> Sizing fixe 5% reste le meilleur. Kelly sur-mise toujours — revoir à 100+ trades filtrés.
 
 ### Projections forward — 10h–22h UP seul (sizing réel, compound)
 
@@ -198,8 +241,10 @@ Hors fenêtre, même edge>5% est négatif (-31.4% ROI/trade).
 
 | Phase | Description |
 |---|---|
-| `2` | Phase courante (edge_threshold=0.02, fenêtre libre) |
-| `2b` | Phase 2 avec filtre fenêtre 10h–22h UTC activé |
+| `2` | edge_threshold=0.02, fenêtre libre (toutes heures) |
+| `2b` | edge_threshold=0.02, filtre 10h–22h UTC |
+| `3` | **Phase active** — UP only tradé, fenêtre 10h–22h UTC (démarré 2026-04-06) |
+| `3_watch` | Signaux DOWN loggués en watch-only (non tradés) pour suivi statistique |
 
 ---
 
