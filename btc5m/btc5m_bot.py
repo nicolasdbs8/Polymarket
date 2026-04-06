@@ -49,6 +49,10 @@ POLYGON_RPCS = [
     "https://rpc.ankr.com/polygon",
     "https://1rpc.io/matic",
     "https://polygon-rpc.com",
+    "https://polygon-mainnet.public.blastapi.io",
+    "https://polygon.drpc.org",
+    "https://polygon.meowrpc.com",
+    "https://endpoints.omniatech.io/v1/matic/mainnet/public",
 ]
 USDC_CONTRACTS = [
     "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",  # USDC.e (bridgé)
@@ -276,7 +280,7 @@ def fetch_usdc_balance(wallet: str) -> float | None:
             "params":  [{"to": contract, "data": data}, "latest"], "id": 1,
         }
         try:
-            r = requests.post(rpc_url, json=payload, timeout=6)
+            r = requests.post(rpc_url, json=payload, timeout=10)
             if r.ok:
                 j = r.json()
                 if "result" in j and j["result"] and "error" not in j:
@@ -286,13 +290,18 @@ def fetch_usdc_balance(wallet: str) -> float | None:
         return None
 
     total = 0.0
+    any_rpc_success = False
     for contract in USDC_CONTRACTS:
         for rpc in POLYGON_RPCS:
             val = call_rpc(rpc, contract)
             if val is not None:
+                any_rpc_success = True
                 total += val
                 break
-    return round(total, 2) if total > 0 else None
+
+    if not any_rpc_success:
+        return None  # tous les RPCs ont échoué — laisser le fallback agir
+    return round(total, 2)
 
 
 def fetch_positions_value(wallet: str) -> float | None:
@@ -676,8 +685,14 @@ def main():
         portfolio = cash
         print(f"  Portefeuille : {cash:.2f} USDC (cash uniquement, positions non disponibles)")
     else:
-        print("  ↳ Balance USDC non disponible — skip")
-        return
+        fallback = cfg.get("safety", {}).get("fallback_portfolio_usdc")
+        if fallback:
+            portfolio = float(fallback)
+            print(f"  ⚠ Balance USDC non disponible (RPC ou POLYMARKET_WALLET_ADDR manquant)")
+            print(f"  ↳ Fallback config : {portfolio:.0f} USDC")
+        else:
+            print("  ↳ Balance USDC non disponible et fallback_portfolio_usdc non configuré — skip")
+            return
 
     if portfolio < 5.0:
         print(f"  ↳ Portefeuille insuffisant ({portfolio:.2f} USDC) — skip")
