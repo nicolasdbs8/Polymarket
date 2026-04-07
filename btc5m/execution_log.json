@@ -78,5 +78,24 @@
     "status": "skipped",
     "skip_reason": "taille ordre 1.23 USDC < minimum 2.00 USDC (portefeuille trop petit)",
     "dry_run": false
+  },
+  {
+    "ts_signal": "2026-04-07T14:01:28Z",
+    "ts_bot": "2026-04-07T14:01:34Z",
+    "pm_slug": "btc-updown-5m-1775570400",
+    "candle_open": "2026-04-07T13:55:00Z",
+    "direction": "UP",
+    "preset": "up_only_10_22",
+    "edge_signal": 0.0241,
+    "edge_live": 0.0241,
+    "minutes_left": 3.46,
+    "best_ask": 0.51,
+    "size_usdc": 2.23,
+    "size_label": "PETIT",
+    "fee_usdc": 0.04,
+    "portfolio": 111.38,
+    "status": "error: py-clob-client manquant",
+    "order_id": "",
+    "dry_run": false
   }
 ]
