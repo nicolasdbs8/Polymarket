@@ -388,20 +388,19 @@ def place_fok_order(clob_client, token_id: str, price: float,
         return {"status": "dry_run", "price": price, "size_shares": size_shares}
 
     try:
-        from py_clob_client.clob_types import OrderArgs, OrderType
-        from py_clob_client.constants import BUY
+        from py_clob_client.clob_types import OrderArgs
     except ImportError:
         print("[bot] py-clob-client manquant — pip install py-clob-client")
         return {"status": "error: py-clob-client manquant"}
 
     try:
-        order  = clob_client.create_order(OrderArgs(
+        order = clob_client.create_order(OrderArgs(
             token_id=token_id,
             price=price,
             size=size_shares,
-            side=BUY,
+            side="BUY",
         ))
-        resp   = clob_client.post_order(order, OrderType.FOK)
+        resp  = clob_client.post_order(order, "FOK")
         return resp if isinstance(resp, dict) else {"status": str(resp)}
     except Exception as e:
         print(f"[bot] Erreur placement ordre : {e}")
