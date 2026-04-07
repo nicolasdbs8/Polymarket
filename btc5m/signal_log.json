@@ -15182,7 +15182,7 @@
       "close_vs_ma10": 0.003081
     },
     "phase": "3_watch",
-    "result": null,
+    "result": "down",
     "notified_at": "2026-04-07T19:21:00Z"
   }
 ]
