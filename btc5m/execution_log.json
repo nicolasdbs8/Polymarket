@@ -154,5 +154,24 @@
     "status": "error: py-clob-client manquant",
     "order_id": "",
     "dry_run": false
+  },
+  {
+    "ts_signal": "2026-04-07T15:01:27Z",
+    "ts_bot": "2026-04-07T15:01:33Z",
+    "pm_slug": "btc-updown-5m-1775574000",
+    "candle_open": "2026-04-07T14:55:00Z",
+    "direction": "UP",
+    "preset": "up_only_10_22",
+    "edge_signal": 0.0149,
+    "edge_live": 0.0149,
+    "minutes_left": 3.5,
+    "best_ask": 0.51,
+    "size_usdc": 2.23,
+    "size_label": "PETIT",
+    "fee_usdc": 0.04,
+    "portfolio": 111.38,
+    "status": "error: py-clob-client manquant",
+    "order_id": "",
+    "dry_run": false
   }
 ]
