@@ -58,5 +58,15 @@
     "status": "skipped",
     "skip_reason": "taille ordre 1.23 USDC < minimum 2.00 USDC (portefeuille trop petit)",
     "dry_run": false
+  },
+  {
+    "ts_signal": "2026-04-07T11:05:48Z",
+    "ts_bot": "2026-04-07T11:05:53Z",
+    "pm_slug": "btc-updown-5m-1775559900",
+    "candle_open": "2026-04-07T11:00:00Z",
+    "direction": "UP",
+    "status": "skipped",
+    "skip_reason": "taille ordre 1.23 USDC < minimum 2.00 USDC (portefeuille trop petit)",
+    "dry_run": false
   }
 ]
