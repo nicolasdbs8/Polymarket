@@ -344,5 +344,24 @@
     "status": "error: PolyApiException[status_code=403, error_message={'error': 'Trading restricted in your region, please refer to available regions - https://docs.polymarket.com/developers/CLOB/geoblock'}]",
     "order_id": "",
     "dry_run": false
+  },
+  {
+    "ts_signal": "2026-04-08T14:35:54Z",
+    "ts_bot": "2026-04-08T14:36:14Z",
+    "pm_slug": "btc-updown-5m-1775658900",
+    "candle_open": "2026-04-08T14:30:00Z",
+    "direction": "UP",
+    "preset": "up_only_10_22",
+    "edge_signal": 0.0316,
+    "edge_live": 0.0316,
+    "minutes_left": 3.83,
+    "best_ask": 0.51,
+    "size_usdc": 5.57,
+    "size_label": "STANDARD",
+    "fee_usdc": 0.1,
+    "portfolio": 111.38,
+    "status": "error: PolyApiException[status_code=403, error_message={'error': 'Trading restricted in your region, please refer to available regions - https://docs.polymarket.com/developers/CLOB/geoblock'}]",
+    "order_id": "",
+    "dry_run": false
   }
 ]
