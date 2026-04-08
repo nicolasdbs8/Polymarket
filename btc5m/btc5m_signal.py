@@ -58,7 +58,7 @@ EDGE_THRESHOLD = 0.02
 # Friction estimée sur Polymarket BTC 5m (mesurée ou estimée)
 DEFAULT_FRICTION = 0.005  # spread/2 mesuré sur marchés BTC 5m Polymarket
 
-# Fenêtre de trading Phase 2b (win rate 64.7% dans fenêtre vs 39.5% hors)
+# Fenêtre de trading active (validée en Phase 2b : win rate 64.7% dans fenêtre vs 39.5% hors)
 TRADE_WINDOW_UTC = (10, 22)   # heures UTC : [10h, 22h[
 CURRENT_PHASE    = "3"
 
@@ -856,7 +856,7 @@ EDGE_THRESHOLD = 0.02
 # Friction estimée sur Polymarket BTC 5m (mesurée ou estimée)
 DEFAULT_FRICTION = 0.005  # spread/2 mesuré sur marchés BTC 5m Polymarket
 
-# Fenêtre de trading Phase 2b (win rate 64.7% dans fenêtre vs 39.5% hors)
+# Fenêtre de trading active (validée en Phase 2b : win rate 64.7% dans fenêtre vs 39.5% hors)
 TRADE_WINDOW_UTC = (10, 22)   # heures UTC : [10h, 22h[
 CURRENT_PHASE    = "3"
 
@@ -1721,6 +1721,16 @@ def cmd_review(last: int, phase: str | None = None):
     p2b_res    = [e for e in p2b_log if e.get("result") is not None and _is_signal(e)]
     p2b_wins   = [e for e in p2b_res if _win(e)]
 
+    # Stats phase 3 (UP tradés uniquement)
+    p3_log     = [e for e in all_log if e.get("phase") == "3"]
+    p3_res     = [e for e in p3_log if e.get("result") is not None and _is_signal(e)]
+    p3_wins    = [e for e in p3_res if _win(e)]
+
+    # Stats phase 3_watch (DOWN loggués, non tradés)
+    p3w_log    = [e for e in all_log if e.get("phase") == "3_watch"]
+    p3w_res    = [e for e in p3w_log if e.get("result") is not None and _is_signal(e)]
+    p3w_wins   = [e for e in p3w_res if _win(e)]
+
     resolved   = [e for e in log if e.get("result") is not None]
     n_signals  = sum(1 for e in log if _is_signal(e))
     n_res_sig  = [e for e in resolved if _is_signal(e)]
@@ -1736,6 +1746,7 @@ def cmd_review(last: int, phase: str | None = None):
         wr = len(wins) / len(n_res_sig)
         print(f"  Win rate live      : {wr:.1%}  ({len(wins)}/{len(n_res_sig)})")
         print(f"  Baseline Phase 1   : 52.8%  (edge_0.02 OOS)")
+        print(f"  Phase courante     : {CURRENT_PHASE}  (UP tradé, DOWN watch-only)")
 
     # ── Stats par phase ───────────────────────────────────────────
     print(f"{'─' * 65}")
@@ -1754,6 +1765,20 @@ def cmd_review(last: int, phase: str | None = None):
         print(f"  Phase 2b ({n_p2b_total:>3} signaux) : {wr2b:.1%}  ({len(p2b_wins)}/{len(p2b_res)})  — filtre 10h-22h UTC")
     elif n_p2b_total:
         print(f"  Phase 2b ({n_p2b_total:>3} signaux) : —  (résultats en attente)")
+
+    n_p3_total = sum(1 for e in all_log if e.get("phase") == "3" and _is_signal(e))
+    if p3_res:
+        wr3 = len(p3_wins) / len(p3_res)
+        print(f"  Phase 3  ({n_p3_total:>3} signaux) : {wr3:.1%}  ({len(p3_wins)}/{len(p3_res)})  — UP tradé (fenêtre {TRADE_WINDOW_UTC[0]}h-{TRADE_WINDOW_UTC[1]}h UTC)")
+    elif n_p3_total:
+        print(f"  Phase 3  ({n_p3_total:>3} signaux) : —  (résultats en attente)")
+
+    n_p3w_total = sum(1 for e in all_log if e.get("phase") == "3_watch" and _is_signal(e))
+    if p3w_res:
+        wr3w = len(p3w_wins) / len(p3w_res)
+        print(f"  Phase 3w ({n_p3w_total:>3} signaux) : {wr3w:.1%}  ({len(p3w_wins)}/{len(p3w_res)})  — DOWN watch-only (collecte)")
+    elif n_p3w_total:
+        print(f"  Phase 3w ({n_p3w_total:>3} signaux) : —  (résultats en attente)")
 
     print(f"{'─' * 65}\n")
 
