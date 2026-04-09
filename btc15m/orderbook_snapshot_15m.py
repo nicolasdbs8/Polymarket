@@ -169,21 +169,10 @@ def _enrich_market(market: dict, slug: str, now: datetime) -> tuple | None:
     if not (-2 < minutes_left < 30):  # hors fenêtre utile
         return None
 
-    # startDate → time_since_open_s
-    start_str = market.get("startDate", "") or market.get("start_date_iso", "")
-    if start_str:
-        if not start_str.endswith("Z"):
-            start_str += "Z"
-        try:
-            start_dt = datetime.fromisoformat(start_str.replace("Z", "+00:00"))
-            time_since_open_s = int((now - start_dt).total_seconds())
-        except ValueError:
-            time_since_open_s = MARKET_DURATION_S - int(minutes_left * 60)
-    else:
-        # Fallback : on suppose une durée de 900s
-        time_since_open_s = MARKET_DURATION_S - int(minutes_left * 60)
-
-    time_since_open_s = max(0, time_since_open_s)
+    # time_since_open_s : calculé depuis endDate uniquement.
+    # Le champ startDate de l'API Gamma représente la création de l'event series,
+    # pas l'ouverture de la fenêtre 15m actuelle — on ne l'utilise pas.
+    time_since_open_s = max(0, MARKET_DURATION_S - int(minutes_left * 60))
 
     # clobTokenIds
     token_ids_raw = market.get("clobTokenIds", "[]")
