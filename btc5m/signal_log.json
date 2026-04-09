@@ -16862,7 +16862,7 @@
       "close_vs_ma10": 0.002654
     },
     "phase": "3_watch",
-    "result": null,
+    "result": "down",
     "notified_at": "2026-04-09T10:01:13Z"
   }
 ]
