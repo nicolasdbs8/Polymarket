@@ -58,6 +58,20 @@ TIMEFRAME_KEYWORDS = {
     "daily": ["up-or-down-on", "daily"],
 }
 
+# Nom utilisé dans le slug des marchés daily (pattern : {name}-up-or-down-on-{month}-{day})
+DAILY_SLUG_NAMES = {
+    "btc":  "bitcoin",
+    "eth":  "ethereum",
+    "sol":  "solana",
+    "xrp":  "xrp",
+    "doge": "dogecoin",
+}
+
+MONTH_NAMES = [
+    "january", "february", "march", "april", "may", "june",
+    "july", "august", "september", "october", "november", "december",
+]
+
 TIMEFRAME_CONFIG = {
     "5m": {
         "duration_s":       300,
@@ -165,10 +179,14 @@ def _search_via_markets_api(asset: str, timeframe: str, cfg: dict, now: datetime
 
 def _search_via_events_api(asset: str, timeframe: str, cfg: dict, now: datetime) -> list:
     """
-    Fallback : construit des slugs candidats sur une grille temporelle
-    et interroge /events pour chacun.
-    Pattern attendu : {asset}-updown-{timeframe}-{timestamp}
+    Fallback via /events avec slug construit.
+    - intraday (5m, 15m) : pattern {asset}-updown-{timeframe}-{timestamp}
+    - daily              : pattern {full_name}-up-or-down-on-{month}-{day}
+                           testé sur J-1, J, J+1, J+2 (fenêtre de transition)
     """
+    if timeframe == "daily":
+        return _search_daily_via_events(asset, cfg, now)
+
     candidates = []
     ts   = int(now.timestamp())
     base = (ts // cfg["grid_s"]) * cfg["grid_s"]
@@ -176,6 +194,43 @@ def _search_via_events_api(asset: str, timeframe: str, cfg: dict, now: datetime)
     for offset in cfg["fallback_offsets"]:
         candidate_ts = base + offset * cfg["grid_s"]
         slug = f"{asset}-updown-{timeframe}-{candidate_ts}"
+        try:
+            r = requests.get(GAMMA_EVENTS_URL, params={"slug": slug}, timeout=8)
+            if r.status_code != 200:
+                continue
+            events = r.json()
+            if not events:
+                continue
+            market = events[0].get("markets", [{}])[0]
+            if not market:
+                continue
+            enriched = _enrich_market(market, slug, cfg, now)
+            if enriched is not None:
+                candidates.append(enriched)
+        except Exception:
+            continue
+
+    return candidates
+
+
+def _search_daily_via_events(asset: str, cfg: dict, now: datetime) -> list:
+    """
+    Recherche les marchés daily via /events en construisant les slugs par date.
+    Pattern Polymarket : {full_name}-up-or-down-on-{month}-{day}
+    Ex : bitcoin-up-or-down-on-april-10
+
+    Teste J-1 à J+2 pour couvrir la fenêtre de transition autour de midi ET.
+    """
+    from datetime import timedelta
+
+    name       = DAILY_SLUG_NAMES.get(asset, asset)
+    candidates = []
+
+    for offset in range(-1, 3):
+        candidate_date = (now + timedelta(days=offset)).date()
+        month = MONTH_NAMES[candidate_date.month - 1]
+        day   = candidate_date.day
+        slug  = f"{name}-up-or-down-on-{month}-{day}"
         try:
             r = requests.get(GAMMA_EVENTS_URL, params={"slug": slug}, timeout=8)
             if r.status_code != 200:
