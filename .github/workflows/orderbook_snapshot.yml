@@ -1,4 +1,4 @@
-name: BTC Orderbook Snapshot (5m + 15m)
+name: Orderbook Snapshot — All Markets
 
 on:
   workflow_dispatch: # déclenché par cron-job.org toutes les 10 min
@@ -6,7 +6,7 @@ on:
 jobs:
   snapshot:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repo
@@ -23,19 +23,61 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run orderbook snapshot 5m
-        run: python btc5m/orderbook_snapshot.py
+      # ── BTC ──────────────────────────────────────────────────────────────
+      - name: BTC 5m
+        run: python orderbook_snapshot.py --asset btc --timeframe 5m
         continue-on-error: true
 
-      - name: Run orderbook snapshot 15m
-        run: python btc15m/orderbook_snapshot_15m.py
+      - name: BTC 15m
+        run: python orderbook_snapshot.py --asset btc --timeframe 15m
         continue-on-error: true
 
+      - name: BTC daily
+        run: python orderbook_snapshot.py --asset btc --timeframe daily
+        continue-on-error: true
+
+      # ── ETH ──────────────────────────────────────────────────────────────
+      - name: ETH 5m
+        run: python orderbook_snapshot.py --asset eth --timeframe 5m
+        continue-on-error: true
+
+      - name: ETH 15m
+        run: python orderbook_snapshot.py --asset eth --timeframe 15m
+        continue-on-error: true
+
+      - name: ETH daily
+        run: python orderbook_snapshot.py --asset eth --timeframe daily
+        continue-on-error: true
+
+      # ── SOL ──────────────────────────────────────────────────────────────
+      - name: SOL 5m
+        run: python orderbook_snapshot.py --asset sol --timeframe 5m
+        continue-on-error: true
+
+      - name: SOL 15m
+        run: python orderbook_snapshot.py --asset sol --timeframe 15m
+        continue-on-error: true
+
+      # ── XRP ──────────────────────────────────────────────────────────────
+      - name: XRP 5m
+        run: python orderbook_snapshot.py --asset xrp --timeframe 5m
+        continue-on-error: true
+
+      - name: XRP 15m
+        run: python orderbook_snapshot.py --asset xrp --timeframe 15m
+        continue-on-error: true
+
+      # ── DOGE ─────────────────────────────────────────────────────────────
+      - name: DOGE 5m
+        run: python orderbook_snapshot.py --asset doge --timeframe 5m
+        continue-on-error: true
+
+      # ── Commit ───────────────────────────────────────────────────────────
       - name: Commit orderbook logs if updated
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add btc5m/orderbook_log.json btc15m/orderbook_log_15m.json
+          find . -name "orderbook_log.json" -not -path "./.git/*" -exec git add {} \;
           git diff --staged --quiet || git commit -m "orderbook snapshot [$(date -u '+%H:%M UTC')]"
           git push
         continue-on-error: true
