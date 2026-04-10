@@ -1,0 +1,21 @@
+[
+  {
+    "ts": "2026-04-10T16:00:56Z",
+    "slug": "ethereum-up-or-down-on-april-11-2026",
+    "token_id_up": "93010661645244616241568690166764284087553001313307722497642972216888616539817",
+    "time_since_open_s": 57,
+    "mins_left": 1439.1,
+    "best_bid": 0.47,
+    "best_ask": 0.53,
+    "spread": 0.06,
+    "friction_half_spread": 0.03,
+    "depth_ask_usdc": 9514.9,
+    "n_ask_levels": 31,
+    "slippage_usdc": {
+      "50": 0.0,
+      "100": 0.0,
+      "200": 0.082696,
+      "500": 0.209464
+    }
+  }
+]

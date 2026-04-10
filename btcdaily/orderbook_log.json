@@ -1,0 +1,21 @@
+[
+  {
+    "ts": "2026-04-10T16:00:50Z",
+    "slug": "bitcoin-up-or-down-on-april-11-2026",
+    "token_id_up": "51211000897598378944677071789917987582418176394495026931787962832718626511807",
+    "time_since_open_s": 51,
+    "mins_left": 1439.2,
+    "best_bid": 0.44,
+    "best_ask": 0.49,
+    "spread": 0.05,
+    "friction_half_spread": 0.025,
+    "depth_ask_usdc": 124860.65,
+    "n_ask_levels": 45,
+    "slippage_usdc": {
+      "50": 0.0,
+      "100": 0.000358,
+      "200": 0.00513,
+      "500": 0.00804
+    }
+  }
+]
