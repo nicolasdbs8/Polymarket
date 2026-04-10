@@ -1,0 +1,128 @@
+[
+  {
+    "ts": "2026-04-10T11:58:18.469310+00:00",
+    "portfolio_val": 107.0761,
+    "pnl": -2.3039,
+    "open_val": 0.0,
+    "n_resolved": 3,
+    "n_wins": 1,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T11:58:33.569339+00:00",
+    "portfolio_val": 107.0761,
+    "pnl": -2.3039,
+    "open_val": 0,
+    "n_resolved": 3,
+    "n_wins": 1,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T11:59:46.917344+00:00",
+    "portfolio_val": 107.0761,
+    "pnl": -2.3039,
+    "open_val": 0,
+    "n_resolved": 3,
+    "n_wins": 1,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T12:00:10.959571+00:00",
+    "portfolio_val": 107.0761,
+    "pnl": -2.3039,
+    "open_val": 0,
+    "n_resolved": 3,
+    "n_wins": 1,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T12:00:37.870318+00:00",
+    "portfolio_val": 107.0761,
+    "pnl": -2.3039,
+    "open_val": 0.0,
+    "n_resolved": 3,
+    "n_wins": 1,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T12:01:24.840392+00:00",
+    "portfolio_val": 107.0761,
+    "pnl": -2.3039,
+    "open_val": 0,
+    "n_resolved": 3,
+    "n_wins": 1,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T12:07:50.679423+00:00",
+    "portfolio_val": 119.61,
+    "pnl": 10.23,
+    "open_val": 0,
+    "n_resolved": 9,
+    "n_wins": 7,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T12:16:22.590299+00:00",
+    "portfolio_val": 119.61,
+    "pnl": 0.0,
+    "open_val": 0.0,
+    "n_resolved": 7,
+    "n_wins": 5,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T12:17:33.756865+00:00",
+    "portfolio_val": 119.61,
+    "pnl": 12.6312,
+    "open_val": 0.0,
+    "n_resolved": 7,
+    "n_wins": 5,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T12:18:50.444957+00:00",
+    "portfolio_val": 119.61,
+    "pnl": 12.6312,
+    "open_val": 0.0,
+    "n_resolved": 7,
+    "n_wins": 5,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T12:19:33.135248+00:00",
+    "portfolio_val": 119.61,
+    "pnl": 12.6312,
+    "open_val": 0.0,
+    "n_resolved": 7,
+    "n_wins": 5,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T12:24:49.717290+00:00",
+    "portfolio_val": 119.61,
+    "pnl": 12.6312,
+    "open_val": 0.0,
+    "n_resolved": 7,
+    "n_wins": 5,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T12:33:04.282602+00:00",
+    "portfolio_val": 119.61,
+    "pnl": 12.6312,
+    "open_val": 0.0,
+    "n_resolved": 7,
+    "n_wins": 5,
+    "n_losses": 2
+  },
+  {
+    "ts": "2026-04-10T12:33:23.881891+00:00",
+    "portfolio_val": 119.61,
+    "pnl": 12.6312,
+    "open_val": 0.0,
+    "n_resolved": 7,
+    "n_wins": 5,
+    "n_losses": 2
+  }
+]
