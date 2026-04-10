@@ -115,7 +115,7 @@ TIMEFRAME_CONFIG = {
 # 1. Détection dynamique du marché actif
 # ─────────────────────────────────────────────────────────────────────────────
 
-def find_active_market(asset: str, timeframe: str) -> dict | None:
+def find_active_market(asset: str, timeframe: str, verbose: bool = False) -> dict | None:
     """
     Détecte le marché actif pour l'asset/timeframe donné.
     Stratégie 1 : /markets (liste active) → filtrage par keywords
@@ -127,9 +127,13 @@ def find_active_market(asset: str, timeframe: str) -> dict | None:
     cfg = TIMEFRAME_CONFIG[timeframe]
     now = datetime.now(timezone.utc)
 
-    candidates = _search_via_markets_api(asset, timeframe, cfg, now)
+    candidates = _search_via_markets_api(asset, timeframe, cfg, now, verbose)
+    if verbose:
+        print(f"  [DEBUG] Stratégie 1 (/markets) : {len(candidates)} candidat(s)")
     if not candidates:
-        candidates = _search_via_events_api(asset, timeframe, cfg, now)
+        candidates = _search_via_events_api(asset, timeframe, cfg, now, verbose)
+        if verbose:
+            print(f"  [DEBUG] Stratégie 2 (/events)  : {len(candidates)} candidat(s)")
 
     if not candidates:
         return None
@@ -143,7 +147,8 @@ def find_active_market(asset: str, timeframe: str) -> dict | None:
     return candidates[0][1]
 
 
-def _search_via_markets_api(asset: str, timeframe: str, cfg: dict, now: datetime) -> list:
+def _search_via_markets_api(asset: str, timeframe: str, cfg: dict, now: datetime,
+                            verbose: bool = False) -> list:
     """Recherche via /markets en filtrant par asset et timeframe dans le slug."""
     candidates = []
     try:
@@ -153,6 +158,8 @@ def _search_via_markets_api(asset: str, timeframe: str, cfg: dict, now: datetime
             timeout=10,
         )
         if r.status_code != 200:
+            if verbose:
+                print(f"  [DEBUG] /markets HTTP {r.status_code}")
             return []
         markets = r.json()
         if isinstance(markets, dict):
@@ -164,20 +171,27 @@ def _search_via_markets_api(asset: str, timeframe: str, cfg: dict, now: datetime
     asset_kws     = ASSET_KEYWORDS.get(asset, [asset])
     timeframe_kws = TIMEFRAME_KEYWORDS.get(timeframe, [timeframe])
 
+    if verbose:
+        print(f"  [DEBUG] /markets : {len(markets)} marchés reçus")
+        print(f"  [DEBUG] Filtres asset={asset_kws}  timeframe={timeframe_kws}")
+
     for market in markets:
         slug = (market.get("slug", "") or market.get("conditionId", "")).lower()
-        if not any(kw in slug for kw in asset_kws):
+        asset_ok = any(kw in slug for kw in asset_kws)
+        tf_ok    = any(kw in slug for kw in timeframe_kws)
+        if verbose and asset_ok:
+            print(f"  [DEBUG]   slug='{slug}'  asset_ok={asset_ok}  tf_ok={tf_ok}")
+        if not asset_ok or not tf_ok:
             continue
-        if not any(kw in slug for kw in timeframe_kws):
-            continue
-        enriched = _enrich_market(market, slug, cfg, now)
+        enriched = _enrich_market(market, slug, cfg, now, verbose)
         if enriched is not None:
             candidates.append(enriched)
 
     return candidates
 
 
-def _search_via_events_api(asset: str, timeframe: str, cfg: dict, now: datetime) -> list:
+def _search_via_events_api(asset: str, timeframe: str, cfg: dict, now: datetime,
+                           verbose: bool = False) -> list:
     """
     Fallback via /events avec slug construit.
     - intraday (5m, 15m) : pattern {asset}-updown-{timeframe}-{timestamp}
@@ -185,7 +199,7 @@ def _search_via_events_api(asset: str, timeframe: str, cfg: dict, now: datetime)
                            testé sur J-1, J, J+1, J+2 (fenêtre de transition)
     """
     if timeframe == "daily":
-        return _search_daily_via_events(asset, cfg, now)
+        return _search_daily_via_events(asset, cfg, now, verbose)
 
     candidates = []
     ts   = int(now.timestamp())
@@ -204,7 +218,7 @@ def _search_via_events_api(asset: str, timeframe: str, cfg: dict, now: datetime)
             market = events[0].get("markets", [{}])[0]
             if not market:
                 continue
-            enriched = _enrich_market(market, slug, cfg, now)
+            enriched = _enrich_market(market, slug, cfg, now, verbose)
             if enriched is not None:
                 candidates.append(enriched)
         except Exception:
@@ -213,13 +227,17 @@ def _search_via_events_api(asset: str, timeframe: str, cfg: dict, now: datetime)
     return candidates
 
 
-def _search_daily_via_events(asset: str, cfg: dict, now: datetime) -> list:
+def _search_daily_via_events(asset: str, cfg: dict, now: datetime,
+                              verbose: bool = False) -> list:
     """
     Recherche les marchés daily via /events en construisant les slugs par date.
-    Pattern Polymarket : {full_name}-up-or-down-on-{month}-{day}
-    Ex : bitcoin-up-or-down-on-april-10
 
-    Teste J-1 à J+2 pour couvrir la fenêtre de transition autour de midi ET.
+    Polymarket crée un nouveau marché chaque année avec un suffixe :
+      {full_name}-up-or-down-on-{month}-{day}-{year}
+    Ex : bitcoin-up-or-down-on-april-10-2026
+
+    Teste J-1 à J+2 avec et sans suffixe année, pour couvrir la fenêtre
+    de transition autour de midi ET.
     """
     from datetime import timedelta
 
@@ -230,50 +248,67 @@ def _search_daily_via_events(asset: str, cfg: dict, now: datetime) -> list:
         candidate_date = (now + timedelta(days=offset)).date()
         month = MONTH_NAMES[candidate_date.month - 1]
         day   = candidate_date.day
-        slug  = f"{name}-up-or-down-on-{month}-{day}"
-        try:
-            r = requests.get(GAMMA_EVENTS_URL, params={"slug": slug}, timeout=8)
-            if r.status_code != 200:
+        year  = candidate_date.year
+        slugs_to_try = [
+            f"{name}-up-or-down-on-{month}-{day}-{year}",
+            f"{name}-up-or-down-on-{month}-{day}",
+        ]
+        for slug in slugs_to_try:
+            if verbose:
+                print(f"  [DEBUG] /events daily slug testé : '{slug}'")
+            try:
+                r = requests.get(GAMMA_EVENTS_URL, params={"slug": slug}, timeout=8)
+                if verbose:
+                    print(f"  [DEBUG]   HTTP {r.status_code}  body[:200]={r.text[:200]}")
+                if r.status_code != 200:
+                    continue
+                events = r.json()
+                if not events:
+                    continue
+                market = events[0].get("markets", [{}])[0]
+                if not market:
+                    if verbose:
+                        print(f"  [DEBUG]   event trouvé mais aucun market : {list(events[0].keys())[:10]}")
+                    continue
+                enriched = _enrich_market(market, slug, cfg, now, verbose)
+                if enriched is not None:
+                    candidates.append(enriched)
+            except Exception as e:
+                if verbose:
+                    print(f"  [DEBUG]   exception : {e}")
                 continue
-            events = r.json()
-            if not events:
-                continue
-            market = events[0].get("markets", [{}])[0]
-            if not market:
-                continue
-            enriched = _enrich_market(market, slug, cfg, now)
-            if enriched is not None:
-                candidates.append(enriched)
-        except Exception:
-            continue
 
     return candidates
 
 
-def _enrich_market(market: dict, slug: str, cfg: dict, now: datetime) -> tuple | None:
+def _enrich_market(market: dict, slug: str, cfg: dict, now: datetime,
+                   verbose: bool = False) -> tuple | None:
     """
     Enrichit un dict marché avec les champs internes.
     Retourne (minutes_left, market_enriched) ou None si hors fenêtre ou invalide.
     """
     end_str = market.get("endDate", "") or market.get("end_date_iso", "")
     if not end_str:
+        if verbose:
+            print(f"  [DEBUG]   '{slug}' rejeté : endDate absent  keys={list(market.keys())[:10]}")
         return None
     if not end_str.endswith("Z"):
         end_str += "Z"
     try:
         end_dt = datetime.fromisoformat(end_str.replace("Z", "+00:00"))
     except ValueError:
+        if verbose:
+            print(f"  [DEBUG]   '{slug}' rejeté : endDate non parseable '{end_str}'")
         return None
 
     minutes_left = (end_dt - now).total_seconds() / 60
     window       = cfg["window_min"]
 
-    # Garde les marchés actifs ou très récemment expirés (résolution en cours)
     if not (-(window * 0.02) < minutes_left < window):
+        if verbose:
+            print(f"  [DEBUG]   '{slug}' rejeté : minutes_left={minutes_left:.1f} hors fenêtre "
+                  f"({-(window*0.02):.0f}, {window})")
         return None
-
-    duration_s        = cfg["duration_s"]
-    time_since_open_s = max(0, duration_s - int(minutes_left * 60))
 
     token_ids_raw = market.get("clobTokenIds", "[]")
     if isinstance(token_ids_raw, str):
@@ -285,7 +320,12 @@ def _enrich_market(market: dict, slug: str, cfg: dict, now: datetime) -> tuple |
         token_ids = token_ids_raw or []
 
     if not token_ids:
+        if verbose:
+            print(f"  [DEBUG]   '{slug}' rejeté : clobTokenIds vide")
         return None
+
+    duration_s        = cfg["duration_s"]
+    time_since_open_s = max(0, duration_s - int(minutes_left * 60))
 
     market["_slug"]              = slug
     market["_minutes_left"]      = round(minutes_left, 1)
@@ -521,6 +561,8 @@ def parse_args():
                         help="Asset cible")
     parser.add_argument("--timeframe", required=False, choices=["5m", "15m", "daily"],
                         help="Durée du marché (non requis pour 'discover')")
+    parser.add_argument("--verbose", "-v", action="store_true",
+                        help="Affiche le détail des stratégies de détection")
     parser.add_argument("action", nargs="?", default="snapshot",
                         choices=["snapshot", "report", "discover"],
                         help="'snapshot' (défaut), 'report' ou 'discover'")
@@ -549,7 +591,7 @@ def main():
     print(f"\n[{now_str}] Orderbook snapshot {asset.upper()} {timeframe}")
 
     # 1. Trouver le marché actif
-    market = find_active_market(asset, timeframe)
+    market = find_active_market(asset, timeframe, verbose=args.verbose)
     if not market:
         print(f"  Aucun marché {asset.upper()} {timeframe} actif trouvé — snapshot ignoré.")
         sys.exit(0)
