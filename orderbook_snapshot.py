@@ -39,6 +39,25 @@ CLOB_BOOK_URL     = "https://clob.polymarket.com/book"
 
 SLIPPAGE_SIZES = [50, 100, 200, 500]  # USDC
 
+# Mots-clés de recherche par asset dans les slugs Polymarket.
+# Les marchés daily utilisent le nom complet (bitcoin, ethereum...).
+ASSET_KEYWORDS = {
+    "btc":  ["btc", "bitcoin"],
+    "eth":  ["eth", "ethereum"],
+    "sol":  ["sol", "solana"],
+    "xrp":  ["xrp"],
+    "doge": ["doge", "dogecoin"],
+}
+
+# Mots-clés de recherche par timeframe dans les slugs.
+# Les marchés daily utilisent un pattern date : "up-or-down-on-april-10"
+# On utilise "up-or-down-on" pour les distinguer des marchés intraday.
+TIMEFRAME_KEYWORDS = {
+    "5m":    ["5m"],
+    "15m":   ["15m"],
+    "daily": ["up-or-down-on", "daily"],
+}
+
 TIMEFRAME_CONFIG = {
     "5m": {
         "duration_s":       300,
@@ -67,7 +86,7 @@ TIMEFRAME_CONFIG = {
         "duration_s":       86400,
         "grid_s":           86400,
         "window_min":       1500,  # 25h de fenêtre de recherche
-        "fallback_offsets": range(-1, 3),
+        "fallback_offsets": range(0, 0),  # pas de fallback events API pour daily (slug non-standard)
         "report_buckets": [
             ("0-2h",   0,     7200),
             ("2-8h",   7200,  28800),
@@ -116,7 +135,7 @@ def _search_via_markets_api(asset: str, timeframe: str, cfg: dict, now: datetime
     try:
         r = requests.get(
             GAMMA_MARKETS_URL,
-            params={"active": "true", "closed": "false", "limit": 50},
+            params={"active": "true", "closed": "false", "limit": 100},
             timeout=10,
         )
         if r.status_code != 200:
@@ -128,11 +147,14 @@ def _search_via_markets_api(asset: str, timeframe: str, cfg: dict, now: datetime
         print(f"  [WARN] Gamma markets API : {e}")
         return []
 
+    asset_kws     = ASSET_KEYWORDS.get(asset, [asset])
+    timeframe_kws = TIMEFRAME_KEYWORDS.get(timeframe, [timeframe])
+
     for market in markets:
-        slug = market.get("slug", "") or market.get("conditionId", "")
-        if asset.lower() not in slug.lower():
+        slug = (market.get("slug", "") or market.get("conditionId", "")).lower()
+        if not any(kw in slug for kw in asset_kws):
             continue
-        if timeframe.lower() not in slug.lower():
+        if not any(kw in slug for kw in timeframe_kws):
             continue
         enriched = _enrich_market(market, slug, cfg, now)
         if enriched is not None:
@@ -403,14 +425,50 @@ def print_phase0_report(asset: str, timeframe: str):
 # 6. Main
 # ─────────────────────────────────────────────────────────────────────────────
 
+def discover_slugs(asset: str):
+    """
+    Liste tous les marchés actifs correspondant à l'asset (tous keywords confondus).
+    Utile pour identifier les patterns de nommage réels sur Polymarket.
+
+    Usage : python orderbook_snapshot.py --asset btc discover
+    """
+    try:
+        r = requests.get(
+            GAMMA_MARKETS_URL,
+            params={"active": "true", "closed": "false", "limit": 100},
+            timeout=10,
+        )
+        if r.status_code != 200:
+            print(f"[ERREUR] API status {r.status_code}")
+            return
+        markets = r.json()
+        if isinstance(markets, dict):
+            markets = markets.get("markets", markets.get("data", []))
+    except Exception as e:
+        print(f"[ERREUR] {e}")
+        return
+
+    asset_kws = ASSET_KEYWORDS.get(asset, [asset])
+    matches = [
+        m.get("slug", "") or m.get("conditionId", "")
+        for m in markets
+        if any(kw in (m.get("slug", "") or "").lower() for kw in asset_kws)
+    ]
+
+    print(f"\nMarchés actifs pour '{asset}' (keywords: {asset_kws}) — {len(matches)} trouvés :")
+    for slug in sorted(matches):
+        print(f"  {slug}")
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Polymarket orderbook snapshot générique")
     parser.add_argument("--asset",     required=True, choices=["btc", "eth", "sol", "xrp", "doge"],
                         help="Asset cible")
-    parser.add_argument("--timeframe", required=True, choices=["5m", "15m", "daily"],
-                        help="Durée du marché")
-    parser.add_argument("action", nargs="?", default="snapshot", choices=["snapshot", "report"],
-                        help="'snapshot' (défaut) ou 'report' pour le rapport Phase 0")
+    parser.add_argument("--timeframe", required=False, choices=["5m", "15m", "daily"],
+                        help="Durée du marché (non requis pour 'discover')")
+    parser.add_argument("action", nargs="?", default="snapshot",
+                        choices=["snapshot", "report", "discover"],
+                        help="'snapshot' (défaut), 'report' ou 'discover'")
     return parser.parse_args()
 
 
@@ -418,6 +476,14 @@ def main():
     args      = parse_args()
     asset     = args.asset
     timeframe = args.timeframe
+
+    if args.action == "discover":
+        discover_slugs(asset)
+        return
+
+    if not timeframe:
+        print("[ERREUR] --timeframe requis pour snapshot et report.")
+        sys.exit(1)
 
     if args.action == "report":
         print_phase0_report(asset, timeframe)
