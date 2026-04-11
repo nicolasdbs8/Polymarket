@@ -19350,7 +19350,7 @@
       "close_vs_ma10": 0.000861
     },
     "phase": "3_watch",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-04-11T18:35:44Z",
@@ -19377,7 +19377,7 @@
       "close_vs_ma10": 0.00187
     },
     "phase": "3_watch",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-04-11T18:40:51Z",
