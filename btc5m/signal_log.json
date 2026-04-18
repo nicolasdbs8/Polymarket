@@ -26046,7 +26046,7 @@
       "close_vs_ma10": -0.001122
     },
     "phase": "3",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-04-18T10:55:46Z",
@@ -26073,7 +26073,7 @@
       "close_vs_ma10": -0.001415
     },
     "phase": "3",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-04-18T11:05:43Z",
@@ -26100,7 +26100,7 @@
       "close_vs_ma10": -0.00184
     },
     "phase": "3",
-    "result": null
+    "result": "down"
   },
   {
     "ts": "2026-04-18T11:10:44Z",
@@ -26127,7 +26127,7 @@
       "close_vs_ma10": -0.003131
     },
     "phase": "3",
-    "result": null
+    "result": "down"
   },
   {
     "ts": "2026-04-18T11:15:47Z",
