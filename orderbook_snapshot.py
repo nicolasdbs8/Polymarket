@@ -37,7 +37,14 @@ GAMMA_MARKETS_URL = "https://gamma-api.polymarket.com/markets"
 GAMMA_EVENTS_URL  = "https://gamma-api.polymarket.com/events"
 CLOB_BOOK_URL     = "https://clob.polymarket.com/book"
 
-SLIPPAGE_SIZES = [50, 100, 200, 500]  # USDC
+# Tailles de slippage mesurées par timeframe.
+# Les marchés daily ont une liquidité suffisante pour mesurer des tailles plus élevées
+# afin de calibrer le cap de mise au-delà de 500 USDC.
+SLIPPAGE_SIZES_BY_TIMEFRAME = {
+    "5m":    [50, 100, 200, 500],
+    "15m":   [50, 100, 200, 500],
+    "daily": [200, 500, 1000, 2000, 5000],
+}
 
 # Mots-clés de recherche par asset dans les slugs Polymarket.
 # Les marchés daily utilisent le nom complet (bitcoin, ethereum...).
@@ -387,10 +394,10 @@ def compute_slippage(asks: list, size_usdc: float) -> float | None:
     return round(avg_price - float(asks[0]["price"]), 6)
 
 
-def compute_all_slippages(asks: list) -> dict:
+def compute_all_slippages(asks: list, sizes: list) -> dict:
     return {
         str(size): (round(s, 6) if (s := compute_slippage(asks, size)) is not None else None)
-        for size in SLIPPAGE_SIZES
+        for size in sizes
     }
 
 
@@ -465,7 +472,8 @@ def print_phase0_report(asset: str, timeframe: str):
     print(f"\n--- Slippage par taille de mise ---")
     print(f"{'Taille':>8}  {'Médiane':>8}  {'Moyenne':>8}  {'Coût total (frais inclus)':>26}")
     friction_med = sorted(frictions)[len(frictions)//2] if frictions else 0.005
-    for size in SLIPPAGE_SIZES:
+    sizes = SLIPPAGE_SIZES_BY_TIMEFRAME.get(timeframe, [50, 100, 200, 500])
+    for size in sizes:
         vals = [
             e["slippage_usdc"][str(size)]
             for e in log
@@ -631,7 +639,8 @@ def main():
         best_bid    = float(bids_sorted[0]["price"])
 
     # 3. Métriques
-    slippages   = compute_all_slippages(asks)
+    sizes     = SLIPPAGE_SIZES_BY_TIMEFRAME.get(timeframe, [50, 100, 200, 500])
+    slippages = compute_all_slippages(asks, sizes)
     depth_usdc  = total_depth_usdc(asks)
     n_levels    = len(asks)
     friction_hs = half_spread(best_bid, best_ask)
