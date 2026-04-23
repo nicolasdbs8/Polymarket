@@ -42,7 +42,7 @@ CLOB_BOOK_URL     = "https://clob.polymarket.com/book"
 # afin de calibrer le cap de mise au-delà de 500 USDC.
 SLIPPAGE_SIZES_BY_TIMEFRAME = {
     "5m":    [50, 100, 200, 500],
-    "15m":   [50, 100, 200, 500],
+    "15m":   [50, 100, 200, 500, 1000, 2000],
     "daily": [200, 500, 1000, 2000, 5000],
 }
 
