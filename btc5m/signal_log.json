@@ -35092,5 +35092,32 @@
     },
     "phase": "3",
     "result": null
+  },
+  {
+    "ts": "2026-04-23T17:10:53Z",
+    "btc_price": 77777.3,
+    "p_up": 0.5406,
+    "p_down": 0.4594,
+    "raw_edge": 0.0406,
+    "direction": "UP",
+    "decision": "SIGNAL UP — PETIT",
+    "edge_net": 0.0206,
+    "pm_slug": "btc-updown-5m-1776964200",
+    "pm_up": 0.515,
+    "pm_down": 0.485,
+    "pm_mins_left": 4.1,
+    "candle_open": "2026-04-23T17:05:00Z",
+    "features": {
+      "ret_1": -0.002395,
+      "ret_cum5": -0.007534,
+      "ret_cum10": -0.008731,
+      "n_green_5": 1.0,
+      "n_green_10": 2.0,
+      "close_pos": 0.0,
+      "range_pos_20": 0.0,
+      "close_vs_ma10": -0.005975
+    },
+    "phase": "3",
+    "result": null
   }
 ]
