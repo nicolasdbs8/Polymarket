@@ -48961,5 +48961,24 @@
       "200": 0.1133,
       "500": 0.120853
     }
+  },
+  {
+    "ts": "2026-04-28T12:00:50Z",
+    "slug": "eth-updown-5m-1777377600",
+    "token_id_up": "61139331918839923377302031519305104507167726407234134748935146477619436541887",
+    "time_since_open_s": 51,
+    "mins_left": 4.2,
+    "best_bid": 0.47,
+    "best_ask": 0.53,
+    "spread": 0.06,
+    "friction_half_spread": 0.03,
+    "depth_ask_usdc": 21.65,
+    "n_ask_levels": 7,
+    "slippage_usdc": {
+      "50": null,
+      "100": null,
+      "200": null,
+      "500": null
+    }
   }
 ]

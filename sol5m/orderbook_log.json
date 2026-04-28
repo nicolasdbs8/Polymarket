@@ -48980,5 +48980,24 @@
       "200": null,
       "500": null
     }
+  },
+  {
+    "ts": "2026-04-28T12:00:52Z",
+    "slug": "sol-updown-5m-1777377600",
+    "token_id_up": "76908598880964232185288130932449586856350207139393090643603820621153679904835",
+    "time_since_open_s": 53,
+    "mins_left": 4.1,
+    "best_bid": 0.47,
+    "best_ask": 0.53,
+    "spread": 0.06,
+    "friction_half_spread": 0.03,
+    "depth_ask_usdc": 99.0,
+    "n_ask_levels": 1,
+    "slippage_usdc": {
+      "50": 0.0,
+      "100": null,
+      "200": null,
+      "500": null
+    }
   }
 ]
