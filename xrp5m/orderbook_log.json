@@ -49037,5 +49037,24 @@
       "200": null,
       "500": null
     }
+  },
+  {
+    "ts": "2026-04-28T12:40:36Z",
+    "slug": "xrp-updown-5m-1777380000",
+    "token_id_up": "97864586456019402849184706131569829089040369245490235376089090836862578459357",
+    "time_since_open_s": 37,
+    "mins_left": 4.4,
+    "best_bid": 0.48,
+    "best_ask": 0.52,
+    "spread": 0.04,
+    "friction_half_spread": 0.02,
+    "depth_ask_usdc": 154.52,
+    "n_ask_levels": 6,
+    "slippage_usdc": {
+      "50": 0.086327,
+      "100": 0.163421,
+      "200": null,
+      "500": null
+    }
   }
 ]
