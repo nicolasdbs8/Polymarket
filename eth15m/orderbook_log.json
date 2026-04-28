@@ -50107,5 +50107,26 @@
       "1000": null,
       "2000": null
     }
+  },
+  {
+    "ts": "2026-04-28T12:50:44Z",
+    "slug": "eth-updown-15m-1777380300",
+    "token_id_up": "56786879572424191670900155726747449734741032433469230400021735823316706583455",
+    "time_since_open_s": 345,
+    "mins_left": 9.3,
+    "best_bid": 0.45,
+    "best_ask": 0.46,
+    "spread": 0.01,
+    "friction_half_spread": 0.005,
+    "depth_ask_usdc": 196.96,
+    "n_ask_levels": 6,
+    "slippage_usdc": {
+      "50": 0.046093,
+      "100": 0.052982,
+      "200": null,
+      "500": null,
+      "1000": null,
+      "2000": null
+    }
   }
 ]
