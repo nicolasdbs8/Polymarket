@@ -49913,5 +49913,26 @@
       "1000": null,
       "2000": null
     }
+  },
+  {
+    "ts": "2026-04-28T12:30:51Z",
+    "slug": "btc-updown-15m-1777379400",
+    "token_id_up": "20397847935238774317238455411343626260288935554943473880648369235598296519144",
+    "time_since_open_s": 52,
+    "mins_left": 14.1,
+    "best_bid": 0.03,
+    "best_ask": 0.99,
+    "spread": 0.96,
+    "friction_half_spread": 0.48,
+    "depth_ask_usdc": 113.16,
+    "n_ask_levels": 3,
+    "slippage_usdc": {
+      "50": 0.0,
+      "100": 0.076621,
+      "200": null,
+      "500": null,
+      "1000": null,
+      "2000": null
+    }
   }
 ]
