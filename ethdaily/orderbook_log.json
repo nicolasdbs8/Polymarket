@@ -69306,5 +69306,25 @@
       "2000": 0.0,
       "5000": null
     }
+  },
+  {
+    "ts": "2026-05-05T15:50:34Z",
+    "slug": "ethereum-up-or-down-on-may-5-2026",
+    "token_id_up": "61272331551888873741623249523107377568653323414548137683450115599509240526698",
+    "time_since_open_s": 85835,
+    "mins_left": 9.4,
+    "best_bid": 0.996,
+    "best_ask": 0.998,
+    "spread": 0.002,
+    "friction_half_spread": 0.001,
+    "depth_ask_usdc": 933.07,
+    "n_ask_levels": 1,
+    "slippage_usdc": {
+      "200": -0.0,
+      "500": 0.0,
+      "1000": null,
+      "2000": null,
+      "5000": null
+    }
   }
 ]
