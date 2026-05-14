@@ -59013,7 +59013,7 @@
       "close_vs_ma10": 0.007431
     },
     "phase": "3_watch",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-05-14T15:05:57Z",
@@ -59040,7 +59040,7 @@
       "close_vs_ma10": 0.006711
     },
     "phase": "3_watch",
-    "result": null
+    "result": "down"
   },
   {
     "ts": "2026-05-14T15:15:53Z",
@@ -59067,7 +59067,7 @@
       "close_vs_ma10": 0.004403
     },
     "phase": "3_watch",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-05-14T15:25:58Z",
@@ -59094,7 +59094,7 @@
       "close_vs_ma10": 0.002997
     },
     "phase": "3_watch",
-    "result": null
+    "result": "down"
   },
   {
     "ts": "2026-05-14T15:45:53Z",
@@ -59121,7 +59121,7 @@
       "close_vs_ma10": 0.000491
     },
     "phase": "3_watch",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-05-14T15:51:04Z",
@@ -59148,7 +59148,7 @@
       "close_vs_ma10": 0.001211
     },
     "phase": "3_watch",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-05-14T16:01:21Z",
@@ -59175,7 +59175,7 @@
       "close_vs_ma10": 0.003376
     },
     "phase": "3_watch",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-05-14T16:05:46Z",
@@ -59202,7 +59202,7 @@
       "close_vs_ma10": 0.003506
     },
     "phase": "3_watch",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-05-14T16:11:04Z",
@@ -59229,7 +59229,7 @@
       "close_vs_ma10": 0.004413
     },
     "phase": "3_watch",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-05-14T16:16:03Z",
@@ -59256,7 +59256,7 @@
       "close_vs_ma10": 0.00473
     },
     "phase": "3_watch",
-    "result": null
+    "result": "down"
   },
   {
     "ts": "2026-05-14T16:25:49Z",
@@ -59283,7 +59283,7 @@
       "close_vs_ma10": 0.002338
     },
     "phase": "3_watch",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-05-14T16:31:01Z",
@@ -59310,7 +59310,7 @@
       "close_vs_ma10": 0.002324
     },
     "phase": "3_watch",
-    "result": null
+    "result": "down"
   },
   {
     "ts": "2026-05-14T16:40:50Z",
