@@ -60714,7 +60714,7 @@
       "close_vs_ma10": 0.001001
     },
     "phase": "3_watch",
-    "result": null
+    "result": "down"
   },
   {
     "ts": "2026-05-16T17:35:45Z",
