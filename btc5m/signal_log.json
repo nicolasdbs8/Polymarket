@@ -65925,7 +65925,7 @@
       "close_vs_ma10": 0.002453
     },
     "phase": "3_watch",
-    "result": null
+    "result": "up"
   },
   {
     "ts": "2026-05-20T17:45:55Z",
@@ -65952,7 +65952,7 @@
       "close_vs_ma10": 0.002541
     },
     "phase": "3_watch",
-    "result": null
+    "result": "down"
   },
   {
     "ts": "2026-05-20T18:01:10Z",
@@ -65979,6 +65979,6 @@
       "close_vs_ma10": 0.00021
     },
     "phase": "3_watch",
-    "result": null
+    "result": "down"
   }
 ]
