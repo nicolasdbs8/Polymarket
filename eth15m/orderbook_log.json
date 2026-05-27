@@ -134758,5 +134758,26 @@
       "1000": 0.123826,
       "2000": 0.237013
     }
+  },
+  {
+    "ts": "2026-05-27T09:40:57Z",
+    "slug": "eth-updown-15m-1779874200",
+    "token_id_up": "11107357177323042636947136560217002444040818575404349140260592134737429359206",
+    "time_since_open_s": 658,
+    "mins_left": 4.0,
+    "best_bid": 0.55,
+    "best_ask": 0.56,
+    "spread": 0.01,
+    "friction_half_spread": 0.005,
+    "depth_ask_usdc": 5.94,
+    "n_ask_levels": 1,
+    "slippage_usdc": {
+      "50": null,
+      "100": null,
+      "200": null,
+      "500": null,
+      "1000": null,
+      "2000": null
+    }
   }
 ]
