@@ -133964,5 +133964,25 @@
       "2000": 0.0,
       "5000": -0.0
     }
+  },
+  {
+    "ts": "2026-05-29T15:40:37Z",
+    "slug": "bitcoin-up-or-down-on-may-29-2026",
+    "token_id_up": "19735187935113313356269391755949984976837709310636144016615739798321431953532",
+    "time_since_open_s": 85238,
+    "mins_left": 19.4,
+    "best_bid": 0.98,
+    "best_ask": 0.981,
+    "spread": 0.001,
+    "friction_half_spread": 0.0005,
+    "depth_ask_usdc": 34.08,
+    "n_ask_levels": 1,
+    "slippage_usdc": {
+      "200": null,
+      "500": null,
+      "1000": null,
+      "2000": null,
+      "5000": null
+    }
   }
 ]
