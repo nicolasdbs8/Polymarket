@@ -142439,5 +142439,26 @@
       "1000": 0.029679,
       "2000": 0.055183
     }
+  },
+  {
+    "ts": "2026-05-30T01:10:33Z",
+    "slug": "btc-updown-15m-1780102800",
+    "token_id_up": "18316986495940721672956818461338658396425526540479331719631428216380221166268",
+    "time_since_open_s": 634,
+    "mins_left": 4.4,
+    "best_bid": 0.59,
+    "best_ask": 0.6,
+    "spread": 0.01,
+    "friction_half_spread": 0.005,
+    "depth_ask_usdc": 16.16,
+    "n_ask_levels": 1,
+    "slippage_usdc": {
+      "50": null,
+      "100": null,
+      "200": null,
+      "500": null,
+      "1000": null,
+      "2000": null
+    }
   }
 ]
