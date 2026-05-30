@@ -144467,5 +144467,26 @@
       "1000": 0.226967,
       "2000": 0.325775
     }
+  },
+  {
+    "ts": "2026-05-30T11:40:38Z",
+    "slug": "sol-updown-15m-1780140600",
+    "token_id_up": "87187213304666374782755913572836015255493790925351728373655474929883521639044",
+    "time_since_open_s": 639,
+    "mins_left": 4.4,
+    "best_bid": 0.76,
+    "best_ask": 0.77,
+    "spread": 0.01,
+    "friction_half_spread": 0.005,
+    "depth_ask_usdc": 16.12,
+    "n_ask_levels": 1,
+    "slippage_usdc": {
+      "50": null,
+      "100": null,
+      "200": null,
+      "500": null,
+      "1000": null,
+      "2000": null
+    }
   }
 ]
