@@ -79668,7 +79668,7 @@
       "close_vs_ma10": -0.001724
     },
     "phase": "3",
-    "result": null
+    "result": "down"
   },
   {
     "ts": "2026-06-02T18:31:12Z",
@@ -79695,6 +79695,6 @@
       "close_vs_ma10": -0.002836
     },
     "phase": "3",
-    "result": null
+    "result": "down"
   }
 ]
